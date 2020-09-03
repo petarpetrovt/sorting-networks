@@ -9,7 +9,7 @@
 		HtmlExporter]
 	public class ArraySortBenchmark
 	{
-		private IPool[] pools;
+		private ISortable[] pools;
 
 		[Params(6)]
 		public int PoolCount;
@@ -17,11 +17,11 @@
 		[IterationSetup]
 		public void Setup()
 		{
-			pools = new IPool[PoolCount];
+			pools = new ISortable[PoolCount];
 
 			for (int i = 0; i < PoolCount; i++)
 			{
-				pools[i] = new Pool();
+				pools[i] = new Sortable();
 			}
 		}
 
@@ -43,26 +43,8 @@
 			sort6_sorting_network_v2(pools);
 		}
 
-		public interface IPool
-		{
-			ref readonly uint Count { get; }
-		}
-
-		public class Pool : IPool
-		{
-			private readonly uint _count;
-
-			public ref readonly uint Count
-				=> ref _count;
-
-			public Pool()
-			{
-				_count = (uint)new Random().Next(0, int.MaxValue / 2);
-			}
-		}
-
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		static void sort6_sorting_network_v1(IPool[] d)
+		static void sort6_sorting_network_v1(ISortable[] d)
 		{
 			SWAP(d, 1, 2);
 			SWAP(d, 0, 2);
@@ -79,9 +61,9 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		static void sort6_sorting_network_v2(IPool[] array)
+		static void sort6_sorting_network_v2(ISortable[] array)
 		{
-			ref IPool d = ref array[0];
+			ref ISortable d = ref array[0];
 
 			sort3_sorting_network_v2(ref Unsafe.Add(ref d, 0), ref Unsafe.Add(ref d, 1), ref Unsafe.Add(ref d, 2));
 			sort3_sorting_network_v2(ref Unsafe.Add(ref d, 3), ref Unsafe.Add(ref d, 4), ref Unsafe.Add(ref d, 5));
@@ -92,7 +74,7 @@
 
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		static void sort4_sorting_network_v2(ref IPool p0, ref IPool p1, ref IPool p2, ref IPool p3)
+		static void sort4_sorting_network_v2(ref ISortable p0, ref ISortable p1, ref ISortable p2, ref ISortable p3)
 		{
 			sort2_sorting_network_v2(ref p0, ref p1);
 			sort2_sorting_network_v2(ref p2, ref p3);
@@ -102,7 +84,7 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		static void sort3_sorting_network_v2(ref IPool p0, ref IPool p1, ref IPool p2)
+		static void sort3_sorting_network_v2(ref ISortable p0, ref ISortable p1, ref ISortable p2)
 		{
 			sort2_sorting_network_v2(ref p0, ref p1);
 			sort2_sorting_network_v2(ref p1, ref p2);
@@ -110,22 +92,22 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		static void sort2_sorting_network_v2(ref IPool p0, ref IPool p1)
+		static void sort2_sorting_network_v2(ref ISortable p0, ref ISortable p1)
 		{
 			if (p0.Count < p1.Count)
 			{
-				IPool tmp = p0;
+				ISortable tmp = p0;
 				p0 = p1;
 				p1 = tmp;
 			}
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public static void SWAP(IPool[] d, in int x, in int y)
+		public static void SWAP(ISortable[] d, in int x, in int y)
 		{
 			if (d[y].Count < d[x].Count)
 			{
-				IPool tmp = d[x];
+				ISortable tmp = d[x];
 				d[x] = d[y];
 				d[y] = tmp;
 			}
