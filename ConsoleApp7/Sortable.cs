@@ -13,5 +13,10 @@
 		{
 			_count = (uint)new Random().Next(0, int.MaxValue / 2);
 		}
+
+		public Sortable(uint count)
+		{
+			_count = count;
+		}
 	}
 }
