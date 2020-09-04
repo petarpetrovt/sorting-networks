@@ -1,13 +1,17 @@
 ﻿namespace ConsoleApp7
 {
 	using System;
+	using System.Runtime.CompilerServices;
 
 	public class Sortable : ISortable
 	{
 		private readonly uint _count;
 
 		public ref readonly uint Count
-			=> ref _count;
+		{
+			[MethodImpl(MethodImplOptions.AggressiveInlining)]
+			get => ref _count;
+		}
 
 		public Sortable()
 		{

@@ -9,7 +9,7 @@
 	public class ArraySort6Benchmark
 	{
 		private const int PoolSize = 6;
-		private const int Count = 100_000_000;
+		private const int Count = 1_000_000;
 
 		private ISortable[] pools;
 
@@ -65,6 +65,39 @@
 				ref ISortable p0 = ref Unsafe.Add(ref pools[0], i);
 
 				SortableAlgorithms<ISortable>.sort6_sorting_network_v2(ref p0, (x, y) => x.Count.CompareTo(y.Count));
+			}
+		}
+
+		[Benchmark]
+		public void ArraySortNetworkSA_Optimized()
+		{
+			for (int i = 0; i < Count; i += PoolSize)
+			{
+				ref ISortable p0 = ref Unsafe.Add(ref pools[0], i);
+
+				SA.sort6_sorting_network_v1_inlined_full_optimized(ref p0);
+			}
+		}
+
+		[Benchmark]
+		public void ArraySortNetworkSA_full()
+		{
+			for (int i = 0; i < Count; i += PoolSize)
+			{
+				ref ISortable p0 = ref Unsafe.Add(ref pools[0], i);
+
+				SA.sort6_sorting_network_v1_inlined_full(ref p0);
+			}
+		}
+
+		[Benchmark]
+		public void ArraySortNetworkSA_half()
+		{
+			for (int i = 0; i < Count; i += PoolSize)
+			{
+				ref ISortable p0 = ref Unsafe.Add(ref pools[0], i);
+
+				SA.sort6_sorting_network_v1_inlined_half(ref p0);
 			}
 		}
 	}
