@@ -13,54 +13,91 @@
 		private const int N = 1_000_000;
 		private Sortable[] sortables;
 
-		[Params(2, 3, 4, 5, 6, 7, 8)]
-		public int Size;
-
 		[IterationSetup]
 		public void Setup()
 		{
-			sortables = new Sortable[N * Size];
+			sortables = new Sortable[N * 10];
 
-			for (int i = 0; i < N * Size; i++)
+			for (int i = 0; i < N * 10; i++)
 			{
 				sortables[i] = new Sortable(i);
 			}
 		}
 
 		[Benchmark]
-		public void InsertionSort()
+		public void SA2()
 		{
-			for (int i = 0; i < N; i += Size)
+			for (int i = 0; i < N; i += 2)
 			{
-				InsertionSort(sortables.AsSpan(i, Size));
+				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
+
+				SA.Sort2(ref p0);
 			}
 		}
 
 		[Benchmark]
-		public void SortingNetworkGeneric()
+		public void SA3()
 		{
-			for (int i = 0; i < N; i += Size)
+			for (int i = 0; i < N; i += 3)
 			{
 				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
 
-				SA.Sort(ref p0, Size);
+				SA.Sort3(ref p0);
 			}
 		}
 
-		private static void InsertionSort<T>(Span<T> input)
-			where T : IComparable<T>
+		[Benchmark]
+		public void SA4()
 		{
-			for (int i = 0; i < input.Length - 1; i++)
+			for (int i = 0; i < N; i += 4)
 			{
-				for (int j = i + 1; j > 0; j--)
-				{
-					if (input[j - 1].CompareTo(input[j]) > 0)
-					{
-						ref T temp = ref input[j - 1];
-						input[j - 1] = input[j];
-						input[j] = temp;
-					}
-				}
+				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
+
+				SA.Sort4(ref p0);
+			}
+		}
+
+		[Benchmark]
+		public void SA5()
+		{
+			for (int i = 0; i < N; i += 5)
+			{
+				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
+
+				SA.Sort5(ref p0);
+			}
+		}
+
+		[Benchmark]
+		public void SA6()
+		{
+			for (int i = 0; i < N; i += 6)
+			{
+				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
+
+				SA.Sort6(ref p0);
+			}
+		}
+
+		[Benchmark]
+		public void SA7()
+		{
+			for (int i = 0; i < N; i += 7)
+			{
+				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
+
+				SA.Sort7(ref p0);
+			}
+		}
+
+		[Benchmark]
+		public void SA8()
+		{
+			for (int i = 0; i < N; i += 8)
+			{
+				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
+
+				SA.Sort8(ref p0);
 			}
 		}
 
