@@ -1,8 +1,10 @@
-﻿using System;
+﻿#if NET5_0
+using System;
 using System.Runtime.CompilerServices;
 
 namespace ConsoleApp7
 {
+	[SkipLocalsInitAttribute]
 	public abstract class SA2
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -198,3 +200,4 @@ namespace ConsoleApp7
 		}
 	}
 }
+#endif

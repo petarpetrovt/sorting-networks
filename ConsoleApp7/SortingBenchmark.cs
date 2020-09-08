@@ -4,7 +4,10 @@
 	using System.Diagnostics.CodeAnalysis;
 	using System.Runtime.CompilerServices;
 	using BenchmarkDotNet.Attributes;
+	using BenchmarkDotNet.Jobs;
 
+	[SimpleJob(RuntimeMoniker.NetCoreApp31)]
+	[SimpleJob(RuntimeMoniker.NetCoreApp50)]
 	[HtmlExporter]
 	[MemoryDiagnoser]
 	[DisassemblyDiagnoser(exportHtml: true, printInstructionAddresses: true, exportCombinedDisassemblyReport: true, exportDiff: true)]
@@ -21,72 +24,6 @@
 			for (int i = 0; i < N * 10; i++)
 			{
 				sortables[i] = new Sortable(i);
-			}
-		}
-
-		[Benchmark]
-		public void SA2()
-		{
-			for (int i = 0; i < N; i += 2)
-			{
-				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
-
-				SA.Sort2(ref p0);
-			}
-		}
-
-		[Benchmark]
-		public void SA3()
-		{
-			for (int i = 0; i < N; i += 3)
-			{
-				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
-
-				SA.Sort3(ref p0);
-			}
-		}
-
-		[Benchmark]
-		public void SA4()
-		{
-			for (int i = 0; i < N; i += 4)
-			{
-				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
-
-				SA.Sort4(ref p0);
-			}
-		}
-
-		[Benchmark]
-		public void SA5()
-		{
-			for (int i = 0; i < N; i += 5)
-			{
-				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
-
-				SA.Sort5(ref p0);
-			}
-		}
-
-		[Benchmark]
-		public void SA6()
-		{
-			for (int i = 0; i < N; i += 6)
-			{
-				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
-
-				SA.Sort6(ref p0);
-			}
-		}
-
-		[Benchmark]
-		public void SA7()
-		{
-			for (int i = 0; i < N; i += 7)
-			{
-				ref Sortable p0 = ref Unsafe.Add(ref sortables[0], i);
-
-				SA.Sort7(ref p0);
 			}
 		}
 
