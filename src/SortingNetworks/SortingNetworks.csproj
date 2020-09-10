@@ -1,11 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard1.3;netstandard2.0;netstandard2.1;netcoreapp3.1</TargetFrameworks>
+		<TargetFramework>netstandard1.3</TargetFramework>
+		<AssemblyName>SortingNetworks</AssemblyName>
+		<RootNamespace>SortingNetworks</RootNamespace>
+		<IsPackable>true</IsPackable>
+		<PackageTags>sort;array;sorting;network;</PackageTags>
+		<!--<GenerateDocumentationFile>true</GenerateDocumentationFile>-->
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' != 'netcoreapp3.1'">
 		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.7.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="GitVersionTask" Version="5.3.7">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 
 </Project>
