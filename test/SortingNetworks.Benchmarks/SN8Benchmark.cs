@@ -29,7 +29,7 @@
 			{
 				ref int p0 = ref Unsafe.Add(ref _items[0], i);
 
-				SNBoseNelson.Sort8(ref p0);
+				SNBoseNelson.Sort8Ascending(ref p0);
 			}
 		}
 
