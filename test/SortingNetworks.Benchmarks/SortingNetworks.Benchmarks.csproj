@@ -2,9 +2,12 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\SortingNetworks\SortingNetworks.csproj" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
