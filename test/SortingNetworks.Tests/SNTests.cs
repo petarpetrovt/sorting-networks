@@ -7,14 +7,28 @@ namespace SortingNetworks.Tests
 	public class SNTests
 	{
 		[TestMethod]
-		public void Sort_IComparable()
+		public void SNBoseNelson_IComparable()
 		{
-			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
+			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
 				int[] expected = Enumerable.Range(0, length).ToArray();
 				int[] actual = expected.Reverse().ToArray();
 
-				SN.Sort(ref actual[0], length);
+				SNBoseNelson.Sort(ref actual[0], length);
+
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public void SNBestKnown_IComparable()
+		{
+			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			{
+				int[] expected = Enumerable.Range(0, length).ToArray();
+				int[] actual = expected.Reverse().ToArray();
+
+				SNBestKnown.Sort(ref actual[0], length);
 
 				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
