@@ -1,9 +1,11 @@
 ﻿namespace SortingNetworks
 {
 	using System;
+	using System.Runtime.CompilerServices;
 
 	public abstract class SN
 	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected static void SwapIfGreater<T>(ref T p0, ref T p1)
 			where T : IComparable<T>
 		{
@@ -15,6 +17,7 @@
 			}
 		}
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected static void SwapIfLesser<T>(ref T p0, ref T p1)
 			where T : IComparable<T>
 		{

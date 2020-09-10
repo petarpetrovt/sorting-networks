@@ -4,10 +4,10 @@
 	using System.Runtime.CompilerServices;
 	using BenchmarkDotNet.Attributes;
 
-	public class SN8Benchmark : SNBenchmark
+	public class SN8Benchmark : SNBenchmarkBase
 	{
 		private const int Length = 8;
-		private const int N = 1_000_000;
+		private const int N = 10_000_000;
 
 		private int[] _items;
 
