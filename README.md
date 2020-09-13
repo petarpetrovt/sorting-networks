@@ -23,7 +23,7 @@ TODO
 
 * **Petar Petrov**
 
-See also the list of [contributors](https://github.com/petarpetrovt/sharpecs/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/petarpetrovt/sorting-networks/graphs/contributors) who participated in this project.
 
 ## License
 
