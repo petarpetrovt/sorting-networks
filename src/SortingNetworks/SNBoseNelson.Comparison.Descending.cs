@@ -149,7 +149,7 @@
 				case 6: Sort6Descending(ref p0, comparison); break;
 				case 7: Sort7Descending(ref p0, comparison); break;
 				case 8: Sort8Descending(ref p0, comparison); break;
-				default: throw new ArgumentException($"Sorting network length `{length}` must be between `{MinLength}` and `{MaxLength}`.");
+				default: throw new ArgumentOutOfRangeException(nameof(length), $"Sorting network length `{length}` must be between `{MinLength}` and `{MaxLength}`.");
 			}
 		}
 	}

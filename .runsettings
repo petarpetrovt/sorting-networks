@@ -3,4 +3,24 @@
 	<RunConfiguration>
 		<ResultsDirectory>%Temp%\SortingNetworksTestsResults</ResultsDirectory>
 	</RunConfiguration>
+	<DataCollectionRunSettings>
+		<DataCollectors>
+			<DataCollector friendlyName="Code Coverage">
+				<Configuration>
+					<CodeCoverage>
+						<ModulePaths>
+							<Exclude>
+								<ModulePath>.*Tests.dll</ModulePath>
+							</Exclude>
+						</ModulePaths>
+						<Attributes>
+							<Exclude>
+								<Attribute>^System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute$</Attribute>
+							</Exclude>
+						</Attributes>
+					</CodeCoverage>
+				</Configuration>
+			</DataCollector>
+		</DataCollectors>
+	</DataCollectionRunSettings>
 </RunSettings>

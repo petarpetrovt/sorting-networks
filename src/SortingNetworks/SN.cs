@@ -31,6 +31,10 @@
 						SNBestKnown.SortAscending(ref array[0], length);
 						break;
 					}
+				default:
+					{
+						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+					}
 			}
 		}
 
@@ -58,6 +62,10 @@
 						SNBestKnown.SortDescending(ref array[0], length);
 						break;
 					}
+				default:
+					{
+						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+					}
 			}
 		}
 
@@ -80,6 +88,10 @@
 						SNBestKnown.SortAscending(ref buffer[0], length);
 						break;
 					}
+				default:
+					{
+						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+					}
 			}
 		}
 
@@ -101,6 +113,10 @@
 					{
 						SNBestKnown.SortDescending(ref buffer[0], length);
 						break;
+					}
+				default:
+					{
+						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
 					}
 			}
 		}
@@ -133,6 +149,10 @@
 						SNBestKnown.SortAscending(ref array[0], length, comparison);
 						break;
 					}
+				default:
+					{
+						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+					}
 			}
 		}
 
@@ -164,6 +184,10 @@
 						SNBestKnown.SortDescending(ref array[0], length, comparison);
 						break;
 					}
+				default:
+					{
+						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+					}
 			}
 		}
 
@@ -190,6 +214,10 @@
 						SNBestKnown.SortAscending(ref buffer[0], length, comparison);
 						break;
 					}
+				default:
+					{
+						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+					}
 			}
 		}
 
@@ -215,6 +243,10 @@
 					{
 						SNBestKnown.SortDescending(ref buffer[0], length, comparison);
 						break;
+					}
+				default:
+					{
+						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
 					}
 			}
 		}

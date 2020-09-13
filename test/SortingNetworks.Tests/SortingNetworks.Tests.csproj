@@ -2,7 +2,10 @@
 
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AssemblyName>SortingNetworks.Tests</AssemblyName>
+		<RootNamespace>SortingNetworks.Tests</RootNamespace>
 		<IsPackable>false</IsPackable>
+		<RunSettingsFilePath>$(SolutionDir)\.runsettings</RunSettingsFilePath>
 	</PropertyGroup>
 
 	<ItemGroup>
