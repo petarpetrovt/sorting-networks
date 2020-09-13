@@ -3,7 +3,6 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-<# int viewsCount = 8; #>
 namespace SortingNetworks.Benchmarks
 {
 	using BenchmarkDotNet.Attributes;
