@@ -6,7 +6,7 @@
 	[MemoryDiagnoser, DisassemblyDiagnoser(exportCombinedDisassemblyReport: true)]
 	public abstract class SNFixedBenchmarkBase : SNBenchmarkBase
 	{
-		public abstract int Length { get; }
+		public abstract int Length { get; set; }
 
 		protected int[] Items;
 

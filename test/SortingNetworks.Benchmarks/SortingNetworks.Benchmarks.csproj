@@ -6,14 +6,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Include="SNFixedBenchmarks.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>SNFixedBenchmarks.tt</DependentUpon>
-	  </None>
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\..\src\SortingNetworks\SortingNetworks.csproj" />
 	</ItemGroup>
 
@@ -22,22 +14,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="SNFixedBenchmarks.tt">
-	    <Generator>TextTemplatingFileGenerator</Generator>
-	    <LastGenOutput>SNFixedBenchmarks.cs</LastGenOutput>
-	  </None>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+		<None Update="SNBNBenchmarks.tt">
+			<LastGenOutput>SNBNBenchmarks.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNKNBenchmarks.tt">
+			<Generator>TextTemplatingFileGenerator</Generator>
+			<LastGenOutput>SNKNBenchmarks.cs</LastGenOutput>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="SNFixedBenchmarks.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>SNFixedBenchmarks.tt</DependentUpon>
-	  </Compile>
+		<Compile Update="SNBNBenchmarks.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SNBNBenchmarks.tt</DependentUpon>
+		</Compile>
+		<Compile Update="SNKNBenchmarks.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SNKNBenchmarks.tt</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 </Project>

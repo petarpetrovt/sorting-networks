@@ -1,0 +1,50 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<# int viewsCount = 8; #>
+namespace SortingNetworks.Benchmarks
+{
+	using BenchmarkDotNet.Attributes;
+
+<#for (int i = 9; i <= 16; i++) {#>
+	public class SN<#= i #>SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	{
+		#region SNFixedBenchmarkBase Members
+
+		[Params(<#= i #>)]
+		public override int Length { get; set; }
+
+		#endregion
+
+		[Benchmark]
+		public void SortAscending_Comparable()
+		{
+			for (int i = 0; i < N; i += Length)
+			{
+				SNBestKnown.Sort<#= i #>Ascending(ref Items[i]);
+			}
+		}
+
+		[Benchmark]
+		public void SortAscending_Comparison()
+		{
+			for (int i = 0; i < N; i += Length)
+			{
+				SNBestKnown.Sort<#= i #>Ascending(ref Items[i], InternalComparison);
+			}
+		}
+
+		[Benchmark]
+		public unsafe void SortAscending_ComparisonPointer()
+		{
+			for (int i = 0; i < N; i += Length)
+			{
+				SNBestKnown.Sort<#= i #>Ascending(ref Items[i], &InternalComparison);
+			}
+		}
+	}
+
+<#}#>
+}
