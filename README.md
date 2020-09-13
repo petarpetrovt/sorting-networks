@@ -1,10 +1,15 @@
 # Sorting Networks
 
+<p align="left">
+    <a href="https://github.com/petarpetrovt/sorting-networks/actions?query=workflow%3ABuild" alt="Build">
+        <img alt="Build" src="https://github.com/petarpetrovt/sorting-networks/workflows/Build/badge.svg" />
+    </a>
+    <a href="https://github.com/petarpetrovt/sorting-networks/graphs/contributors" alt="Contributors">
+        <img alt="Contributors" src="https://img.shields.io/github/contributors/petarpetrovt/sorting-networks?label=Contributors">
+    </a>
+</p>
+
 Fast C# sorting networks algorithms.
-
-## Build Status
-
-TODO
 
 ## Installation
 
