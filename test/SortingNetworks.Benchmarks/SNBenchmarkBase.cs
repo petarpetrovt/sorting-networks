@@ -10,6 +10,8 @@
 	[MemoryDiagnoser]
 	public abstract class SNBenchmarkBase
 	{
+		protected const int N = 10_000_000;
+
 		protected static void PrivateInsertionSortAscending<T>(Span<T> span)
 			where T : IComparable<T>
 		{

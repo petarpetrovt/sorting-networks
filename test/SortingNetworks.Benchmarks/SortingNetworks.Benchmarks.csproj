@@ -6,11 +6,38 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Include="SNFixedBenchmarks.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>SNFixedBenchmarks.tt</DependentUpon>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\..\src\SortingNetworks\SortingNetworks.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="SNFixedBenchmarks.tt">
+	    <Generator>TextTemplatingFileGenerator</Generator>
+	    <LastGenOutput>SNFixedBenchmarks.cs</LastGenOutput>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="SNFixedBenchmarks.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>SNFixedBenchmarks.tt</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>
