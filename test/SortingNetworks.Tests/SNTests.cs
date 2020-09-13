@@ -1,18 +1,16 @@
 namespace SortingNetworks.Tests
 {
-	using System.Linq;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	[TestClass]
-	public class SNTests
+	public class SNTests : SNTestsBase
 	{
 		[TestMethod]
 		public void SNBoseNelson_Ascending_IComparable()
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				int[] expected = Enumerable.Range(0, length).ToArray();
-				int[] actual = expected.Reverse().ToArray();
+				GenerateArraysAscending(length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortAscending(ref actual[0], length);
 
@@ -25,8 +23,7 @@ namespace SortingNetworks.Tests
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				int[] actual = Enumerable.Range(0, length).ToArray();
-				int[] expected = actual.Reverse().ToArray();
+				GenerateArraysDescending(length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], length);
 
@@ -39,8 +36,7 @@ namespace SortingNetworks.Tests
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				int[] expected = Enumerable.Range(0, length).ToArray();
-				int[] actual = expected.Reverse().ToArray();
+				GenerateArraysAscending(length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortAscending(ref actual[0], length);
 
@@ -53,8 +49,7 @@ namespace SortingNetworks.Tests
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				int[] actual = Enumerable.Range(0, length).ToArray();
-				int[] expected = actual.Reverse().ToArray();
+				GenerateArraysDescending(length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortDescending(ref actual[0], length);
 
@@ -67,8 +62,7 @@ namespace SortingNetworks.Tests
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				int[] expected = Enumerable.Range(0, length).ToArray();
-				int[] actual = expected.Reverse().ToArray();
+				GenerateArraysAscending(length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortAscending(ref actual[0], length, (a, b) => a.CompareTo(b));
 
@@ -81,8 +75,7 @@ namespace SortingNetworks.Tests
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				int[] actual = Enumerable.Range(0, length).ToArray();
-				int[] expected = actual.Reverse().ToArray();
+				GenerateArraysDescending(length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], length, (a, b) => a.CompareTo(b));
 
@@ -95,8 +88,7 @@ namespace SortingNetworks.Tests
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				int[] expected = Enumerable.Range(0, length).ToArray();
-				int[] actual = expected.Reverse().ToArray();
+				GenerateArraysAscending(length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortAscending(ref actual[0], length, (a, b) => a.CompareTo(b));
 
@@ -109,8 +101,7 @@ namespace SortingNetworks.Tests
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				int[] actual = Enumerable.Range(0, length).ToArray();
-				int[] expected = actual.Reverse().ToArray();
+				GenerateArraysDescending(length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortDescending(ref actual[0], length, (a, b) => a.CompareTo(b));
 
