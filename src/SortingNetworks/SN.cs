@@ -1,58 +1,221 @@
 ﻿namespace SortingNetworks
 {
 	using System;
-	using System.Diagnostics;
-	using System.Runtime.CompilerServices;
 
-	public abstract class SN
+	public static class SN
 	{
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static void SwapIfGreater<T>(ref T p0, ref T p1)
+		public const int MinLength = 2;
+		public const int MaxLength = 16;
+
+		public static void SortAscending<T>(T[] array)
 			where T : IComparable<T>
 		{
-			if (p0.CompareTo(p1) > 0)
+			if (array is null)
 			{
-				T temp = p0;
-				p0 = p1;
-				p1 = temp;
+				throw new ArgumentNullException(nameof(array));
+			}
+
+			switch (array.Length)
+			{
+				case int length
+					when length >= SNBoseNelson.MinLength
+						&& length <= SNBoseNelson.MaxLength:
+					{
+						SNBoseNelson.SortAscending(ref array[0], length);
+						break;
+					}
+				case int length
+					when length >= SNBestKnown.MinLength
+						&& length <= SNBestKnown.MaxLength:
+					{
+						SNBestKnown.SortAscending(ref array[0], length);
+						break;
+					}
 			}
 		}
 
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static void SwapIfLesser<T>(ref T p0, ref T p1)
+		public static void SortDescending<T>(T[] array)
 			where T : IComparable<T>
 		{
-			if (p0.CompareTo(p1) < 0)
+			if (array is null)
 			{
-				T temp = p0;
-				p0 = p1;
-				p1 = temp;
+				throw new ArgumentNullException(nameof(array));
+			}
+
+			switch (array.Length)
+			{
+				case int length
+					when length >= SNBoseNelson.MinLength
+						&& length <= SNBoseNelson.MaxLength:
+					{
+						SNBoseNelson.SortDescending(ref array[0], length);
+						break;
+					}
+				case int length
+					when length >= SNBestKnown.MinLength
+						&& length <= SNBestKnown.MaxLength:
+					{
+						SNBestKnown.SortDescending(ref array[0], length);
+						break;
+					}
 			}
 		}
 
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static void SwapIfGreater<T>(ref T p0, ref T p1, Comparison<T> comparison)
+		public static void SortAscending<T>(Span<T> buffer)
+			where T : IComparable<T>
 		{
-			Debug.Assert(comparison != null);
-
-			if (comparison.Invoke(p0, p1) > 0)
+			switch (buffer.Length)
 			{
-				T temp = p0;
-				p0 = p1;
-				p1 = temp;
+				case int length
+					when length >= SNBoseNelson.MinLength
+						&& length <= SNBoseNelson.MaxLength:
+					{
+						SNBoseNelson.SortAscending(ref buffer[0], length);
+						break;
+					}
+				case int length
+					when length >= SNBestKnown.MinLength
+						&& length <= SNBestKnown.MaxLength:
+					{
+						SNBestKnown.SortAscending(ref buffer[0], length);
+						break;
+					}
 			}
 		}
 
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static void SwapIfLesser<T>(ref T p0, ref T p1, Comparison<T> comparison)
+		public static void SortDescending<T>(Span<T> buffer)
+			where T : IComparable<T>
 		{
-			Debug.Assert(comparison != null);
-
-			if (comparison.Invoke(p0, p1) < 0)
+			switch (buffer.Length)
 			{
-				T temp = p0;
-				p0 = p1;
-				p1 = temp;
+				case int length
+					when length >= SNBoseNelson.MinLength
+						&& length <= SNBoseNelson.MaxLength:
+					{
+						SNBoseNelson.SortDescending(ref buffer[0], length);
+						break;
+					}
+				case int length
+					when length >= SNBestKnown.MinLength
+						&& length <= SNBestKnown.MaxLength:
+					{
+						SNBestKnown.SortDescending(ref buffer[0], length);
+						break;
+					}
+			}
+		}
+
+		public static void SortAscending<T>(T[] array, Comparison<T> comparison)
+		{
+			if (array is null)
+			{
+				throw new ArgumentNullException(nameof(array));
+			}
+
+			if (comparison is null)
+			{
+				throw new ArgumentNullException(nameof(comparison));
+			}
+
+			switch (array.Length)
+			{
+				case int length
+					when length >= SNBoseNelson.MinLength
+						&& length <= SNBoseNelson.MaxLength:
+					{
+						SNBoseNelson.SortAscending(ref array[0], length, comparison);
+						break;
+					}
+				case int length
+					when length >= SNBestKnown.MinLength
+						&& length <= SNBestKnown.MaxLength:
+					{
+						SNBestKnown.SortAscending(ref array[0], length, comparison);
+						break;
+					}
+			}
+		}
+
+		public static void SortDescending<T>(T[] array, Comparison<T> comparison)
+		{
+			if (array is null)
+			{
+				throw new ArgumentNullException(nameof(array));
+			}
+
+			if (comparison is null)
+			{
+				throw new ArgumentNullException(nameof(comparison));
+			}
+
+			switch (array.Length)
+			{
+				case int length
+					when length >= SNBoseNelson.MinLength
+						&& length <= SNBoseNelson.MaxLength:
+					{
+						SNBoseNelson.SortDescending(ref array[0], length, comparison);
+						break;
+					}
+				case int length
+					when length >= SNBestKnown.MinLength
+						&& length <= SNBestKnown.MaxLength:
+					{
+						SNBestKnown.SortDescending(ref array[0], length, comparison);
+						break;
+					}
+			}
+		}
+
+		public static void SortAscending<T>(Span<T> buffer, Comparison<T> comparison)
+		{
+			if (comparison is null)
+			{
+				throw new ArgumentNullException(nameof(comparison));
+			}
+
+			switch (buffer.Length)
+			{
+				case int length
+					when length >= SNBoseNelson.MinLength
+						&& length <= SNBoseNelson.MaxLength:
+					{
+						SNBoseNelson.SortAscending(ref buffer[0], length, comparison);
+						break;
+					}
+				case int length
+					when length >= SNBestKnown.MinLength
+						&& length <= SNBestKnown.MaxLength:
+					{
+						SNBestKnown.SortAscending(ref buffer[0], length, comparison);
+						break;
+					}
+			}
+		}
+
+		public static void SortDescending<T>(Span<T> buffer, Comparison<T> comparison)
+		{
+			if (comparison is null)
+			{
+				throw new ArgumentNullException(nameof(comparison));
+			}
+
+			switch (buffer.Length)
+			{
+				case int length
+					when length >= SNBoseNelson.MinLength
+						&& length <= SNBoseNelson.MaxLength:
+					{
+						SNBoseNelson.SortDescending(ref buffer[0], length, comparison);
+						break;
+					}
+				case int length
+					when length >= SNBestKnown.MinLength
+						&& length <= SNBestKnown.MaxLength:
+					{
+						SNBestKnown.SortDescending(ref buffer[0], length, comparison);
+						break;
+					}
 			}
 		}
 	}
