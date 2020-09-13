@@ -5,20 +5,11 @@
 	</RunConfiguration>
 	<DataCollectionRunSettings>
 		<DataCollectors>
-			<DataCollector friendlyName="Code Coverage">
+			<DataCollector friendlyName="XPlat code coverage">
 				<Configuration>
-					<CodeCoverage>
-						<ModulePaths>
-							<Exclude>
-								<ModulePath>.*Tests.dll</ModulePath>
-							</Exclude>
-						</ModulePaths>
-						<Attributes>
-							<Exclude>
-								<Attribute>^System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute$</Attribute>
-							</Exclude>
-						</Attributes>
-					</CodeCoverage>
+					<Format>lcov</Format>
+					<Exclude>[*]Tests*</Exclude>
+					<ExcludeByAttribute>ExcludeFromCodeCoverageAttribute</ExcludeByAttribute>
 				</Configuration>
 			</DataCollector>
 		</DataCollectors>
