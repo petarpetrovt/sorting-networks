@@ -7,7 +7,7 @@ namespace SortingNetworks.Tests
 	public class SNBoseNelsonTests : SNTestsBase
 	{
 		[TestMethod]
-		public void Ascending_IComparable()
+		public void Ascending_Comparable()
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
@@ -20,7 +20,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void Descending_IComparable()
+		public void Descending_Comparable()
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
@@ -59,7 +59,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void Ascending_IComparable_OutOfRange()
+		public void Ascending_Comparable_OutOfRange()
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
@@ -70,7 +70,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void Descending_IComparable_OutOfRange()
+		public void Descending_Comparable_OutOfRange()
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{

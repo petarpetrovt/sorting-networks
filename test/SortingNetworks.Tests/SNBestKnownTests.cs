@@ -7,7 +7,7 @@
 	public class SNBestKnownTests : SNTestsBase
 	{
 		[TestMethod]
-		public void Ascending_IComparable()
+		public void Ascending_Comparable()
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
@@ -20,7 +20,7 @@
 		}
 
 		[TestMethod]
-		public void Descending_IComparable()
+		public void Descending_Comparable()
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
@@ -59,7 +59,7 @@
 		}
 
 		[TestMethod]
-		public void Ascending_IComparable_OutOfRange()
+		public void Ascending_Comparable_OutOfRange()
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
@@ -70,7 +70,7 @@
 		}
 
 		[TestMethod]
-		public void Descending_IComparable_OutOfRange()
+		public void Descending_Comparable_OutOfRange()
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{

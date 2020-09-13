@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<TargetFrameworks>net48;netcoreapp3.1</TargetFrameworks>
 		<AssemblyName>SortingNetworks.Tests</AssemblyName>
 		<RootNamespace>SortingNetworks.Tests</RootNamespace>
 		<IsPackable>false</IsPackable>

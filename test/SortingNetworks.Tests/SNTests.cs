@@ -7,7 +7,7 @@ namespace SortingNetworks.Tests
 	public class SNTests : SNTestsBase
 	{
 		[TestMethod]
-		public void SN_Array_Ascending_IComparable()
+		public void SN_Array_Ascending_Comparable()
 		{
 			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
 			{
@@ -20,7 +20,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Array_Descending_IComparable()
+		public void SN_Array_Descending_Comparable()
 		{
 			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
 			{
@@ -59,7 +59,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Span_Ascending_IComparable()
+		public void SN_Span_Ascending_Comparable()
 		{
 			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
 			{
@@ -72,7 +72,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Span_Descending_IComparable()
+		public void SN_Span_Descending_Comparable()
 		{
 			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
 			{
@@ -111,7 +111,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Array_Ascending_IComparable_OutOfRange()
+		public void SN_Array_Ascending_Comparable_OutOfRange()
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
@@ -122,7 +122,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Array_Descending_IComparable_OutOfRange()
+		public void SN_Array_Descending_Comparable_OutOfRange()
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
@@ -155,7 +155,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Span_Ascending_IComparable_OutOfRange()
+		public void SN_Span_Ascending_Comparable_OutOfRange()
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
@@ -166,7 +166,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Span_Descending_IComparable_OutOfRange()
+		public void SN_Span_Descending_Comparable_OutOfRange()
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
@@ -199,7 +199,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Array_Ascending_IComparable_ArrayNull()
+		public void SN_Array_Ascending_Comparable_ArrayNull()
 		{
 			Assert.ThrowsException<ArgumentNullException>(() =>
 			{
@@ -210,7 +210,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void SN_Array_Descending_IComparable_ArrayNull()
+		public void SN_Array_Descending_Comparable_ArrayNull()
 		{
 			Assert.ThrowsException<ArgumentNullException>(() =>
 			{
