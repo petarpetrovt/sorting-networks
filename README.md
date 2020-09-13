@@ -1,4 +1,4 @@
-# Sorting Networks
+# sorting-networks
 
 <p align="left">
     <a href="https://github.com/petarpetrovt/sorting-networks/actions?query=workflow%3ABuild" alt="Build">
