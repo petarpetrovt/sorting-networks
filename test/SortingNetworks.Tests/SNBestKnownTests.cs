@@ -39,7 +39,7 @@
 			{
 				GenerateArraysAscending(length, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortAscending(ref actual[0], length, (a, b) => a.CompareTo(b));
+				SNBestKnown.SortAscending(ref actual[0], length, InternalComparison);
 
 				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
@@ -52,7 +52,33 @@
 			{
 				GenerateArraysDescending(length, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortDescending(ref actual[0], length, (a, b) => a.CompareTo(b));
+				SNBestKnown.SortDescending(ref actual[0], length, InternalComparison);
+
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public unsafe void Ascending_ComparisonPointer()
+		{
+			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			{
+				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+
+				SNBestKnown.SortAscending(ref actual[0], length, &InternalComparison);
+
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public unsafe void Descending_ComparisonPointer()
+		{
+			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			{
+				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+
+				SNBestKnown.SortDescending(ref actual[0], length, &InternalComparison);
 
 				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
@@ -87,7 +113,7 @@
 			{
 				GenerateArraysAscending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortAscending(ref actual[0], actual.Length, (a, b) => a.CompareTo(b));
+				SNBestKnown.SortAscending(ref actual[0], actual.Length, InternalComparison);
 			});
 		}
 
@@ -98,7 +124,29 @@
 			{
 				GenerateArraysDescending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortDescending(ref actual[0], actual.Length, (a, b) => a.CompareTo(b));
+				SNBestKnown.SortDescending(ref actual[0], actual.Length, InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void Ascending_ComparisonPointer_OutOfRange()
+		{
+			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+			{
+				GenerateArraysAscending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+
+				SNBestKnown.SortAscending(ref actual[0], actual.Length, &InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void Descending_ComparisonPointer_OutOfRange()
+		{
+			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+			{
+				GenerateArraysDescending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+
+				SNBestKnown.SortDescending(ref actual[0], actual.Length, &InternalComparison);
 			});
 		}
 

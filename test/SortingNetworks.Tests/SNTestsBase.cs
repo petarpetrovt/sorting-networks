@@ -54,5 +54,9 @@
 				}
 			}
 		}
+
+
+		protected static int InternalComparison(int a, int b)
+			=> a.CompareTo(b);
 	}
 }

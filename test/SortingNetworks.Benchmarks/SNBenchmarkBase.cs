@@ -1,6 +1,7 @@
 ﻿namespace SortingNetworks.Benchmarks
 {
 	using System;
+	using System.Runtime.CompilerServices;
 	using BenchmarkDotNet.Attributes;
 	using BenchmarkDotNet.Jobs;
 
@@ -48,5 +49,9 @@
 				span[j + 1] = key;
 			}
 		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		protected static int InternalComparison(int a, int b)
+			=> a.CompareTo(b);
 	}
 }

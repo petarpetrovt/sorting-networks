@@ -19,6 +19,7 @@
 	<PropertyGroup>
 		<AnalysisLevel>latest</AnalysisLevel>
 		<LangVersion>9.0</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">

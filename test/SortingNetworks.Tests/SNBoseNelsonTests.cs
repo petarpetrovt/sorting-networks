@@ -39,7 +39,7 @@ namespace SortingNetworks.Tests
 			{
 				GenerateArraysAscending(length, out int[] expected, out int[] actual);
 
-				SNBoseNelson.SortAscending(ref actual[0], length, (a, b) => a.CompareTo(b));
+				SNBoseNelson.SortAscending(ref actual[0], length, InternalComparison);
 
 				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
@@ -52,7 +52,33 @@ namespace SortingNetworks.Tests
 			{
 				GenerateArraysDescending(length, out int[] expected, out int[] actual);
 
-				SNBoseNelson.SortDescending(ref actual[0], length, (a, b) => a.CompareTo(b));
+				SNBoseNelson.SortDescending(ref actual[0], length, InternalComparison);
+
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public unsafe void Ascending_ComparisonPointer()
+		{
+			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
+			{
+				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+
+				SNBoseNelson.SortAscending(ref actual[0], length, &InternalComparison);
+
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public unsafe void Descending_ComparisonPointer()
+		{
+			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
+			{
+				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+
+				SNBoseNelson.SortDescending(ref actual[0], length, &InternalComparison);
 
 				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
@@ -99,6 +125,28 @@ namespace SortingNetworks.Tests
 				GenerateArraysDescending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], actual.Length, (a, b) => a.CompareTo(b));
+			});
+		}
+
+		[TestMethod]
+		public unsafe void Ascending_ComparisonPointer_OutOfRange()
+		{
+			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+			{
+				GenerateArraysAscending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
+
+				SNBoseNelson.SortAscending(ref actual[0], actual.Length, &InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void Descending_ComparisonPointer_OutOfRange()
+		{
+			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+			{
+				GenerateArraysDescending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
+
+				SNBoseNelson.SortDescending(ref actual[0], actual.Length, &InternalComparison);
 			});
 		}
 

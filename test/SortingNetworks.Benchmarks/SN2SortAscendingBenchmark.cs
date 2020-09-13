@@ -35,7 +35,16 @@
 		{
 			for (int i = 0; i < N; i += Length)
 			{
-				SNBoseNelson.Sort2Ascending(ref _items[i], (a, b) => a.CompareTo(b));
+				SNBoseNelson.Sort2Ascending(ref _items[i], InternalComparison);
+			}
+		}
+
+		[Benchmark]
+		public unsafe void SortAscending_ComparisonPointer()
+		{
+			for (int i = 0; i < N; i += Length)
+			{
+				SNBoseNelson.Sort2Ascending(ref _items[i], &InternalComparison);
 			}
 		}
 

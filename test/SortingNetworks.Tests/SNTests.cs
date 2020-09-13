@@ -39,7 +39,7 @@ namespace SortingNetworks.Tests
 			{
 				GenerateArraysAscending(length, out int[] expected, out int[] actual);
 
-				SN.SortAscending(actual, (a, b) => a.CompareTo(b));
+				SN.SortAscending(actual, InternalComparison);
 
 				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
@@ -52,7 +52,33 @@ namespace SortingNetworks.Tests
 			{
 				GenerateArraysDescending(length, out int[] expected, out int[] actual);
 
-				SN.SortDescending(actual, (a, b) => a.CompareTo(b));
+				SN.SortDescending(actual, InternalComparison);
+
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public unsafe void SN_Array_Ascending_ComparisonPointer()
+		{
+			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
+			{
+				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+
+				SN.SortAscending(actual, &InternalComparison);
+
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public unsafe void SN_Array_Descending_ComparisonPointer()
+		{
+			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
+			{
+				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+
+				SN.SortDescending(actual, &InternalComparison);
 
 				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
@@ -91,7 +117,7 @@ namespace SortingNetworks.Tests
 			{
 				GenerateSpansAscending(length, out Span<int> expected, out Span<int> actual);
 
-				SN.SortAscending(actual, (a, b) => a.CompareTo(b));
+				SN.SortAscending(actual, InternalComparison);
 
 				AssertAreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
@@ -104,7 +130,33 @@ namespace SortingNetworks.Tests
 			{
 				GenerateSpansDescending(length, out Span<int> expected, out Span<int> actual);
 
-				SN.SortDescending(actual, (a, b) => a.CompareTo(b));
+				SN.SortDescending(actual, InternalComparison);
+
+				AssertAreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public unsafe void SN_Span_Ascending_ComparisonPointer()
+		{
+			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
+			{
+				GenerateSpansAscending(length, out Span<int> expected, out Span<int> actual);
+
+				SN.SortAscending(actual, &InternalComparison);
+
+				AssertAreEqual(expected, actual, $"Collections differs for length `{length}`.");
+			}
+		}
+
+		[TestMethod]
+		public unsafe void SN_Span_Descending_ComparisonPointer()
+		{
+			for (int length = SN.MinLength; length <= SN.MaxLength; length++)
+			{
+				GenerateSpansDescending(length, out Span<int> expected, out Span<int> actual);
+
+				SN.SortDescending(actual, &InternalComparison);
 
 				AssertAreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
@@ -139,7 +191,7 @@ namespace SortingNetworks.Tests
 			{
 				GenerateArraysAscending(SN.MinLength - 1, out int[] expected, out int[] actual);
 
-				SN.SortAscending(actual, (a, b) => a.CompareTo(b));
+				SN.SortAscending(actual, InternalComparison);
 			});
 		}
 
@@ -150,7 +202,29 @@ namespace SortingNetworks.Tests
 			{
 				GenerateArraysDescending(SN.MinLength - 1, out int[] expected, out int[] actual);
 
-				SN.SortDescending(actual, (a, b) => a.CompareTo(b));
+				SN.SortDescending(actual, InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void SN_Array_Ascending_ComparisonPointer_OutOfRange()
+		{
+			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+			{
+				GenerateArraysAscending(SN.MinLength - 1, out int[] expected, out int[] actual);
+
+				SN.SortAscending(actual, &InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void SN_Array_Descending_ComparisonPointer_OutOfRange()
+		{
+			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+			{
+				GenerateArraysDescending(SN.MinLength - 1, out int[] expected, out int[] actual);
+
+				SN.SortDescending(actual, &InternalComparison);
 			});
 		}
 
@@ -183,7 +257,7 @@ namespace SortingNetworks.Tests
 			{
 				GenerateSpansAscending(SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
 
-				SN.SortAscending(actual, (a, b) => a.CompareTo(b));
+				SN.SortAscending(actual, InternalComparison);
 			});
 		}
 
@@ -194,7 +268,29 @@ namespace SortingNetworks.Tests
 			{
 				GenerateSpansDescending(SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
 
-				SN.SortDescending(actual, (a, b) => a.CompareTo(b));
+				SN.SortDescending(actual, InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void SN_Span_Ascending_ComparisonPointer_OutOfRange()
+		{
+			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+			{
+				GenerateSpansAscending(SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
+
+				SN.SortAscending(actual, &InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void SN_Span_Descending_ComparisonPointer_OutOfRange()
+		{
+			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
+			{
+				GenerateSpansDescending(SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
+
+				SN.SortDescending(actual, &InternalComparison);
 			});
 		}
 
@@ -227,7 +323,7 @@ namespace SortingNetworks.Tests
 			{
 				int[] actual = null;
 
-				SN.SortAscending(actual, (a, b) => a.CompareTo(b));
+				SN.SortAscending(actual, InternalComparison);
 			});
 		}
 
@@ -238,7 +334,29 @@ namespace SortingNetworks.Tests
 			{
 				int[] actual = null;
 
-				SN.SortDescending(actual, (a, b) => a.CompareTo(b));
+				SN.SortDescending(actual, InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void SN_Array_Ascending_ComparisonPointer_ArrayNull()
+		{
+			Assert.ThrowsException<ArgumentNullException>(() =>
+			{
+				int[] actual = null;
+
+				SN.SortAscending(actual, &InternalComparison);
+			});
+		}
+
+		[TestMethod]
+		public unsafe void SN_Array_Descending_ComparisonPointer_ArrayNull()
+		{
+			Assert.ThrowsException<ArgumentNullException>(() =>
+			{
+				int[] actual = null;
+
+				SN.SortDescending(actual, &InternalComparison);
 			});
 		}
 

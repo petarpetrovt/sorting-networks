@@ -41,7 +41,18 @@
 			{
 				Span<int> buffer = _items.AsSpan(0, Length);
 
-				SN.SortAscending(buffer, (a, b) => a.CompareTo(b));
+				SN.SortAscending(buffer, InternalComparison);
+			}
+		}
+
+		[Benchmark]
+		public unsafe void SortAscending_ComparisonPointer()
+		{
+			for (int i = 0; i < N; i += Length)
+			{
+				Span<int> buffer = _items.AsSpan(0, Length);
+
+				SN.SortAscending(buffer, &InternalComparison);
 			}
 		}
 

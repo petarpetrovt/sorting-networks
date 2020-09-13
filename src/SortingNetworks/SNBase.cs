@@ -55,5 +55,27 @@
 				p1 = temp;
 			}
 		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		protected unsafe static void SwapIfGreater<T>(ref T p0, ref T p1, delegate* managed<T, T, int> comparisonPointer)
+		{
+			if (comparisonPointer(p0, p1) > 0)
+			{
+				T temp = p0;
+				p0 = p1;
+				p1 = temp;
+			}
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		protected unsafe static void SwapIfLesser<T>(ref T p0, ref T p1, delegate* managed<T, T, int> comparisonPointer)
+		{
+			if (comparisonPointer(p0, p1) < 0)
+			{
+				T temp = p0;
+				p0 = p1;
+				p1 = temp;
+			}
+		}
 	}
 }
