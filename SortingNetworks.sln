@@ -25,9 +25,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingNetworks", "src\SortingNetworks\SortingNetworks.csproj", "{92585F6D-F60D-4DF3-8917-9CFF1BD8124D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingNetworks.Tests", "test\SortingNetworks.Tests\SortingNetworks.Tests.csproj", "{3EA784C2-3FBB-46B0-B979-E29C64108B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingNetworks.Tests", "test\SortingNetworks.Tests\SortingNetworks.Tests.csproj", "{3EA784C2-3FBB-46B0-B979-E29C64108B77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingNetworks.Benchmarks", "test\SortingNetworks.Benchmarks\SortingNetworks.Benchmarks.csproj", "{BEC79585-DD14-4069-90C9-2E8D0828EFC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingNetworks.Benchmarks", "test\SortingNetworks.Benchmarks\SortingNetworks.Benchmarks.csproj", "{BEC79585-DD14-4069-90C9-2E8D0828EFC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{187A3C4F-5F71-4005-949A-2F5A25BD155F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{48585725-71CD-40EC-936B-EA021DF702E0}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnetcore.yml = .github\workflows\dotnetcore.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +62,7 @@ Global
 		{92585F6D-F60D-4DF3-8917-9CFF1BD8124D} = {1A064382-D7F6-4002-85B6-64313591EDEC}
 		{3EA784C2-3FBB-46B0-B979-E29C64108B77} = {569F0626-FBF6-4B3F-BE95-01F1C101ECA9}
 		{BEC79585-DD14-4069-90C9-2E8D0828EFC9} = {569F0626-FBF6-4B3F-BE95-01F1C101ECA9}
+		{48585725-71CD-40EC-936B-EA021DF702E0} = {187A3C4F-5F71-4005-949A-2F5A25BD155F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA61EBA0-786A-480A-B361-207F2663B1A4}
