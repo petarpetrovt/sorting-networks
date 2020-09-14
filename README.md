@@ -14,6 +14,10 @@
 
 Fast C# sorting networks algorithms.
 
+TODO
+
+> :warning: Check [benchmarks](test/SortingNetworks.Benchmarks/Results/README.md) before use.
+
 ## Installation
 
 TODO
