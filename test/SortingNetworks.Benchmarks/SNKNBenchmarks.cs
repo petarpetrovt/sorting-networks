@@ -2,14 +2,10 @@
 {
 	using BenchmarkDotNet.Attributes;
 
-	public class SN9SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN9SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(9)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()
@@ -39,14 +35,10 @@
 		}
 	}
 
-	public class SN10SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN10SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(10)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()
@@ -76,14 +68,10 @@
 		}
 	}
 
-	public class SN11SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN11SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(11)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()
@@ -113,14 +101,10 @@
 		}
 	}
 
-	public class SN12SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN12SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(12)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()
@@ -150,14 +134,10 @@
 		}
 	}
 
-	public class SN13SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN13SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(13)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()
@@ -187,14 +167,10 @@
 		}
 	}
 
-	public class SN14SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN14SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(14)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()
@@ -224,14 +200,10 @@
 		}
 	}
 
-	public class SN15SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN15SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(15)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()
@@ -261,14 +233,10 @@
 		}
 	}
 
-	public class SN16SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN16SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(16)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()

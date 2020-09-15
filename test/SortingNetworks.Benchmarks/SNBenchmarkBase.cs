@@ -13,7 +13,10 @@
 		private const int N = 100_000_000;
 
 		private int[] _globalItems;
+
 		protected int[] _iterationItems;
+
+		public abstract int Length { get; set; }
 
 		[GlobalSetup]
 		public void GlobalSetup()
@@ -46,6 +49,17 @@
 		{
 			_iterationItems = null;
 			GC.Collect();
+		}
+
+		[Benchmark]
+		public void SortAscending_Insertion()
+		{
+			for (int i = 0; i < _iterationItems.Length; i += Length)
+			{
+				Span<int> slice = _iterationItems.AsSpan(i, Length);
+
+				PrivateInsertionSortAscending(slice);
+			}
 		}
 
 		[MethodImpl(MethodImplOptions.NoInlining)]

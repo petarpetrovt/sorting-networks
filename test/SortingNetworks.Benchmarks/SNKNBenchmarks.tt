@@ -8,14 +8,10 @@ namespace SortingNetworks.Benchmarks
 	using BenchmarkDotNet.Attributes;
 
 <#for (int i = 9; i <= 16; i++) {#>
-	public class SN<#= i #>SortSNBestKnownBenchmark : SNFixedBenchmarkBase
+	public class SN<#= i #>SortSNBestKnownBenchmark : SNBenchmarkBase
 	{
-		#region SNFixedBenchmarkBase Members
-
 		[Params(<#= i #>)]
 		public override int Length { get; set; }
-
-		#endregion
 
 		[Benchmark]
 		public void SortAscending_Comparable()
