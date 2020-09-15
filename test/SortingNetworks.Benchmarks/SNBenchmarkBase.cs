@@ -10,8 +10,45 @@
 	[MemoryDiagnoser]
 	public abstract class SNBenchmarkBase
 	{
-		protected const int N = 10_000_000;
+		private const int N = 100_000_000;
 
+		private int[] _globalItems;
+		protected int[] _iterationItems;
+
+		[GlobalSetup]
+		public void GlobalSetup()
+		{
+			_globalItems = new int[N];
+
+			var random = new Random(new Random().Next());
+			for (int i = 0; i < _globalItems.Length; i++)
+			{
+				_globalItems[i] = random.Next(int.MinValue, int.MaxValue);
+			}
+		}
+
+		[GlobalCleanup]
+		public void GlobalCleanup()
+		{
+			_globalItems = null;
+			GC.Collect();
+		}
+
+		[IterationSetup]
+		public void IterationSetup()
+		{
+			_iterationItems = new int[N];
+			_globalItems.AsSpan().CopyTo(_iterationItems);
+		}
+
+		[IterationCleanup]
+		public void IterationCleanup()
+		{
+			_iterationItems = null;
+			GC.Collect();
+		}
+
+		[MethodImpl(MethodImplOptions.NoInlining)]
 		protected static void PrivateInsertionSortAscending<T>(Span<T> span)
 			where T : IComparable<T>
 		{
@@ -32,6 +69,7 @@
 			}
 		}
 
+		[MethodImpl(MethodImplOptions.NoInlining)]
 		protected static void PrivateInsertionSortDescending<T>(Span<T> span)
 			where T : IComparable<T>
 		{

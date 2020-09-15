@@ -20,27 +20,27 @@ namespace SortingNetworks.Benchmarks
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort<#= i #>Ascending(ref Items[i]);
+				SNBoseNelson.Sort<#= i #>Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort<#= i #>Ascending(ref Items[i], InternalComparison);
+				SNBoseNelson.Sort<#= i #>Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort<#= i #>Ascending(ref Items[i], &InternalComparison);
+				SNBoseNelson.Sort<#= i #>Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}

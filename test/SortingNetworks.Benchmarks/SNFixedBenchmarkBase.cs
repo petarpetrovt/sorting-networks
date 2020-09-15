@@ -8,25 +8,12 @@
 	{
 		public abstract int Length { get; set; }
 
-		protected int[] Items;
-
-		[IterationSetup]
-		public void Setup()
-		{
-			Items = new int[N * Length];
-
-			for (int i = 0; i < N * Length; i++)
-			{
-				Items[i] = i;
-			}
-		}
-
 		[Benchmark]
 		public void SortAscending_Insertion()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				Span<int> slice = Items.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, Length);
 
 				PrivateInsertionSortAscending(slice);
 			}

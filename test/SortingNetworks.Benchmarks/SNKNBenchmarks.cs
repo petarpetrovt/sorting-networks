@@ -14,27 +14,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort9Ascending(ref Items[i]);
+				SNBestKnown.Sort9Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort9Ascending(ref Items[i], InternalComparison);
+				SNBestKnown.Sort9Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort9Ascending(ref Items[i], &InternalComparison);
+				SNBestKnown.Sort9Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -51,27 +51,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort10Ascending(ref Items[i]);
+				SNBestKnown.Sort10Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort10Ascending(ref Items[i], InternalComparison);
+				SNBestKnown.Sort10Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort10Ascending(ref Items[i], &InternalComparison);
+				SNBestKnown.Sort10Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -88,27 +88,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort11Ascending(ref Items[i]);
+				SNBestKnown.Sort11Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort11Ascending(ref Items[i], InternalComparison);
+				SNBestKnown.Sort11Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort11Ascending(ref Items[i], &InternalComparison);
+				SNBestKnown.Sort11Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -125,27 +125,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort12Ascending(ref Items[i]);
+				SNBestKnown.Sort12Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort12Ascending(ref Items[i], InternalComparison);
+				SNBestKnown.Sort12Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort12Ascending(ref Items[i], &InternalComparison);
+				SNBestKnown.Sort12Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -162,27 +162,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort13Ascending(ref Items[i]);
+				SNBestKnown.Sort13Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort13Ascending(ref Items[i], InternalComparison);
+				SNBestKnown.Sort13Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort13Ascending(ref Items[i], &InternalComparison);
+				SNBestKnown.Sort13Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -199,27 +199,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort14Ascending(ref Items[i]);
+				SNBestKnown.Sort14Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort14Ascending(ref Items[i], InternalComparison);
+				SNBestKnown.Sort14Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort14Ascending(ref Items[i], &InternalComparison);
+				SNBestKnown.Sort14Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -236,27 +236,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort15Ascending(ref Items[i]);
+				SNBestKnown.Sort15Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort15Ascending(ref Items[i], InternalComparison);
+				SNBestKnown.Sort15Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort15Ascending(ref Items[i], &InternalComparison);
+				SNBestKnown.Sort15Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -273,27 +273,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort16Ascending(ref Items[i]);
+				SNBestKnown.Sort16Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort16Ascending(ref Items[i], InternalComparison);
+				SNBestKnown.Sort16Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBestKnown.Sort16Ascending(ref Items[i], &InternalComparison);
+				SNBestKnown.Sort16Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}

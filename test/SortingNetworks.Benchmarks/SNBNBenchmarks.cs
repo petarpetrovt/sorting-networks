@@ -14,27 +14,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort2Ascending(ref Items[i]);
+				SNBoseNelson.Sort2Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort2Ascending(ref Items[i], InternalComparison);
+				SNBoseNelson.Sort2Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort2Ascending(ref Items[i], &InternalComparison);
+				SNBoseNelson.Sort2Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -51,27 +51,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort3Ascending(ref Items[i]);
+				SNBoseNelson.Sort3Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort3Ascending(ref Items[i], InternalComparison);
+				SNBoseNelson.Sort3Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort3Ascending(ref Items[i], &InternalComparison);
+				SNBoseNelson.Sort3Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -88,27 +88,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort4Ascending(ref Items[i]);
+				SNBoseNelson.Sort4Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort4Ascending(ref Items[i], InternalComparison);
+				SNBoseNelson.Sort4Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort4Ascending(ref Items[i], &InternalComparison);
+				SNBoseNelson.Sort4Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -125,27 +125,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort5Ascending(ref Items[i]);
+				SNBoseNelson.Sort5Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort5Ascending(ref Items[i], InternalComparison);
+				SNBoseNelson.Sort5Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort5Ascending(ref Items[i], &InternalComparison);
+				SNBoseNelson.Sort5Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -162,27 +162,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort6Ascending(ref Items[i]);
+				SNBoseNelson.Sort6Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort6Ascending(ref Items[i], InternalComparison);
+				SNBoseNelson.Sort6Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort6Ascending(ref Items[i], &InternalComparison);
+				SNBoseNelson.Sort6Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -199,27 +199,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort7Ascending(ref Items[i]);
+				SNBoseNelson.Sort7Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort7Ascending(ref Items[i], InternalComparison);
+				SNBoseNelson.Sort7Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort7Ascending(ref Items[i], &InternalComparison);
+				SNBoseNelson.Sort7Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
@@ -236,27 +236,27 @@
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort8Ascending(ref Items[i]);
+				SNBoseNelson.Sort8Ascending(ref _iterationItems[i]);
 			}
 		}
 
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort8Ascending(ref Items[i], InternalComparison);
+				SNBoseNelson.Sort8Ascending(ref _iterationItems[i], InternalComparison);
 			}
 		}
 
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < N; i += Length)
+			for (int i = 0; i < _iterationItems.Length; i += Length)
 			{
-				SNBoseNelson.Sort8Ascending(ref Items[i], &InternalComparison);
+				SNBoseNelson.Sort8Ascending(ref _iterationItems[i], &InternalComparison);
 			}
 		}
 	}
