@@ -16,7 +16,9 @@ namespace SortingNetworks.Benchmarks
 		[Benchmark]
 		public void SortAscending_Comparable()
 		{
-			for (int i = 0; i < _iterationItems.Length; i += Length)
+			int maximumLength = _iterationItems.Length - Length;
+
+			for (int i = 0; i < maximumLength; i += Length)
 			{
 				SNBestKnown.Sort<#= i #>Ascending(ref _iterationItems[i]);
 			}
@@ -25,7 +27,9 @@ namespace SortingNetworks.Benchmarks
 		[Benchmark]
 		public void SortAscending_Comparison()
 		{
-			for (int i = 0; i < _iterationItems.Length; i += Length)
+			int maximumLength = _iterationItems.Length - Length;
+
+			for (int i = 0; i < maximumLength; i += Length)
 			{
 				SNBestKnown.Sort<#= i #>Ascending(ref _iterationItems[i], InternalComparison);
 			}
@@ -34,7 +38,9 @@ namespace SortingNetworks.Benchmarks
 		[Benchmark]
 		public unsafe void SortAscending_ComparisonPointer()
 		{
-			for (int i = 0; i < _iterationItems.Length; i += Length)
+			int maximumLength = _iterationItems.Length - Length;
+
+			for (int i = 0; i < maximumLength; i += Length)
 			{
 				SNBestKnown.Sort<#= i #>Ascending(ref _iterationItems[i], &InternalComparison);
 			}

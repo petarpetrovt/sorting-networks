@@ -10,7 +10,7 @@
 	[MemoryDiagnoser]
 	public abstract class SNBenchmarkBase
 	{
-		private const int N = 100_000_000;
+		private const int N = 50_000_000;
 
 		private int[] _globalItems;
 
@@ -54,7 +54,9 @@
 		[Benchmark]
 		public void SortAscending_Insertion()
 		{
-			for (int i = 0; i < _iterationItems.Length; i += Length)
+			int maximumLength = _iterationItems.Length - Length;
+
+			for (int i = 0; i < maximumLength; i += Length)
 			{
 				Span<int> slice = _iterationItems.AsSpan(i, Length);
 
