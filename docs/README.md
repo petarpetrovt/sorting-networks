@@ -3,4 +3,4 @@
 
 ### API
 
- * [SortingNetworks](/api/SortingNetworks.md)
+ * [SortingNetworks](api/SortingNetworks.md)
