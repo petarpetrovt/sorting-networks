@@ -5,6 +5,12 @@
 
 	partial class SNBoseNelson
 	{
+		/// <summary>
+		/// Sorts a collection of 2 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort2Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -13,6 +19,12 @@
 			SwapIfGreater(ref p0, ref p1);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 3 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort3Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -24,6 +36,12 @@
 			SwapIfGreater(ref p0, ref p1);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 4 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort4Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -38,6 +56,12 @@
 			SwapIfGreater(ref p1, ref p2);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 5 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort5Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -57,6 +81,12 @@
 			SwapIfGreater(ref p1, ref p2);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 6 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort6Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -80,6 +110,12 @@
 			SwapIfGreater(ref p2, ref p3);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 7 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort7Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -108,6 +144,12 @@
 			SwapIfGreater(ref p2, ref p3);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 8 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort8Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -140,6 +182,14 @@
 			SwapIfGreater(ref p3, ref p4);
 		}
 
+		/// <summary>
+		/// Sorts a collection of specified number of elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="length">the length of the collection</param>
+		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortAscending<T>(ref T p0, in int length)
 			where T : IComparable<T>
 		{

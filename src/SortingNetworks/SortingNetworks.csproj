@@ -6,7 +6,7 @@
 		<RootNamespace>SortingNetworks</RootNamespace>
 		<IsPackable>true</IsPackable>
 		<PackageTags>sort;array;sorting;network;</PackageTags>
-		<!--<GenerateDocumentationFile>true</GenerateDocumentationFile>-->
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' != 'netcoreapp3.1'">

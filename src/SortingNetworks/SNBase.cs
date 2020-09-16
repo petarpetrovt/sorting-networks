@@ -4,10 +4,13 @@
 	using System.Diagnostics;
 	using System.Runtime.CompilerServices;
 
+	/// <summary>
+	/// Represents a base for different sorting network implementations.
+	/// </summary>
 	public abstract class SNBase
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static void SwapIfGreater<T>(ref T p0, ref T p1)
+		internal static void SwapIfGreater<T>(ref T p0, ref T p1)
 			where T : IComparable<T>
 		{
 			if (p0.CompareTo(p1) > 0)
@@ -19,7 +22,7 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static void SwapIfLesser<T>(ref T p0, ref T p1)
+		internal static void SwapIfLesser<T>(ref T p0, ref T p1)
 			where T : IComparable<T>
 		{
 			if (p0.CompareTo(p1) < 0)
@@ -31,7 +34,7 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static void SwapIfGreater<T>(ref T p0, ref T p1, Comparison<T> comparison)
+		internal static void SwapIfGreater<T>(ref T p0, ref T p1, Comparison<T> comparison)
 		{
 			Debug.Assert(comparison != null);
 
@@ -44,7 +47,7 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static void SwapIfLesser<T>(ref T p0, ref T p1, Comparison<T> comparison)
+		internal static void SwapIfLesser<T>(ref T p0, ref T p1, Comparison<T> comparison)
 		{
 			Debug.Assert(comparison != null);
 
@@ -57,7 +60,7 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected unsafe static void SwapIfGreater<T>(ref T p0, ref T p1, delegate* managed<T, T, int> comparisonPointer)
+		internal unsafe static void SwapIfGreater<T>(ref T p0, ref T p1, delegate* managed<T, T, int> comparisonPointer)
 		{
 			if (comparisonPointer(p0, p1) > 0)
 			{
@@ -68,7 +71,7 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected unsafe static void SwapIfLesser<T>(ref T p0, ref T p1, delegate* managed<T, T, int> comparisonPointer)
+		internal unsafe static void SwapIfLesser<T>(ref T p0, ref T p1, delegate* managed<T, T, int> comparisonPointer)
 		{
 			if (comparisonPointer(p0, p1) < 0)
 			{

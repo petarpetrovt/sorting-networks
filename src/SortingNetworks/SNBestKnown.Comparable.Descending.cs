@@ -5,6 +5,12 @@
 
 	partial class SNBestKnown
 	{
+		/// <summary>
+		/// Sorts a collection of 9 elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort9Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -44,6 +50,12 @@
 			SwapIfLesser(ref p5, ref p6);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 10 elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort10Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -88,6 +100,12 @@
 			SwapIfLesser(ref p4, ref p5);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 11 elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort11Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -139,6 +157,12 @@
 			SwapIfLesser(ref p7, ref p8);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 12 elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort12Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -195,6 +219,12 @@
 			SwapIfLesser(ref p7, ref p8);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 13 elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort13Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -258,6 +288,12 @@
 			SwapIfLesser(ref p5, ref p6);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 14 elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort14Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -328,6 +364,12 @@
 			SwapIfLesser(ref p8, ref p9);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 15 elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort15Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -404,6 +446,12 @@
 			SwapIfLesser(ref p8, ref p9);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 16 elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort16Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -485,6 +533,14 @@
 			SwapIfLesser(ref p8, ref p9);
 		}
 
+		/// <summary>
+		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="length">the length of the collection</param>
+		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortDescending<T>(ref T p0, in int length)
 			where T : IComparable<T>
 		{

@@ -5,6 +5,12 @@
 
 	partial class SNBestKnown
 	{
+		/// <summary>
+		/// Sorts a collection of 9 elements in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort9Descending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -43,6 +49,12 @@
 			SwapIfLesser(ref p5, ref p6, comparison);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 10 elements in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort10Descending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -86,6 +98,12 @@
 			SwapIfLesser(ref p4, ref p5, comparison);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 11 elements in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort11Descending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -136,6 +154,12 @@
 			SwapIfLesser(ref p7, ref p8, comparison);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 12 elements in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort12Descending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -191,6 +215,12 @@
 			SwapIfLesser(ref p7, ref p8, comparison);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 13 elements in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort13Descending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -253,6 +283,12 @@
 			SwapIfLesser(ref p5, ref p6, comparison);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 14 elements in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort14Descending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -322,6 +358,12 @@
 			SwapIfLesser(ref p8, ref p9, comparison);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 15 in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort15Descending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -397,6 +439,12 @@
 			SwapIfLesser(ref p8, ref p9, comparison);
 		}
 
+		/// <summary>
+		/// Sorts a collection of 16 elements in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort16Descending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -477,6 +525,15 @@
 			SwapIfLesser(ref p8, ref p9, comparison);
 		}
 
+		/// <summary>
+		/// Sorts a collection of specified number of elements in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="length">the length of the collection</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+		/// <exception cref="ArgumentNullException">comparison is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortDescending<T>(ref T p0, in int length, Comparison<T> comparison)
 		{
 			if (comparison is null)

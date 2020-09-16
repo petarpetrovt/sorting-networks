@@ -2,11 +2,29 @@
 {
 	using System;
 
+	/// <summary>
+	/// Contains generic sorting methods for collections with length from <see cref="MinLength"/> to <see cref="MaxLength"/>.
+	/// </summary>
 	public static class SN
 	{
+		/// <summary>
+		/// The minimum supported length for sorting.
+		/// </summary>
 		public const int MinLength = 2;
+
+		/// <summary>
+		/// The maximum supported length for sorting.
+		/// </summary>
 		public const int MaxLength = 16;
 
+		/// <summary>
+		/// Sorts the elements in an entire <see cref="Array"/> in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element of the <see cref="Array"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the array.</typeparam>
+		/// <param name="array">The one-dimensional, zero-based <see cref="Array"/> to sort.</param>
+		/// <exception cref="ArgumentNullException">array is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">array length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortAscending<T>(T[] array)
 			where T : IComparable<T>
 		{
@@ -39,6 +57,14 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an entire <see cref="Array"/> in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element of the <see cref="Array"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the array.</typeparam>
+		/// <param name="array">The one-dimensional, zero-based <see cref="Array"/> to sort.</param>
+		/// <exception cref="ArgumentNullException">array is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">array length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortDescending<T>(T[] array)
 			where T : IComparable<T>
 		{
@@ -71,6 +97,13 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an entire <see cref="Span{T}"/> in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element of the <see cref="Span{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the span.</typeparam>
+		/// <param name="buffer">The one-dimensional, zero-based <see cref="Span{T}"/> to sort.</param>
+		/// <exception cref="ArgumentOutOfRangeException">span length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortAscending<T>(Span<T> buffer)
 			where T : IComparable<T>
 		{
@@ -98,6 +131,13 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an entire <see cref="Span{T}"/> in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element of the <see cref="Span{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the span.</typeparam>
+		/// <param name="buffer">The one-dimensional, zero-based <see cref="Span{T}"/> to sort.</param>
+		/// <exception cref="ArgumentOutOfRangeException">span length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortDescending<T>(Span<T> buffer)
 			where T : IComparable<T>
 		{
@@ -125,6 +165,15 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an <see cref="Array"/> in ascending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the array.</typeparam>
+		/// <param name="array">The one-dimensional, zero-based <see cref="Array"/> to sort.</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+		/// <exception cref="ArgumentNullException">array is null</exception>
+		/// <exception cref="ArgumentNullException">comparison is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">array length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortAscending<T>(T[] array, Comparison<T> comparison)
 		{
 			if (array is null)
@@ -161,6 +210,15 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an <see cref="Array"/> in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the array.</typeparam>
+		/// <param name="array">The one-dimensional, zero-based <see cref="Array"/> to sort.</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+		/// <exception cref="ArgumentNullException">array is null</exception>
+		/// <exception cref="ArgumentNullException">comparison is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">array length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortDescending<T>(T[] array, Comparison<T> comparison)
 		{
 			if (array is null)
@@ -197,6 +255,14 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an <see cref="Span{T}"/> in ascending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the span.</typeparam>
+		/// <param name="buffer">The one-dimensional, zero-based <see cref="Span{T}"/> to sort.</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+		/// <exception cref="ArgumentNullException">comparison is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">span length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortAscending<T>(Span<T> buffer, Comparison<T> comparison)
 		{
 			if (comparison is null)
@@ -228,6 +294,14 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an <see cref="Span{T}"/> in descending order using the specified <see cref="Comparison{T}"/>.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the span.</typeparam>
+		/// <param name="buffer">The one-dimensional, zero-based <see cref="Span{T}"/> to sort.</param>
+		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+		/// <exception cref="ArgumentNullException">comparison is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">span length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public static void SortDescending<T>(Span<T> buffer, Comparison<T> comparison)
 		{
 			if (comparison is null)
@@ -259,6 +333,14 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an <see cref="Array"/> in ascending order using the specified function pointer.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the array.</typeparam>
+		/// <param name="array">The one-dimensional, zero-based <see cref="Array"/> to sort.</param>
+		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
+		/// <exception cref="ArgumentNullException">array is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">array length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public unsafe static void SortAscending<T>(T[] array, delegate* managed<T, T, int> comparisonPointer)
 		{
 			if (array is null)
@@ -290,6 +372,14 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an <see cref="Array"/> in descending order using the specified function pointer.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the array.</typeparam>
+		/// <param name="array">The one-dimensional, zero-based <see cref="Array"/> to sort.</param>
+		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
+		/// <exception cref="ArgumentNullException">array is null</exception>
+		/// <exception cref="ArgumentOutOfRangeException">array length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public unsafe static void SortDescending<T>(T[] array, delegate* managed<T, T, int> comparisonPointer)
 		{
 			if (array is null)
@@ -321,6 +411,13 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an <see cref="Span{T}"/> in ascending order using the specified function pointer.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the span.</typeparam>
+		/// <param name="buffer">The one-dimensional, zero-based <see cref="Span{T}"/> to sort.</param>
+		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
+		/// <exception cref="ArgumentOutOfRangeException">span length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public unsafe static void SortAscending<T>(Span<T> buffer, delegate* managed<T, T, int> comparisonPointer)
 		{
 			switch (buffer.Length)
@@ -347,6 +444,13 @@
 			}
 		}
 
+		/// <summary>
+		/// Sorts the elements in an <see cref="Span{T}"/> in descending order using the specified function pointer.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the span.</typeparam>
+		/// <param name="buffer">The one-dimensional, zero-based <see cref="Span{T}"/> to sort.</param>
+		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
+		/// <exception cref="ArgumentOutOfRangeException">span length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
 		public unsafe static void SortDescending<T>(Span<T> buffer, delegate* managed<T, T, int> comparisonPointer)
 		{
 			switch (buffer.Length)
