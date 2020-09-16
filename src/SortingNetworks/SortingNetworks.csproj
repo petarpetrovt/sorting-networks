@@ -7,6 +7,7 @@
 		<IsPackable>true</IsPackable>
 		<PackageTags>sort;array;sorting;network;</PackageTags>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' != 'netcoreapp3.1'">
@@ -15,6 +16,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="DefaultDocumentation" Version="0.6.11">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="GitVersionTask" Version="5.3.7">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
