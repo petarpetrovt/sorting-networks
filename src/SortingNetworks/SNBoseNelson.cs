@@ -17,5 +17,10 @@
 		/// The maximum supported length for sorting.
 		/// </summary>
 		public const int MaxLength = 8;
+
+		/// <summary>
+		/// Disable the default constructor.
+		/// </summary>
+		private SNBoseNelson() { }
 	}
 }

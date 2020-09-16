@@ -6,7 +6,7 @@
 	/// <remarks>
 	/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
 	/// </remarks>
-	public abstract partial class SNBestKnown : SNBase
+	public sealed partial class SNBestKnown : SNBase
 	{
 		/// <summary>
 		/// The minimum supported length for sorting.
@@ -17,5 +17,10 @@
 		/// The maximum supported length for sorting.
 		/// </summary>
 		public const int MaxLength = 16;
+
+		/// <summary>
+		/// Disable the default constructor.
+		/// </summary>
+		private SNBestKnown() { }
 	}
 }
