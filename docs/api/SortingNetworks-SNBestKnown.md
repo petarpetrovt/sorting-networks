@@ -2,11 +2,13 @@
 ## SNBestKnown Class
 Sorting networks implementation using the best known arrangement of comparators.  
 ```csharp
-public abstract class SNBestKnown : SNBase
+public sealed class SNBestKnown : SNBase
 ```
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [SNBase](./SortingNetworks-SNBase.md 'SortingNetworks.SNBase') &#129106; SNBestKnown  
 ### Remarks
 SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html  
+### Constructors
+- [SNBestKnown()](./SortingNetworks-SNBestKnown-SNBestKnown().md 'SortingNetworks.SNBestKnown.SNBestKnown()')
 ### Fields
 - [MaxLength](./SortingNetworks-SNBestKnown-MaxLength.md 'SortingNetworks.SNBestKnown.MaxLength')
 - [MinLength](./SortingNetworks-SNBestKnown-MinLength.md 'SortingNetworks.SNBestKnown.MinLength')
