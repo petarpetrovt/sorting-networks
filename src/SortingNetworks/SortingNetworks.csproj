@@ -6,11 +6,19 @@
 		<RootNamespace>SortingNetworks</RootNamespace>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<IsPackable>true</IsPackable>
-		<PackageTags>sort;array;sorting;network;</PackageTags>
+		<PackageTags>sort;sorting;network;array;span;algorithms</PackageTags>
 		<Description>A collection of sorting network algorithms implemented in C#.</Description>
+		<PackageLicenseFile></PackageLicenseFile>
+		<PackageIcon>$(SolutionDir)\icon.png</PackageIcon>
 	</PropertyGroup>
 
-	<PropertyGroup  Condition="'$(Configuration)' == 'Debug'">
+	<ItemGroup>
+		<None Include="$(SolutionDir)\icon.png">
+			<Pack>True</Pack>
+		</None>
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
 		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
 	</PropertyGroup>
 
