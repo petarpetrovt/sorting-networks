@@ -30,12 +30,13 @@ A collection of sorting network algorithms implemented in C#.
 | [SNBestKnown](docs/api/SortingNetworks-SNBestKnown.md#Methods) | `9` | `16` | `-` |
 | [SN](docs/api/SortingNetworks-SN.md#Methods) | `2` | `16` | `+` |
 
-## Authors
-
-* **Petar Petrov**
-
-See also the list of [contributors](https://github.com/petarpetrovt/sorting-networks/graphs/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Contributors
+<a href="https://github.com/petarpetrovt/sorting-networks/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=petarpetrovt/sorting-networks" />
+</a>
+
+Made with [contributors-img](https://contributors-img.web.app).
