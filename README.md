@@ -14,17 +14,15 @@
 
 Fast C# sorting networks algorithms.
 
-TODO
+* [latest](test/SortingNetworks.Benchmarks/Results/README.md) benchmarks
 
-> :warning: Check [benchmarks](test/SortingNetworks.Benchmarks/Results/README.md) before use.
+## API
 
-## Installation
-
-TODO
-
-## Examples
-
-TODO
+| API | MinLength | MaxLength | Safety |
+| --- | ----------| --------- | ------ |
+| [SNBoseNelson](docs/api/SortingNetworks-SNBoseNelson.md#Methods) | `2` | `8` | [ ] |
+| [SNBestKnown](docs/api/SortingNetworks-SNBestKnown.md#Methods) | `9` | `16` | [ ] |
+| [SN](docs/api/SortingNetworks-SN.md#Methods) | `2` | `16` | [x] |
 
 ## Authors
 
