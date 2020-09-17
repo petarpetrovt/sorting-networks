@@ -20,8 +20,6 @@ jobs:
     steps:
      - name: Checkout
        uses: actions/checkout@v2
-       with:
-         fetch-depth: 0 # Fetch all history for GitVersionTask to work
 
      - name: Setup dotnet
        uses: actions/setup-dotnet@v1
