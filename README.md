@@ -18,11 +18,11 @@ Fast C# sorting networks algorithms.
 
 ## API
 
-| API | MinLength | MaxLength | Safety |
+| API | MinLength | MaxLength | Safe |
 | --- | ----------| --------- | ------ |
-| [SNBoseNelson](docs/api/SortingNetworks-SNBoseNelson.md#Methods) | `2` | `8` | [ ] |
-| [SNBestKnown](docs/api/SortingNetworks-SNBestKnown.md#Methods) | `9` | `16` | [ ] |
-| [SN](docs/api/SortingNetworks-SN.md#Methods) | `2` | `16` | [x] |
+| [SNBoseNelson](docs/api/SortingNetworks-SNBoseNelson.md#Methods) | `2` | `8` | `-` |
+| [SNBestKnown](docs/api/SortingNetworks-SNBestKnown.md#Methods) | `9` | `16` | `-` |
+| [SN](docs/api/SortingNetworks-SN.md#Methods) | `2` | `16` | `+` |
 
 ## Authors
 
