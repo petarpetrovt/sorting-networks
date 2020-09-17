@@ -12,7 +12,7 @@
     </a>
 </p>
 
-Fast C# sorting networks algorithms.
+A collection of sorting network algorithms implemented in C#.
 
 * [latest](test/SortingNetworks.Benchmarks/Results/README.md) benchmarks
 

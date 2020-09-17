@@ -4,9 +4,10 @@
 		<TargetFrameworks>netstandard1.3;netcoreapp3.1</TargetFrameworks>
 		<AssemblyName>SortingNetworks</AssemblyName>
 		<RootNamespace>SortingNetworks</RootNamespace>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<IsPackable>true</IsPackable>
 		<PackageTags>sort;array;sorting;network;</PackageTags>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Description>A collection of sorting network algorithms implemented in C#.</Description>
 	</PropertyGroup>
 
 	<PropertyGroup  Condition="'$(Configuration)' == 'Debug'">

@@ -9,6 +9,7 @@
 		<PackageProjectUrl>https://github.com/petarpetrovt/sorting-networks</PackageProjectUrl>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<NeutralLanguage>en</NeutralLanguage>
+		<Icon>icon.png</Icon>
 	</PropertyGroup>
 
 	<PropertyGroup>
