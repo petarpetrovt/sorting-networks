@@ -24,6 +24,9 @@ A collection of sorting network algorithms implemented in C#.
 
 ## API
 
+* [documentation](docs/README.md)
+* [benchmarks](test/SortingNetworks.Benchmarks/Results/README.md)
+
 | API | MinLength | MaxLength | Safe |
 | --- | ----------| --------- | ------ |
 | [SNBoseNelson](docs/api/SortingNetworks-SNBoseNelson.md#Methods) | `2` | `8` | `-` |
