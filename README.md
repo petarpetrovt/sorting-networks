@@ -31,12 +31,13 @@ A collection of sorting network algorithms implemented in C#.
 | [SN](docs/api/SortingNetworks-SN.md#Methods) | `2` | `16` | `+` |
 
 ## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fpetarpetrovt%2Fsorting-networks?ref=badge_large">
+  <img alt="License" src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpetarpetrovt%2Fsorting-networks.svg?type=large" />
+</a>
 
 ## Contributors
 <a href="https://github.com/petarpetrovt/sorting-networks/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=petarpetrovt/sorting-networks" />
+  <img alt="Contributors" src="https://contributors-img.web.app/image?repo=petarpetrovt/sorting-networks" />
 </a>
 
 Made with [contributors-img](https://contributors-img.web.app).
