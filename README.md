@@ -7,6 +7,7 @@
     <a href="https://codecov.io/gh/petarpetrovt/sorting-networks" alt="codecov">
         <img alt="codecov" src="https://codecov.io/gh/petarpetrovt/sorting-networks/branch/master/graph/badge.svg?token=nzdk7N3iVY" />
     </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fpetarpetrovt%2Fsorting-networks?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpetarpetrovt%2Fsorting-networks.svg?type=shield"/></a>
     <a href="https://github.com/petarpetrovt/sorting-networks/graphs/contributors" alt="Contributors">
         <img alt="Contributors" src="https://img.shields.io/github/contributors/petarpetrovt/sorting-networks?label=Contributors">
     </a>
@@ -33,3 +34,6 @@ See also the list of [contributors](https://github.com/petarpetrovt/sorting-netw
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpetarpetrovt%2Fsorting-networks.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpetarpetrovt%2Fsorting-networks?ref=badge_large)
