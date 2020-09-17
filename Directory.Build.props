@@ -10,6 +10,7 @@
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<NeutralLanguage>en</NeutralLanguage>
 		<Icon>icon.png</Icon>
+		<Copyright>2020 Petar Petrov</Copyright>
 	</PropertyGroup>
 
 	<PropertyGroup>
