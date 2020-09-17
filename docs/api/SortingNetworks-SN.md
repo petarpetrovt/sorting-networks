@@ -11,9 +11,9 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 ### Methods
 - [SortAscending&lt;T&gt;(T[])](./SortingNetworks-SN-SortAscending-T-(T--).md 'SortingNetworks.SN.SortAscending&lt;T&gt;(T[])')
 - [SortAscending&lt;T&gt;(T[], System.Comparison&lt;T&gt;)](./SortingNetworks-SN-SortAscending-T-(T--_System-Comparison-T-).md 'SortingNetworks.SN.SortAscending&lt;T&gt;(T[], System.Comparison&lt;T&gt;)')
-- [SortAscending&lt;T&gt;(System.Span&lt;T&gt;)](./SortingNetworks-SN-SortAscending-T-(System-Span-T-).md 'SortingNetworks.SN.SortAscending&lt;T&gt;(System.Span&lt;T&gt;)')
-- [SortAscending&lt;T&gt;(System.Span&lt;T&gt;, System.Comparison&lt;T&gt;)](./SortingNetworks-SN-SortAscending-T-(System-Span-T-_System-Comparison-T-).md 'SortingNetworks.SN.SortAscending&lt;T&gt;(System.Span&lt;T&gt;, System.Comparison&lt;T&gt;)')
+- [SortAscending&lt;T&gt;(Span&lt;T&gt;)](./SortingNetworks-SN-SortAscending-T-(Span-T-).md 'SortingNetworks.SN.SortAscending&lt;T&gt;(Span&lt;T&gt;)')
+- [SortAscending&lt;T&gt;(Span&lt;T&gt;, System.Comparison&lt;T&gt;)](./SortingNetworks-SN-SortAscending-T-(Span-T-_System-Comparison-T-).md 'SortingNetworks.SN.SortAscending&lt;T&gt;(Span&lt;T&gt;, System.Comparison&lt;T&gt;)')
 - [SortDescending&lt;T&gt;(T[])](./SortingNetworks-SN-SortDescending-T-(T--).md 'SortingNetworks.SN.SortDescending&lt;T&gt;(T[])')
 - [SortDescending&lt;T&gt;(T[], System.Comparison&lt;T&gt;)](./SortingNetworks-SN-SortDescending-T-(T--_System-Comparison-T-).md 'SortingNetworks.SN.SortDescending&lt;T&gt;(T[], System.Comparison&lt;T&gt;)')
-- [SortDescending&lt;T&gt;(System.Span&lt;T&gt;)](./SortingNetworks-SN-SortDescending-T-(System-Span-T-).md 'SortingNetworks.SN.SortDescending&lt;T&gt;(System.Span&lt;T&gt;)')
-- [SortDescending&lt;T&gt;(System.Span&lt;T&gt;, System.Comparison&lt;T&gt;)](./SortingNetworks-SN-SortDescending-T-(System-Span-T-_System-Comparison-T-).md 'SortingNetworks.SN.SortDescending&lt;T&gt;(System.Span&lt;T&gt;, System.Comparison&lt;T&gt;)')
+- [SortDescending&lt;T&gt;(Span&lt;T&gt;)](./SortingNetworks-SN-SortDescending-T-(Span-T-).md 'SortingNetworks.SN.SortDescending&lt;T&gt;(Span&lt;T&gt;)')
+- [SortDescending&lt;T&gt;(Span&lt;T&gt;, System.Comparison&lt;T&gt;)](./SortingNetworks-SN-SortDescending-T-(Span-T-_System-Comparison-T-).md 'SortingNetworks.SN.SortDescending&lt;T&gt;(Span&lt;T&gt;, System.Comparison&lt;T&gt;)')

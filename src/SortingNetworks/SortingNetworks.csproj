@@ -9,13 +9,11 @@
 		<PackageTags>sort;sorting;network;array;span;algorithms</PackageTags>
 		<Description>A collection of sorting network algorithms implemented in C#.</Description>
 		<PackageLicenseFile></PackageLicenseFile>
-		<PackageIcon>$(SolutionDir)\icon.png</PackageIcon>
+		<PackageIcon>icon.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="$(SolutionDir)\icon.png">
-			<Pack>True</Pack>
-		</None>
+		<None Include="$(SolutionDir)icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
