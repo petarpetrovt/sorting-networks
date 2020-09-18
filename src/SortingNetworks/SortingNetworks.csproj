@@ -21,7 +21,7 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
-		<PackageReference Include="DefaultDocumentation" Version="0.6.11">
+		<PackageReference Include="DefaultDocumentation" Version="0.6.12">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
