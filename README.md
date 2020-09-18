@@ -20,9 +20,10 @@
 
 A collection of sorting network algorithms implemented in C#.
 
-* [latest](test/SortingNetworks.Benchmarks/Results/README.md) benchmarks
-
 ## API
+
+* [documentation](docs/README.md)
+* [benchmarks](test/SortingNetworks.Benchmarks/Results/README.md)
 
 | API | MinLength | MaxLength | Safe |
 | --- | ----------| --------- | ------ |
