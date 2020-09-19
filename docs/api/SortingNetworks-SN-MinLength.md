@@ -1,4 +1,3 @@
-#### [SortingNetworks](./index.md 'index')
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SN](./SortingNetworks-SN.md 'SortingNetworks.SN')
 ## SN.MinLength Field
 The minimum supported length for sorting.  

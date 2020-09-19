@@ -1,4 +1,3 @@
-#### [SortingNetworks](./index.md 'index')
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks')
 ## SNBestKnown Class
 Sorting networks implementation using the best known arrangement of comparators.  

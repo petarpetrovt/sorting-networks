@@ -1,4 +1,3 @@
-#### [SortingNetworks](./index.md 'index')
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks')
 ## SNBoseNelson Class
 Sorting networks implementation using Bose-Nelson algorithm.  

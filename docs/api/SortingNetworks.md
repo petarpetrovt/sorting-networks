@@ -1,4 +1,3 @@
-#### [SortingNetworks](./index.md 'index')
 ## SortingNetworks Namespace
 ### Classes
 - [SN](./SortingNetworks-SN.md 'SortingNetworks.SN')

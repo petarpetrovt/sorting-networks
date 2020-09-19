@@ -1,4 +1,3 @@
-#### [SortingNetworks](./index.md 'index')
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks')
 ## SN Class
 Contains generic sorting methods for collections with length from [MinLength](./SortingNetworks-SN-MinLength.md 'SortingNetworks.SN.MinLength') to [MaxLength](./SortingNetworks-SN-MaxLength.md 'SortingNetworks.SN.MaxLength').  
