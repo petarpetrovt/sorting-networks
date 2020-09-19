@@ -50,17 +50,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="SNBoseNelsonGenerated.tt">
-			<LastGenOutput>SNBoseNelsonGenerated.cs</LastGenOutput>
+		<None Update="SNBoseNelsonGenerated.Comparable.tt">
+			<LastGenOutput>SNBoseNelsonGenerated.Comparable.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="SNBoseNelsonGenerated.cs">
+		<Compile Update="SNBoseNelsonGenerated.Comparable.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
-			<DependentUpon>SNBoseNelsonGenerated.tt</DependentUpon>
+			<DependentUpon>SNBoseNelsonGenerated.Comparable.tt</DependentUpon>
 		</Compile>
 	</ItemGroup>
 	

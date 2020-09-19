@@ -33,6 +33,21 @@ namespace SortingNetworks
 			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfGreater(ref p{x.Item1 - 1}, ref p{x.Item2 - 1});")) #>
 		}
 
+		/// <summary>
+		/// Sorts a collection of <#= i #> elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		public static void Sort<#= i #>Descending<T>(ref T p0)
+			where T : IComparable<T>
+		{
+<#for (int y = 1; y < i; y++) {#>
+			ref var p<#= y #> = ref Unsafe.Add(ref p<#= y - 1 #>, <#= y #>);
+<#}#>
+
+			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfLesser(ref p{x.Item1 - 1}, ref p{x.Item2 - 1});")) #>
+		}
 <#}#>
 	}
 }
