@@ -9,5 +9,6 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 Derived  
 &#8627; [SNBoseNelson](./SortingNetworks-SNBoseNelson.md 'SortingNetworks.SNBoseNelson')  
+&#8627; [SNBoseNelsonGenerated](./SortingNetworks-SNBoseNelsonGenerated.md 'SortingNetworks.SNBoseNelsonGenerated')  
 ### Constructors
 - [SNBase()](./SortingNetworks-SNBase-SNBase().md 'SortingNetworks.SNBase.SNBase()')

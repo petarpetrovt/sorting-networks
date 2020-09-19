@@ -45,4 +45,23 @@
 		</PackageReference>
 	</ItemGroup>
 
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="SNBoseNelsonGenerated.tt">
+			<LastGenOutput>SNBoseNelsonGenerated.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="SNBoseNelsonGenerated.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SNBoseNelsonGenerated.tt</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	
 </Project>
