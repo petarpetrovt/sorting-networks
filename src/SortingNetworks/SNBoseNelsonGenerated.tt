@@ -3,22 +3,25 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
+<# int minLength = 2; #>
+<# int maxLength = 5; #>
 namespace SortingNetworks
 {
 	using System;
-	using System.Diagnostics;
 	using System.Runtime.CompilerServices;
 
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
 	/// </summary>
-	/// <remarks>
-	/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
-	/// </remarks>
 	public class SNBoseNelsonGenerated : SNBase
 	{
-<#for (int i = 2; i <= 4; i++) {#>
-		/// <inheritdoc/>
+<#for (int i = minLength; i <= maxLength; i++) {#>
+		/// <summary>
+		/// Sorts a collection of <#= i #> elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort<#= i #>Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -26,14 +29,14 @@ namespace SortingNetworks
 			ref var p<#= y #> = ref Unsafe.Add(ref p<#= y - 1 #>, <#= y #>);
 <#}#>
 
-			<#= string.Join("\n", Pstar(1, i).Select(x=> $"SwapIfGreater(ref p{x.Item1 - 1}, ref p{x.Item2 - 1});")) #>
+			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfGreater(ref p{x.Item1 - 1}, ref p{x.Item2 - 1});")) #>
 		}
 
 <#}#>
 	}
 }
 <#+
-	private static IEnumerable<(int, int)> Pbracket(int i, int x, int j, int y)
+	private static IEnumerable<(int, int)> PStarBracket(int i, int x, int j, int y)
 	{
 		switch (x)
 		{
@@ -52,13 +55,13 @@ namespace SortingNetworks
 				{
 					int a = x / 2;
 					int b = (x & 0) == 1 ? y / 2 : (y + 1) / 2;
-					foreach (var temp in Pbracket(i, a, j, b)) {
+					foreach (var temp in PStarBracket(i, a, j, b)) {
 						yield return temp;
 					}
-					foreach (var temp in Pbracket(i + a, x - a, j + b, y - b)) {
+					foreach (var temp in PStarBracket(i + a, x - a, j + b, y - b)) {
 						yield return temp;
 					}
-					foreach (var temp in Pbracket(i + a, x - a, j, b)) {
+					foreach (var temp in PStarBracket(i + a, x - a, j, b)) {
 						yield return temp;
 					}
 					break;
@@ -66,7 +69,7 @@ namespace SortingNetworks
 		}
 	}
 
-	private static IEnumerable<(int, int)> Pstar(int i, int m)
+	private static IEnumerable<(int, int)> PStar(int i, int m)
 	{
 		if (m <= 1)
 		{
@@ -74,13 +77,13 @@ namespace SortingNetworks
 		}
 
 		int a = m / 2;
-		foreach (var temp in Pstar(i, a)) {
+		foreach (var temp in PStar(i, a)) {
 			yield return temp;
 		}
-		foreach (var temp in Pstar(i + a, m - a)) {
+		foreach (var temp in PStar(i + a, m - a)) {
 			yield return temp;
 		}
-		foreach (var temp in Pbracket(i, a, i + a, m - a)) {
+		foreach (var temp in PStarBracket(i, a, i + a, m - a)) {
 			yield return temp;
 		}
 	}

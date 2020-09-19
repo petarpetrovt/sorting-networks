@@ -1,18 +1,19 @@
 ﻿namespace SortingNetworks
 {
 	using System;
-	using System.Diagnostics;
 	using System.Runtime.CompilerServices;
 
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
 	/// </summary>
-	/// <remarks>
-	/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
-	/// </remarks>
 	public class SNBoseNelsonGenerated : SNBase
 	{
-		/// <inheritdoc/>
+		/// <summary>
+		/// Sorts a collection of 2 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort2Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -21,7 +22,12 @@
 			SwapIfGreater(ref p0, ref p1);
 		}
 
-		/// <inheritdoc/>
+		/// <summary>
+		/// Sorts a collection of 3 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort3Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -33,7 +39,12 @@
 			SwapIfGreater(ref p0, ref p1);
 		}
 
-		/// <inheritdoc/>
+		/// <summary>
+		/// Sorts a collection of 4 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
 		public static void Sort4Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
@@ -44,6 +55,31 @@
 			SwapIfGreater(ref p0, ref p1);
 			SwapIfGreater(ref p2, ref p3);
 			SwapIfGreater(ref p0, ref p2);
+			SwapIfGreater(ref p1, ref p3);
+			SwapIfGreater(ref p1, ref p2);
+		}
+
+		/// <summary>
+		/// Sorts a collection of 5 elements in ascending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		public static void Sort5Ascending<T>(ref T p0)
+			where T : IComparable<T>
+		{
+			ref var p1 = ref Unsafe.Add(ref p0, 1);
+			ref var p2 = ref Unsafe.Add(ref p1, 2);
+			ref var p3 = ref Unsafe.Add(ref p2, 3);
+			ref var p4 = ref Unsafe.Add(ref p3, 4);
+
+			SwapIfGreater(ref p0, ref p1);
+			SwapIfGreater(ref p3, ref p4);
+			SwapIfGreater(ref p2, ref p4);
+			SwapIfGreater(ref p2, ref p3);
+			SwapIfGreater(ref p0, ref p3);
+			SwapIfGreater(ref p0, ref p2);
+			SwapIfGreater(ref p1, ref p4);
 			SwapIfGreater(ref p1, ref p3);
 			SwapIfGreater(ref p1, ref p2);
 		}
