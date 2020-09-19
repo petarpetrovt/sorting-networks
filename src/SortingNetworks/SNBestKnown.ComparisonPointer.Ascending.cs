@@ -552,6 +552,22 @@
 				case 14: Sort14Ascending(ref p0, comparisonPointer); break;
 				case 15: Sort15Ascending(ref p0, comparisonPointer); break;
 				case 16: Sort16Ascending(ref p0, comparisonPointer); break;
+				case 17: Sort17Ascending(ref p0, comparisonPointer); break;
+				case 18: Sort18Ascending(ref p0, comparisonPointer); break;
+				case 19: Sort19Ascending(ref p0, comparisonPointer); break;
+				case 20: Sort20Ascending(ref p0, comparisonPointer); break;
+				case 21: Sort21Ascending(ref p0, comparisonPointer); break;
+				case 22: Sort22Ascending(ref p0, comparisonPointer); break;
+				case 23: Sort23Ascending(ref p0, comparisonPointer); break;
+				case 24: Sort24Ascending(ref p0, comparisonPointer); break;
+				case 25: Sort25Ascending(ref p0, comparisonPointer); break;
+				case 26: Sort26Ascending(ref p0, comparisonPointer); break;
+				case 27: Sort27Ascending(ref p0, comparisonPointer); break;
+				case 28: Sort28Ascending(ref p0, comparisonPointer); break;
+				case 29: Sort29Ascending(ref p0, comparisonPointer); break;
+				case 30: Sort30Ascending(ref p0, comparisonPointer); break;
+				case 31: Sort31Ascending(ref p0, comparisonPointer); break;
+				case 32: Sort32Ascending(ref p0, comparisonPointer); break;
 				default: throw new ArgumentOutOfRangeException(nameof(length), $"Sorting network length `{length}` must be between `{MinLength}` and `{MaxLength}`.");
 			}
 		}

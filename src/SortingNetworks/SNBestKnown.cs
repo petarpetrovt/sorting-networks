@@ -19,7 +19,7 @@
 		/// <summary>
 		/// The maximum supported length for sorting.
 		/// </summary>
-		public new const int MaxLength = 16;
+		public new const int MaxLength = 32;
 
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
