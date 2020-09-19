@@ -54,6 +54,10 @@
 			<LastGenOutput>SNBoseNelsonGenerated.Comparison.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
+		<None Update="SNBoseNelsonGenerated.ComparisonPointer.tt">
+			<LastGenOutput>SNBoseNelsonGenerated.ComparisonPointer.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
 		<None Update="SNBoseNelsonGenerated.Comparable.tt">
 			<LastGenOutput>SNBoseNelsonGenerated.Comparable.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
@@ -63,6 +67,11 @@
 	<ItemGroup>
 		<Compile Update="SNBoseNelsonGenerated.Comparison.cs">
 			<DependentUpon>SNBoseNelsonGenerated.Comparison.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelsonGenerated.ComparisonPointer.cs">
+			<DependentUpon>SNBoseNelsonGenerated.ComparisonPointer.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>

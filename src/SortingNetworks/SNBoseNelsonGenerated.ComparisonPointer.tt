@@ -1,0 +1,48 @@
+﻿<#@ template language="C#" #>
+<#@ include file="TemplateUtilities.tt" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<# int minLength = 2; #>
+<# int maxLength = 5; #>
+namespace SortingNetworks
+{
+	using System.Runtime.CompilerServices;
+
+	partial class SNBoseNelsonGenerated
+	{
+<#for (int i = minLength; i <= maxLength; i++) {#>
+		/// <summary>
+		/// Sorts a collection of <#= i #> elements in ascending order using the specified function pointer.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
+		public unsafe static void Sort<#= i #>Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		{
+<#for (int y = 1; y < i; y++) {#>
+			ref var p<#= y #> = ref Unsafe.Add(ref p<#= y - 1 #>, <#= y #>);
+<#}#>
+
+			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfGreater(ref p{x.Item1 - 1}, ref p{x.Item2 - 1}, comparisonPointer);")) #>
+		}
+
+		/// <summary>
+		/// Sorts a collection of <#= i #> elements in descending order using the specified function pointer.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
+		public unsafe static void Sort<#= i #>Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		{
+<#for (int y = 1; y < i; y++) {#>
+			ref var p<#= y #> = ref Unsafe.Add(ref p<#= y - 1 #>, <#= y #>);
+<#}#>
+
+			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfLesser(ref p{x.Item1 - 1}, ref p{x.Item2 - 1}, comparisonPointer);")) #>
+		}
+
+<#}#>
+	}
+}
