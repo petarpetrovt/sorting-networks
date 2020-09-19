@@ -11,7 +11,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort9Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort9Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -55,7 +55,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort10Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort10Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -104,7 +104,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort11Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort11Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -160,7 +160,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort12Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort12Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -221,7 +221,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort13Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort13Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -289,7 +289,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort14Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort14Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -364,7 +364,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort15Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort15Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -445,7 +445,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort16Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort16Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);

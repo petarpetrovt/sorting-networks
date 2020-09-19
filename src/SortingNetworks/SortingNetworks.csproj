@@ -50,33 +50,33 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="SNBoseNelsonGenerated.Comparison.tt">
-			<LastGenOutput>SNBoseNelsonGenerated.Comparison.cs</LastGenOutput>
+		<None Update="SNBoseNelson.Comparison.tt">
+			<LastGenOutput>SNBoseNelson.Comparison.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
-		<None Update="SNBoseNelsonGenerated.ComparisonPointer.tt">
-			<LastGenOutput>SNBoseNelsonGenerated.ComparisonPointer.cs</LastGenOutput>
+		<None Update="SNBoseNelson.ComparisonPointer.tt">
+			<LastGenOutput>SNBoseNelson.ComparisonPointer.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
-		<None Update="SNBoseNelsonGenerated.Comparable.tt">
-			<LastGenOutput>SNBoseNelsonGenerated.Comparable.cs</LastGenOutput>
+		<None Update="SNBoseNelson.Comparable.tt">
+			<LastGenOutput>SNBoseNelson.Comparable.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="SNBoseNelsonGenerated.Comparison.cs">
-			<DependentUpon>SNBoseNelsonGenerated.Comparison.tt</DependentUpon>
+		<Compile Update="SNBoseNelson.Comparison.cs">
+			<DependentUpon>SNBoseNelson.Comparison.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>
-		<Compile Update="SNBoseNelsonGenerated.ComparisonPointer.cs">
-			<DependentUpon>SNBoseNelsonGenerated.ComparisonPointer.tt</DependentUpon>
+		<Compile Update="SNBoseNelson.ComparisonPointer.cs">
+			<DependentUpon>SNBoseNelson.ComparisonPointer.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>
-		<Compile Update="SNBoseNelsonGenerated.Comparable.cs">
-			<DependentUpon>SNBoseNelsonGenerated.Comparable.tt</DependentUpon>
+		<Compile Update="SNBoseNelson.Comparable.cs">
+			<DependentUpon>SNBoseNelson.Comparable.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>

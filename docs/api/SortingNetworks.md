@@ -5,4 +5,3 @@
 - [SNBase](./SortingNetworks-SNBase.md 'SortingNetworks.SNBase')
 - [SNBestKnown](./SortingNetworks-SNBestKnown.md 'SortingNetworks.SNBestKnown')
 - [SNBoseNelson](./SortingNetworks-SNBoseNelson.md 'SortingNetworks.SNBoseNelson')
-- [SNBoseNelsonGenerated](./SortingNetworks-SNBoseNelsonGenerated.md 'SortingNetworks.SNBoseNelsonGenerated')

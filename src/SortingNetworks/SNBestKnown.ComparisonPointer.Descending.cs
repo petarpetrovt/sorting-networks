@@ -11,7 +11,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
-		public unsafe static void Sort9Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void Sort9Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -55,7 +55,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
-		public unsafe static void Sort10Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void Sort10Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -104,7 +104,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
-		public unsafe static void Sort11Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void Sort11Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -160,7 +160,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
-		public unsafe static void Sort12Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void Sort12Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -221,7 +221,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
-		public unsafe static void Sort13Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void Sort13Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -289,7 +289,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
-		public unsafe static void Sort14Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void Sort14Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -364,7 +364,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
-		public unsafe static void Sort15Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void Sort15Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -445,7 +445,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
-		public unsafe static void Sort16Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void Sort16Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);

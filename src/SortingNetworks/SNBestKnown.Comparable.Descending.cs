@@ -11,7 +11,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort9Descending<T>(ref T p0)
+		public static new void Sort9Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -56,7 +56,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort10Descending<T>(ref T p0)
+		public static new void Sort10Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -106,7 +106,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort11Descending<T>(ref T p0)
+		public static new void Sort11Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -163,7 +163,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort12Descending<T>(ref T p0)
+		public static new void Sort12Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -225,7 +225,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort13Descending<T>(ref T p0)
+		public static new void Sort13Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -294,7 +294,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort14Descending<T>(ref T p0)
+		public static new void Sort14Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -370,7 +370,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort15Descending<T>(ref T p0)
+		public static new void Sort15Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -452,7 +452,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort16Descending<T>(ref T p0)
+		public static new void Sort16Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -544,6 +544,8 @@
 		public static new void SortDescending<T>(ref T p0, in int length)
 			where T : IComparable<T>
 		{
+			// TODO: move to SNBestKnown.tt
+
 			switch (length)
 			{
 				case 2: Sort2Descending(ref p0); break;

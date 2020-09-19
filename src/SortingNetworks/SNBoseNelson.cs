@@ -5,9 +5,6 @@
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
 	/// </summary>
-	/// <remarks>
-	/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
-	/// </remarks>
 	public abstract partial class SNBoseNelson : SNBase
 	{
 		/// <summary>
@@ -18,7 +15,7 @@
 		/// <summary>
 		/// The maximum supported length for sorting.
 		/// </summary>
-		public const int MaxLength = 8;
+		public const int MaxLength = 32;
 
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
