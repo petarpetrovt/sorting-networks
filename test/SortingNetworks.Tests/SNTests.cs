@@ -1,8 +1,8 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace SortingNetworks.Tests
+﻿namespace SortingNetworks.Tests
 {
+	using System;
+	using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 	[TestClass]
 	public class SNTests : SNTestsBase
 	{
