@@ -1,3 +1,4 @@
+#### [SortingNetworks](./index.md 'index')
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBestKnown](./SortingNetworks-SNBestKnown.md 'SortingNetworks.SNBestKnown')
 ## SNBestKnown.SortAscending&lt;T&gt;(T, int, System.Comparison&lt;T&gt;) Method
 Sorts a collection of specified number of elements in ascending order using the specified [System.Comparison&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Comparison-1 'System.Comparison`1').  

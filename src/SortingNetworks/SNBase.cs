@@ -2,7 +2,6 @@
 {
 	using System;
 	using System.Diagnostics;
-	using System.Diagnostics.CodeAnalysis;
 	using System.Runtime.CompilerServices;
 
 	/// <summary>
@@ -13,7 +12,7 @@
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
 		/// </summary>
-		[ExcludeFromCodeCoverage]
+		[DebuggerNonUserCode]
 		internal SNBase() { }
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]

@@ -1,3 +1,4 @@
+#### [SortingNetworks](./index.md 'index')
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBoseNelson](./SortingNetworks-SNBoseNelson.md 'SortingNetworks.SNBoseNelson')
 ## SNBoseNelson.Sort4Descending&lt;T&gt;(T) Method
 Sorts a collection of 4 elements in descending order using the [System.IComparable&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1') generic  

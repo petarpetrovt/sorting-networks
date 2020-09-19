@@ -1,3 +1,4 @@
+#### [SortingNetworks](./index.md 'index')
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks')
 ## SNBase Class
 Represents a base for different sorting network implementations.  

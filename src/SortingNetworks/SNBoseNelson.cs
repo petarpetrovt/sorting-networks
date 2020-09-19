@@ -1,6 +1,6 @@
 ﻿namespace SortingNetworks
 {
-	using System.Diagnostics.CodeAnalysis;
+	using System.Diagnostics;
 
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
@@ -23,7 +23,7 @@
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
 		/// </summary>
-		[ExcludeFromCodeCoverage]
+		[DebuggerNonUserCode]
 		internal SNBoseNelson() { }
 	}
 }
