@@ -533,10 +533,17 @@
 		/// <param name="length">the length of the collection</param>
 		/// <param name="comparisonPointer">The function pointer to use when comparing elements.</param>
 		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public unsafe static void SortDescending<T>(ref T p0, in int length, delegate* managed<T, T, int> comparisonPointer)
+		public unsafe static new void SortDescending<T>(ref T p0, in int length, delegate* managed<T, T, int> comparisonPointer)
 		{
 			switch (length)
 			{
+				case 2: Sort2Descending(ref p0, comparisonPointer); break;
+				case 3: Sort3Descending(ref p0, comparisonPointer); break;
+				case 4: Sort4Descending(ref p0, comparisonPointer); break;
+				case 5: Sort5Descending(ref p0, comparisonPointer); break;
+				case 6: Sort6Descending(ref p0, comparisonPointer); break;
+				case 7: Sort7Descending(ref p0, comparisonPointer); break;
+				case 8: Sort8Descending(ref p0, comparisonPointer); break;
 				case 9: Sort9Descending(ref p0, comparisonPointer); break;
 				case 10: Sort10Descending(ref p0, comparisonPointer); break;
 				case 11: Sort11Descending(ref p0, comparisonPointer); break;

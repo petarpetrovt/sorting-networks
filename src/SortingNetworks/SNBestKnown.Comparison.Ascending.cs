@@ -534,7 +534,7 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		/// <exception cref="ArgumentNullException">comparison is null</exception>
 		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static void SortAscending<T>(ref T p0, in int length, Comparison<T> comparison)
+		public static new void SortAscending<T>(ref T p0, in int length, Comparison<T> comparison)
 		{
 			if (comparison is null)
 			{
@@ -543,6 +543,13 @@
 
 			switch (length)
 			{
+				case 2: Sort2Ascending(ref p0, comparison); break;
+				case 3: Sort3Ascending(ref p0, comparison); break;
+				case 4: Sort4Ascending(ref p0, comparison); break;
+				case 5: Sort5Ascending(ref p0, comparison); break;
+				case 6: Sort6Ascending(ref p0, comparison); break;
+				case 7: Sort7Ascending(ref p0, comparison); break;
+				case 8: Sort8Ascending(ref p0, comparison); break;
 				case 9: Sort9Ascending(ref p0, comparison); break;
 				case 10: Sort10Ascending(ref p0, comparison); break;
 				case 11: Sort11Ascending(ref p0, comparison); break;

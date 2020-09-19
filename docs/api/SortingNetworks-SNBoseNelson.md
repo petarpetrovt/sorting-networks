@@ -5,6 +5,9 @@ Sorting networks implementation using Bose-Nelson algorithm.
 public abstract class SNBoseNelson : SNBase
 ```
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [SNBase](./SortingNetworks-SNBase.md 'SortingNetworks.SNBase') &#129106; SNBoseNelson  
+
+Derived  
+&#8627; [SNBestKnown](./SortingNetworks-SNBestKnown.md 'SortingNetworks.SNBestKnown')  
 ### Remarks
 SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html  
 ### Constructors

@@ -541,11 +541,18 @@
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
 		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static void SortAscending<T>(ref T p0, in int length)
+		public static new void SortAscending<T>(ref T p0, in int length)
 			where T : IComparable<T>
 		{
 			switch (length)
 			{
+				case 2: Sort2Ascending(ref p0); break;
+				case 3: Sort3Ascending(ref p0); break;
+				case 4: Sort4Ascending(ref p0); break;
+				case 5: Sort5Ascending(ref p0); break;
+				case 6: Sort6Ascending(ref p0); break;
+				case 7: Sort7Ascending(ref p0); break;
+				case 8: Sort8Ascending(ref p0); break;
 				case 9: Sort9Ascending(ref p0); break;
 				case 10: Sort10Ascending(ref p0); break;
 				case 11: Sort11Ascending(ref p0); break;

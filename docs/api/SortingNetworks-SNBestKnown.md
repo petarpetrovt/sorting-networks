@@ -2,10 +2,11 @@
 ## SNBestKnown Class
 Sorting networks implementation using the best known arrangement of comparators.  
 ```csharp
-public abstract class SNBestKnown : SNBase
+public abstract class SNBestKnown : SNBoseNelson
 ```
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [SNBase](./SortingNetworks-SNBase.md 'SortingNetworks.SNBase') &#129106; SNBestKnown  
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [SNBase](./SortingNetworks-SNBase.md 'SortingNetworks.SNBase') &#129106; [SNBoseNelson](./SortingNetworks-SNBoseNelson.md 'SortingNetworks.SNBoseNelson') &#129106; SNBestKnown  
 ### Remarks
+Custom arrangement or comparators are used only for length between [9, 16] otherwise Bose-Nelson algorithm is used.  
 SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html  
 ### Constructors
 - [SNBestKnown()](./SortingNetworks-SNBestKnown-SNBestKnown().md 'SortingNetworks.SNBestKnown.SNBestKnown()')
