@@ -16,16 +16,9 @@
 		<None Include="$(SolutionDir)icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
-	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
+	<PropertyGroup Condition="'$(TargetFramework)' != 'netstandard1.3'">
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
-
-	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
-		<PackageReference Include="DefaultDocumentation" Version="0.6.12">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
 		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.7.1" />
@@ -37,10 +30,62 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Nullable" Version="1.3.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+	</ItemGroup>
+
+	<!-- DefaultDocumentation -->
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(Configuration)' == 'Release'">
+		<PackageReference Include="DefaultDocumentation" Version="0.6.12">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="SNBoseNelson.Comparison.tt">
+			<LastGenOutput>SNBoseNelson.Comparison.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBoseNelson.ComparisonPointer.tt">
+			<LastGenOutput>SNBoseNelson.ComparisonPointer.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBoseNelson.Comparable.tt">
+			<LastGenOutput>SNBoseNelson.Comparable.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="SNBoseNelson.Comparison.cs">
+			<DependentUpon>SNBoseNelson.Comparison.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelson.ComparisonPointer.cs">
+			<DependentUpon>SNBoseNelson.ComparisonPointer.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelson.Comparable.cs">
+			<DependentUpon>SNBoseNelson.Comparable.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
 	</ItemGroup>
 
 </Project>

@@ -11,7 +11,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort9Ascending<T>(ref T p0)
+		public static new void Sort9Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -56,7 +56,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort10Ascending<T>(ref T p0)
+		public static new void Sort10Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -106,7 +106,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort11Ascending<T>(ref T p0)
+		public static new void Sort11Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -163,7 +163,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort12Ascending<T>(ref T p0)
+		public static new void Sort12Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -225,7 +225,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort13Ascending<T>(ref T p0)
+		public static new void Sort13Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -294,7 +294,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort14Ascending<T>(ref T p0)
+		public static new void Sort14Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -370,7 +370,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort15Ascending<T>(ref T p0)
+		public static new void Sort15Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -452,7 +452,7 @@
 		/// </summary>
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort16Ascending<T>(ref T p0)
+		public static new void Sort16Ascending<T>(ref T p0)
 			where T : IComparable<T>
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
@@ -541,11 +541,18 @@
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
 		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static void SortAscending<T>(ref T p0, in int length)
+		public static new void SortAscending<T>(ref T p0, in int length)
 			where T : IComparable<T>
 		{
 			switch (length)
 			{
+				case 2: Sort2Ascending(ref p0); break;
+				case 3: Sort3Ascending(ref p0); break;
+				case 4: Sort4Ascending(ref p0); break;
+				case 5: Sort5Ascending(ref p0); break;
+				case 6: Sort6Ascending(ref p0); break;
+				case 7: Sort7Ascending(ref p0); break;
+				case 8: Sort8Ascending(ref p0); break;
 				case 9: Sort9Ascending(ref p0); break;
 				case 10: Sort10Ascending(ref p0); break;
 				case 11: Sort11Ascending(ref p0); break;
@@ -554,6 +561,22 @@
 				case 14: Sort14Ascending(ref p0); break;
 				case 15: Sort15Ascending(ref p0); break;
 				case 16: Sort16Ascending(ref p0); break;
+				case 17: Sort17Ascending(ref p0); break;
+				case 18: Sort18Ascending(ref p0); break;
+				case 19: Sort19Ascending(ref p0); break;
+				case 20: Sort20Ascending(ref p0); break;
+				case 21: Sort21Ascending(ref p0); break;
+				case 22: Sort22Ascending(ref p0); break;
+				case 23: Sort23Ascending(ref p0); break;
+				case 24: Sort24Ascending(ref p0); break;
+				case 25: Sort25Ascending(ref p0); break;
+				case 26: Sort26Ascending(ref p0); break;
+				case 27: Sort27Ascending(ref p0); break;
+				case 28: Sort28Ascending(ref p0); break;
+				case 29: Sort29Ascending(ref p0); break;
+				case 30: Sort30Ascending(ref p0); break;
+				case 31: Sort31Ascending(ref p0); break;
+				case 32: Sort32Ascending(ref p0); break;
 				default: throw new ArgumentOutOfRangeException(nameof(length), $"Sorting network length `{length}` must be between `{MinLength}` and `{MaxLength}`.");
 			}
 		}

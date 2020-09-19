@@ -1,6 +1,6 @@
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBestKnown](./SortingNetworks-SNBestKnown.md 'SortingNetworks.SNBestKnown')
 ## SNBestKnown() Constructor
-Disable the default constructor.  
+Disable inheritance outside of the assembly.  
 ```csharp
-private SNBestKnown();
+internal SNBestKnown();
 ```

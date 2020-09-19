@@ -1,12 +1,11 @@
 ﻿namespace SortingNetworks
 {
+	using System.Diagnostics;
+
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
 	/// </summary>
-	/// <remarks>
-	/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
-	/// </remarks>
-	public sealed partial class SNBoseNelson : SNBase
+	public abstract partial class SNBoseNelson : SNBase
 	{
 		/// <summary>
 		/// The minimum supported length for sorting.
@@ -16,11 +15,12 @@
 		/// <summary>
 		/// The maximum supported length for sorting.
 		/// </summary>
-		public const int MaxLength = 8;
+		public const int MaxLength = 32;
 
 		/// <summary>
-		/// Disable the default constructor.
+		/// Disable inheritance outside of the assembly.
 		/// </summary>
-		private SNBoseNelson() { }
+		[DebuggerNonUserCode]
+		internal SNBoseNelson() { }
 	}
 }

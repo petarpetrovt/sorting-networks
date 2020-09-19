@@ -15,7 +15,7 @@
 		/// <summary>
 		/// The maximum supported length for sorting.
 		/// </summary>
-		public const int MaxLength = 16;
+		public const int MaxLength = 32;
 
 		/// <summary>
 		/// Sorts the elements in an entire <see cref="Array"/> in ascending order using the <see cref="IComparable{T}"/> generic
@@ -50,6 +50,22 @@
 				case 14: SNBestKnown.Sort14Ascending(ref array[0]); break;
 				case 15: SNBestKnown.Sort15Ascending(ref array[0]); break;
 				case 16: SNBestKnown.Sort16Ascending(ref array[0]); break;
+				case 17: SNBoseNelson.Sort17Ascending(ref array[0]); break;
+				case 18: SNBoseNelson.Sort18Ascending(ref array[0]); break;
+				case 19: SNBoseNelson.Sort19Ascending(ref array[0]); break;
+				case 20: SNBoseNelson.Sort20Ascending(ref array[0]); break;
+				case 21: SNBoseNelson.Sort21Ascending(ref array[0]); break;
+				case 22: SNBoseNelson.Sort22Ascending(ref array[0]); break;
+				case 23: SNBoseNelson.Sort23Ascending(ref array[0]); break;
+				case 24: SNBoseNelson.Sort24Ascending(ref array[0]); break;
+				case 25: SNBoseNelson.Sort25Ascending(ref array[0]); break;
+				case 26: SNBoseNelson.Sort26Ascending(ref array[0]); break;
+				case 27: SNBoseNelson.Sort27Ascending(ref array[0]); break;
+				case 28: SNBoseNelson.Sort28Ascending(ref array[0]); break;
+				case 29: SNBoseNelson.Sort29Ascending(ref array[0]); break;
+				case 30: SNBoseNelson.Sort30Ascending(ref array[0]); break;
+				case 31: SNBoseNelson.Sort31Ascending(ref array[0]); break;
+				case 32: SNBoseNelson.Sort32Ascending(ref array[0]); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -90,6 +106,22 @@
 				case 14: SNBestKnown.Sort14Descending(ref array[0]); break;
 				case 15: SNBestKnown.Sort15Descending(ref array[0]); break;
 				case 16: SNBestKnown.Sort16Descending(ref array[0]); break;
+				case 17: SNBoseNelson.Sort17Descending(ref array[0]); break;
+				case 18: SNBoseNelson.Sort18Descending(ref array[0]); break;
+				case 19: SNBoseNelson.Sort19Descending(ref array[0]); break;
+				case 20: SNBoseNelson.Sort20Descending(ref array[0]); break;
+				case 21: SNBoseNelson.Sort21Descending(ref array[0]); break;
+				case 22: SNBoseNelson.Sort22Descending(ref array[0]); break;
+				case 23: SNBoseNelson.Sort23Descending(ref array[0]); break;
+				case 24: SNBoseNelson.Sort24Descending(ref array[0]); break;
+				case 25: SNBoseNelson.Sort25Descending(ref array[0]); break;
+				case 26: SNBoseNelson.Sort26Descending(ref array[0]); break;
+				case 27: SNBoseNelson.Sort27Descending(ref array[0]); break;
+				case 28: SNBoseNelson.Sort28Descending(ref array[0]); break;
+				case 29: SNBoseNelson.Sort29Descending(ref array[0]); break;
+				case 30: SNBoseNelson.Sort30Descending(ref array[0]); break;
+				case 31: SNBoseNelson.Sort31Descending(ref array[0]); break;
+				case 32: SNBoseNelson.Sort32Descending(ref array[0]); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -124,6 +156,22 @@
 				case 14: SNBestKnown.Sort14Ascending(ref buffer[0]); break;
 				case 15: SNBestKnown.Sort15Ascending(ref buffer[0]); break;
 				case 16: SNBestKnown.Sort16Ascending(ref buffer[0]); break;
+				case 17: SNBoseNelson.Sort17Ascending(ref buffer[0]); break;
+				case 18: SNBoseNelson.Sort18Ascending(ref buffer[0]); break;
+				case 19: SNBoseNelson.Sort19Ascending(ref buffer[0]); break;
+				case 20: SNBoseNelson.Sort20Ascending(ref buffer[0]); break;
+				case 21: SNBoseNelson.Sort21Ascending(ref buffer[0]); break;
+				case 22: SNBoseNelson.Sort22Ascending(ref buffer[0]); break;
+				case 23: SNBoseNelson.Sort23Ascending(ref buffer[0]); break;
+				case 24: SNBoseNelson.Sort24Ascending(ref buffer[0]); break;
+				case 25: SNBoseNelson.Sort25Ascending(ref buffer[0]); break;
+				case 26: SNBoseNelson.Sort26Ascending(ref buffer[0]); break;
+				case 27: SNBoseNelson.Sort27Ascending(ref buffer[0]); break;
+				case 28: SNBoseNelson.Sort28Ascending(ref buffer[0]); break;
+				case 29: SNBoseNelson.Sort29Ascending(ref buffer[0]); break;
+				case 30: SNBoseNelson.Sort30Ascending(ref buffer[0]); break;
+				case 31: SNBoseNelson.Sort31Ascending(ref buffer[0]); break;
+				case 32: SNBoseNelson.Sort32Ascending(ref buffer[0]); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -158,6 +206,22 @@
 				case 14: SNBestKnown.Sort14Descending(ref buffer[0]); break;
 				case 15: SNBestKnown.Sort15Descending(ref buffer[0]); break;
 				case 16: SNBestKnown.Sort16Descending(ref buffer[0]); break;
+				case 17: SNBoseNelson.Sort17Descending(ref buffer[0]); break;
+				case 18: SNBoseNelson.Sort18Descending(ref buffer[0]); break;
+				case 19: SNBoseNelson.Sort19Descending(ref buffer[0]); break;
+				case 20: SNBoseNelson.Sort20Descending(ref buffer[0]); break;
+				case 21: SNBoseNelson.Sort21Descending(ref buffer[0]); break;
+				case 22: SNBoseNelson.Sort22Descending(ref buffer[0]); break;
+				case 23: SNBoseNelson.Sort23Descending(ref buffer[0]); break;
+				case 24: SNBoseNelson.Sort24Descending(ref buffer[0]); break;
+				case 25: SNBoseNelson.Sort25Descending(ref buffer[0]); break;
+				case 26: SNBoseNelson.Sort26Descending(ref buffer[0]); break;
+				case 27: SNBoseNelson.Sort27Descending(ref buffer[0]); break;
+				case 28: SNBoseNelson.Sort28Descending(ref buffer[0]); break;
+				case 29: SNBoseNelson.Sort29Descending(ref buffer[0]); break;
+				case 30: SNBoseNelson.Sort30Descending(ref buffer[0]); break;
+				case 31: SNBoseNelson.Sort31Descending(ref buffer[0]); break;
+				case 32: SNBoseNelson.Sort32Descending(ref buffer[0]); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -203,6 +267,22 @@
 				case 14: SNBestKnown.Sort14Ascending(ref array[0], comparison); break;
 				case 15: SNBestKnown.Sort15Ascending(ref array[0], comparison); break;
 				case 16: SNBestKnown.Sort16Ascending(ref array[0], comparison); break;
+				case 17: SNBoseNelson.Sort17Ascending(ref array[0], comparison); break;
+				case 18: SNBoseNelson.Sort18Ascending(ref array[0], comparison); break;
+				case 19: SNBoseNelson.Sort19Ascending(ref array[0], comparison); break;
+				case 20: SNBoseNelson.Sort20Ascending(ref array[0], comparison); break;
+				case 21: SNBoseNelson.Sort21Ascending(ref array[0], comparison); break;
+				case 22: SNBoseNelson.Sort22Ascending(ref array[0], comparison); break;
+				case 23: SNBoseNelson.Sort23Ascending(ref array[0], comparison); break;
+				case 24: SNBoseNelson.Sort24Ascending(ref array[0], comparison); break;
+				case 25: SNBoseNelson.Sort25Ascending(ref array[0], comparison); break;
+				case 26: SNBoseNelson.Sort26Ascending(ref array[0], comparison); break;
+				case 27: SNBoseNelson.Sort27Ascending(ref array[0], comparison); break;
+				case 28: SNBoseNelson.Sort28Ascending(ref array[0], comparison); break;
+				case 29: SNBoseNelson.Sort29Ascending(ref array[0], comparison); break;
+				case 30: SNBoseNelson.Sort30Ascending(ref array[0], comparison); break;
+				case 31: SNBoseNelson.Sort31Ascending(ref array[0], comparison); break;
+				case 32: SNBoseNelson.Sort32Ascending(ref array[0], comparison); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -248,6 +328,22 @@
 				case 14: SNBestKnown.Sort14Descending(ref array[0], comparison); break;
 				case 15: SNBestKnown.Sort15Descending(ref array[0], comparison); break;
 				case 16: SNBestKnown.Sort16Descending(ref array[0], comparison); break;
+				case 17: SNBoseNelson.Sort17Descending(ref array[0], comparison); break;
+				case 18: SNBoseNelson.Sort18Descending(ref array[0], comparison); break;
+				case 19: SNBoseNelson.Sort19Descending(ref array[0], comparison); break;
+				case 20: SNBoseNelson.Sort20Descending(ref array[0], comparison); break;
+				case 21: SNBoseNelson.Sort21Descending(ref array[0], comparison); break;
+				case 22: SNBoseNelson.Sort22Descending(ref array[0], comparison); break;
+				case 23: SNBoseNelson.Sort23Descending(ref array[0], comparison); break;
+				case 24: SNBoseNelson.Sort24Descending(ref array[0], comparison); break;
+				case 25: SNBoseNelson.Sort25Descending(ref array[0], comparison); break;
+				case 26: SNBoseNelson.Sort26Descending(ref array[0], comparison); break;
+				case 27: SNBoseNelson.Sort27Descending(ref array[0], comparison); break;
+				case 28: SNBoseNelson.Sort28Descending(ref array[0], comparison); break;
+				case 29: SNBoseNelson.Sort29Descending(ref array[0], comparison); break;
+				case 30: SNBoseNelson.Sort30Descending(ref array[0], comparison); break;
+				case 31: SNBoseNelson.Sort31Descending(ref array[0], comparison); break;
+				case 32: SNBoseNelson.Sort32Descending(ref array[0], comparison); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -287,6 +383,22 @@
 				case 14: SNBestKnown.Sort14Ascending(ref buffer[0], comparison); break;
 				case 15: SNBestKnown.Sort15Ascending(ref buffer[0], comparison); break;
 				case 16: SNBestKnown.Sort16Ascending(ref buffer[0], comparison); break;
+				case 17: SNBoseNelson.Sort17Ascending(ref buffer[0], comparison); break;
+				case 18: SNBoseNelson.Sort18Ascending(ref buffer[0], comparison); break;
+				case 19: SNBoseNelson.Sort19Ascending(ref buffer[0], comparison); break;
+				case 20: SNBoseNelson.Sort20Ascending(ref buffer[0], comparison); break;
+				case 21: SNBoseNelson.Sort21Ascending(ref buffer[0], comparison); break;
+				case 22: SNBoseNelson.Sort22Ascending(ref buffer[0], comparison); break;
+				case 23: SNBoseNelson.Sort23Ascending(ref buffer[0], comparison); break;
+				case 24: SNBoseNelson.Sort24Ascending(ref buffer[0], comparison); break;
+				case 25: SNBoseNelson.Sort25Ascending(ref buffer[0], comparison); break;
+				case 26: SNBoseNelson.Sort26Ascending(ref buffer[0], comparison); break;
+				case 27: SNBoseNelson.Sort27Ascending(ref buffer[0], comparison); break;
+				case 28: SNBoseNelson.Sort28Ascending(ref buffer[0], comparison); break;
+				case 29: SNBoseNelson.Sort29Ascending(ref buffer[0], comparison); break;
+				case 30: SNBoseNelson.Sort30Ascending(ref buffer[0], comparison); break;
+				case 31: SNBoseNelson.Sort31Ascending(ref buffer[0], comparison); break;
+				case 32: SNBoseNelson.Sort32Ascending(ref buffer[0], comparison); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -326,6 +438,22 @@
 				case 14: SNBestKnown.Sort14Descending(ref buffer[0], comparison); break;
 				case 15: SNBestKnown.Sort15Descending(ref buffer[0], comparison); break;
 				case 16: SNBestKnown.Sort16Descending(ref buffer[0], comparison); break;
+				case 17: SNBoseNelson.Sort17Descending(ref buffer[0], comparison); break;
+				case 18: SNBoseNelson.Sort18Descending(ref buffer[0], comparison); break;
+				case 19: SNBoseNelson.Sort19Descending(ref buffer[0], comparison); break;
+				case 20: SNBoseNelson.Sort20Descending(ref buffer[0], comparison); break;
+				case 21: SNBoseNelson.Sort21Descending(ref buffer[0], comparison); break;
+				case 22: SNBoseNelson.Sort22Descending(ref buffer[0], comparison); break;
+				case 23: SNBoseNelson.Sort23Descending(ref buffer[0], comparison); break;
+				case 24: SNBoseNelson.Sort24Descending(ref buffer[0], comparison); break;
+				case 25: SNBoseNelson.Sort25Descending(ref buffer[0], comparison); break;
+				case 26: SNBoseNelson.Sort26Descending(ref buffer[0], comparison); break;
+				case 27: SNBoseNelson.Sort27Descending(ref buffer[0], comparison); break;
+				case 28: SNBoseNelson.Sort28Descending(ref buffer[0], comparison); break;
+				case 29: SNBoseNelson.Sort29Descending(ref buffer[0], comparison); break;
+				case 30: SNBoseNelson.Sort30Descending(ref buffer[0], comparison); break;
+				case 31: SNBoseNelson.Sort31Descending(ref buffer[0], comparison); break;
+				case 32: SNBoseNelson.Sort32Descending(ref buffer[0], comparison); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -365,6 +493,22 @@
 				case 14: SNBestKnown.Sort14Ascending(ref array[0], comparisonPointer); break;
 				case 15: SNBestKnown.Sort15Ascending(ref array[0], comparisonPointer); break;
 				case 16: SNBestKnown.Sort16Ascending(ref array[0], comparisonPointer); break;
+				case 17: SNBoseNelson.Sort17Ascending(ref array[0], comparisonPointer); break;
+				case 18: SNBoseNelson.Sort18Ascending(ref array[0], comparisonPointer); break;
+				case 19: SNBoseNelson.Sort19Ascending(ref array[0], comparisonPointer); break;
+				case 20: SNBoseNelson.Sort20Ascending(ref array[0], comparisonPointer); break;
+				case 21: SNBoseNelson.Sort21Ascending(ref array[0], comparisonPointer); break;
+				case 22: SNBoseNelson.Sort22Ascending(ref array[0], comparisonPointer); break;
+				case 23: SNBoseNelson.Sort23Ascending(ref array[0], comparisonPointer); break;
+				case 24: SNBoseNelson.Sort24Ascending(ref array[0], comparisonPointer); break;
+				case 25: SNBoseNelson.Sort25Ascending(ref array[0], comparisonPointer); break;
+				case 26: SNBoseNelson.Sort26Ascending(ref array[0], comparisonPointer); break;
+				case 27: SNBoseNelson.Sort27Ascending(ref array[0], comparisonPointer); break;
+				case 28: SNBoseNelson.Sort28Ascending(ref array[0], comparisonPointer); break;
+				case 29: SNBoseNelson.Sort29Ascending(ref array[0], comparisonPointer); break;
+				case 30: SNBoseNelson.Sort30Ascending(ref array[0], comparisonPointer); break;
+				case 31: SNBoseNelson.Sort31Ascending(ref array[0], comparisonPointer); break;
+				case 32: SNBoseNelson.Sort32Ascending(ref array[0], comparisonPointer); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -404,6 +548,22 @@
 				case 14: SNBestKnown.Sort14Descending(ref array[0], comparisonPointer); break;
 				case 15: SNBestKnown.Sort15Descending(ref array[0], comparisonPointer); break;
 				case 16: SNBestKnown.Sort16Descending(ref array[0], comparisonPointer); break;
+				case 17: SNBoseNelson.Sort17Descending(ref array[0], comparisonPointer); break;
+				case 18: SNBoseNelson.Sort18Descending(ref array[0], comparisonPointer); break;
+				case 19: SNBoseNelson.Sort19Descending(ref array[0], comparisonPointer); break;
+				case 20: SNBoseNelson.Sort20Descending(ref array[0], comparisonPointer); break;
+				case 21: SNBoseNelson.Sort21Descending(ref array[0], comparisonPointer); break;
+				case 22: SNBoseNelson.Sort22Descending(ref array[0], comparisonPointer); break;
+				case 23: SNBoseNelson.Sort23Descending(ref array[0], comparisonPointer); break;
+				case 24: SNBoseNelson.Sort24Descending(ref array[0], comparisonPointer); break;
+				case 25: SNBoseNelson.Sort25Descending(ref array[0], comparisonPointer); break;
+				case 26: SNBoseNelson.Sort26Descending(ref array[0], comparisonPointer); break;
+				case 27: SNBoseNelson.Sort27Descending(ref array[0], comparisonPointer); break;
+				case 28: SNBoseNelson.Sort28Descending(ref array[0], comparisonPointer); break;
+				case 29: SNBoseNelson.Sort29Descending(ref array[0], comparisonPointer); break;
+				case 30: SNBoseNelson.Sort30Descending(ref array[0], comparisonPointer); break;
+				case 31: SNBoseNelson.Sort31Descending(ref array[0], comparisonPointer); break;
+				case 32: SNBoseNelson.Sort32Descending(ref array[0], comparisonPointer); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -437,6 +597,22 @@
 				case 14: SNBestKnown.Sort14Ascending(ref buffer[0], comparisonPointer); break;
 				case 15: SNBestKnown.Sort15Ascending(ref buffer[0], comparisonPointer); break;
 				case 16: SNBestKnown.Sort16Ascending(ref buffer[0], comparisonPointer); break;
+				case 17: SNBoseNelson.Sort17Ascending(ref buffer[0], comparisonPointer); break;
+				case 18: SNBoseNelson.Sort18Ascending(ref buffer[0], comparisonPointer); break;
+				case 19: SNBoseNelson.Sort19Ascending(ref buffer[0], comparisonPointer); break;
+				case 20: SNBoseNelson.Sort20Ascending(ref buffer[0], comparisonPointer); break;
+				case 21: SNBoseNelson.Sort21Ascending(ref buffer[0], comparisonPointer); break;
+				case 22: SNBoseNelson.Sort22Ascending(ref buffer[0], comparisonPointer); break;
+				case 23: SNBoseNelson.Sort23Ascending(ref buffer[0], comparisonPointer); break;
+				case 24: SNBoseNelson.Sort24Ascending(ref buffer[0], comparisonPointer); break;
+				case 25: SNBoseNelson.Sort25Ascending(ref buffer[0], comparisonPointer); break;
+				case 26: SNBoseNelson.Sort26Ascending(ref buffer[0], comparisonPointer); break;
+				case 27: SNBoseNelson.Sort27Ascending(ref buffer[0], comparisonPointer); break;
+				case 28: SNBoseNelson.Sort28Ascending(ref buffer[0], comparisonPointer); break;
+				case 29: SNBoseNelson.Sort29Ascending(ref buffer[0], comparisonPointer); break;
+				case 30: SNBoseNelson.Sort30Ascending(ref buffer[0], comparisonPointer); break;
+				case 31: SNBoseNelson.Sort31Ascending(ref buffer[0], comparisonPointer); break;
+				case 32: SNBoseNelson.Sort32Ascending(ref buffer[0], comparisonPointer); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
@@ -470,6 +646,22 @@
 				case 14: SNBestKnown.Sort14Descending(ref buffer[0], comparisonPointer); break;
 				case 15: SNBestKnown.Sort15Descending(ref buffer[0], comparisonPointer); break;
 				case 16: SNBestKnown.Sort16Descending(ref buffer[0], comparisonPointer); break;
+				case 17: SNBoseNelson.Sort17Descending(ref buffer[0], comparisonPointer); break;
+				case 18: SNBoseNelson.Sort18Descending(ref buffer[0], comparisonPointer); break;
+				case 19: SNBoseNelson.Sort19Descending(ref buffer[0], comparisonPointer); break;
+				case 20: SNBoseNelson.Sort20Descending(ref buffer[0], comparisonPointer); break;
+				case 21: SNBoseNelson.Sort21Descending(ref buffer[0], comparisonPointer); break;
+				case 22: SNBoseNelson.Sort22Descending(ref buffer[0], comparisonPointer); break;
+				case 23: SNBoseNelson.Sort23Descending(ref buffer[0], comparisonPointer); break;
+				case 24: SNBoseNelson.Sort24Descending(ref buffer[0], comparisonPointer); break;
+				case 25: SNBoseNelson.Sort25Descending(ref buffer[0], comparisonPointer); break;
+				case 26: SNBoseNelson.Sort26Descending(ref buffer[0], comparisonPointer); break;
+				case 27: SNBoseNelson.Sort27Descending(ref buffer[0], comparisonPointer); break;
+				case 28: SNBoseNelson.Sort28Descending(ref buffer[0], comparisonPointer); break;
+				case 29: SNBoseNelson.Sort29Descending(ref buffer[0], comparisonPointer); break;
+				case 30: SNBoseNelson.Sort30Descending(ref buffer[0], comparisonPointer); break;
+				case 31: SNBoseNelson.Sort31Descending(ref buffer[0], comparisonPointer); break;
+				case 32: SNBoseNelson.Sort32Descending(ref buffer[0], comparisonPointer); break;
 				default:
 					{
 						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
