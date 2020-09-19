@@ -10,13 +10,16 @@
 		<Description>A collection of sorting network algorithms implemented in C#.</Description>
 		<PackageLicenseFile></PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
-		<Nullable>enable</Nullable>
 		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="$(SolutionDir)icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)' != 'netstandard1.3'">
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
 		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.7.1" />
