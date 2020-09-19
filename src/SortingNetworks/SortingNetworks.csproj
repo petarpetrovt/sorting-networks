@@ -50,6 +50,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Update="SNBoseNelsonGenerated.Comparison.tt">
+			<LastGenOutput>SNBoseNelsonGenerated.Comparison.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
 		<None Update="SNBoseNelsonGenerated.Comparable.tt">
 			<LastGenOutput>SNBoseNelsonGenerated.Comparable.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
@@ -57,11 +61,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="SNBoseNelsonGenerated.Comparable.cs">
+		<Compile Update="SNBoseNelsonGenerated.Comparison.cs">
+			<DependentUpon>SNBoseNelsonGenerated.Comparison.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelsonGenerated.Comparable.cs">
 			<DependentUpon>SNBoseNelsonGenerated.Comparable.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
 		</Compile>
 	</ItemGroup>
-	
+
 </Project>

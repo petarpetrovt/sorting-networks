@@ -3,10 +3,7 @@
 	using System;
 	using System.Runtime.CompilerServices;
 
-	/// <summary>
-	/// Sorting networks implementation using Bose-Nelson algorithm.
-	/// </summary>
-	public partial class SNBoseNelsonGenerated : SNBase
+	partial class SNBoseNelsonGenerated
 	{
 		/// <summary>
 		/// Sorts a collection of 2 elements in ascending order using the <see cref="IComparable{T}"/> generic
@@ -35,6 +32,7 @@
 
 			SwapIfLesser(ref p0, ref p1);
 		}
+
 		/// <summary>
 		/// Sorts a collection of 3 elements in ascending order using the <see cref="IComparable{T}"/> generic
 		/// interface implementation of each element.
@@ -68,6 +66,7 @@
 			SwapIfLesser(ref p0, ref p2);
 			SwapIfLesser(ref p0, ref p1);
 		}
+
 		/// <summary>
 		/// Sorts a collection of 4 elements in ascending order using the <see cref="IComparable{T}"/> generic
 		/// interface implementation of each element.
@@ -107,6 +106,7 @@
 			SwapIfLesser(ref p1, ref p3);
 			SwapIfLesser(ref p1, ref p2);
 		}
+
 		/// <summary>
 		/// Sorts a collection of 5 elements in ascending order using the <see cref="IComparable{T}"/> generic
 		/// interface implementation of each element.
@@ -156,5 +156,6 @@
 			SwapIfLesser(ref p1, ref p3);
 			SwapIfLesser(ref p1, ref p2);
 		}
+
 	}
 }

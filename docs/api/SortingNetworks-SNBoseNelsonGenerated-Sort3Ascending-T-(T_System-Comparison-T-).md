@@ -1,0 +1,21 @@
+#### [SortingNetworks](./index.md 'index')
+### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBoseNelsonGenerated](./SortingNetworks-SNBoseNelsonGenerated.md 'SortingNetworks.SNBoseNelsonGenerated')
+## SNBoseNelsonGenerated.Sort3Ascending&lt;T&gt;(T, System.Comparison&lt;T&gt;) Method
+Sorts a collection of 3 elements in ascending order using the specified [System.Comparison&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Comparison-1 'System.Comparison`1').  
+```csharp
+public static void Sort3Ascending<T>(ref T p0, System.Comparison<T> comparison);
+```
+#### Type parameters
+<a name='SortingNetworks-SNBoseNelsonGenerated-Sort3Ascending-T-(T_System-Comparison-T-)-T'></a>
+`T`  
+The type of the elements of the collection.  
+  
+#### Parameters
+<a name='SortingNetworks-SNBoseNelsonGenerated-Sort3Ascending-T-(T_System-Comparison-T-)-p0'></a>
+`p0` [T](#SortingNetworks-SNBoseNelsonGenerated-Sort3Ascending-T-(T_System-Comparison-T-)-T 'SortingNetworks.SNBoseNelsonGenerated.Sort3Ascending&lt;T&gt;(T, System.Comparison&lt;T&gt;).T')  
+the reference to the first element of the collection  
+  
+<a name='SortingNetworks-SNBoseNelsonGenerated-Sort3Ascending-T-(T_System-Comparison-T-)-comparison'></a>
+`comparison` [System.Comparison&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Comparison-1 'System.Comparison`1')[T](#SortingNetworks-SNBoseNelsonGenerated-Sort3Ascending-T-(T_System-Comparison-T-)-T 'SortingNetworks.SNBoseNelsonGenerated.Sort3Ascending&lt;T&gt;(T, System.Comparison&lt;T&gt;).T')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Comparison-1 'System.Comparison`1')  
+The [System.Comparison&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Comparison-1 'System.Comparison`1') to use when comparing elements.  
+  
