@@ -6,7 +6,7 @@
 	/// <remarks>
 	/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
 	/// </remarks>
-	public sealed partial class SNBestKnown : SNBase
+	public abstract partial class SNBestKnown : SNBase
 	{
 		/// <summary>
 		/// The minimum supported length for sorting.
@@ -19,8 +19,8 @@
 		public const int MaxLength = 16;
 
 		/// <summary>
-		/// Disable the default constructor.
+		/// Disable inheritance outside of the assembly.
 		/// </summary>
-		private SNBestKnown() { }
+		internal SNBestKnown() { }
 	}
 }

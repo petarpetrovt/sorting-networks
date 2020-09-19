@@ -9,6 +9,11 @@
 	/// </summary>
 	public abstract class SNBase
 	{
+		/// <summary>
+		/// Disable inheritance outside of the assembly.
+		/// </summary>
+		internal SNBase() { }
+
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		internal static void SwapIfGreater<T>(ref T p0, ref T p1)
 			where T : IComparable<T>

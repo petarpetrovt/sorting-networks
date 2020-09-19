@@ -6,7 +6,7 @@
 	/// <remarks>
 	/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
 	/// </remarks>
-	public sealed partial class SNBoseNelson : SNBase
+	public abstract partial class SNBoseNelson : SNBase
 	{
 		/// <summary>
 		/// The minimum supported length for sorting.
@@ -19,8 +19,8 @@
 		public const int MaxLength = 8;
 
 		/// <summary>
-		/// Disable the default constructor.
+		/// Disable inheritance outside of the assembly.
 		/// </summary>
-		private SNBoseNelson() { }
+		internal SNBoseNelson() { }
 	}
 }

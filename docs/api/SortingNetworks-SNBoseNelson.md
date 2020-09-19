@@ -2,7 +2,7 @@
 ## SNBoseNelson Class
 Sorting networks implementation using Bose-Nelson algorithm.  
 ```csharp
-public sealed class SNBoseNelson : SNBase
+public abstract class SNBoseNelson : SNBase
 ```
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [SNBase](./SortingNetworks-SNBase.md 'SortingNetworks.SNBase') &#129106; SNBoseNelson  
 ### Remarks

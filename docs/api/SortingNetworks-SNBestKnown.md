@@ -2,7 +2,7 @@
 ## SNBestKnown Class
 Sorting networks implementation using the best known arrangement of comparators.  
 ```csharp
-public sealed class SNBestKnown : SNBase
+public abstract class SNBestKnown : SNBase
 ```
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [SNBase](./SortingNetworks-SNBase.md 'SortingNetworks.SNBase') &#129106; SNBestKnown  
 ### Remarks

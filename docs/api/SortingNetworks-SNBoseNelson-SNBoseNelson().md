@@ -1,6 +1,6 @@
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBoseNelson](./SortingNetworks-SNBoseNelson.md 'SortingNetworks.SNBoseNelson')
 ## SNBoseNelson() Constructor
-Disable the default constructor.  
+Disable inheritance outside of the assembly.  
 ```csharp
-private SNBoseNelson();
+internal SNBoseNelson();
 ```
