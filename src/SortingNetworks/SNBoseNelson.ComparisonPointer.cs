@@ -40,7 +40,7 @@
 		public unsafe static void Sort3Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -56,7 +56,7 @@
 		public unsafe static void Sort3Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -72,8 +72,8 @@
 		public unsafe static void Sort4Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p2, ref p3, comparisonPointer);
@@ -91,8 +91,8 @@
 		public unsafe static void Sort4Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p2, ref p3, comparisonPointer);
@@ -110,9 +110,9 @@
 		public unsafe static void Sort5Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p3, ref p4, comparisonPointer);
@@ -134,9 +134,9 @@
 		public unsafe static void Sort5Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p3, ref p4, comparisonPointer);
@@ -158,10 +158,10 @@
 		public unsafe static void Sort6Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -187,10 +187,10 @@
 		public unsafe static void Sort6Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -216,11 +216,11 @@
 		public unsafe static void Sort7Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -249,11 +249,11 @@
 		public unsafe static void Sort7Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -282,12 +282,12 @@
 		public unsafe static void Sort8Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p2, ref p3, comparisonPointer);
@@ -319,12 +319,12 @@
 		public unsafe static void Sort8Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p2, ref p3, comparisonPointer);
@@ -356,13 +356,13 @@
 		public unsafe static void Sort9Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p2, ref p3, comparisonPointer);
@@ -402,13 +402,13 @@
 		public unsafe static void Sort9Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p2, ref p3, comparisonPointer);
@@ -448,14 +448,14 @@
 		public unsafe static void Sort10Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p3, ref p4, comparisonPointer);
@@ -503,14 +503,14 @@
 		public unsafe static void Sort10Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p3, ref p4, comparisonPointer);
@@ -558,15 +558,15 @@
 		public unsafe static void Sort11Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p3, ref p4, comparisonPointer);
@@ -620,15 +620,15 @@
 		public unsafe static void Sort11Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p3, ref p4, comparisonPointer);
@@ -682,16 +682,16 @@
 		public unsafe static void Sort12Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -751,16 +751,16 @@
 		public unsafe static void Sort12Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -820,17 +820,17 @@
 		public unsafe static void Sort13Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -895,17 +895,17 @@
 		public unsafe static void Sort13Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -970,18 +970,18 @@
 		public unsafe static void Sort14Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -1051,18 +1051,18 @@
 		public unsafe static void Sort14Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -1132,19 +1132,19 @@
 		public unsafe static void Sort15Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -1218,19 +1218,19 @@
 		public unsafe static void Sort15Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -1304,20 +1304,20 @@
 		public unsafe static void Sort16Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p2, ref p3, comparisonPointer);
@@ -1395,20 +1395,20 @@
 		public unsafe static void Sort16Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p2, ref p3, comparisonPointer);
@@ -1486,21 +1486,21 @@
 		public unsafe static void Sort17Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p2, ref p3, comparisonPointer);
@@ -1594,21 +1594,21 @@
 		public unsafe static void Sort17Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p2, ref p3, comparisonPointer);
@@ -1702,22 +1702,22 @@
 		public unsafe static void Sort18Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p2, ref p3, comparisonPointer);
@@ -1827,22 +1827,22 @@
 		public unsafe static void Sort18Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p2, ref p3, comparisonPointer);
@@ -1952,23 +1952,23 @@
 		public unsafe static void Sort19Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p2, ref p3, comparisonPointer);
@@ -2090,23 +2090,23 @@
 		public unsafe static void Sort19Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p2, ref p3, comparisonPointer);
@@ -2228,24 +2228,24 @@
 		public unsafe static void Sort20Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p3, ref p4, comparisonPointer);
@@ -2379,24 +2379,24 @@
 		public unsafe static void Sort20Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p3, ref p4, comparisonPointer);
@@ -2530,25 +2530,25 @@
 		public unsafe static void Sort21Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p3, ref p4, comparisonPointer);
@@ -2692,25 +2692,25 @@
 		public unsafe static void Sort21Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p3, ref p4, comparisonPointer);
@@ -2854,26 +2854,26 @@
 		public unsafe static void Sort22Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p3, ref p4, comparisonPointer);
@@ -3027,26 +3027,26 @@
 		public unsafe static void Sort22Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p3, ref p4, comparisonPointer);
@@ -3200,27 +3200,27 @@
 		public unsafe static void Sort23Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p3, ref p4, comparisonPointer);
@@ -3382,27 +3382,27 @@
 		public unsafe static void Sort23Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p3, ref p4, comparisonPointer);
@@ -3564,28 +3564,28 @@
 		public unsafe static void Sort24Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -3755,28 +3755,28 @@
 		public unsafe static void Sort24Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -3946,29 +3946,29 @@
 		public unsafe static void Sort25Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -4147,29 +4147,29 @@
 		public unsafe static void Sort25Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -4348,30 +4348,30 @@
 		public unsafe static void Sort26Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -4559,30 +4559,30 @@
 		public unsafe static void Sort26Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -4770,31 +4770,31 @@
 		public unsafe static void Sort27Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -4989,31 +4989,31 @@
 		public unsafe static void Sort27Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -5208,32 +5208,32 @@
 		public unsafe static void Sort28Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -5435,32 +5435,32 @@
 		public unsafe static void Sort28Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -5662,33 +5662,33 @@
 		public unsafe static void Sort29Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
-			ref var p28 = ref Unsafe.Add(ref p27, 28);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref var p28 = ref Unsafe.Add(ref p0, 28);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -5896,33 +5896,33 @@
 		public unsafe static void Sort29Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
-			ref var p28 = ref Unsafe.Add(ref p27, 28);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref var p28 = ref Unsafe.Add(ref p0, 28);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -6130,34 +6130,34 @@
 		public unsafe static void Sort30Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
-			ref var p28 = ref Unsafe.Add(ref p27, 28);
-			ref var p29 = ref Unsafe.Add(ref p28, 29);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref var p28 = ref Unsafe.Add(ref p0, 28);
+			ref var p29 = ref Unsafe.Add(ref p0, 29);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -6371,34 +6371,34 @@
 		public unsafe static void Sort30Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
-			ref var p28 = ref Unsafe.Add(ref p27, 28);
-			ref var p29 = ref Unsafe.Add(ref p28, 29);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref var p28 = ref Unsafe.Add(ref p0, 28);
+			ref var p29 = ref Unsafe.Add(ref p0, 29);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -6612,35 +6612,35 @@
 		public unsafe static void Sort31Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
-			ref var p28 = ref Unsafe.Add(ref p27, 28);
-			ref var p29 = ref Unsafe.Add(ref p28, 29);
-			ref var p30 = ref Unsafe.Add(ref p29, 30);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref var p28 = ref Unsafe.Add(ref p0, 28);
+			ref var p29 = ref Unsafe.Add(ref p0, 29);
+			ref var p30 = ref Unsafe.Add(ref p0, 30);
 
 			SwapIfGreater(ref p1, ref p2, comparisonPointer);
 			SwapIfGreater(ref p0, ref p2, comparisonPointer);
@@ -6859,35 +6859,35 @@
 		public unsafe static void Sort31Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
-			ref var p28 = ref Unsafe.Add(ref p27, 28);
-			ref var p29 = ref Unsafe.Add(ref p28, 29);
-			ref var p30 = ref Unsafe.Add(ref p29, 30);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref var p28 = ref Unsafe.Add(ref p0, 28);
+			ref var p29 = ref Unsafe.Add(ref p0, 29);
+			ref var p30 = ref Unsafe.Add(ref p0, 30);
 
 			SwapIfLesser(ref p1, ref p2, comparisonPointer);
 			SwapIfLesser(ref p0, ref p2, comparisonPointer);
@@ -7106,36 +7106,36 @@
 		public unsafe static void Sort32Ascending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
-			ref var p28 = ref Unsafe.Add(ref p27, 28);
-			ref var p29 = ref Unsafe.Add(ref p28, 29);
-			ref var p30 = ref Unsafe.Add(ref p29, 30);
-			ref var p31 = ref Unsafe.Add(ref p30, 31);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref var p28 = ref Unsafe.Add(ref p0, 28);
+			ref var p29 = ref Unsafe.Add(ref p0, 29);
+			ref var p30 = ref Unsafe.Add(ref p0, 30);
+			ref var p31 = ref Unsafe.Add(ref p0, 31);
 
 			SwapIfGreater(ref p0, ref p1, comparisonPointer);
 			SwapIfGreater(ref p2, ref p3, comparisonPointer);
@@ -7359,36 +7359,36 @@
 		public unsafe static void Sort32Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p1, 2);
-			ref var p3 = ref Unsafe.Add(ref p2, 3);
-			ref var p4 = ref Unsafe.Add(ref p3, 4);
-			ref var p5 = ref Unsafe.Add(ref p4, 5);
-			ref var p6 = ref Unsafe.Add(ref p5, 6);
-			ref var p7 = ref Unsafe.Add(ref p6, 7);
-			ref var p8 = ref Unsafe.Add(ref p7, 8);
-			ref var p9 = ref Unsafe.Add(ref p8, 9);
-			ref var p10 = ref Unsafe.Add(ref p9, 10);
-			ref var p11 = ref Unsafe.Add(ref p10, 11);
-			ref var p12 = ref Unsafe.Add(ref p11, 12);
-			ref var p13 = ref Unsafe.Add(ref p12, 13);
-			ref var p14 = ref Unsafe.Add(ref p13, 14);
-			ref var p15 = ref Unsafe.Add(ref p14, 15);
-			ref var p16 = ref Unsafe.Add(ref p15, 16);
-			ref var p17 = ref Unsafe.Add(ref p16, 17);
-			ref var p18 = ref Unsafe.Add(ref p17, 18);
-			ref var p19 = ref Unsafe.Add(ref p18, 19);
-			ref var p20 = ref Unsafe.Add(ref p19, 20);
-			ref var p21 = ref Unsafe.Add(ref p20, 21);
-			ref var p22 = ref Unsafe.Add(ref p21, 22);
-			ref var p23 = ref Unsafe.Add(ref p22, 23);
-			ref var p24 = ref Unsafe.Add(ref p23, 24);
-			ref var p25 = ref Unsafe.Add(ref p24, 25);
-			ref var p26 = ref Unsafe.Add(ref p25, 26);
-			ref var p27 = ref Unsafe.Add(ref p26, 27);
-			ref var p28 = ref Unsafe.Add(ref p27, 28);
-			ref var p29 = ref Unsafe.Add(ref p28, 29);
-			ref var p30 = ref Unsafe.Add(ref p29, 30);
-			ref var p31 = ref Unsafe.Add(ref p30, 31);
+			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref var p28 = ref Unsafe.Add(ref p0, 28);
+			ref var p29 = ref Unsafe.Add(ref p0, 29);
+			ref var p30 = ref Unsafe.Add(ref p0, 30);
+			ref var p31 = ref Unsafe.Add(ref p0, 31);
 
 			SwapIfLesser(ref p0, ref p1, comparisonPointer);
 			SwapIfLesser(ref p2, ref p3, comparisonPointer);
