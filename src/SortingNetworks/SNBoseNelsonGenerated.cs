@@ -6,7 +6,7 @@
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
 	/// </summary>
-	public class SNBoseNelsonGenerated : SNBase
+	public partial class SNBoseNelsonGenerated : SNBase
 	{
 		/// <summary>
 		/// Sorts a collection of 2 elements in ascending order using the <see cref="IComparable{T}"/> generic

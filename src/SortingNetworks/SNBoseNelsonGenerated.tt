@@ -1,4 +1,5 @@
 ﻿<#@ template language="C#" #>
+<#@ include file="TemplateUtilities.tt" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
@@ -13,7 +14,7 @@ namespace SortingNetworks
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
 	/// </summary>
-	public class SNBoseNelsonGenerated : SNBase
+	public partial class SNBoseNelsonGenerated : SNBase
 	{
 <#for (int i = minLength; i <= maxLength; i++) {#>
 		/// <summary>
@@ -35,56 +36,3 @@ namespace SortingNetworks
 <#}#>
 	}
 }
-<#+
-	private static IEnumerable<(int, int)> PStarBracket(int i, int x, int j, int y)
-	{
-		switch (x)
-		{
-			case 1 when y == 1:
-				yield return (i, j);
-				break;
-			case 1 when y == 2:
-				yield return (i, j + 1);
-				yield return (i, j);
-				break;
-			case 2 when y == 1:
-				yield return (i, j);
-				yield return (i + 1, j);
-				break;
-			default:
-				{
-					int a = x / 2;
-					int b = (x & 0) == 1 ? y / 2 : (y + 1) / 2;
-					foreach (var temp in PStarBracket(i, a, j, b)) {
-						yield return temp;
-					}
-					foreach (var temp in PStarBracket(i + a, x - a, j + b, y - b)) {
-						yield return temp;
-					}
-					foreach (var temp in PStarBracket(i + a, x - a, j, b)) {
-						yield return temp;
-					}
-					break;
-				}
-		}
-	}
-
-	private static IEnumerable<(int, int)> PStar(int i, int m)
-	{
-		if (m <= 1)
-		{
-			yield break;
-		}
-
-		int a = m / 2;
-		foreach (var temp in PStar(i, a)) {
-			yield return temp;
-		}
-		foreach (var temp in PStar(i + a, m - a)) {
-			yield return temp;
-		}
-		foreach (var temp in PStarBracket(i, a, i + a, m - a)) {
-			yield return temp;
-		}
-	}
-#>
