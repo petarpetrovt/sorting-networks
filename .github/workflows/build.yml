@@ -1,0 +1,38 @@
+name: Build
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+jobs:
+  test:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest] #, ubuntu-latest, macOS-latest]
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+
+     - name: Setup dotnet
+       uses: actions/setup-dotnet@v1
+
+     - name: Publish tests
+       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Release" -f "netcoreapp3.1"
+       env:
+         DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+     - name: Run tests
+       run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --collect:"XPlat code coverage" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
+
+     - name: Update codecov
+       uses: codecov/codecov-action@v1
+       with:
+         token: ${{ secrets.CODECOV_TOKEN }}

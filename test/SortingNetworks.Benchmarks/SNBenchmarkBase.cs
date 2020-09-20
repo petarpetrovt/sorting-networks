@@ -7,6 +7,7 @@
 
 	[SimpleJob(RuntimeMoniker.Net48)]
 	[SimpleJob(RuntimeMoniker.NetCoreApp31)]
+	[SimpleJob(RuntimeMoniker.CoreRt31)]
 	[MemoryDiagnoser]
 	public abstract class SNBenchmarkBase
 	{
@@ -51,19 +52,6 @@
 			GC.Collect();
 		}
 
-		[Benchmark]
-		public void SortAscending_Insertion()
-		{
-			int maximumLength = _iterationItems.Length - Length;
-
-			for (int i = 0; i < maximumLength; i += Length)
-			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
-
-				PrivateInsertionSortAscending(slice);
-			}
-		}
-
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		protected static void PrivateInsertionSortAscending<T>(Span<T> span)
 			where T : IComparable<T>
@@ -105,9 +93,5 @@
 				span[j + 1] = key;
 			}
 		}
-
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected static int InternalComparison(int a, int b)
-			=> a.CompareTo(b);
 	}
 }
