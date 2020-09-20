@@ -5,16 +5,28 @@
 <#@ import namespace="System.Collections.Generic" #>
 namespace SortingNetworks.Benchmarks
 {
+	using System;
 	using BenchmarkDotNet.Attributes;
 
-<#for (int i = 2; i <= 8; i++) {#>
+<#for (int i = 2; i <= 32; i++) {#>
 	public class SN<#= i #>SortSNBoseNelsonBenchmark : SNBenchmarkBase
 	{
 		[Params(<#= i #>)]
 		public override int Length { get; set; }
 
 		[Benchmark]
-		public void SortAscending_Comparable()
+		public void SN_Generic_Comparable()
+		{
+			int maximumLength = _iterationItems.Length - Length;
+
+			for (int i = 0; i < maximumLength; i += Length)
+			{
+				SNBoseNelson.SortAscending(ref _iterationItems[i], Length);
+			}
+		}
+
+		[Benchmark]
+		public void SN_Fixed_Comparable()
 		{
 			int maximumLength = _iterationItems.Length - Length;
 
@@ -25,24 +37,15 @@ namespace SortingNetworks.Benchmarks
 		}
 
 		[Benchmark]
-		public void SortAscending_Comparison()
+		public void Insertion_Comparable()
 		{
 			int maximumLength = _iterationItems.Length - Length;
 
 			for (int i = 0; i < maximumLength; i += Length)
 			{
-				SNBoseNelson.Sort<#= i #>Ascending(ref _iterationItems[i], InternalComparison);
-			}
-		}
+				Span<int> slice = _iterationItems.AsSpan(i, Length);
 
-		[Benchmark]
-		public unsafe void SortAscending_ComparisonPointer()
-		{
-			int maximumLength = _iterationItems.Length - Length;
-
-			for (int i = 0; i < maximumLength; i += Length)
-			{
-				SNBoseNelson.Sort<#= i #>Ascending(ref _iterationItems[i], &InternalComparison);
+				PrivateInsertionSortAscending(slice);
 			}
 		}
 	}
