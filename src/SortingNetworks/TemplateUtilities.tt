@@ -32,7 +32,7 @@
 		}
 	}
 
-	public static IEnumerable<(int, int)> PStar(int i, int m)
+	private static IEnumerable<(int, int)> PStar(int i, int m)
 	{
 		if (m <= 1)
 		{
@@ -50,6 +50,9 @@
 			yield return temp;
 		}
 	}
+
+	public static IEnumerable<(int, int)> GetBoseNelsonSwapMacros(int length)
+		=> PStar(1, length);
 
 	public static string GetSwapIfGreaterComparable(string a, string b, string temp = "temp")
 		=> $"if ({a}.CompareTo({b}) > 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";

@@ -30,7 +30,7 @@ namespace SortingNetworks
 <#}#>
 
 			T temp;
-			<#= string.Join("\r\n			", PStar(1, i).Select(x=> GetSwapIfGreaterComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
+			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfGreaterComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 		}
 
 		/// <summary>
@@ -48,7 +48,7 @@ namespace SortingNetworks
 <#}#>
 
 			T temp;
-			<#= string.Join("\r\n			", PStar(1, i).Select(x=> GetSwapIfLesserComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
+			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfLesserComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 		}
 
 <#}#>
