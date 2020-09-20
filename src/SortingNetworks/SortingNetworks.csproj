@@ -56,6 +56,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Update="SNBestKnown.Comparison.tt">
+			<LastGenOutput>SNBestKnown.Comparison.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBestKnown.ComparisonPointer.tt">
+			<LastGenOutput>SNBestKnown.ComparisonPointer.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBestKnown.Comparable.tt">
+			<LastGenOutput>SNBestKnown.Comparable.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
 		<None Update="SNBoseNelson.Comparison.tt">
 			<LastGenOutput>SNBoseNelson.Comparison.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
@@ -71,6 +83,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Compile Update="SNBestKnown.Comparison.cs">
+			<DependentUpon>SNBestKnown.Comparison.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBestKnown.ComparisonPointer.cs">
+			<DependentUpon>SNBestKnown.ComparisonPointer.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBestKnown.Comparable.cs">
+			<DependentUpon>SNBestKnown.Comparable.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
 		<Compile Update="SNBoseNelson.Comparison.cs">
 			<DependentUpon>SNBoseNelson.Comparison.tt</DependentUpon>
 			<DesignTime>True</DesignTime>

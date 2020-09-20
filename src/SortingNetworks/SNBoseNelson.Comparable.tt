@@ -4,8 +4,6 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-<# int minLength = 2; #>
-<# int maxLength = 32; #>
 namespace SortingNetworks
 {
 	using System;
