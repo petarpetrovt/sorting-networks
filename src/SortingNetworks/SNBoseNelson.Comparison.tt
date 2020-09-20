@@ -26,7 +26,8 @@ namespace SortingNetworks
 			ref var p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfGreater(ref p{x.Item1 - 1}, ref p{x.Item2 - 1}, comparison);")) #>
+			T temp;
+			<#= string.Join("\r\n			", PStar(1, i).Select(x=> GetSwapIfGreaterComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 		}
 
 		/// <summary>
@@ -41,8 +42,10 @@ namespace SortingNetworks
 			ref var p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfLesser(ref p{x.Item1 - 1}, ref p{x.Item2 - 1}, comparison);")) #>
+			T temp;
+			<#= string.Join("\r\n			", PStar(1, i).Select(x=> GetSwapIfLesserComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 		}
+
 <#}#>
 
 		/// <summary>
