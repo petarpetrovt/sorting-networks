@@ -1,6 +1,7 @@
 ﻿namespace SortingNetworks
 {
 	using System;
+	using System.Diagnostics;
 	using System.Runtime.CompilerServices;
 
 	partial class SNBoseNelson
@@ -13,6 +14,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort2Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 
 			T temp;
@@ -27,6 +30,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort2Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 
 			T temp;
@@ -41,6 +46,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort3Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 
@@ -58,6 +65,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort3Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 
@@ -75,6 +84,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort4Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -95,6 +106,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort4Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -115,6 +128,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort5Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -140,6 +155,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort5Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -165,6 +182,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort6Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -195,6 +214,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort6Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -225,6 +246,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort7Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -259,6 +282,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort7Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -293,6 +318,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort8Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -331,6 +358,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort8Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -369,6 +398,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort9Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -416,6 +447,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort9Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -463,6 +496,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort10Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -519,6 +554,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort10Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -575,6 +612,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort11Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -638,6 +677,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort11Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -701,6 +742,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort12Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -771,6 +814,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort12Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -841,6 +886,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort13Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -917,6 +964,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort13Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -993,6 +1042,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort14Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1075,6 +1126,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort14Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1157,6 +1210,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort15Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1244,6 +1299,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort15Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1331,6 +1388,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort16Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1423,6 +1482,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort16Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1515,6 +1576,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort17Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1624,6 +1687,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort17Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1733,6 +1798,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort18Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1859,6 +1926,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort18Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -1985,6 +2054,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort19Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -2124,6 +2195,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort19Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -2263,6 +2336,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort20Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -2415,6 +2490,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort20Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -2567,6 +2644,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort21Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -2730,6 +2809,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort21Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -2893,6 +2974,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort22Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -3067,6 +3150,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort22Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -3241,6 +3326,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort23Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -3424,6 +3511,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort23Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -3607,6 +3696,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort24Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -3799,6 +3890,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort24Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -3991,6 +4084,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort25Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -4193,6 +4288,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort25Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -4395,6 +4492,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort26Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -4607,6 +4706,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort26Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -4819,6 +4920,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort27Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -5039,6 +5142,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort27Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -5259,6 +5364,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort28Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -5487,6 +5594,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort28Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -5715,6 +5824,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort29Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -5950,6 +6061,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort29Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -6185,6 +6298,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort30Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -6427,6 +6542,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort30Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -6669,6 +6786,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort31Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -6917,6 +7036,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort31Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -7165,6 +7286,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort32Ascending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -7419,6 +7542,8 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort32Descending<T>(ref T p0, Comparison<T> comparison)
 		{
+			Debug.Assert(comparison != null);
+
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
 			ref var p3 = ref Unsafe.Add(ref p0, 3);
@@ -7678,11 +7803,7 @@
 		public static void SortAscending<T>(ref T p0, in int length, Comparison<T> comparison)
 			where T : IComparable<T>
 		{
-			// TODO: consider Debug.Assert
-			if (comparison is null)
-			{
-				throw new ArgumentNullException(nameof(comparison));
-			}
+			Debug.Assert(comparison != null);
 
 			switch (length)
 			{
@@ -7733,11 +7854,7 @@
 		public static void SortDescending<T>(ref T p0, in int length, Comparison<T> comparison)
 			where T : IComparable<T>
 		{
-			// TODO: consider Debug.Assert
-			if (comparison is null)
-			{
-				throw new ArgumentNullException(nameof(comparison));
-			}
+			Debug.Assert(comparison != null);
 
 			switch (length)
 			{
