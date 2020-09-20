@@ -1,4 +1,4 @@
-namespace SortingNetworks.Tests
+﻿namespace SortingNetworks.Tests
 {
 	using System;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -147,28 +147,6 @@ namespace SortingNetworks.Tests
 				GenerateArraysDescending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], actual.Length, &InternalComparison);
-			});
-		}
-
-		[TestMethod]
-		public void Ascending_Comparison_ComparisonNull()
-		{
-			Assert.ThrowsException<ArgumentNullException>(() =>
-			{
-				GenerateArraysAscending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
-
-				SNBoseNelson.SortAscending(ref actual[0], actual.Length, comparison: null);
-			});
-		}
-
-		[TestMethod]
-		public void Descending_Comparison_ComparisonNull()
-		{
-			Assert.ThrowsException<ArgumentNullException>(() =>
-			{
-				GenerateArraysDescending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
-
-				SNBoseNelson.SortDescending(ref actual[0], actual.Length, comparison: null);
 			});
 		}
 	}

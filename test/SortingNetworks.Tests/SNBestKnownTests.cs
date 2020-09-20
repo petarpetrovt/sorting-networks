@@ -149,27 +149,5 @@
 				SNBestKnown.SortDescending(ref actual[0], actual.Length, &InternalComparison);
 			});
 		}
-
-		[TestMethod]
-		public void Ascending_Comparison_ComparisonNull()
-		{
-			Assert.ThrowsException<ArgumentNullException>(() =>
-			{
-				GenerateArraysAscending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
-
-				SNBestKnown.SortAscending(ref actual[0], actual.Length, comparison: null);
-			});
-		}
-
-		[TestMethod]
-		public void Descending_Comparison_ComparisonNull()
-		{
-			Assert.ThrowsException<ArgumentNullException>(() =>
-			{
-				GenerateArraysDescending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
-
-				SNBestKnown.SortDescending(ref actual[0], actual.Length, comparison: null);
-			});
-		}
 	}
 }

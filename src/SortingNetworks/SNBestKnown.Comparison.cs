@@ -1,6 +1,7 @@
 ﻿namespace SortingNetworks
 {
 	using System;
+	using System.Diagnostics.CodeAnalysis;
 	using System.Runtime.CompilerServices;
 
 	partial class SNBestKnown
@@ -11,7 +12,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort9Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort9Ascending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -58,7 +59,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort9Descending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort9Descending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -105,7 +106,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort10Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort10Ascending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -157,7 +158,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort10Descending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort10Descending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -209,7 +210,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort11Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort11Ascending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -268,7 +269,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort11Descending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort11Descending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -327,7 +328,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort12Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort12Ascending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -391,7 +392,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort12Descending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort12Descending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -455,7 +456,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort13Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort13Ascending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -526,7 +527,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort13Descending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort13Descending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -597,7 +598,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort14Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort14Ascending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -675,7 +676,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort14Descending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort14Descending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -753,7 +754,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort15Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort15Ascending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -837,7 +838,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort15Descending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort15Descending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -921,7 +922,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort16Ascending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort16Ascending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -1010,7 +1011,7 @@
 		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort16Descending<T>(ref T p0, Comparison<T> comparison)
+		public static new void Sort16Descending<T>(ref T p0, [DisallowNull] Comparison<T> comparison)
 		{
 			Assert.NotNull(comparison, nameof(comparison));
 
@@ -1101,9 +1102,8 @@
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		/// <exception cref="ArgumentNullException">comparison is null</exception>
 		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static new void SortAscending<T>(ref T p0, in int length, Comparison<T> comparison)
+		public static new void SortAscending<T>(ref T p0, in int length, [DisallowNull] Comparison<T> comparison)
 			where T : IComparable<T>
 		{
 			Assert.NotNull(comparison, nameof(comparison));
@@ -1152,9 +1152,8 @@
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		/// <exception cref="ArgumentNullException">comparison is null</exception>
 		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static new void SortDescending<T>(ref T p0, in int length, Comparison<T> comparison)
+		public static new void SortDescending<T>(ref T p0, in int length, [DisallowNull] Comparison<T> comparison)
 			where T : IComparable<T>
 		{
 			Assert.NotNull(comparison, nameof(comparison));
