@@ -25,7 +25,7 @@ jobs:
        uses: actions/setup-dotnet@v1
 
      - name: Publish tests
-       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Release" -f "netcoreapp3.1"
+       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Debug" -f "netcoreapp3.1"
        env:
          DOTNET_CLI_TELEMETRY_OPTOUT: true
 

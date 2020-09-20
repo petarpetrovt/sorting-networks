@@ -4,8 +4,6 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-<# int minLength = 2; #>
-<# int maxLength = 32; #>
 namespace SortingNetworks
 {
 	using System;
@@ -27,7 +25,8 @@ namespace SortingNetworks
 			ref var p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfGreater(ref p{x.Item1 - 1}, ref p{x.Item2 - 1});")) #>
+			T temp;
+			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfGreaterComparable($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 		}
 
 		/// <summary>
@@ -43,7 +42,8 @@ namespace SortingNetworks
 			ref var p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-			<#= string.Join("\r\n			", PStar(1, i).Select(x=> $"SwapIfLesser(ref p{x.Item1 - 1}, ref p{x.Item2 - 1});")) #>
+			T temp;
+			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfLesserComparable($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 		}
 
 <#}#>

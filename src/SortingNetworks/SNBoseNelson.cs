@@ -5,7 +5,7 @@
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
 	/// </summary>
-	public abstract partial class SNBoseNelson : SNBase
+	public abstract partial class SNBoseNelson
 	{
 		/// <summary>
 		/// The minimum supported length for sorting.

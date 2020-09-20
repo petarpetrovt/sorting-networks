@@ -1,4 +1,25 @@
 ﻿<#+
+	int minLength = 2;
+	int maxLength = 32;
+
+	public static string GetSwapIfGreaterComparable(string a, string b, string temp = "temp")
+		=> $"if ({a}.CompareTo({b}) > 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
+	public static string GetSwapIfLesserComparable(string a, string b, string temp = "temp")
+		=> $"if ({a}.CompareTo({b}) < 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
+	public static string GetSwapIfGreaterComparison(string a, string b, string comparison = "comparison", string temp = "temp")
+		=> $"if ({comparison}.Invoke({a}, {b}) > 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
+	public static string GetSwapIfLesserComparison(string a, string b, string comparison = "comparison", string temp = "temp")
+		=> $"if ({comparison}.Invoke({a}, {b}) < 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
+	public static string GetSwapIfGreaterComparisonPointer(string a, string b, string comparisonPointer = "comparisonPointer", string temp = "temp")
+		=> $"if ({comparisonPointer}({a}, {b}) > 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
+	public static string GetSwapIfLesserComparisonPointer(string a, string b, string comparisonPointer = "comparisonPointer", string temp = "temp")
+		=> $"if ({comparisonPointer}({a}, {b}) < 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
 	private static IEnumerable<(int, int)> PStarBracket(int i, int x, int j, int y)
 	{
 		switch (x)
@@ -32,7 +53,7 @@
 		}
 	}
 
-	public static IEnumerable<(int, int)> PStar(int i, int m)
+	private static IEnumerable<(int, int)> PStar(int i, int m)
 	{
 		if (m <= 1)
 		{
@@ -50,4 +71,137 @@
 			yield return temp;
 		}
 	}
+
+	public static IEnumerable<(int, int)> GetBoseNelsonSwapMacros(int length)
+		=> PStar(1, length);
+
+	public static IEnumerable<(int, int)> GetBestKnownSwapMacros(int length)
+		=> length switch
+		{
+			9 => GetBestKnownSwapMacros9(),
+			10 => GetBestKnownSwapMacros10(),
+			11 => GetBestKnownSwapMacros11(),
+			12 => GetBestKnownSwapMacros12(),
+			13 => GetBestKnownSwapMacros13(),
+			14 => GetBestKnownSwapMacros14(),
+			15 => GetBestKnownSwapMacros15(),
+			16 => GetBestKnownSwapMacros16(),
+			_ => throw new Exception($"Invalid length `{length}`."),
+		};
+
+	private static IEnumerable<(int, int)> GetBestKnownSwapMacros9()
+		=> new[]
+		{
+			(0, 1), (3, 4), (6, 7),
+			(1, 2), (4, 5), (7, 8),
+			(0, 1), (3, 4), (6, 7), (2, 5),
+			(0, 3), (1, 4), (5, 8),
+			(3, 6), (4, 7), (2, 5),
+			(0, 3), (1, 4), (5, 7), (2, 6),
+			(1, 3), (4, 6),
+			(2, 4), (5, 6),
+			(2, 3),
+		};
+
+	private static IEnumerable<(int, int)> GetBestKnownSwapMacros10()
+		=> new[]
+		{
+			(4, 9), (3, 8), (2, 7), (1, 6), (0, 5),
+			(1, 4), (6, 9), (0, 3), (5, 8),
+			(0, 2), (3, 6), (7, 9),
+			(0, 1), (2, 4), (5, 7), (8, 9),
+			(1, 2), (4, 6), (7, 8), (3, 5),
+			(2, 5), (6, 8), (1, 3), (4, 7),
+			(2, 3), (6, 7),
+			(3, 4), (5, 6),
+			(4, 5)
+		};
+
+	private static IEnumerable<(int, int)> GetBestKnownSwapMacros11()
+		=> new[]
+		{
+			(0, 1), (2, 3), (4, 5), (6, 7), (8, 9),
+			(1, 3), (5, 7), (0, 2), (4, 6), (8, 10),
+			(1, 2), (5, 6), (9, 10), (0, 4), (3, 7),
+			(1, 5), (6, 10), (4, 8),
+			(5, 9), (2, 6), (0, 4), (3, 8),
+			(1, 5), (6, 10), (2, 3), (8, 9),
+			(1, 4), (7, 10), (3, 5), (6, 8),
+			(2, 4), (7, 9), (5, 6),
+			(3, 4), (7, 8),
+		};
+
+	private static IEnumerable<(int, int)> GetBestKnownSwapMacros12()
+		=> new[]
+		{
+			(0, 1), (2, 3), (4, 5), (6, 7), (8, 9), (10, 11),
+			(1, 3), (5, 7), (9, 11), (0, 2), (4, 6), (8, 10),
+			(1, 2), (5, 6), (9, 10), (0, 4), (7, 11),
+			(1, 5), (6, 10), (3, 7), (4, 8),
+			(5, 9), (2, 6), (0, 4), (7, 11), (3, 8),
+			(1, 5), (6, 10), (2, 3), (8, 9),
+			(1, 4), (7, 10), (3, 5), (6, 8),
+			(2, 4), (7, 9), (5, 6),
+			(3, 4), (7, 8),
+		};
+
+	private static IEnumerable<(int, int)> GetBestKnownSwapMacros13()
+		=> new[]
+		{
+			(1, 7), (9, 11), (3, 4), (5, 8), (0, 12), (2, 6),
+			(0, 1), (2, 3), (4, 6), (8, 11), (7, 12), (5, 9),
+			(0, 2), (3, 7), (10, 11), (1, 4), (6, 12),
+			(7, 8), (11, 12), (4, 9), (6, 10),
+			(3, 4), (5, 6), (8, 9), (10, 11), (1, 7),
+			(2, 6), (9, 11), (1, 3), (4, 7), (8, 10), (0, 5),
+			(2, 5), (6, 8), (9, 10),
+			(1, 2), (3, 5), (7, 8), (4, 6),
+			(2, 3), (4, 5), (6, 7), (8, 9),
+			(3, 4), (5, 6),
+		};
+
+	private static IEnumerable<(int, int)> GetBestKnownSwapMacros14()
+		=> new[]
+		{
+			(0, 1), (2, 3), (4, 5), (6, 7), (8, 9), (10, 11), (12, 13),
+			(0, 2), (4, 6), (8, 10), (1, 3), (5, 7), (9, 11),
+			(0, 4), (8, 12), (1, 5), (9, 13), (2, 6), (3, 7),
+			(0, 8), (1, 9), (2, 10), (3, 11), (4, 12), (5, 13),
+			(5, 10), (6, 9), (3, 12), (7, 11), (1, 2), (4, 8),
+			(1, 4), (7, 13), (2, 8), (5, 6), (9, 10),
+			(2, 4), (11, 13), (3, 8), (7, 12),
+			(6, 8), (10, 12), (3, 5), (7, 9),
+			(3, 4), (5, 6), (7, 8), (9, 10), (11, 12),
+			(6, 7), (8, 9),
+		};
+
+	private static IEnumerable<(int, int)> GetBestKnownSwapMacros15()
+		=> new[]
+		{
+			(0, 1), (2, 3), (4, 5), (6, 7), (8, 9), (10, 11), (12, 13),
+			(0, 2), (4, 6), (8, 10), (12, 14), (1, 3), (5, 7), (9, 11),
+			(0, 4), (8, 12), (1, 5), (9, 13), (2, 6), (10, 14), (3, 7),
+			(0, 8), (1, 9), (2, 10), (3, 11), (4, 12), (5, 13), (6, 14),
+			(5, 10), (6, 9), (3, 12), (13, 14), (7, 11), (1, 2), (4, 8),
+			(1, 4), (7, 13), (2, 8), (11, 14), (5, 6), (9, 10),
+			(2, 4), (11, 13), (3, 8), (7, 12),
+			(6, 8), (10, 12), (3, 5), (7, 9),
+			(3, 4), (5, 6), (7, 8), (9, 10), (11, 12),
+			(6, 7), (8, 9),
+		};
+
+	private static IEnumerable<(int, int)> GetBestKnownSwapMacros16()
+		=> new[]
+		{
+			(0, 1), (2, 3), (4, 5), (6, 7), (8, 9), (10, 11), (12, 13), (14, 15),
+			(0, 2), (4, 6), (8, 10), (12, 14), (1, 3), (5, 7), (9, 11), (13, 15),
+			(0, 4), (8, 12), (1, 5), (9, 13), (2, 6), (10, 14), (3, 7), (11, 15),
+			(0, 8), (1, 9), (2, 10), (3, 11), (4, 12), (5, 13), (6, 14), (7, 15),
+			(5, 10), (6, 9), (3, 12), (13, 14), (7, 11), (1, 2), (4, 8),
+			(1, 4), (7, 13), (2, 8), (11, 14), (5, 6), (9, 10),
+			(2, 4), (11, 13), (3, 8), (7, 12),
+			(6, 8), (10, 12), (3, 5), (7, 9),
+			(3, 4), (5, 6), (7, 8), (9, 10), (11, 12),
+			(6, 7), (8, 9),
+		};
 #>
