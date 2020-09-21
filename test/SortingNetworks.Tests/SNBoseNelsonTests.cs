@@ -1,4 +1,4 @@
-namespace SortingNetworks.Tests
+﻿namespace SortingNetworks.Tests
 {
 	using System;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -7,11 +7,14 @@ namespace SortingNetworks.Tests
 	public class SNBoseNelsonTests : SNTestsBase
 	{
 		[TestMethod]
-		public void Ascending_Comparable()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public void Ascending_Comparable(GenerationMode mode)
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortAscending(ref actual[0], length);
 
@@ -20,11 +23,14 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void Descending_Comparable()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public void Descending_Comparable(GenerationMode mode)
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], length);
 
@@ -33,11 +39,14 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void Ascending_Comparison()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public void Ascending_Comparison(GenerationMode mode)
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortAscending(ref actual[0], length, InternalComparison);
 
@@ -46,11 +55,14 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public void Descending_Comparison()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public void Descending_Comparison(GenerationMode mode)
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], length, InternalComparison);
 
@@ -59,11 +71,14 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public unsafe void Ascending_ComparisonPointer()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public unsafe void Ascending_ComparisonPointer(GenerationMode mode)
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortAscending(ref actual[0], length, &InternalComparison);
 
@@ -72,11 +87,14 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		public unsafe void Descending_ComparisonPointer()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public unsafe void Descending_ComparisonPointer(GenerationMode mode)
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], length, &InternalComparison);
 
@@ -89,7 +107,7 @@ namespace SortingNetworks.Tests
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortAscending(ref actual[0], actual.Length);
 			});
@@ -100,7 +118,7 @@ namespace SortingNetworks.Tests
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], actual.Length);
 			});
@@ -111,7 +129,7 @@ namespace SortingNetworks.Tests
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortAscending(ref actual[0], actual.Length, (a, b) => a.CompareTo(b));
 			});
@@ -122,7 +140,7 @@ namespace SortingNetworks.Tests
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], actual.Length, (a, b) => a.CompareTo(b));
 			});
@@ -133,7 +151,7 @@ namespace SortingNetworks.Tests
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortAscending(ref actual[0], actual.Length, &InternalComparison);
 			});
@@ -144,31 +162,9 @@ namespace SortingNetworks.Tests
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBoseNelson.SortDescending(ref actual[0], actual.Length, &InternalComparison);
-			});
-		}
-
-		[TestMethod]
-		public void Ascending_Comparison_ComparisonNull()
-		{
-			Assert.ThrowsException<ArgumentNullException>(() =>
-			{
-				GenerateArraysAscending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
-
-				SNBoseNelson.SortAscending(ref actual[0], actual.Length, comparison: null);
-			});
-		}
-
-		[TestMethod]
-		public void Descending_Comparison_ComparisonNull()
-		{
-			Assert.ThrowsException<ArgumentNullException>(() =>
-			{
-				GenerateArraysDescending(SNBoseNelson.MinLength - 1, out int[] expected, out int[] actual);
-
-				SNBoseNelson.SortDescending(ref actual[0], actual.Length, comparison: null);
 			});
 		}
 	}
