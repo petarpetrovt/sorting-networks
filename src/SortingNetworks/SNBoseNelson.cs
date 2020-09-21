@@ -1,11 +1,9 @@
 ﻿namespace SortingNetworks
 {
-	using System.Diagnostics;
-
 	/// <summary>
 	/// Sorting networks implementation using Bose-Nelson algorithm.
 	/// </summary>
-	public abstract partial class SNBoseNelson
+	public abstract partial class SNBoseNelson : SNBase
 	{
 		/// <summary>
 		/// The minimum supported length for sorting.
@@ -20,7 +18,11 @@
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
 		/// </summary>
-		[DebuggerNonUserCode]
+#if NETSTANDARD1_3
+		[System.Diagnostics.DebuggerNonUserCode]
+#else
+		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+#endif
 		internal SNBoseNelson() { }
 	}
 }

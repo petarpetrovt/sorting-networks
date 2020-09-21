@@ -6,7 +6,7 @@
 	public class Program
 	{
 		public static void Main(string[] args)
-			//=> BenchmarkRunner.Run(Assembly.GetExecutingAssembly());
+			 //=> BenchmarkRunner.Run(Assembly.GetExecutingAssembly());
 			 => BenchmarkSwitcher
 			 	.FromAssembly(Assembly.GetExecutingAssembly())
 			 	.Run(args);
