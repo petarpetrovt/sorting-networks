@@ -1,7 +1,5 @@
 ﻿namespace SortingNetworks
 {
-	using System.Diagnostics;
-
 	/// <summary>
 	/// Sorting networks implementation using the best known arrangement of comparators.
 	/// </summary>
@@ -24,7 +22,11 @@
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
 		/// </summary>
-		[DebuggerNonUserCode]
+#if NETSTANDARD1_3
+		[System.Diagnostics.DebuggerNonUserCode]
+#else
+		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+#endif
 		internal SNBestKnown() { }
 	}
 }
