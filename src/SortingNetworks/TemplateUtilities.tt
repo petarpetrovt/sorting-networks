@@ -8,6 +8,12 @@
 	public static string GetSwapIfLesserComparable(string a, string b, string temp = "temp")
 		=> $"if (LessThan(ref {a}, ref {b})) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
 
+	public static string GetSwapIfGreaterComparableLegacy(string a, string b, string temp = "temp")
+		=> $"if ({a}.CompareTo({b}) > 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
+	public static string GetSwapIfLesserComparableLegacy(string a, string b, string temp = "temp")
+		=> $"if ({a}.CompareTo({b}) < 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
 	public static string GetSwapIfGreaterComparison(string a, string b, string comparison = "comparison", string temp = "temp")
 		=> $"if ({comparison}.Invoke({a}, {b}) > 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
 

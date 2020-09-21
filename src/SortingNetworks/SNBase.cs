@@ -59,7 +59,6 @@
 			if (typeof(T) == typeof(nint)) return (nint)(object)left < (nint)(object)right ? true : false;
 			if (typeof(T) == typeof(float)) return (float)(object)left < (float)(object)right ? true : false;
 			if (typeof(T) == typeof(double)) return (double)(object)left < (double)(object)right ? true : false;
-
 			// TODO: .NET 5
 			//if (typeof(TKey) == typeof(Half)) return (Half)(object)left < (Half)(object)right ? true : false;
 
@@ -97,7 +96,6 @@
 			if (typeof(T) == typeof(nint)) return (nint)(object)left > (nint)(object)right ? true : false;
 			if (typeof(T) == typeof(float)) return (float)(object)left > (float)(object)right ? true : false;
 			if (typeof(T) == typeof(double)) return (double)(object)left > (double)(object)right ? true : false;
-
 			// TODO: .NET 5
 			//if (typeof(TKey) == typeof(Half)) return (Half)(object)left > (Half)(object)right ? true : false;
 
