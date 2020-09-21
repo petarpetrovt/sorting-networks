@@ -1,0 +1,13 @@
+﻿# Documentation: https://docs.codecov.io/docs/codecov-yaml
+
+codecov:
+    require_ci_to_pass: yes
+    max_report_age: off
+
+coverage:
+  status:
+    project:
+      default:
+        threshold: 1%
+        paths:
+          - "src"

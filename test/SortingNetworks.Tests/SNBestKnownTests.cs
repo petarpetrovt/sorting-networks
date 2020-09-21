@@ -1,17 +1,21 @@
 ﻿namespace SortingNetworks.Tests
 {
 	using System;
+	using System.Linq;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	[TestClass]
 	public class SNBestKnownTests : SNTestsBase
 	{
 		[TestMethod]
-		public void Ascending_Comparable()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public void Ascending_Comparable(GenerationMode mode)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortAscending(ref actual[0], length);
 
@@ -20,11 +24,14 @@
 		}
 
 		[TestMethod]
-		public void Descending_Comparable()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public void Descending_Comparable(GenerationMode mode)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortDescending(ref actual[0], length);
 
@@ -33,11 +40,14 @@
 		}
 
 		[TestMethod]
-		public void Ascending_Comparison()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public void Ascending_Comparison(GenerationMode mode)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortAscending(ref actual[0], length, InternalComparison);
 
@@ -46,11 +56,14 @@
 		}
 
 		[TestMethod]
-		public void Descending_Comparison()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public void Descending_Comparison(GenerationMode mode)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortDescending(ref actual[0], length, InternalComparison);
 
@@ -59,11 +72,14 @@
 		}
 
 		[TestMethod]
-		public unsafe void Ascending_ComparisonPointer()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public unsafe void Ascending_ComparisonPointer(GenerationMode mode)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				GenerateArraysAscending(length, out int[] expected, out int[] actual);
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortAscending(ref actual[0], length, &InternalComparison);
 
@@ -72,11 +88,14 @@
 		}
 
 		[TestMethod]
-		public unsafe void Descending_ComparisonPointer()
+		[DataRow(GenerationMode.Sorted)]
+		[DataRow(GenerationMode.Random)]
+		[DataRow(GenerationMode.Reverse)]
+		public unsafe void Descending_ComparisonPointer(GenerationMode mode)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 			{
-				GenerateArraysDescending(length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortDescending(ref actual[0], length, &InternalComparison);
 
@@ -89,7 +108,7 @@
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortAscending(ref actual[0], actual.Length);
 			});
@@ -100,7 +119,7 @@
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortDescending(ref actual[0], actual.Length);
 			});
@@ -111,7 +130,7 @@
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortAscending(ref actual[0], actual.Length, InternalComparison);
 			});
@@ -122,7 +141,7 @@
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortDescending(ref actual[0], actual.Length, InternalComparison);
 			});
@@ -133,7 +152,7 @@
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortAscending(ref actual[0], actual.Length, &InternalComparison);
 			});
@@ -144,7 +163,7 @@
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
 				SNBestKnown.SortDescending(ref actual[0], actual.Length, &InternalComparison);
 			});
