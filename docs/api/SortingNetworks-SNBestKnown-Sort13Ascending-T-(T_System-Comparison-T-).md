@@ -1,6 +1,6 @@
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBestKnown](./SortingNetworks-SNBestKnown.md 'SortingNetworks.SNBestKnown')
 ## SNBestKnown.Sort13Ascending&lt;T&gt;(T, System.Comparison&lt;T&gt;) Method
-Sorts a collection of 13 in ascending order using the specified [System.Comparison&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Comparison-1 'System.Comparison`1').  
+Sorts a collection of 13 elements in ascending order using the specified [System.Comparison&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Comparison-1 'System.Comparison`1').  
 ```csharp
 public static void Sort13Ascending<T>(ref T p0, System.Comparison<T> comparison);
 ```
