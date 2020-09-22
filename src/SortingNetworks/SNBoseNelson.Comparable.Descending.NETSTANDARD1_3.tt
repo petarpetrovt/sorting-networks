@@ -1,0 +1,36 @@
+﻿<#@ template language="C#" #>
+<#@ include file="TemplateUtilities.tt" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+namespace SortingNetworks
+{
+	using System;
+	using System.Runtime.CompilerServices;
+
+	partial class SNBoseNelson
+	{
+#if NETSTANDARD1_3
+<#for (int i = minLength; i <= maxLength; i++) {#>
+		/// <summary>
+		/// Sorts a collection of <#= i #> elements in descending order using the <see cref="IComparable{T}"/> generic
+		/// interface implementation of each element.
+		/// </summary>
+		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+		/// <param name="p0">the reference to the first element of the collection</param>
+		public static void Sort<#= i #>Descending<T>(ref T p0)
+			where T : IComparable<T>
+		{
+<#for (int y = 1; y < i; y++) {#>
+			ref var p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
+<#}#>
+
+			T temp;
+			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfLesserComparableLegacy($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
+		}
+
+<#}#>
+#endif
+	}
+}
