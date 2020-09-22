@@ -1,15 +1,21 @@
-name: Build
+﻿name: Build
 on:
   push:
     branches:
       - master
     paths-ignore:
       - '**.md'
+      - '**.png'
+      - '**.editorconfig'
+      - '**.csv'
   pull_request:
     branches:
       - master
     paths-ignore:
       - '**.md'
+      - '**.png'
+      - '**.editorconfig'
+      - '**.csv'
 jobs:
   test:
     name: Build on ${{ matrix.os }}
