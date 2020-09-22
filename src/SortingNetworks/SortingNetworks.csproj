@@ -56,24 +56,44 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="SNBestKnown.Comparison.tt">
-			<LastGenOutput>SNBestKnown.Comparison.cs</LastGenOutput>
+		<None Update="SNBestKnown.Comparison.Ascending.tt">
+			<LastGenOutput>SNBestKnown.Comparison.Ascending.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
-		<None Update="SNBestKnown.ComparisonPointer.tt">
-			<LastGenOutput>SNBestKnown.ComparisonPointer.cs</LastGenOutput>
+		<None Update="SNBestKnown.Comparison.Descending.tt">
+			<LastGenOutput>SNBestKnown.Comparison.Descending.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
-		<None Update="SNBestKnown.Comparable.tt">
-			<LastGenOutput>SNBestKnown.Comparable.cs</LastGenOutput>
+		<None Update="SNBestKnown.ComparisonPointer.Ascending.tt">
+			<LastGenOutput>SNBestKnown.ComparisonPointer.Ascending.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
-		<None Update="SNBoseNelson.Comparison.tt">
-			<LastGenOutput>SNBoseNelson.Comparison.cs</LastGenOutput>
+		<None Update="SNBestKnown.ComparisonPointer.Descending.tt">
+			<LastGenOutput>SNBestKnown.ComparisonPointer.Descending.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
-		<None Update="SNBoseNelson.ComparisonPointer.tt">
-			<LastGenOutput>SNBoseNelson.ComparisonPointer.cs</LastGenOutput>
+		<None Update="SNBestKnown.Comparable.Ascending.tt">
+			<LastGenOutput>SNBestKnown.Comparable.Ascending.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBestKnown.Comparable.Descending.tt">
+			<LastGenOutput>SNBestKnown.Comparable.Descending.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBoseNelson.Comparison.Ascending.tt">
+			<LastGenOutput>SNBoseNelson.Comparison.Ascending.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBoseNelson.Comparison.Descending.tt">
+			<LastGenOutput>SNBoseNelson.Comparison.Descending.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBoseNelson.ComparisonPointer.Ascending.tt">
+			<LastGenOutput>SNBoseNelson.ComparisonPointer.Ascending.cs</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
+		</None>
+		<None Update="SNBoseNelson.ComparisonPointer.Descending.tt">
+			<LastGenOutput>SNBoseNelson.ComparisonPointer.Descending.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
 		<None Update="SNBoseNelson.Comparable.Ascending.tt">
@@ -87,28 +107,53 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="SNBestKnown.Comparison.cs">
-			<DependentUpon>SNBestKnown.Comparison.tt</DependentUpon>
+		<Compile Update="SNBestKnown.Comparison.Ascending.cs">
+			<DependentUpon>SNBestKnown.Comparison.Ascending.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>
-		<Compile Update="SNBestKnown.ComparisonPointer.cs">
-			<DependentUpon>SNBestKnown.ComparisonPointer.tt</DependentUpon>
+		<Compile Update="SNBestKnown.Comparison.Descending.cs">
+			<DependentUpon>SNBestKnown.Comparison.Descending.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>
-		<Compile Update="SNBestKnown.Comparable.cs">
-			<DependentUpon>SNBestKnown.Comparable.tt</DependentUpon>
+		<Compile Update="SNBestKnown.ComparisonPointer.Ascending.cs">
+			<DependentUpon>SNBestKnown.ComparisonPointer.Ascending.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>
-		<Compile Update="SNBoseNelson.Comparison.cs">
-			<DependentUpon>SNBoseNelson.Comparison.tt</DependentUpon>
+		<Compile Update="SNBestKnown.ComparisonPointer.Descending.cs">
+			<DependentUpon>SNBestKnown.ComparisonPointer.Descending.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>
-		<Compile Update="SNBoseNelson.ComparisonPointer.cs">
-			<DependentUpon>SNBoseNelson.ComparisonPointer.tt</DependentUpon>
+		<Compile Update="SNBestKnown.Comparable.Ascending.cs">
+			<DependentUpon>SNBestKnown.Comparable.Ascending.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBestKnown.Comparable.Descending.cs">
+			<DependentUpon>SNBestKnown.Comparable.Descending.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelson.Comparison.Ascending.cs">
+			<DependentUpon>SNBoseNelson.Comparison.Ascending.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelson.Comparison.Descending.cs">
+			<DependentUpon>SNBoseNelson.Comparison.Descending.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelson.ComparisonPointer.Ascending.cs">
+			<DependentUpon>SNBoseNelson.ComparisonPointer.Ascending.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelson.ComparisonPointer.Descending.cs">
+			<DependentUpon>SNBoseNelson.ComparisonPointer.Descending.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>
