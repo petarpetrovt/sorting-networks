@@ -1,5 +1,7 @@
-﻿# sorting-networks
-
+<h1>
+<img src="/icon.png" alt="sorting-networks" width="64"/>
+sorting-networks
+</h1>
 <p align="left">
     <a href="https://github.com/petarpetrovt/sorting-networks/actions?query=workflow%3ABuild" alt="Build">
         <img alt="Build" src="https://github.com/petarpetrovt/sorting-networks/workflows/Build/badge.svg?branch=master" />
