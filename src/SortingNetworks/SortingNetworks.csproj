@@ -104,6 +104,14 @@
 			<LastGenOutput>SNBoseNelson.Comparable.Descending.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
+		<None Update="SNBoseNelson.Comparable.Ascending.NETSTANDARD1_3.tt">
+			<Generator>TextTemplatingFileGenerator</Generator>
+			<LastGenOutput>SNBoseNelson.Comparable.Ascending.NETSTANDARD1_3.cs</LastGenOutput>
+		</None>
+		<None Update="SNBoseNelson.Comparable.Descending.NETSTANDARD1_3.tt">
+			<Generator>TextTemplatingFileGenerator</Generator>
+			<LastGenOutput>SNBoseNelson.Comparable.Descending.NETSTANDARD1_3.cs</LastGenOutput>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -164,6 +172,16 @@
 		</Compile>
 		<Compile Update="SNBoseNelson.Comparable.Descending.cs">
 			<DependentUpon>SNBoseNelson.Comparable.Descending.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelson.Comparable.Ascending.NETSTANDARD1_3.cs">
+			<DependentUpon>SNBoseNelson.Comparable.Ascending.NETSTANDARD1_3.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SNBoseNelson.Comparable.Descending.NETSTANDARD1_3.cs">
+			<DependentUpon>SNBoseNelson.Comparable.Descending.NETSTANDARD1_3.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>

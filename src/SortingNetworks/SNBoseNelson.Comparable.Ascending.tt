@@ -11,6 +11,7 @@ namespace SortingNetworks
 
 	partial class SNBoseNelson
 	{
+#if !NETSTANDARD1_3
 <#for (int i = minLength; i <= maxLength; i++) {#>
 		/// <summary>
 		/// Sorts a collection of <#= i #> elements in ascending order using the <see cref="IComparable{T}"/> generic
@@ -26,14 +27,11 @@ namespace SortingNetworks
 <#}#>
 
 			T temp;
-#if NETSTANDARD1_3
-			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfGreaterComparableLegacy($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
-#else
 			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfGreaterComparable($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
-#endif
 		}
 
 <#}#>
+#endif
 		/// <summary>
 		/// Sorts a collection of specified number of elements in ascending order using the <see cref="IComparable{T}"/> generic
 		/// interface implementation of each element.
