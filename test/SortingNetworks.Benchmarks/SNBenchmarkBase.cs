@@ -1,6 +1,7 @@
 ﻿namespace SortingNetworks.Benchmarks
 {
 	using System;
+	using System.Buffers;
 	using System.Runtime.CompilerServices;
 	using BenchmarkDotNet.Attributes;
 	using BenchmarkDotNet.Jobs;
@@ -11,18 +12,29 @@
 	[MemoryDiagnoser]
 	public abstract class SNBenchmarkBase
 	{
-		private const int N = 50_000_000;
-
 		private int[] _globalItems;
 
 		protected int[] _iterationItems;
 
 		public abstract int Length { get; set; }
 
+		public int Count
+			=> Length switch
+			{
+				int length when length <= 02 => 40_000_000,
+				int length when length <= 06 => 35_000_000,
+				int length when length <= 11 => 22_000_000,
+				int length when length <= 15 => 15_000_000,
+				int length when length <= 20 => 13_000_000,
+				int length when length <= 26 => 11_000_000,
+				int length when length <= 32 => 09_000_000,
+				_ => -1,
+			};
+
 		[GlobalSetup]
 		public void GlobalSetup()
 		{
-			_globalItems = new int[N];
+			_globalItems = new int[Count];
 
 			var random = new Random(new Random().Next());
 			for (int i = 0; i < _globalItems.Length; i++)
@@ -41,15 +53,15 @@
 		[IterationSetup]
 		public void IterationSetup()
 		{
-			_iterationItems = new int[N];
+			_iterationItems = ArrayPool<int>.Shared.Rent(Count);
 			_globalItems.AsSpan().CopyTo(_iterationItems);
 		}
 
 		[IterationCleanup]
 		public void IterationCleanup()
 		{
+			ArrayPool<int>.Shared.Return(_iterationItems);
 			_iterationItems = null;
-			GC.Collect();
 		}
 
 		[MethodImpl(MethodImplOptions.NoInlining)]

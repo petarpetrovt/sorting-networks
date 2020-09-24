@@ -11,20 +11,22 @@
 		[Benchmark]
 		public void SN_Generic_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.SortAscending(ref _iterationItems[i], Length);
+				SNBestKnown.SortAscending(ref _iterationItems[i], length);
 			}
 		}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBestKnown.Sort9Ascending(ref _iterationItems[i]);
 			}
@@ -33,11 +35,12 @@
 		[Benchmark]
 		public void Insertion_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
@@ -52,20 +55,22 @@
 		[Benchmark]
 		public void SN_Generic_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.SortAscending(ref _iterationItems[i], Length);
+				SNBestKnown.SortAscending(ref _iterationItems[i], length);
 			}
 		}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBestKnown.Sort10Ascending(ref _iterationItems[i]);
 			}
@@ -74,11 +79,12 @@
 		[Benchmark]
 		public void Insertion_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
@@ -93,20 +99,22 @@
 		[Benchmark]
 		public void SN_Generic_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.SortAscending(ref _iterationItems[i], Length);
+				SNBestKnown.SortAscending(ref _iterationItems[i], length);
 			}
 		}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBestKnown.Sort11Ascending(ref _iterationItems[i]);
 			}
@@ -115,11 +123,12 @@
 		[Benchmark]
 		public void Insertion_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
@@ -134,20 +143,22 @@
 		[Benchmark]
 		public void SN_Generic_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.SortAscending(ref _iterationItems[i], Length);
+				SNBestKnown.SortAscending(ref _iterationItems[i], length);
 			}
 		}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBestKnown.Sort12Ascending(ref _iterationItems[i]);
 			}
@@ -156,11 +167,12 @@
 		[Benchmark]
 		public void Insertion_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
@@ -175,20 +187,22 @@
 		[Benchmark]
 		public void SN_Generic_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.SortAscending(ref _iterationItems[i], Length);
+				SNBestKnown.SortAscending(ref _iterationItems[i], length);
 			}
 		}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBestKnown.Sort13Ascending(ref _iterationItems[i]);
 			}
@@ -197,11 +211,12 @@
 		[Benchmark]
 		public void Insertion_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
@@ -216,20 +231,22 @@
 		[Benchmark]
 		public void SN_Generic_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.SortAscending(ref _iterationItems[i], Length);
+				SNBestKnown.SortAscending(ref _iterationItems[i], length);
 			}
 		}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBestKnown.Sort14Ascending(ref _iterationItems[i]);
 			}
@@ -238,11 +255,12 @@
 		[Benchmark]
 		public void Insertion_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
@@ -257,20 +275,22 @@
 		[Benchmark]
 		public void SN_Generic_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.SortAscending(ref _iterationItems[i], Length);
+				SNBestKnown.SortAscending(ref _iterationItems[i], length);
 			}
 		}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBestKnown.Sort15Ascending(ref _iterationItems[i]);
 			}
@@ -279,11 +299,12 @@
 		[Benchmark]
 		public void Insertion_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
@@ -298,20 +319,22 @@
 		[Benchmark]
 		public void SN_Generic_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.SortAscending(ref _iterationItems[i], Length);
+				SNBestKnown.SortAscending(ref _iterationItems[i], length);
 			}
 		}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBestKnown.Sort16Ascending(ref _iterationItems[i]);
 			}
@@ -320,11 +343,12 @@
 		[Benchmark]
 		public void Insertion_Comparable()
 		{
-			int maximumLength = _iterationItems.Length - Length;
+			int length = Length;
+			int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += Length)
+			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, Length);
+				Span<int> slice = _iterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
