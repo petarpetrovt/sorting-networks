@@ -23,6 +23,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest] #, ubuntu-latest, macOS-latest]
+        tf: [net5.0, netcoreapp3.1, net48]
     steps:
      - name: Checkout
        uses: actions/checkout@v2
@@ -30,8 +31,8 @@ jobs:
      - name: Setup dotnet
        uses: actions/setup-dotnet@v1
 
-     - name: Publish tests
-       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Debug" -f "netcoreapp3.1"
+     - name: Publish tests `${{runner.tf}}`
+       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Debug" -f "${{runner.tf}}"
        env:
          DOTNET_CLI_TELEMETRY_OPTOUT: true
 
