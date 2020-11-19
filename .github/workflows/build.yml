@@ -25,14 +25,17 @@ jobs:
         options:
           - os: windows-latest
             tf: net5.0
+            rv: '5.0.100'
             coverage: true
 
           - os: windows-latest
             tf: netcoreapp3.1
+            rv: '3.1.404'
             coverage: false
 
           - os: windows-latest
             tf: net48
+            rv: '5.0.100'
             coverage: false
     steps:
      - name: Checkout
@@ -41,12 +44,10 @@ jobs:
      - name: Setup dotnet
        uses: actions/setup-dotnet@v1.7.2
        with:
-         dotnet-version: '5.0.100'
+         dotnet-version: ${{ matrix.options.rv }}
 
      - name: Publish tests
        run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Debug" -f "${{ matrix.options.tf }}"
-       env:
-         DOTNET_CLI_TELEMETRY_OPTOUT: true
 
      - name: Run tests with code coverage
        if: ${{ matrix.options.coverage }}
