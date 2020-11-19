@@ -50,15 +50,7 @@ jobs:
             rv: '3.1.404'
             codecov: false
           # net48
-          - os: ubuntu-latest
-            tf: net48
-            rv: '5.0.100'
-            codecov: false
           - os: windows-latest
-            tf: net48
-            rv: '5.0.100'
-            codecov: false
-          - os: macos-latest
             tf: net48
             rv: '5.0.100'
             codecov: false
