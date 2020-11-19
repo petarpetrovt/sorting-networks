@@ -8,6 +8,7 @@
 
 	[SimpleJob(RuntimeMoniker.Net48)]
 	[SimpleJob(RuntimeMoniker.NetCoreApp31)]
+	[SimpleJob(RuntimeMoniker.NetCoreApp50)]
 	[SimpleJob(RuntimeMoniker.CoreRt31)]
 	[MemoryDiagnoser]
 	public abstract class SNBenchmarkBase

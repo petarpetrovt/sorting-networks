@@ -31,4 +31,18 @@
 		<DebugType Condition="'$(codecov)' != ''">full</DebugType>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<!--Compile T4 on build-->
+		<TransformOnBuild>true</TransformOnBuild>
+		<OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOutputFiles>
+		<TransformOutOfDateOnly>true</TransformOutOfDateOnly>
+		<T4IncludeDir>$(SolutionDir)</T4IncludeDir>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<T4ParameterValues Include="T4IncludeDir">
+			<Value>$(T4IncludeDir)</Value>
+		</T4ParameterValues>
+	</ItemGroup>
+
 </Project>

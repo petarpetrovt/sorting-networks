@@ -6,6 +6,9 @@
 	/// <summary>
 	/// Represents a base for different sorting network implementations.
 	/// </summary>
+#if NET5_0
+	[SkipLocalsInit]
+#endif
 	public abstract class SNBase
 	{
 		/// <summary>
@@ -59,8 +62,9 @@
 			if (typeof(T) == typeof(nint)) return (nint)(object)left < (nint)(object)right ? true : false;
 			if (typeof(T) == typeof(float)) return (float)(object)left < (float)(object)right ? true : false;
 			if (typeof(T) == typeof(double)) return (double)(object)left < (double)(object)right ? true : false;
-			// TODO: .NET 5
-			//if (typeof(TKey) == typeof(Half)) return (Half)(object)left < (Half)(object)right ? true : false;
+#if NET5_0
+			if (typeof(T) == typeof(Half)) return (Half)(object)left < (Half)(object)right ? true : false;
+#endif
 
 			return left.CompareTo(right) < 0 ? true : false;
 		}
@@ -96,8 +100,9 @@
 			if (typeof(T) == typeof(nint)) return (nint)(object)left > (nint)(object)right ? true : false;
 			if (typeof(T) == typeof(float)) return (float)(object)left > (float)(object)right ? true : false;
 			if (typeof(T) == typeof(double)) return (double)(object)left > (double)(object)right ? true : false;
-			// TODO: .NET 5
-			//if (typeof(TKey) == typeof(Half)) return (Half)(object)left > (Half)(object)right ? true : false;
+#if NET5_0
+			if (typeof(T) == typeof(Half)) return (Half)(object)left > (Half)(object)right ? true : false;
+#endif
 
 			return left.CompareTo(right) > 0 ? true : false;
 		}
