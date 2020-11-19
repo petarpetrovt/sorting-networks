@@ -37,15 +37,7 @@ jobs:
             rv: '5.0.100'
             codecov: false
           # netcoreapp3.1
-          - os: ubuntu-latest
-            tf: netcoreapp3.1
-            rv: '3.1.404'
-            codecov: false
           - os: windows-latest
-            tf: netcoreapp3.1
-            rv: '3.1.404'
-            codecov: false
-          - os: macos-latest
             tf: netcoreapp3.1
             rv: '3.1.404'
             codecov: false
