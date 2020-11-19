@@ -30,6 +30,8 @@ jobs:
 
      - name: Setup dotnet
        uses: actions/setup-dotnet@v1.7.2
+       with:
+         dotnet-version: '5.0.100'
 
      - name: Publish tests
        run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Debug" -f "${{ matrix.tf }}"
