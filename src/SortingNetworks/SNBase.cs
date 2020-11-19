@@ -6,6 +6,9 @@
 	/// <summary>
 	/// Represents a base for different sorting network implementations.
 	/// </summary>
+#if NET5_0
+	[SkipLocalsInit]
+#endif
 	public abstract class SNBase
 	{
 		/// <summary>
