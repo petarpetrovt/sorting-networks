@@ -23,17 +23,17 @@ jobs:
     strategy:
       matrix:
         options:
-          - os: windows-latest
+          - os: ubuntu-latest
             tf: net5.0
             rv: '5.0.100'
             coverage: true
 
-          - os: windows-latest
+          - os: ubuntu-latest
             tf: netcoreapp3.1
             rv: '3.1.404'
             coverage: false
 
-          - os: windows-latest
+          - os: ubuntu-latest
             tf: net48
             rv: '5.0.100'
             coverage: false
