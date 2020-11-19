@@ -23,20 +23,45 @@ jobs:
     strategy:
       matrix:
         options:
+          # ne5.0
           - os: ubuntu-latest
             tf: net5.0
             rv: '5.0.100'
-            coverage: true
-
+            codecov: true
+          - os: windows-latest
+            tf: net5.0
+            rv: '5.0.100'
+            codecov: false
+          - os: macos-latest
+            tf: net5.0
+            rv: '5.0.100'
+            codecov: false
+          # netcoreapp3.1
           - os: ubuntu-latest
             tf: netcoreapp3.1
             rv: '3.1.404'
-            coverage: false
-
+            codecov: false
+          - os: windows-latest
+            tf: netcoreapp3.1
+            rv: '3.1.404'
+            codecov: false
+          - os: macos-latest
+            tf: netcoreapp3.1
+            rv: '3.1.404'
+            codecov: false
+          # net48
+          - os: ubuntu-latest
+            tf: net48
+            rv: '5.0.100'
+            codecov: false
           - os: windows-latest
             tf: net48
             rv: '5.0.100'
-            coverage: false
+            codecov: false
+          - os: macos-latest
+            tf: net48
+            rv: '5.0.100'
+            codecov: false
     steps:
      - name: Checkout
        uses: actions/checkout@v2.3.4
@@ -50,15 +75,15 @@ jobs:
        run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Debug" -f "${{ matrix.options.tf }}"
 
      - name: Run tests with code coverage
-       if: ${{ matrix.options.coverage }}
+       if: ${{ matrix.options.codecov }}
        run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --collect:"XPlat code coverage" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
 
      - name: Run tests without code coverage
-       if: ${{ !matrix.options.coverage }}
+       if: ${{ !matrix.options.codecov }}
        run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
 
      - name: Update codecov
-       if: ${{ matrix.options.coverage }}
+       if: ${{ matrix.options.codecov }}
        uses: codecov/codecov-action@v1
        with:
          token: ${{ secrets.CODECOV_TOKEN }}
