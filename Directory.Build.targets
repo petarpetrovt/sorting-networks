@@ -1,5 +1,11 @@
 ﻿<Project>
+
 	<Target Name="VSTestIfTestProject">
 		<CallTarget Targets="VSTest" Condition="'$(IsTestProject)' == 'true'" />
 	</Target>
+
+	<!--Import T4 targets-->
+	<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TextTemplating\Microsoft.TextTemplating.targets"
+		Condition="'$(BuildingInsideVisualStudio)' == 'true'" />
+
 </Project>
