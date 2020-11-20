@@ -6,6 +6,9 @@ sorting-networks
     <a href="https://github.com/petarpetrovt/sorting-networks/actions?query=workflow%3ABuild" alt="Build">
         <img alt="Build" src="https://github.com/petarpetrovt/sorting-networks/workflows/Build/badge.svg?branch=master" />
     </a>
+    <a href="https://github.com/petarpetrovt/sorting-networks/actions?query=workflow%3ACodeQL" alt="CodeQL">
+        <img alt="CodeQL" src="https://github.com/petarpetrovt/sorting-networks/workflows/CodeQL/badge.svg?branch=master" />
+    </a>
     <a href="https://codecov.io/gh/petarpetrovt/sorting-networks" alt="codecov">
         <img alt="codecov" src="https://codecov.io/gh/petarpetrovt/sorting-networks/branch/master/graph/badge.svg?token=nzdk7N3iVY" />
     </a>
