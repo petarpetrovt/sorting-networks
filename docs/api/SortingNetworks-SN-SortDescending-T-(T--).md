@@ -3,12 +3,15 @@
 Sorts the elements in an entire [System.Array](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array') in descending order using the [System.IComparable&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1') generic  
 interface implementation of each element of the [System.Array](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array').  
 ```csharp
-public static void SortDescending<T>(T[] array);
+public static void SortDescending<T>(T[] array)
+    where T : System.IComparable<T>;
 ```
 #### Type parameters
 <a name='SortingNetworks-SN-SortDescending-T-(T--)-T'></a>
 `T`  
 The type of the elements of the array.  
+
+Constraints [System.IComparable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1')[T](#SortingNetworks-SN-SortDescending-T-(T--)-T 'SortingNetworks.SN.SortDescending&lt;T&gt;(T[]).T')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1')  
   
 #### Parameters
 <a name='SortingNetworks-SN-SortDescending-T-(T--)-array'></a>

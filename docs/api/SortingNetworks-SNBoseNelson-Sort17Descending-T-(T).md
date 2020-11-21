@@ -3,12 +3,15 @@
 Sorts a collection of 17 elements in descending order using the [System.IComparable&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1') generic  
 interface implementation of each element.  
 ```csharp
-public static void Sort17Descending<T>(ref T p0);
+public static void Sort17Descending<T>(ref T p0)
+    where T : System.IComparable<T>;
 ```
 #### Type parameters
 <a name='SortingNetworks-SNBoseNelson-Sort17Descending-T-(T)-T'></a>
 `T`  
 The type of the elements of the collection.  
+
+Constraints [System.IComparable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1')[T](#SortingNetworks-SNBoseNelson-Sort17Descending-T-(T)-T 'SortingNetworks.SNBoseNelson.Sort17Descending&lt;T&gt;(T).T')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1')  
   
 #### Parameters
 <a name='SortingNetworks-SNBoseNelson-Sort17Descending-T-(T)-p0'></a>

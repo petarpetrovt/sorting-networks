@@ -14,6 +14,7 @@
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
 		/// </summary>
+		/// <exclude/>
 #if NETSTANDARD1_3
 		[System.Diagnostics.DebuggerNonUserCode]
 #else
@@ -41,6 +42,7 @@
 		/// <param name="left">the left parameter</param>
 		/// <param name="right">the right parameter</param>
 		/// <returns>true if <paramref name="left"/> is less than <paramref name="right"/>; otherwise false</returns>
+		/// <exclude/>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 #if NETSTANDARD1_3
 		[System.Diagnostics.DebuggerNonUserCode]
@@ -79,6 +81,7 @@
 		/// <param name="left">the left parameter</param>
 		/// <param name="right">the right parameter</param>
 		/// <returns>true if <paramref name="left"/> is greater than <paramref name="right"/>; otherwise false</returns>
+		/// <exclude/>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 #if NETSTANDARD1_3
 		[System.Diagnostics.DebuggerNonUserCode]

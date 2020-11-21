@@ -2,12 +2,15 @@
 ## SNBoseNelson.SortAscending&lt;T&gt;(T, int, System.Comparison&lt;T&gt;) Method
 Sorts a collection of specified number of elements in ascending order using the specified [System.Comparison&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Comparison-1 'System.Comparison`1').  
 ```csharp
-public static void SortAscending<T>(ref T p0, in int length, System.Comparison<T> comparison);
+public static void SortAscending<T>(ref T p0, in int length, System.Comparison<T> comparison)
+    where T : System.IComparable<T>;
 ```
 #### Type parameters
 <a name='SortingNetworks-SNBoseNelson-SortAscending-T-(T_int_System-Comparison-T-)-T'></a>
 `T`  
 The type of the elements of the collection.  
+
+Constraints [System.IComparable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1')[T](#SortingNetworks-SNBoseNelson-SortAscending-T-(T_int_System-Comparison-T-)-T 'SortingNetworks.SNBoseNelson.SortAscending&lt;T&gt;(T, int, System.Comparison&lt;T&gt;).T')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1')  
   
 #### Parameters
 <a name='SortingNetworks-SNBoseNelson-SortAscending-T-(T_int_System-Comparison-T-)-p0'></a>

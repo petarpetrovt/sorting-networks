@@ -22,6 +22,7 @@
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
 		/// </summary>
+		/// <exclude/>
 #if NETSTANDARD1_3
 		[System.Diagnostics.DebuggerNonUserCode]
 #else

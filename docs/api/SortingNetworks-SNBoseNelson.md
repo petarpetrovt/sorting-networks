@@ -2,14 +2,12 @@
 ## SNBoseNelson Class
 Sorting networks implementation using Bose-Nelson algorithm.  
 ```csharp
-public abstract class SNBoseNelson : SNBase
+public abstract class SNBoseNelson : SortingNetworks.SNBase
 ```
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [SNBase](./SortingNetworks-SNBase.md 'SortingNetworks.SNBase') &#129106; SNBoseNelson  
 
 Derived  
 &#8627; [SNBestKnown](./SortingNetworks-SNBestKnown.md 'SortingNetworks.SNBestKnown')  
-### Constructors
-- [SNBoseNelson()](./SortingNetworks-SNBoseNelson-SNBoseNelson().md 'SortingNetworks.SNBoseNelson.SNBoseNelson()')
 ### Fields
 - [MaxLength](./SortingNetworks-SNBoseNelson-MaxLength.md 'SortingNetworks.SNBoseNelson.MaxLength')
 - [MinLength](./SortingNetworks-SNBoseNelson-MinLength.md 'SortingNetworks.SNBoseNelson.MinLength')
