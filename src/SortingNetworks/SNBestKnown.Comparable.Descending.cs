@@ -14,14 +14,14 @@
 		public static new void Sort9Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
 
 			T temp;
 #if NETSTANDARD1_3
@@ -88,15 +88,15 @@
 		public static new void Sort10Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
 
 			T temp;
 #if NETSTANDARD1_3
@@ -171,16 +171,16 @@
 		public static new void Sort11Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
 
 			T temp;
 #if NETSTANDARD1_3
@@ -267,17 +267,17 @@
 		public static new void Sort12Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
 
 			T temp;
 #if NETSTANDARD1_3
@@ -372,18 +372,18 @@
 		public static new void Sort13Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
 
 			T temp;
 #if NETSTANDARD1_3
@@ -490,19 +490,19 @@
 		public static new void Sort14Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
 
 			T temp;
 #if NETSTANDARD1_3
@@ -621,20 +621,20 @@
 		public static new void Sort15Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
 
 			T temp;
 #if NETSTANDARD1_3
@@ -763,21 +763,21 @@
 		public static new void Sort16Descending<T>(ref T p0)
 			where T : IComparable<T>
 		{
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
 
 			T temp;
 #if NETSTANDARD1_3

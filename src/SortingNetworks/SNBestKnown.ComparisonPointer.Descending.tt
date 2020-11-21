@@ -23,7 +23,7 @@ namespace SortingNetworks
 		public unsafe static new void Sort<#= i #>Descending<T>(ref T p0, delegate* managed<T, T, int> comparisonPointer)
 		{
 <#for (int y = 1; y < i; y++) {#>
-			ref var p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
+			ref T p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
 			T temp;

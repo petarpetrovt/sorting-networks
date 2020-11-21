@@ -18,7 +18,7 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -37,8 +37,8 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -59,9 +59,9 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -84,10 +84,10 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -114,11 +114,11 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -149,12 +149,12 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -188,13 +188,13 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -231,14 +231,14 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -283,15 +283,15 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -344,16 +344,16 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -412,17 +412,17 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -487,18 +487,18 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -568,19 +568,19 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -655,20 +655,20 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -747,21 +747,21 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -844,22 +844,22 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -958,23 +958,23 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -1089,24 +1089,24 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -1233,25 +1233,25 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -1390,26 +1390,26 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -1558,27 +1558,27 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -1737,28 +1737,28 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
@@ -1925,29 +1925,29 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -2122,30 +2122,30 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
-			ref var p24 = ref Unsafe.Add(ref p0, 24);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p24 = ref Unsafe.Add(ref p0, 24);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -2329,31 +2329,31 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
-			ref var p24 = ref Unsafe.Add(ref p0, 24);
-			ref var p25 = ref Unsafe.Add(ref p0, 25);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p24 = ref Unsafe.Add(ref p0, 24);
+			ref T p25 = ref Unsafe.Add(ref p0, 25);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -2546,32 +2546,32 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
-			ref var p24 = ref Unsafe.Add(ref p0, 24);
-			ref var p25 = ref Unsafe.Add(ref p0, 25);
-			ref var p26 = ref Unsafe.Add(ref p0, 26);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p24 = ref Unsafe.Add(ref p0, 24);
+			ref T p25 = ref Unsafe.Add(ref p0, 25);
+			ref T p26 = ref Unsafe.Add(ref p0, 26);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -2771,33 +2771,33 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
-			ref var p24 = ref Unsafe.Add(ref p0, 24);
-			ref var p25 = ref Unsafe.Add(ref p0, 25);
-			ref var p26 = ref Unsafe.Add(ref p0, 26);
-			ref var p27 = ref Unsafe.Add(ref p0, 27);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p24 = ref Unsafe.Add(ref p0, 24);
+			ref T p25 = ref Unsafe.Add(ref p0, 25);
+			ref T p26 = ref Unsafe.Add(ref p0, 26);
+			ref T p27 = ref Unsafe.Add(ref p0, 27);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -3004,34 +3004,34 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
-			ref var p24 = ref Unsafe.Add(ref p0, 24);
-			ref var p25 = ref Unsafe.Add(ref p0, 25);
-			ref var p26 = ref Unsafe.Add(ref p0, 26);
-			ref var p27 = ref Unsafe.Add(ref p0, 27);
-			ref var p28 = ref Unsafe.Add(ref p0, 28);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p24 = ref Unsafe.Add(ref p0, 24);
+			ref T p25 = ref Unsafe.Add(ref p0, 25);
+			ref T p26 = ref Unsafe.Add(ref p0, 26);
+			ref T p27 = ref Unsafe.Add(ref p0, 27);
+			ref T p28 = ref Unsafe.Add(ref p0, 28);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -3244,35 +3244,35 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
-			ref var p24 = ref Unsafe.Add(ref p0, 24);
-			ref var p25 = ref Unsafe.Add(ref p0, 25);
-			ref var p26 = ref Unsafe.Add(ref p0, 26);
-			ref var p27 = ref Unsafe.Add(ref p0, 27);
-			ref var p28 = ref Unsafe.Add(ref p0, 28);
-			ref var p29 = ref Unsafe.Add(ref p0, 29);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p24 = ref Unsafe.Add(ref p0, 24);
+			ref T p25 = ref Unsafe.Add(ref p0, 25);
+			ref T p26 = ref Unsafe.Add(ref p0, 26);
+			ref T p27 = ref Unsafe.Add(ref p0, 27);
+			ref T p28 = ref Unsafe.Add(ref p0, 28);
+			ref T p29 = ref Unsafe.Add(ref p0, 29);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -3491,36 +3491,36 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
-			ref var p24 = ref Unsafe.Add(ref p0, 24);
-			ref var p25 = ref Unsafe.Add(ref p0, 25);
-			ref var p26 = ref Unsafe.Add(ref p0, 26);
-			ref var p27 = ref Unsafe.Add(ref p0, 27);
-			ref var p28 = ref Unsafe.Add(ref p0, 28);
-			ref var p29 = ref Unsafe.Add(ref p0, 29);
-			ref var p30 = ref Unsafe.Add(ref p0, 30);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p24 = ref Unsafe.Add(ref p0, 24);
+			ref T p25 = ref Unsafe.Add(ref p0, 25);
+			ref T p26 = ref Unsafe.Add(ref p0, 26);
+			ref T p27 = ref Unsafe.Add(ref p0, 27);
+			ref T p28 = ref Unsafe.Add(ref p0, 28);
+			ref T p29 = ref Unsafe.Add(ref p0, 29);
+			ref T p30 = ref Unsafe.Add(ref p0, 30);
 
 			T temp;
 			if (comparison.Invoke(p1, p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
@@ -3744,37 +3744,37 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-			ref var p1 = ref Unsafe.Add(ref p0, 1);
-			ref var p2 = ref Unsafe.Add(ref p0, 2);
-			ref var p3 = ref Unsafe.Add(ref p0, 3);
-			ref var p4 = ref Unsafe.Add(ref p0, 4);
-			ref var p5 = ref Unsafe.Add(ref p0, 5);
-			ref var p6 = ref Unsafe.Add(ref p0, 6);
-			ref var p7 = ref Unsafe.Add(ref p0, 7);
-			ref var p8 = ref Unsafe.Add(ref p0, 8);
-			ref var p9 = ref Unsafe.Add(ref p0, 9);
-			ref var p10 = ref Unsafe.Add(ref p0, 10);
-			ref var p11 = ref Unsafe.Add(ref p0, 11);
-			ref var p12 = ref Unsafe.Add(ref p0, 12);
-			ref var p13 = ref Unsafe.Add(ref p0, 13);
-			ref var p14 = ref Unsafe.Add(ref p0, 14);
-			ref var p15 = ref Unsafe.Add(ref p0, 15);
-			ref var p16 = ref Unsafe.Add(ref p0, 16);
-			ref var p17 = ref Unsafe.Add(ref p0, 17);
-			ref var p18 = ref Unsafe.Add(ref p0, 18);
-			ref var p19 = ref Unsafe.Add(ref p0, 19);
-			ref var p20 = ref Unsafe.Add(ref p0, 20);
-			ref var p21 = ref Unsafe.Add(ref p0, 21);
-			ref var p22 = ref Unsafe.Add(ref p0, 22);
-			ref var p23 = ref Unsafe.Add(ref p0, 23);
-			ref var p24 = ref Unsafe.Add(ref p0, 24);
-			ref var p25 = ref Unsafe.Add(ref p0, 25);
-			ref var p26 = ref Unsafe.Add(ref p0, 26);
-			ref var p27 = ref Unsafe.Add(ref p0, 27);
-			ref var p28 = ref Unsafe.Add(ref p0, 28);
-			ref var p29 = ref Unsafe.Add(ref p0, 29);
-			ref var p30 = ref Unsafe.Add(ref p0, 30);
-			ref var p31 = ref Unsafe.Add(ref p0, 31);
+			ref T p1 = ref Unsafe.Add(ref p0, 1);
+			ref T p2 = ref Unsafe.Add(ref p0, 2);
+			ref T p3 = ref Unsafe.Add(ref p0, 3);
+			ref T p4 = ref Unsafe.Add(ref p0, 4);
+			ref T p5 = ref Unsafe.Add(ref p0, 5);
+			ref T p6 = ref Unsafe.Add(ref p0, 6);
+			ref T p7 = ref Unsafe.Add(ref p0, 7);
+			ref T p8 = ref Unsafe.Add(ref p0, 8);
+			ref T p9 = ref Unsafe.Add(ref p0, 9);
+			ref T p10 = ref Unsafe.Add(ref p0, 10);
+			ref T p11 = ref Unsafe.Add(ref p0, 11);
+			ref T p12 = ref Unsafe.Add(ref p0, 12);
+			ref T p13 = ref Unsafe.Add(ref p0, 13);
+			ref T p14 = ref Unsafe.Add(ref p0, 14);
+			ref T p15 = ref Unsafe.Add(ref p0, 15);
+			ref T p16 = ref Unsafe.Add(ref p0, 16);
+			ref T p17 = ref Unsafe.Add(ref p0, 17);
+			ref T p18 = ref Unsafe.Add(ref p0, 18);
+			ref T p19 = ref Unsafe.Add(ref p0, 19);
+			ref T p20 = ref Unsafe.Add(ref p0, 20);
+			ref T p21 = ref Unsafe.Add(ref p0, 21);
+			ref T p22 = ref Unsafe.Add(ref p0, 22);
+			ref T p23 = ref Unsafe.Add(ref p0, 23);
+			ref T p24 = ref Unsafe.Add(ref p0, 24);
+			ref T p25 = ref Unsafe.Add(ref p0, 25);
+			ref T p26 = ref Unsafe.Add(ref p0, 26);
+			ref T p27 = ref Unsafe.Add(ref p0, 27);
+			ref T p28 = ref Unsafe.Add(ref p0, 28);
+			ref T p29 = ref Unsafe.Add(ref p0, 29);
+			ref T p30 = ref Unsafe.Add(ref p0, 30);
+			ref T p31 = ref Unsafe.Add(ref p0, 31);
 
 			T temp;
 			if (comparison.Invoke(p0, p1) > 0) { temp = p0; p0 = p1; p1 = temp; }

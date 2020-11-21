@@ -28,7 +28,7 @@ namespace SortingNetworks
 			}
 
 <#for (int y = 1; y < i; y++) {#>
-			ref var p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
+			ref T p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
 			T temp;
