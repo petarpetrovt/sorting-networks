@@ -163,132 +163,168 @@
 		}
 
 		[TestMethod]
-		public void SN_Array_Ascending_Comparable_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public void SN_Array_Ascending_Comparable_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(default, SN.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, length, out int[] expected, out int[] actual);
 
 				SN.SortAscending(actual);
 			});
 		}
 
 		[TestMethod]
-		public void SN_Array_Descending_Comparable_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public void SN_Array_Descending_Comparable_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(default, SN.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, length, out int[] expected, out int[] actual);
 
 				SN.SortDescending(actual);
 			});
 		}
 
 		[TestMethod]
-		public void SN_Array_Ascending_Comparison_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public void SN_Array_Ascending_Comparison_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(default, SN.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, length, out int[] expected, out int[] actual);
 
 				SN.SortAscending(actual, InternalComparison);
 			});
 		}
 
 		[TestMethod]
-		public void SN_Array_Descending_Comparison_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public void SN_Array_Descending_Comparison_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(default, SN.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, length, out int[] expected, out int[] actual);
 
 				SN.SortDescending(actual, InternalComparison);
 			});
 		}
 
 		[TestMethod]
-		public unsafe void SN_Array_Ascending_ComparisonPointer_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public unsafe void SN_Array_Ascending_ComparisonPointer_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysAscending(default, SN.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysAscending(default, length, out int[] expected, out int[] actual);
 
 				SN.SortAscending(actual, &InternalComparison);
 			});
 		}
 
 		[TestMethod]
-		public unsafe void SN_Array_Descending_ComparisonPointer_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public unsafe void SN_Array_Descending_ComparisonPointer_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateArraysDescending(default, SN.MinLength - 1, out int[] expected, out int[] actual);
+				GenerateArraysDescending(default, length, out int[] expected, out int[] actual);
 
 				SN.SortDescending(actual, &InternalComparison);
 			});
 		}
 
 		[TestMethod]
-		public void SN_Span_Ascending_Comparable_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public void SN_Span_Ascending_Comparable_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateSpansAscending(default, SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
+				GenerateSpansAscending(default, length, out Span<int> expected, out Span<int> actual);
 
 				SN.SortAscending(actual);
 			});
 		}
 
 		[TestMethod]
-		public void SN_Span_Descending_Comparable_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public void SN_Span_Descending_Comparable_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateSpansDescending(default, SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
+				GenerateSpansDescending(default, length, out Span<int> expected, out Span<int> actual);
 
 				SN.SortDescending(actual);
 			});
 		}
 
 		[TestMethod]
-		public void SN_Span_Ascending_Comparison_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public void SN_Span_Ascending_Comparison_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateSpansAscending(default, SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
+				GenerateSpansAscending(default, length, out Span<int> expected, out Span<int> actual);
 
 				SN.SortAscending(actual, InternalComparison);
 			});
 		}
 
 		[TestMethod]
-		public void SN_Span_Descending_Comparison_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public void SN_Span_Descending_Comparison_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateSpansDescending(default, SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
+				GenerateSpansDescending(default, length, out Span<int> expected, out Span<int> actual);
 
 				SN.SortDescending(actual, InternalComparison);
 			});
 		}
 
 		[TestMethod]
-		public unsafe void SN_Span_Ascending_ComparisonPointer_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public unsafe void SN_Span_Ascending_ComparisonPointer_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateSpansAscending(default, SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
+				GenerateSpansAscending(default, length, out Span<int> expected, out Span<int> actual);
 
 				SN.SortAscending(actual, &InternalComparison);
 			});
 		}
 
 		[TestMethod]
-		public unsafe void SN_Span_Descending_ComparisonPointer_OutOfRange()
+		[DataRow(0)]
+		[DataRow(SN.MinLength - 1)]
+		[DataRow(SN.MaxLength + 1)]
+		public unsafe void SN_Span_Descending_ComparisonPointer_OutOfRange(int length)
 		{
 			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 			{
-				GenerateSpansDescending(default, SN.MinLength - 1, out Span<int> expected, out Span<int> actual);
+				GenerateSpansDescending(default, length, out Span<int> expected, out Span<int> actual);
 
 				SN.SortDescending(actual, &InternalComparison);
 			});

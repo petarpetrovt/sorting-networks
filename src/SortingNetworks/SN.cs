@@ -37,7 +37,7 @@
 #if NET5_0
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
-			ref T p0 = ref array[0];
+			ref T p0 = ref ArrayHelper.GetReference(array);
 #endif
 
 			switch (array.Length)
@@ -100,7 +100,7 @@
 #if NET5_0
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
-			ref T p0 = ref array[0];
+			ref T p0 = ref ArrayHelper.GetReference(array);
 #endif
 
 			switch (array.Length)
@@ -274,7 +274,7 @@
 #if NET5_0
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
-			ref T p0 = ref array[0];
+			ref T p0 = ref ArrayHelper.GetReference(array);
 #endif
 
 			switch (array.Length)
@@ -342,7 +342,7 @@
 #if NET5_0
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
-			ref T p0 = ref array[0];
+			ref T p0 = ref ArrayHelper.GetReference(array);
 #endif
 
 			switch (array.Length)
@@ -520,7 +520,7 @@
 #if NET5_0
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
-			ref T p0 = ref array[0];
+			ref T p0 = ref ArrayHelper.GetReference(array);
 #endif
 
 			switch (array.Length)
@@ -582,7 +582,7 @@
 #if NET5_0
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
-			ref T p0 = ref array[0];
+			ref T p0 = ref ArrayHelper.GetReference(array);
 #endif
 
 			switch (array.Length)
