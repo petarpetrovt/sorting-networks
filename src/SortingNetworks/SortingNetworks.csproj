@@ -15,6 +15,7 @@
 		<Description>A collection of sorting network algorithms implemented in C#.</Description>
 		<PackageLicenseFile></PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
+		<NoWarn>$(NoWarn);CA1812</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
