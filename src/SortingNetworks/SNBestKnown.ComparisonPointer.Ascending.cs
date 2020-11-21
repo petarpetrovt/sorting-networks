@@ -576,7 +576,11 @@
 				case 30: Sort30Ascending(ref p0, comparisonPointer); break;
 				case 31: Sort31Ascending(ref p0, comparisonPointer); break;
 				case 32: Sort32Ascending(ref p0, comparisonPointer); break;
-				default: throw new ArgumentOutOfRangeException(nameof(length), $"Sorting network length `{length}` must be between `{MinLength}` and `{MaxLength}`.");
+				default:
+					{
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
+						break;
+					}
 			}
 		}
 	}

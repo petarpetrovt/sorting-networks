@@ -48,7 +48,11 @@ namespace SortingNetworks
 <#for (int i = minLength; i <= maxLength; i++) {#>
 				case <#= i #>: Sort<#= i #>Ascending(ref p0); break;
 <#}#>
-				default: throw new ArgumentOutOfRangeException(nameof(length), $"Sorting network length `{length}` must be between `{MinLength}` and `{MaxLength}`.");
+				default:
+					{
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
+						break;
+					}
 			}
 		}
 	}
