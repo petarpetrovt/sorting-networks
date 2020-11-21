@@ -2,6 +2,8 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
+		<AssemblyName>SortingNetworks.Benchmarks</AssemblyName>
+		<RootNamespace>SortingNetworks.Benchmarks</RootNamespace>
 		<TargetFrameworks>
 			net5.0;
 			netcoreapp3.1;
