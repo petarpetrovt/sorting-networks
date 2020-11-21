@@ -19,5 +19,15 @@
 		/// Reverse
 		/// </summary>
 		Reverse,
+
+		/// <summary>
+		/// Odd bigger than even
+		/// </summary>
+		OddBiggerThanEven,
+
+		/// <summary>
+		/// Even bigger than odd
+		/// </summary>
+		EvenBiggerThanOdd,
 	}
 }
