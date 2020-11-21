@@ -13,7 +13,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort2Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 
@@ -29,7 +32,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort3Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -48,7 +54,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort4Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -70,7 +79,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort5Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -97,7 +109,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort6Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -129,7 +144,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort7Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -165,7 +183,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort8Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -205,7 +226,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort9Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -254,7 +278,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort10Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -312,7 +339,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort11Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -377,7 +407,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort12Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -449,7 +482,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort13Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -527,7 +563,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort14Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -611,7 +650,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort15Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -700,7 +742,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort16Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -794,7 +839,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort17Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -905,7 +953,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort18Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -1033,7 +1084,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort19Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -1174,7 +1228,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort20Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -1328,7 +1385,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort21Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -1493,7 +1553,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort22Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -1669,7 +1732,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort23Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -1854,7 +1920,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort24Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -2048,7 +2117,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort25Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -2252,7 +2324,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort26Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -2466,7 +2541,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort27Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -2688,7 +2766,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort28Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -2918,7 +2999,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort29Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -3155,7 +3239,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort30Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -3399,7 +3486,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort31Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -3649,7 +3739,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static void Sort32Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -3908,7 +4001,10 @@
 		public static void SortDescending<T>(ref T p0, in int length, Comparison<T> comparison)
 			where T : IComparable<T>
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			switch (length)
 			{
@@ -3943,7 +4039,11 @@
 				case 30: Sort30Descending(ref p0, comparison); break;
 				case 31: Sort31Descending(ref p0, comparison); break;
 				case 32: Sort32Descending(ref p0, comparison); break;
-				default: throw new ArgumentOutOfRangeException(nameof(length), $"Sorting network length `{length}` must be between `{MinLength}` and `{MaxLength}`.");
+				default:
+					{
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
+						break;
+					}
 			}
 		}
 	}

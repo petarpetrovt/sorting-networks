@@ -13,7 +13,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static new void Sort9Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -60,7 +63,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static new void Sort10Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -112,7 +118,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static new void Sort11Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -171,7 +180,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static new void Sort12Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -235,7 +247,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static new void Sort13Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -306,7 +321,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static new void Sort14Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -384,7 +402,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static new void Sort15Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -468,7 +489,10 @@
 		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
 		public static new void Sort16Descending<T>(ref T p0, Comparison<T> comparison)
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			ref var p1 = ref Unsafe.Add(ref p0, 1);
 			ref var p2 = ref Unsafe.Add(ref p0, 2);
@@ -560,7 +584,10 @@
 		public static new void SortDescending<T>(ref T p0, in int length, Comparison<T> comparison)
 			where T : IComparable<T>
 		{
-			ThrowHelper.NotNull(comparison, nameof(comparison));
+			if (comparison is null)
+			{
+				ThrowHelper.ArgumentNull(nameof(comparison));
+			}
 
 			switch (length)
 			{
@@ -595,7 +622,11 @@
 				case 30: Sort30Descending(ref p0, comparison); break;
 				case 31: Sort31Descending(ref p0, comparison); break;
 				case 32: Sort32Descending(ref p0, comparison); break;
-				default: throw new ArgumentOutOfRangeException(nameof(length), $"Sorting network length `{length}` must be between `{MinLength}` and `{MaxLength}`.");
+				default:
+					{
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
+						break;
+					}
 			}
 		}
 	}

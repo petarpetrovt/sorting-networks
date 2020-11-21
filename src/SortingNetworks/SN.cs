@@ -31,7 +31,7 @@
 		{
 			if (array is null)
 			{
-				throw new ArgumentNullException(nameof(array));
+				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
 #if NET5_0
@@ -75,7 +75,8 @@
 				case 32: SNBoseNelson.Sort32Ascending(ref p0); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(array), array.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -93,7 +94,7 @@
 		{
 			if (array is null)
 			{
-				throw new ArgumentNullException(nameof(array));
+				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
 #if NET5_0
@@ -137,7 +138,8 @@
 				case 32: SNBoseNelson.Sort32Descending(ref p0); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(array), array.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -189,7 +191,8 @@
 				case 32: SNBoseNelson.Sort32Ascending(ref p0); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(buffer), buffer.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -241,7 +244,8 @@
 				case 32: SNBoseNelson.Sort32Descending(ref p0); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(buffer), buffer.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -259,12 +263,12 @@
 		{
 			if (array is null)
 			{
-				throw new ArgumentNullException(nameof(array));
+				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
 			if (comparison is null)
 			{
-				throw new ArgumentNullException(nameof(comparison));
+				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
 #if NET5_0
@@ -308,7 +312,8 @@
 				case 32: SNBoseNelson.Sort32Ascending(ref p0, comparison); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(array), array.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -326,12 +331,12 @@
 		{
 			if (array is null)
 			{
-				throw new ArgumentNullException(nameof(array));
+				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
 			if (comparison is null)
 			{
-				throw new ArgumentNullException(nameof(comparison));
+				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
 #if NET5_0
@@ -375,7 +380,8 @@
 				case 32: SNBoseNelson.Sort32Descending(ref p0, comparison); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(array), array.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -392,7 +398,7 @@
 		{
 			if (comparison is null)
 			{
-				throw new ArgumentNullException(nameof(comparison));
+				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
 			ref T p0 = ref MemoryMarshal.GetReference(buffer);
@@ -432,7 +438,8 @@
 				case 32: SNBoseNelson.Sort32Ascending(ref p0, comparison); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(buffer), buffer.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -449,7 +456,7 @@
 		{
 			if (comparison is null)
 			{
-				throw new ArgumentNullException(nameof(comparison));
+				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
 			ref T p0 = ref MemoryMarshal.GetReference(buffer);
@@ -489,7 +496,8 @@
 				case 32: SNBoseNelson.Sort32Descending(ref p0, comparison); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(buffer), buffer.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -506,7 +514,7 @@
 		{
 			if (array is null)
 			{
-				throw new ArgumentNullException(nameof(array));
+				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
 #if NET5_0
@@ -550,7 +558,8 @@
 				case 32: SNBoseNelson.Sort32Ascending(ref p0, comparisonPointer); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(array), array.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -567,7 +576,7 @@
 		{
 			if (array is null)
 			{
-				throw new ArgumentNullException(nameof(array));
+				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
 #if NET5_0
@@ -611,7 +620,8 @@
 				case 32: SNBoseNelson.Sort32Descending(ref p0, comparisonPointer); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(array), $"Array length `{array.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(array), array.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -662,7 +672,8 @@
 				case 32: SNBoseNelson.Sort32Ascending(ref p0, comparisonPointer); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(buffer), buffer.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
@@ -713,7 +724,8 @@
 				case 32: SNBoseNelson.Sort32Descending(ref p0, comparisonPointer); break;
 				default:
 					{
-						throw new ArgumentOutOfRangeException(nameof(buffer), $"Buffer length `{buffer.Length}` must be between `{MinLength}` and `{MaxLength}`.");
+						ThrowHelper.ArrayArgumentOutOfRange(nameof(buffer), buffer.Length, MinLength, MaxLength);
+						break;
 					}
 			}
 		}
