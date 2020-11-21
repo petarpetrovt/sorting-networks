@@ -8,7 +8,7 @@ on:
       - '**.png'
       - '**.editorconfig'
       - '**.csv'
-      - 'codeql-analysis.yml'
+      - '**codeql-analysis.yml'
   pull_request:
     branches:
       - master
@@ -17,7 +17,7 @@ on:
       - '**.png'
       - '**.editorconfig'
       - '**.csv'
-      - 'codeql-analysis.yml'
+      - '**codeql-analysis.yml'
 jobs:
   test:
     name: Test `${{ matrix.options.tf }}` on `${{ matrix.options.os }}`
