@@ -2,9 +2,9 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>
-			net48;
+			net5.0;
 			netcoreapp3.1;
-			net5.0
+			net48
 		</TargetFrameworks>
 		<AssemblyName>SortingNetworks.Tests</AssemblyName>
 		<RootNamespace>SortingNetworks.Tests</RootNamespace>
