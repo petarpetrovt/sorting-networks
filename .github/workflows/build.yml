@@ -58,7 +58,7 @@ jobs:
          dotnet-version: ${{ matrix.options.rv }}
 
      - name: Publish tests
-       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Debug" -f "${{ matrix.options.tf }}"
+       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Release" -f "${{ matrix.options.tf }}"
 
      - name: Run tests with code coverage
        if: ${{ matrix.options.codecov }}
