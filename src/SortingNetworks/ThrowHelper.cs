@@ -7,11 +7,8 @@
 
 	[DebuggerNonUserCode]
 	[DebuggerStepThrough]
-	internal static class Assert
+	internal static class ThrowHelper
 	{
-		private const string AssertConditionName = "DEBUG";
-
-		[Conditional(AssertConditionName)]
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		public static void NotNull([NotNull] object argument, string argumentName)
 		{
