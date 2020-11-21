@@ -3,8 +3,8 @@
 sorting-networks
 </h1>
 <p align="left">
-    <a href="https://github.com/petarpetrovt/sorting-networks/actions?query=workflow%3ABuild" alt="Build">
-        <img alt="Build" src="https://github.com/petarpetrovt/sorting-networks/workflows/Build/badge.svg?branch=master" />
+    <a href="https://github.com/petarpetrovt/sorting-networks/actions?query=workflow%3ABuild" alt="Build and test">
+        <img alt="Build and test" src="https://github.com/petarpetrovt/sorting-networks/workflows/Build%20and%20test/badge.svg?branch=master" />
     </a>
     <a href="https://github.com/petarpetrovt/sorting-networks/actions?query=workflow%3ACodeQL" alt="CodeQL">
         <img alt="CodeQL" src="https://github.com/petarpetrovt/sorting-networks/workflows/CodeQL/badge.svg?branch=master" />
