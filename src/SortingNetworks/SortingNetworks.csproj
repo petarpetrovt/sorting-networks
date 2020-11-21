@@ -46,10 +46,10 @@
 	</ItemGroup>
 
 	<!-- DefaultDocumentation -->
-	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+	<PropertyGroup Condition="'$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
 		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(Configuration)' == 'Release'">
+	<ItemGroup Condition="'$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
 		<PackageReference Include="DefaultDocumentation" Version="0.6.12">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
