@@ -5,7 +5,11 @@
 	using System.Diagnostics.CodeAnalysis;
 	using System.Runtime.CompilerServices;
 
+#if NETSTANDARD1_3
 	[DebuggerNonUserCode]
+#else
+	[ExcludeFromCodeCoverage]
+#endif
 	[DebuggerStepThrough]
 	internal static class ThrowHelper
 	{
