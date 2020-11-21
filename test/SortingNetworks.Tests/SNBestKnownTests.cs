@@ -167,5 +167,27 @@
 				SNBestKnown.SortDescending(ref actual[0], actual.Length, &InternalComparison);
 			});
 		}
+
+		[TestMethod]
+		public void Ascending_Comparison_Null()
+		{
+			Assert.ThrowsException<ArgumentNullException>(() =>
+			{
+				Span<int> actual = stackalloc int[1];
+
+				SNBestKnown.SortAscending(ref actual[0], actual.Length, comparison: null);
+			});
+		}
+
+		[TestMethod]
+		public void Descending_Comparison_Null()
+		{
+			Assert.ThrowsException<ArgumentNullException>(() =>
+			{
+				Span<int> actual = stackalloc int[1];
+
+				SNBestKnown.SortDescending(ref actual[0], actual.Length, comparison: null);
+			});
+		}
 	}
 }
