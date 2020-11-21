@@ -2,7 +2,7 @@
 ## SNBase.GreaterThan&lt;T&gt;(T, T) Method
 Gets a flag indicating whether [left](#SortingNetworks-SNBase-GreaterThan-T-(T_T)-left 'SortingNetworks.SNBase.GreaterThan&lt;T&gt;(T, T).left') is greater than [right](#SortingNetworks-SNBase-GreaterThan-T-(T_T)-right 'SortingNetworks.SNBase.GreaterThan&lt;T&gt;(T, T).right').  
 ```csharp
-protected static bool GreaterThan<T>(ref T left, ref T right);
+protected internal static bool GreaterThan<T>(ref T left, ref T right);
 ```
 #### Type parameters
 <a name='SortingNetworks-SNBase-GreaterThan-T-(T_T)-T'></a>

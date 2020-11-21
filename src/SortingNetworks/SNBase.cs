@@ -47,7 +47,7 @@
 #else
 		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 #endif
-		protected static bool LessThan<T>(ref T left, ref T right)
+		protected internal static bool LessThan<T>(ref T left, ref T right)
 			where T : IComparable<T>
 		{
 			if (typeof(T) == typeof(byte)) return (byte)(object)left < (byte)(object)right ? true : false;
@@ -85,7 +85,7 @@
 #else
 		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 #endif
-		protected static bool GreaterThan<T>(ref T left, ref T right)
+		protected internal static bool GreaterThan<T>(ref T left, ref T right)
 			where T : IComparable<T>
 		{
 			if (typeof(T) == typeof(byte)) return (byte)(object)left > (byte)(object)right ? true : false;
