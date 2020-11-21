@@ -36,10 +36,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DefaultDocumentation" Version="0.0.0-ci20201118183225">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
 		<PackageReference Include="Nullable" Version="1.3.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -51,11 +47,11 @@
 	</ItemGroup>
 
 	<!-- DefaultDocumentation -->
-	<PropertyGroup Condition="'$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
+	<PropertyGroup Condition="'$(BuildingInsideVisualStudio)' == 'true' AND '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
 		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
-		<PackageReference Include="DefaultDocumentation" Version="0.6.12">
+	<ItemGroup Condition="'$(BuildingInsideVisualStudio)' == 'true' AND '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
+		<PackageReference Include="DefaultDocumentation" Version="0.0.0-ci20201118183225">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
