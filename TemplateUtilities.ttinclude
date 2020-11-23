@@ -41,13 +41,7 @@
 		yield return "sbyte";
 		yield return "ushort";
 		yield return "short";
-
-		// TODO:
-		//yield return "uint";
-
 		yield return "int";
-
-		// TODO:
 	}
 
 	public static string GetTypeDisplayName(string value)

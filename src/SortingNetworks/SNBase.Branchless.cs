@@ -1,6 +1,5 @@
 ﻿namespace SortingNetworks
 {
-	using System;
 	using System.Runtime.CompilerServices;
 #if NETSTANDARD1_3
 	using EXCLUDE_FROM_CODE_COVERAGE = System.Diagnostics.DebuggerNonUserCodeAttribute;
@@ -125,38 +124,6 @@
 		/// <exclude/>
 		[EXCLUDE_FROM_CODE_COVERAGE]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected internal static void SwapBranchlessLessThan(ref uint left, ref uint right)
-		{
-			throw new NotSupportedException($"TODO");
-
-			//uint diff = left - right;
-			//uint dsgn = diff >> 31;
-			//uint max = left - (diff & dsgn);
-			//uint min = right + (diff & dsgn);
-
-			//right = min;
-			//left = max;
-		}
-
-		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		protected internal static void SwapBranchlessGreaterThan(ref uint left, ref uint right)
-		{
-			throw new NotSupportedException($"TODO");
-
-			//uint diff = left - right;
-			//uint dsgn = diff >> 31;
-			//uint max = left - (diff & dsgn);
-			//uint min = right + (diff & dsgn);
-
-			//right = max;
-			//left = min;
-		}
-
-		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessLessThan(ref int left, ref int right)
 		{
 			int diff = left - right;
@@ -181,8 +148,5 @@
 			right = max;
 			left = min;
 		}
-
-		// TODO: ulong and long
-		// TODO: flaoting point ??
 	}
 }
