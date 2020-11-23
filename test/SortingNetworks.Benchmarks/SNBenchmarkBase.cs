@@ -22,13 +22,37 @@
 		public int Count
 			=> Length switch
 			{
-				int length when length <= 04 => 110_000_000,
-				int length when length <= 07 => 90_000_000,
-				int length when length <= 13 => 35_000_000,
-				int length when length <= 16 => 21_000_000,
-				int length when length <= 20 => 13_000_000,
-				int length when length <= 26 => 11_000_000,
-				int length when length <= 32 => 09_000_000,
+				02 => 110_000_000,
+				03 => 110_000_000,
+				04 => 110_000_000,
+				05 => 90_000_000,
+				06 => 85_000_000,
+				07 => 85_000_000,
+				08 => 45_000_000,
+				09 => 40_000_000,
+				10 => 38_000_000,
+				11 => 37_000_000,
+				12 => 36_000_000,
+				13 => 35_000_000,
+				14 => 22_000_000,
+				15 => 21_000_000,
+				16 => 21_000_000,
+				17 => 13_000_000,
+				18 => 12_000_000,
+				19 => 12_000_000,
+				20 => 11_000_000,
+				21 => 11_000_000,
+				22 => 10_000_000,
+				23 => 10_000_000,
+				24 => 10_000_000,
+				25 => 10_000_000,
+				26 => 09_000_000,
+				27 => 09_000_000,
+				28 => 09_000_000,
+				29 => 09_000_000,
+				30 => 09_000_000,
+				31 => 09_000_000,
+				32 => 09_000_000,
 				_ => -1,
 			};
 
@@ -55,7 +79,7 @@
 		public void IterationSetup()
 		{
 			_iterationItems = ArrayPool<int>.Shared.Rent(Count);
-			_globalItems.AsSpan().CopyTo(_iterationItems);
+			_globalItems.AsSpan(0, Count).CopyTo(_iterationItems);
 		}
 
 		[IterationCleanup]
