@@ -14,17 +14,17 @@ namespace SortingNetworks.Benchmarks
 		[Params(<#= i #>)]
 		public override int Length { get; set; }
 
-		[Benchmark]
-		public void SN_Generic_Comparable()
-		{
-			int length = Length;
-			int maximumLength = Count - length;
-
-			for (int i = 0; i < maximumLength; i += length)
-			{
-				SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-			}
-		}
+		//[Benchmark]
+		//public void SN_Generic_Comparable()
+		//{
+		//	int length = Length;
+		//	int maximumLength = Count - length;
+		//
+		//	for (int i = 0; i < maximumLength; i += length)
+		//	{
+		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
+		//	}
+		//}
 
 		[Benchmark]
 		public void SN_Fixed_Comparable()
@@ -35,6 +35,18 @@ namespace SortingNetworks.Benchmarks
 			for (int i = 0; i < maximumLength; i += length)
 			{
 				SNBoseNelson.Sort<#= i #>Ascending(ref _iterationItems[i]);
+			}
+		}
+		
+		[Benchmark]
+		public void SN_Fixed_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBoseNelson.Sort<#= i #>AscendingBranchless(ref _iterationItems[i]);
 			}
 		}
 

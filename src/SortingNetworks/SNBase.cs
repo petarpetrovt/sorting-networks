@@ -130,8 +130,8 @@
 			int max = left - (diff & dsgn);
 			int min = right + (diff & dsgn);
 
-			right = max;
-			left = min;
+			right = min;
+			left = max;
 		}
 
 		/// <summary>
@@ -153,8 +153,8 @@
 			int max = left - (diff & dsgn);
 			int min = right + (diff & dsgn);
 
-			right = min;
-			left = max;
+			right = max;
+			left = min;
 		}
 	}
 }

@@ -9,8 +9,8 @@
 	[SimpleJob(RuntimeMoniker.Net48)]
 	[SimpleJob(RuntimeMoniker.NetCoreApp31)]
 	[SimpleJob(RuntimeMoniker.NetCoreApp50)]
-	[SimpleJob(RuntimeMoniker.CoreRt31)]
-	[MemoryDiagnoser]
+	//[SimpleJob(RuntimeMoniker.CoreRt31)]
+	[MemoryDiagnoser, DisassemblyDiagnoser(printInstructionAddresses: true, exportHtml: true, exportCombinedDisassemblyReport: true)]
 	public abstract class SNBenchmarkBase
 	{
 		private int[] _globalItems;
@@ -22,8 +22,8 @@
 		public int Count
 			=> Length switch
 			{
-				int length when length <= 02 => 40_000_000,
-				int length when length <= 06 => 35_000_000,
+				int length when length <= 02 => 100_000_000,
+				int length when length <= 06 => 80_000_000,
 				int length when length <= 11 => 22_000_000,
 				int length when length <= 15 => 15_000_000,
 				int length when length <= 20 => 13_000_000,
