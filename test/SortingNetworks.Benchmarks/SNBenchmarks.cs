@@ -3,7 +3,7 @@
 	using System;
 	using BenchmarkDotNet.Attributes;
 
-	public class SN2Benchmark : SNBenchmarkBase
+	public class SN02Benchmark : SNBenchmarkBase
 	{
 		[Params(2)]
 		public override int Length { get; set; }
@@ -47,7 +47,7 @@
 		}
 	}
 
-	public class SN3Benchmark : SNBenchmarkBase
+	public class SN03Benchmark : SNBenchmarkBase
 	{
 		[Params(3)]
 		public override int Length { get; set; }
@@ -91,7 +91,7 @@
 		}
 	}
 
-	public class SN4Benchmark : SNBenchmarkBase
+	public class SN04Benchmark : SNBenchmarkBase
 	{
 		[Params(4)]
 		public override int Length { get; set; }
@@ -135,7 +135,7 @@
 		}
 	}
 
-	public class SN5Benchmark : SNBenchmarkBase
+	public class SN05Benchmark : SNBenchmarkBase
 	{
 		[Params(5)]
 		public override int Length { get; set; }
@@ -179,7 +179,7 @@
 		}
 	}
 
-	public class SN6Benchmark : SNBenchmarkBase
+	public class SN06Benchmark : SNBenchmarkBase
 	{
 		[Params(6)]
 		public override int Length { get; set; }
@@ -223,7 +223,7 @@
 		}
 	}
 
-	public class SN7Benchmark : SNBenchmarkBase
+	public class SN07Benchmark : SNBenchmarkBase
 	{
 		[Params(7)]
 		public override int Length { get; set; }
@@ -267,7 +267,7 @@
 		}
 	}
 
-	public class SN8Benchmark : SNBenchmarkBase
+	public class SN08Benchmark : SNBenchmarkBase
 	{
 		[Params(8)]
 		public override int Length { get; set; }
@@ -311,7 +311,7 @@
 		}
 	}
 
-	public class SN9Benchmark : SNBenchmarkBase
+	public class SN09Benchmark : SNBenchmarkBase
 	{
 		[Params(9)]
 		public override int Length { get; set; }
