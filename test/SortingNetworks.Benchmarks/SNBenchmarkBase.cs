@@ -13,7 +13,16 @@
 	[MemoryDiagnoser]
 	public abstract class SNBenchmarkBase
 	{
-		private int[] _globalItems;
+		private static int[] _globalItems = new int[110_000_000];
+
+		static SNBenchmarkBase()
+		{
+			var random = new Random(new Random().Next());
+			for (int i = 0; i < _globalItems.Length; i++)
+			{
+				_globalItems[i] = random.Next(int.MinValue, int.MaxValue);
+			}
+		}
 
 		protected int[] _iterationItems;
 
@@ -61,25 +70,6 @@
 				32 => 09_000_000,
 				_ => -1,
 			};
-
-		[GlobalSetup]
-		public void GlobalSetup()
-		{
-			_globalItems = new int[Count];
-
-			var random = new Random(new Random().Next());
-			for (int i = 0; i < _globalItems.Length; i++)
-			{
-				_globalItems[i] = random.Next(int.MinValue, int.MaxValue);
-			}
-		}
-
-		[GlobalCleanup]
-		public void GlobalCleanup()
-		{
-			_globalItems = null;
-			GC.Collect();
-		}
 
 		[IterationSetup]
 		public void IterationSetup()
