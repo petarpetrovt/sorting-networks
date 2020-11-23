@@ -6,8 +6,7 @@
 	partial class SNBestKnown
 	{
 		/// <summary>
-		/// Sorts a collection of 9 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 9 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort9DescendingBranchless(ref byte p0)
@@ -49,8 +48,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 10 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 10 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort10DescendingBranchless(ref byte p0)
@@ -97,8 +95,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 11 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 11 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort11DescendingBranchless(ref byte p0)
@@ -152,8 +149,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 12 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 12 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort12DescendingBranchless(ref byte p0)
@@ -212,8 +208,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 13 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 13 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort13DescendingBranchless(ref byte p0)
@@ -279,8 +274,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 14 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 14 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort14DescendingBranchless(ref byte p0)
@@ -353,8 +347,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 15 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 15 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort15DescendingBranchless(ref byte p0)
@@ -433,8 +426,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 16 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 16 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort16DescendingBranchless(ref byte p0)
@@ -518,8 +510,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 9 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 9 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort9DescendingBranchless(ref sbyte p0)
@@ -561,8 +552,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 10 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 10 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort10DescendingBranchless(ref sbyte p0)
@@ -609,8 +599,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 11 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 11 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort11DescendingBranchless(ref sbyte p0)
@@ -664,8 +653,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 12 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 12 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort12DescendingBranchless(ref sbyte p0)
@@ -724,8 +712,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 13 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 13 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort13DescendingBranchless(ref sbyte p0)
@@ -791,8 +778,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 14 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 14 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort14DescendingBranchless(ref sbyte p0)
@@ -865,8 +851,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 15 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 15 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort15DescendingBranchless(ref sbyte p0)
@@ -945,8 +930,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 16 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 16 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort16DescendingBranchless(ref sbyte p0)
@@ -1030,8 +1014,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 9 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 9 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort9DescendingBranchless(ref ushort p0)
@@ -1073,8 +1056,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 10 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 10 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort10DescendingBranchless(ref ushort p0)
@@ -1121,8 +1103,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 11 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 11 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort11DescendingBranchless(ref ushort p0)
@@ -1176,8 +1157,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 12 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 12 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort12DescendingBranchless(ref ushort p0)
@@ -1236,8 +1216,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 13 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 13 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort13DescendingBranchless(ref ushort p0)
@@ -1303,8 +1282,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 14 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 14 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort14DescendingBranchless(ref ushort p0)
@@ -1377,8 +1355,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 15 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 15 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort15DescendingBranchless(ref ushort p0)
@@ -1457,8 +1434,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 16 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 16 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort16DescendingBranchless(ref ushort p0)
@@ -1542,8 +1518,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 9 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 9 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort9DescendingBranchless(ref short p0)
@@ -1585,8 +1560,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 10 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 10 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort10DescendingBranchless(ref short p0)
@@ -1633,8 +1607,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 11 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 11 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort11DescendingBranchless(ref short p0)
@@ -1688,8 +1661,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 12 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 12 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort12DescendingBranchless(ref short p0)
@@ -1748,8 +1720,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 13 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 13 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort13DescendingBranchless(ref short p0)
@@ -1815,8 +1786,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 14 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 14 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort14DescendingBranchless(ref short p0)
@@ -1889,8 +1859,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 15 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 15 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort15DescendingBranchless(ref short p0)
@@ -1969,8 +1938,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 16 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 16 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort16DescendingBranchless(ref short p0)
@@ -2054,8 +2022,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 9 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 9 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort9DescendingBranchless(ref int p0)
@@ -2097,8 +2064,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 10 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 10 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort10DescendingBranchless(ref int p0)
@@ -2145,8 +2111,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 11 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 11 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort11DescendingBranchless(ref int p0)
@@ -2200,8 +2165,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 12 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 12 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort12DescendingBranchless(ref int p0)
@@ -2260,8 +2224,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 13 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 13 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort13DescendingBranchless(ref int p0)
@@ -2327,8 +2290,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 14 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 14 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort14DescendingBranchless(ref int p0)
@@ -2401,8 +2363,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 15 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 15 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort15DescendingBranchless(ref int p0)
@@ -2481,8 +2442,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of 16 elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of 16 elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort16DescendingBranchless(ref int p0)
@@ -2566,8 +2526,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of specified number of elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
@@ -2616,8 +2575,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of specified number of elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
@@ -2666,8 +2624,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of specified number of elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
@@ -2716,8 +2673,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of specified number of elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
@@ -2766,8 +2722,7 @@
 		}
 
 		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of specified number of elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>

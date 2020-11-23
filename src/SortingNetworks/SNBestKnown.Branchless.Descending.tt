@@ -18,8 +18,7 @@ namespace SortingNetworks
 <#foreach (string typeName in GetBranchlessTypeNames()) {#>
 <#for (int i = minLengthOverwrite; i <= maxLengthOverwrite; i++) {#>
 		/// <summary>
-		/// Sorts a collection of <#= i #> elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of <#= i #> elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		public static new void Sort<#= i #>DescendingBranchless(ref <#= typeName #> p0)
@@ -35,8 +34,7 @@ namespace SortingNetworks
 <#}#>
 <#foreach (string typeName in GetBranchlessTypeNames()) {#>
 		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
+		/// Sorts a collection of specified number of elements in descending order using branchless min/max swap.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
