@@ -1,7 +1,6 @@
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBoseNelson](./SortingNetworks-SNBoseNelson.md 'SortingNetworks.SNBoseNelson')
 ## SNBoseNelson.SortDescendingBranchless(ushort, int) Method
-Sorts a collection of specified number of elements in descending order using the [System.IComparable&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1') generic  
-interface implementation of each element.  
+Sorts a collection of specified number of elements in descending order using branchless min/max swap.  
 ```csharp
 public static void SortDescendingBranchless(ref ushort p0, in int length);
 ```

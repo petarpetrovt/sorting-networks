@@ -1,7 +1,6 @@
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBoseNelson](./SortingNetworks-SNBoseNelson.md 'SortingNetworks.SNBoseNelson')
 ## SNBoseNelson.Sort27AscendingBranchless(byte) Method
-Sorts a collection of 27 elements in ascending order using the [System.IComparable&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1') generic  
-interface implementation of each element.  
+Sorts a collection of 27 elements in ascending order using branchless min/max swap.  
 ```csharp
 public static void Sort27AscendingBranchless(ref byte p0);
 ```

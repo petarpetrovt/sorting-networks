@@ -1,7 +1,6 @@
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBestKnown](./SortingNetworks-SNBestKnown.md 'SortingNetworks.SNBestKnown')
 ## SNBestKnown.Sort16AscendingBranchless(short) Method
-Sorts a collection of 16 elements in ascending order using the [System.IComparable&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1') generic  
-interface implementation of each element.  
+Sorts a collection of 16 elements in ascending order using branchless min/max swap.  
 ```csharp
 public static void Sort16AscendingBranchless(ref short p0);
 ```

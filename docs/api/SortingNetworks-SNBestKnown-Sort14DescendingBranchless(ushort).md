@@ -1,7 +1,6 @@
 ### [SortingNetworks](./SortingNetworks.md 'SortingNetworks').[SNBestKnown](./SortingNetworks-SNBestKnown.md 'SortingNetworks.SNBestKnown')
 ## SNBestKnown.Sort14DescendingBranchless(ushort) Method
-Sorts a collection of 14 elements in descending order using the [System.IComparable&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IComparable-1 'System.IComparable`1') generic  
-interface implementation of each element.  
+Sorts a collection of 14 elements in descending order using branchless min/max swap.  
 ```csharp
 public static void Sort14DescendingBranchless(ref ushort p0);
 ```
