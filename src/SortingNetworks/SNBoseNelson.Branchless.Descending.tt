@@ -4,6 +4,8 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
+<# int minLength = GetMinLength(); #>
+<# int maxLength = GetMaxLength(); #>
 namespace SortingNetworks
 {
 	using System;
@@ -11,22 +13,25 @@ namespace SortingNetworks
 
 	partial class SNBoseNelson
 	{
+<#foreach (string typeName in GetBranchlessTypeNames()) {#>
 <#for (int i = minLength; i <= maxLength; i++) {#>
 		/// <summary>
 		/// Sorts a collection of <#= i #> elements in descending order using the <see cref="IComparable{T}"/> generic
 		/// interface implementation of each element.
 		/// </summary>
 		/// <param name="p0">the reference to the first element of the collection</param>
-		public static void Sort<#= i #>DescendingBranchless(ref int p0)
+		public static void Sort<#= i #>DescendingBranchless(ref <#= typeName #> p0)
 		{
 <#for (int y = 1; y < i; y++) {#>
-			ref int p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
+			ref <#= typeName #> p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
 			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfLesserBranchless($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 		}
 
 <#}#>
+<#}#>
+<#foreach (string typeName in GetBranchlessTypeNames()) {#>
 		/// <summary>
 		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
 		/// interface implementation of each element.
@@ -34,7 +39,7 @@ namespace SortingNetworks
 		/// <param name="p0">the reference to the first element of the collection</param>
 		/// <param name="length">the length of the collection</param>
 		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static void SortDescendingBranchless(ref int p0, in int length)
+		public static void SortDescendingBranchless(ref <#= typeName #> p0, in int length)
 		{
 			switch (length)
 			{
@@ -48,5 +53,7 @@ namespace SortingNetworks
 					}
 			}
 		}
+
+<#}#>
 	}
 }

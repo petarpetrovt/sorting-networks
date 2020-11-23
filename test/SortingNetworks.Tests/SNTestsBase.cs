@@ -6,35 +6,40 @@
 
 	public abstract class SNTestsBase
 	{
-		protected static void GenerateArraysAscending(GenerationMode mode, int length, out int[] expected, out int[] actual)
+		protected static void GenerateArraysAscending<T>(GenerationMode mode, int length, out T[] expected, out T[] actual)
+			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
-			expected = Enumerable.Range(1, length).ToArray();
+			expected = Enumerable.Range(1, length).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray();
 			actual = PrivateGenerateArrays(mode, expected, length);
 		}
 
-		protected static void GenerateSpansAscending(GenerationMode mode, int length, out Span<int> expected, out Span<int> actual)
+		protected static void GenerateSpansAscending<T>(GenerationMode mode, int length, out Span<T> expected, out Span<T> actual)
+			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
-			int[] expectedArray = Enumerable.Range(1, length).ToArray();
+			T[] expectedArray = Enumerable.Range(1, length).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray();
 
 			expected = expectedArray.AsSpan();
 			actual = PrivateGenerateArrays(mode, expectedArray, length);
 		}
 
-		protected static void GenerateArraysDescending(GenerationMode mode, int length, out int[] expected, out int[] actual)
+		protected static void GenerateArraysDescending<T>(GenerationMode mode, int length, out T[] expected, out T[] actual)
+			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
-			expected = Enumerable.Range(1, length).Reverse().ToArray();
+			expected = Enumerable.Range(1, length).Reverse().Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray();
 			actual = PrivateGenerateArrays(mode, expected, length);
 		}
 
-		protected static void GenerateSpansDescending(GenerationMode mode, int length, out Span<int> expected, out Span<int> actual)
+		protected static void GenerateSpansDescending<T>(GenerationMode mode, int length, out Span<T> expected, out Span<T> actual)
+			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
-			int[] expectedArray = Enumerable.Range(1, length).Reverse().ToArray();
+			T[] expectedArray = Enumerable.Range(1, length).Reverse().Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray();
 
 			expected = expectedArray.AsSpan();
 			actual = PrivateGenerateArrays(mode, expectedArray, length);
 		}
 
-		protected static void AssertAreEqual(Span<int> expected, Span<int> actual, string message)
+		protected static void AssertAreEqual<T>(Span<T> expected, Span<T> actual, string message)
+			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
 			if (message is null)
 			{
@@ -55,12 +60,14 @@
 			}
 		}
 
-		protected static int InternalComparison(int a, int b)
+		protected static int InternalComparison<T>(T a, T b)
+			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 			=> a.CompareTo(b);
 
-		private static int[] PrivateGenerateArrays(GenerationMode mode, int[] expected, int length)
+		private static T[] PrivateGenerateArrays<T>(GenerationMode mode, T[] expected, int length)
+			where T : unmanaged
 		{
-			int[] actual = mode switch
+			T[] actual = mode switch
 			{
 				GenerationMode.Sorted
 					=> expected.ToArray(),
@@ -69,13 +76,14 @@
 				GenerationMode.OddBiggerThanEven
 					=> expected.Select(x =>
 					{
-						if (x % 2 == 0)
+						long value = Convert.ToInt64(x);
+						if (value % 2 == 0)
 						{
-							return x - 1;
+							return (T)Convert.ChangeType(value - 1, typeof(T));
 						}
-						else if (x + 1 < length || length % 2 == 0)
+						else if (value + 1 < length || length % 2 == 0)
 						{
-							return x + 1;
+							return (T)Convert.ChangeType(value + 1, typeof(T));
 						}
 						else
 						{
@@ -85,13 +93,14 @@
 				GenerationMode.EvenBiggerThanOdd
 					=> expected.Select(x =>
 					{
-						if (x % 2 == 0)
+						long value = Convert.ToInt64(x);
+						if (value % 2 == 0)
 						{
-							return x - 1;
+							return (T)Convert.ChangeType(value - 1, typeof(T));
 						}
-						else if (x + 1 < length || length % 2 == 0)
+						else if (value + 1 < length || length % 2 == 0)
 						{
-							return x + 1;
+							return (T)Convert.ChangeType(value + 1, typeof(T));
 						}
 						else
 						{

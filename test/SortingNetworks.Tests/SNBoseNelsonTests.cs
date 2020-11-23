@@ -5,7 +5,7 @@
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	[TestClass]
-	public class SNBoseNelsonTests : SNTestsBase
+	public partial class SNBoseNelsonTests : SNTestsBase
 	{
 		public static IEnumerable<object[]> GetModeAndIterations()
 		{
@@ -14,40 +14,6 @@
 			yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };
 			yield return new object[] { GenerationMode.OddBiggerThanEven, 1 };
 			yield return new object[] { GenerationMode.Random, 10 };
-		}
-
-		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
-		public void Ascending_Branchless(GenerationMode mode, int iterations)
-		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
-			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
-
-					SNBoseNelson.SortAscendingBranchless(ref actual[0], length);
-
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
-			}
-		}
-
-		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
-		public void Descending_Branchless(GenerationMode mode, int iterations)
-		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
-			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
-
-					SNBoseNelson.SortDescendingBranchless(ref actual[0], length);
-
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
-			}
 		}
 
 		[TestMethod]
@@ -124,11 +90,14 @@
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
+				for (int i = 0; i < iterations; i++)
+				{
+					GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
-				SNBoseNelson.SortAscending(ref actual[0], length, &InternalComparison);
+					SNBoseNelson.SortAscending(ref actual[0], length, &InternalComparison);
 
-				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+				}
 			}
 		}
 

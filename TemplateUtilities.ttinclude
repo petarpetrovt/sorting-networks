@@ -1,6 +1,9 @@
 ﻿<#+
-	int minLength = 2;
-	int maxLength = 32;
+	public static int GetMinLength()
+		=> 2;
+
+	public static int GetMaxLength()
+		=> 32;
 
 	public static string GetSwapIfGreaterBranchless(string a, string b, string temp = "temp")
 		=> $"SwapBranchlessGreaterThan(ref {a}, ref {b});";
@@ -31,6 +34,37 @@
 
 	public static string GetSwapIfLesserComparisonPointer(string a, string b, string comparisonPointer = "comparisonPointer", string temp = "temp")
 		=> $"if ({comparisonPointer}({a}, {b}) < 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
+	public static IEnumerable<string> GetBranchlessTypeNames()
+	{
+		yield return "byte";
+		yield return "sbyte";
+		yield return "ushort";
+		yield return "short";
+
+		// TODO:
+		//yield return "uint";
+
+		yield return "int";
+
+		// TODO:
+	}
+
+	public static string GetTypeDisplayName(string value)
+	{
+		switch (value)
+		{
+			case "byte": return "Byte";
+			case "sbyte": return "SByte";
+			case "ushort": return "UInt16";
+			case "short": return "Int16";
+			case "uint": return "UInt32";
+			case "int": return "Int32";
+			case "ulong": return "UInt64";
+			case "long": return "Int64";
+			default: return "";
+		}
+	}
 
 	private static IEnumerable<(int, int)> PStarBracket(int i, int x, int j, int y)
 	{

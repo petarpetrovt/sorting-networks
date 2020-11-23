@@ -5,7 +5,7 @@
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	[TestClass]
-	public class SNBestKnownTests : SNTestsBase
+	public partial class SNBestKnownTests : SNTestsBase
 	{
 		public static IEnumerable<object[]> GetModeAndIterations()
 		{
@@ -14,40 +14,6 @@
 			yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };
 			yield return new object[] { GenerationMode.OddBiggerThanEven, 1 };
 			yield return new object[] { GenerationMode.Random, 10 };
-		}
-
-		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
-		public void Ascending_Branchless(GenerationMode mode, int iterations)
-		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
-			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
-
-					SNBestKnown.SortAscendingBranchless(ref actual[0], length);
-
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
-			}
-		}
-
-		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
-		public void Descending_Branchless(GenerationMode mode, int iterations)
-		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
-			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
-
-					SNBestKnown.SortDescendingBranchless(ref actual[0], length);
-
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
-			}
 		}
 
 		[TestMethod]
