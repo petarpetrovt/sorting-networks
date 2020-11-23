@@ -2,6 +2,12 @@
 	int minLength = 2;
 	int maxLength = 32;
 
+	public static string GetSwapIfGreaterBranchless(string a, string b, string temp = "temp")
+		=> $"SwapBranchlessGreaterThan(ref {a}, ref {b});";
+
+	public static string GetSwapIfLesserBranchless(string a, string b, string temp = "temp")
+		=> $"SwapBranchlessLessThan(ref {a}, ref {b});";
+
 	public static string GetSwapIfGreaterComparable(string a, string b, string temp = "temp")
 		=> $"if (GreaterThan(ref {a}, ref {b})) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
 

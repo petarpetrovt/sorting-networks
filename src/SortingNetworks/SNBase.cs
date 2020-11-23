@@ -110,5 +110,51 @@
 			return left.CompareTo(right) > 0 ? true : false;
 		}
 #pragma warning restore IDE0075 // Simplify conditional expression
+
+		/// <summary>
+		/// Performs a branch-less swap if <paramref name="left"/> value is lesser than <paramref name="right"/> value.
+		/// </summary>
+		/// <param name="left">the left value</param>
+		/// <param name="right">the right value</param>
+		/// <exclude/>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+#if NETSTANDARD1_3
+		[System.Diagnostics.DebuggerNonUserCode]
+#else
+		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+#endif
+		protected internal static void SwapBranchlessLessThan(ref int left, ref int right)
+		{
+			int diff = left - right;
+			int dsgn = diff >> 31;
+			int max = left - (diff & dsgn);
+			int min = right + (diff & dsgn);
+
+			right = max;
+			left = min;
+		}
+
+		/// <summary>
+		/// Performs a branch-less swap if <paramref name="left"/> value is greater than <paramref name="right"/> value.
+		/// </summary>
+		/// <param name="left">the left value</param>
+		/// <param name="right">the right value</param>
+		/// <exclude/>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+#if NETSTANDARD1_3
+		[System.Diagnostics.DebuggerNonUserCode]
+#else
+		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+#endif
+		protected internal static void SwapBranchlessGreaterThan(ref int left, ref int right)
+		{
+			int diff = left - right;
+			int dsgn = diff >> 31;
+			int max = left - (diff & dsgn);
+			int min = right + (diff & dsgn);
+
+			right = min;
+			left = max;
+		}
 	}
 }
