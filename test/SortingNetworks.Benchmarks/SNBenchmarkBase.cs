@@ -19,6 +19,12 @@
 
 		public abstract int Length { get; set; }
 
+		/// <summary>
+		/// Gets the count of the iteration items depending on the length of the sorting network.
+		/// </summary>
+		/// <remarks>
+		/// The values are adjusted so that the lowest benchmark of N length will run at least 100 ms per iteration.
+		/// </remarks>
 		public int Count
 			=> Length switch
 			{
@@ -28,10 +34,10 @@
 				05 => 90_000_000,
 				06 => 85_000_000,
 				07 => 85_000_000,
-				08 => 45_000_000,
-				09 => 40_000_000,
-				10 => 38_000_000,
-				11 => 37_000_000,
+				08 => 50_000_000,
+				09 => 45_000_000,
+				10 => 42_000_000,
+				11 => 40_000_000,
 				12 => 36_000_000,
 				13 => 35_000_000,
 				14 => 22_000_000,
