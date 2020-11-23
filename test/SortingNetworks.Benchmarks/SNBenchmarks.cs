@@ -3,25 +3,13 @@
 	using System;
 	using BenchmarkDotNet.Attributes;
 
-	public class SN2SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN2Benchmark : SNBenchmarkBase
 	{
 		[Params(2)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -31,9 +19,9 @@
 				SNBoseNelson.Sort2Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -59,25 +47,13 @@
 		}
 	}
 
-	public class SN3SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN3Benchmark : SNBenchmarkBase
 	{
 		[Params(3)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -87,9 +63,9 @@
 				SNBoseNelson.Sort3Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -115,25 +91,13 @@
 		}
 	}
 
-	public class SN4SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN4Benchmark : SNBenchmarkBase
 	{
 		[Params(4)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -143,9 +107,9 @@
 				SNBoseNelson.Sort4Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -171,25 +135,13 @@
 		}
 	}
 
-	public class SN5SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN5Benchmark : SNBenchmarkBase
 	{
 		[Params(5)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -199,9 +151,9 @@
 				SNBoseNelson.Sort5Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -227,25 +179,13 @@
 		}
 	}
 
-	public class SN6SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN6Benchmark : SNBenchmarkBase
 	{
 		[Params(6)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -255,9 +195,9 @@
 				SNBoseNelson.Sort6Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -283,25 +223,13 @@
 		}
 	}
 
-	public class SN7SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN7Benchmark : SNBenchmarkBase
 	{
 		[Params(7)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -311,9 +239,9 @@
 				SNBoseNelson.Sort7Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -339,25 +267,13 @@
 		}
 	}
 
-	public class SN8SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN8Benchmark : SNBenchmarkBase
 	{
 		[Params(8)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -367,9 +283,9 @@
 				SNBoseNelson.Sort8Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -395,25 +311,13 @@
 		}
 	}
 
-	public class SN9SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN9Benchmark : SNBenchmarkBase
 	{
 		[Params(9)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -423,9 +327,9 @@
 				SNBoseNelson.Sort9Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -437,6 +341,30 @@
 		}
 
 		[Benchmark]
+		public void BestKnown_Comparable()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort9Ascending(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
+		public void BestKnown_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort9AscendingBranchless(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
 		public void Insertion_Comparable()
 		{
 			int length = Length;
@@ -451,25 +379,13 @@
 		}
 	}
 
-	public class SN10SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN10Benchmark : SNBenchmarkBase
 	{
 		[Params(10)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -479,9 +395,9 @@
 				SNBoseNelson.Sort10Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -493,6 +409,30 @@
 		}
 
 		[Benchmark]
+		public void BestKnown_Comparable()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort10Ascending(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
+		public void BestKnown_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort10AscendingBranchless(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
 		public void Insertion_Comparable()
 		{
 			int length = Length;
@@ -507,25 +447,13 @@
 		}
 	}
 
-	public class SN11SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN11Benchmark : SNBenchmarkBase
 	{
 		[Params(11)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -535,9 +463,9 @@
 				SNBoseNelson.Sort11Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -549,6 +477,30 @@
 		}
 
 		[Benchmark]
+		public void BestKnown_Comparable()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort11Ascending(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
+		public void BestKnown_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort11AscendingBranchless(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
 		public void Insertion_Comparable()
 		{
 			int length = Length;
@@ -563,25 +515,13 @@
 		}
 	}
 
-	public class SN12SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN12Benchmark : SNBenchmarkBase
 	{
 		[Params(12)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -591,9 +531,9 @@
 				SNBoseNelson.Sort12Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -605,6 +545,30 @@
 		}
 
 		[Benchmark]
+		public void BestKnown_Comparable()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort12Ascending(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
+		public void BestKnown_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort12AscendingBranchless(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
 		public void Insertion_Comparable()
 		{
 			int length = Length;
@@ -619,25 +583,13 @@
 		}
 	}
 
-	public class SN13SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN13Benchmark : SNBenchmarkBase
 	{
 		[Params(13)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -647,9 +599,9 @@
 				SNBoseNelson.Sort13Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -661,6 +613,30 @@
 		}
 
 		[Benchmark]
+		public void BestKnown_Comparable()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort13Ascending(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
+		public void BestKnown_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort13AscendingBranchless(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
 		public void Insertion_Comparable()
 		{
 			int length = Length;
@@ -675,25 +651,13 @@
 		}
 	}
 
-	public class SN14SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN14Benchmark : SNBenchmarkBase
 	{
 		[Params(14)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -703,9 +667,9 @@
 				SNBoseNelson.Sort14Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -717,6 +681,30 @@
 		}
 
 		[Benchmark]
+		public void BestKnown_Comparable()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort14Ascending(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
+		public void BestKnown_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort14AscendingBranchless(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
 		public void Insertion_Comparable()
 		{
 			int length = Length;
@@ -731,25 +719,13 @@
 		}
 	}
 
-	public class SN15SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN15Benchmark : SNBenchmarkBase
 	{
 		[Params(15)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -759,9 +735,9 @@
 				SNBoseNelson.Sort15Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -773,6 +749,30 @@
 		}
 
 		[Benchmark]
+		public void BestKnown_Comparable()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort15Ascending(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
+		public void BestKnown_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort15AscendingBranchless(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
 		public void Insertion_Comparable()
 		{
 			int length = Length;
@@ -787,25 +787,13 @@
 		}
 	}
 
-	public class SN16SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN16Benchmark : SNBenchmarkBase
 	{
 		[Params(16)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -815,9 +803,9 @@
 				SNBoseNelson.Sort16Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -829,6 +817,30 @@
 		}
 
 		[Benchmark]
+		public void BestKnown_Comparable()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort16Ascending(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
+		public void BestKnown_Branchless()
+		{
+			int length = Length;
+			int maximumLength = Count - length;
+
+			for (int i = 0; i < maximumLength; i += length)
+			{
+				SNBestKnown.Sort16AscendingBranchless(ref _iterationItems[i]);
+			}
+		}
+
+		[Benchmark]
 		public void Insertion_Comparable()
 		{
 			int length = Length;
@@ -843,25 +855,13 @@
 		}
 	}
 
-	public class SN17SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN17Benchmark : SNBenchmarkBase
 	{
 		[Params(17)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -871,9 +871,9 @@
 				SNBoseNelson.Sort17Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -899,25 +899,13 @@
 		}
 	}
 
-	public class SN18SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN18Benchmark : SNBenchmarkBase
 	{
 		[Params(18)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -927,9 +915,9 @@
 				SNBoseNelson.Sort18Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -955,25 +943,13 @@
 		}
 	}
 
-	public class SN19SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN19Benchmark : SNBenchmarkBase
 	{
 		[Params(19)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -983,9 +959,9 @@
 				SNBoseNelson.Sort19Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1011,25 +987,13 @@
 		}
 	}
 
-	public class SN20SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN20Benchmark : SNBenchmarkBase
 	{
 		[Params(20)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1039,9 +1003,9 @@
 				SNBoseNelson.Sort20Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1067,25 +1031,13 @@
 		}
 	}
 
-	public class SN21SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN21Benchmark : SNBenchmarkBase
 	{
 		[Params(21)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1095,9 +1047,9 @@
 				SNBoseNelson.Sort21Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1123,25 +1075,13 @@
 		}
 	}
 
-	public class SN22SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN22Benchmark : SNBenchmarkBase
 	{
 		[Params(22)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1151,9 +1091,9 @@
 				SNBoseNelson.Sort22Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1179,25 +1119,13 @@
 		}
 	}
 
-	public class SN23SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN23Benchmark : SNBenchmarkBase
 	{
 		[Params(23)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1207,9 +1135,9 @@
 				SNBoseNelson.Sort23Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1235,25 +1163,13 @@
 		}
 	}
 
-	public class SN24SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN24Benchmark : SNBenchmarkBase
 	{
 		[Params(24)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1263,9 +1179,9 @@
 				SNBoseNelson.Sort24Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1291,25 +1207,13 @@
 		}
 	}
 
-	public class SN25SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN25Benchmark : SNBenchmarkBase
 	{
 		[Params(25)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1319,9 +1223,9 @@
 				SNBoseNelson.Sort25Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1347,25 +1251,13 @@
 		}
 	}
 
-	public class SN26SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN26Benchmark : SNBenchmarkBase
 	{
 		[Params(26)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1375,9 +1267,9 @@
 				SNBoseNelson.Sort26Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1403,25 +1295,13 @@
 		}
 	}
 
-	public class SN27SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN27Benchmark : SNBenchmarkBase
 	{
 		[Params(27)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1431,9 +1311,9 @@
 				SNBoseNelson.Sort27Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1459,25 +1339,13 @@
 		}
 	}
 
-	public class SN28SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN28Benchmark : SNBenchmarkBase
 	{
 		[Params(28)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1487,9 +1355,9 @@
 				SNBoseNelson.Sort28Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1515,25 +1383,13 @@
 		}
 	}
 
-	public class SN29SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN29Benchmark : SNBenchmarkBase
 	{
 		[Params(29)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1543,9 +1399,9 @@
 				SNBoseNelson.Sort29Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1571,25 +1427,13 @@
 		}
 	}
 
-	public class SN30SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN30Benchmark : SNBenchmarkBase
 	{
 		[Params(30)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1599,9 +1443,9 @@
 				SNBoseNelson.Sort30Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1627,25 +1471,13 @@
 		}
 	}
 
-	public class SN31SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN31Benchmark : SNBenchmarkBase
 	{
 		[Params(31)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1655,9 +1487,9 @@
 				SNBoseNelson.Sort31Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1683,25 +1515,13 @@
 		}
 	}
 
-	public class SN32SortSNBoseNelsonBenchmark : SNBenchmarkBase
+	public class SN32Benchmark : SNBenchmarkBase
 	{
 		[Params(32)]
 		public override int Length { get; set; }
 
-		//[Benchmark]
-		//public void SN_Generic_Comparable()
-		//{
-		//	int length = Length;
-		//	int maximumLength = Count - length;
-		//
-		//	for (int i = 0; i < maximumLength; i += length)
-		//	{
-		//		SNBoseNelson.SortAscending(ref _iterationItems[i], length);
-		//	}
-		//}
-
 		[Benchmark]
-		public void SN_Fixed_Comparable()
+		public void BoseNelson_Comparable()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
@@ -1711,9 +1531,9 @@
 				SNBoseNelson.Sort32Ascending(ref _iterationItems[i]);
 			}
 		}
-		
+
 		[Benchmark]
-		public void SN_Fixed_Branchless()
+		public void BoseNelson_Branchless()
 		{
 			int length = Length;
 			int maximumLength = Count - length;
