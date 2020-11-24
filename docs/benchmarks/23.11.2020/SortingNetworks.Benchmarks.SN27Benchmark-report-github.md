@@ -14,15 +14,15 @@ InvocationCount=1  UnrollFactor=1
 ```
 |                Method |           Job |       Runtime | Length |     Mean |   Error |  StdDev | Gen 0 | Gen 1 | Gen 2 | Allocated |
 |---------------------- |-------------- |-------------- |------- |---------:|--------:|--------:|------:|------:|------:|----------:|
-| BoseNelson_Comparable |      .NET 4.8 |      .NET 4.8 |     27 | 132.6 ms | 0.45 ms | 0.40 ms |     - |     - |     - |         - |
-| BoseNelson_Branchless |      .NET 4.8 |      .NET 4.8 |     27 | 212.2 ms | 0.39 ms | 0.36 ms |     - |     - |     - |         - |
-|  Insertion_Comparable |      .NET 4.8 |      .NET 4.8 |     27 | 165.5 ms | 1.38 ms | 1.15 ms |     - |     - |     - |         - |
-| BoseNelson_Comparable | .NET Core 3.1 | .NET Core 3.1 |     27 | 126.4 ms | 0.34 ms | 0.32 ms |     - |     - |     - |         - |
-| BoseNelson_Branchless | .NET Core 3.1 | .NET Core 3.1 |     27 | 209.3 ms | 0.36 ms | 0.33 ms |     - |     - |     - |         - |
-|  Insertion_Comparable | .NET Core 3.1 | .NET Core 3.1 |     27 | 119.6 ms | 0.53 ms | 0.50 ms |     - |     - |     - |         - |
-| BoseNelson_Comparable | .NET Core 5.0 | .NET Core 5.0 |     27 | 126.6 ms | 0.24 ms | 0.22 ms |     - |     - |     - |         - |
-| BoseNelson_Branchless | .NET Core 5.0 | .NET Core 5.0 |     27 | 204.4 ms | 0.46 ms | 0.41 ms |     - |     - |     - |         - |
-|  Insertion_Comparable | .NET Core 5.0 | .NET Core 5.0 |     27 | 123.1 ms | 1.84 ms | 1.63 ms |     - |     - |     - |         - |
-| BoseNelson_Comparable |    CoreRt 3.1 |    CoreRt 3.1 |     27 | 126.1 ms | 0.26 ms | 0.24 ms |     - |     - |     - |         - |
-| BoseNelson_Branchless |    CoreRt 3.1 |    CoreRt 3.1 |     27 | 162.2 ms | 0.31 ms | 0.26 ms |     - |     - |     - |         - |
-|  Insertion_Comparable |    CoreRt 3.1 |    CoreRt 3.1 |     27 | 123.1 ms | 0.62 ms | 0.58 ms |     - |     - |     - |         - |
+| BoseNelson_Comparable |      .NET 4.8 |      .NET 4.8 |     27 | 130.1 ms | 0.45 ms | 0.40 ms |     - |     - |     - |         - |
+| BoseNelson_Branchless |      .NET 4.8 |      .NET 4.8 |     27 | 202.5 ms | 0.09 ms | 0.07 ms |     - |     - |     - |         - |
+|  Insertion_Comparable |      .NET 4.8 |      .NET 4.8 |     27 | 166.0 ms | 1.40 ms | 1.17 ms |     - |     - |     - |         - |
+| BoseNelson_Comparable | .NET Core 3.1 | .NET Core 3.1 |     27 | 124.0 ms | 0.30 ms | 0.28 ms |     - |     - |     - |         - |
+| BoseNelson_Branchless | .NET Core 3.1 | .NET Core 3.1 |     27 | 204.2 ms | 3.81 ms | 3.56 ms |     - |     - |     - |      48 B |
+|  Insertion_Comparable | .NET Core 3.1 | .NET Core 3.1 |     27 | 113.6 ms | 1.05 ms | 0.82 ms |     - |     - |     - |         - |
+| BoseNelson_Comparable | .NET Core 5.0 | .NET Core 5.0 |     27 | 123.8 ms | 0.12 ms | 0.10 ms |     - |     - |     - |         - |
+| BoseNelson_Branchless | .NET Core 5.0 | .NET Core 5.0 |     27 | 193.9 ms | 0.10 ms | 0.08 ms |     - |     - |     - |         - |
+|  Insertion_Comparable | .NET Core 5.0 | .NET Core 5.0 |     27 | 114.3 ms | 1.05 ms | 0.93 ms |     - |     - |     - |         - |
+| BoseNelson_Comparable |    CoreRt 3.1 |    CoreRt 3.1 |     27 | 123.6 ms | 0.14 ms | 0.12 ms |     - |     - |     - |         - |
+| BoseNelson_Branchless |    CoreRt 3.1 |    CoreRt 3.1 |     27 | 160.5 ms | 0.28 ms | 0.25 ms |     - |     - |     - |         - |
+|  Insertion_Comparable |    CoreRt 3.1 |    CoreRt 3.1 |     27 | 111.9 ms | 0.20 ms | 0.17 ms |     - |     - |     - |         - |

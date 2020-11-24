@@ -6,14 +6,14 @@
 
 | Length | Result |
 | ------ | --------------------------------------------------------------------------------------------- |
-| 02     | [click](23.11.2020/SortingNetworks.Benchmarks.SN2Benchmark-report-github.md)  |
-| 03     | [click](23.11.2020/SortingNetworks.Benchmarks.SN3Benchmark-report-github.md)  |
-| 04     | [click](23.11.2020/SortingNetworks.Benchmarks.SN4Benchmark-report-github.md)  |
-| 05     | [click](23.11.2020/SortingNetworks.Benchmarks.SN5Benchmark-report-github.md)  |
-| 06     | [click](23.11.2020/SortingNetworks.Benchmarks.SN6Benchmark-report-github.md)  |
-| 07     | [click](23.11.2020/SortingNetworks.Benchmarks.SN7Benchmark-report-github.md)  |
-| 08     | [click](23.11.2020/SortingNetworks.Benchmarks.SN8Benchmark-report-github.md)  |
-| 09     | [click](23.11.2020/SortingNetworks.Benchmarks.SN9Benchmark-report-github.md)  |
+| 02     | [click](23.11.2020/SortingNetworks.Benchmarks.SN02Benchmark-report-github.md) |
+| 03     | [click](23.11.2020/SortingNetworks.Benchmarks.SN03Benchmark-report-github.md) |
+| 04     | [click](23.11.2020/SortingNetworks.Benchmarks.SN04Benchmark-report-github.md) |
+| 05     | [click](23.11.2020/SortingNetworks.Benchmarks.SN05Benchmark-report-github.md) |
+| 06     | [click](23.11.2020/SortingNetworks.Benchmarks.SN06Benchmark-report-github.md) |
+| 07     | [click](23.11.2020/SortingNetworks.Benchmarks.SN07Benchmark-report-github.md) |
+| 08     | [click](23.11.2020/SortingNetworks.Benchmarks.SN08Benchmark-report-github.md) |
+| 09     | [click](23.11.2020/SortingNetworks.Benchmarks.SN09Benchmark-report-github.md) |
 | 10     | [click](23.11.2020/SortingNetworks.Benchmarks.SN10Benchmark-report-github.md) |
 | 11     | [click](23.11.2020/SortingNetworks.Benchmarks.SN11Benchmark-report-github.md) |
 | 12     | [click](23.11.2020/SortingNetworks.Benchmarks.SN12Benchmark-report-github.md) |
