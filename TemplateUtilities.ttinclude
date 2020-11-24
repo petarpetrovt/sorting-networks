@@ -41,6 +41,7 @@
 		yield return "sbyte";
 		yield return "ushort";
 		yield return "short";
+		yield return "uint";
 		yield return "int";
 	}
 

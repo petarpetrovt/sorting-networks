@@ -1,6 +1,7 @@
 ﻿namespace SortingNetworks.Tests
 {
 	using System;
+	using System.Collections.Generic;
 	using System.Linq;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -9,14 +10,14 @@
 		protected static void GenerateArraysAscending<T>(GenerationMode mode, int length, out T[] expected, out T[] actual)
 			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
-			expected = Enumerable.Range(1, length).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray();
+			expected = PrivateGenerateArrays<T>(mode, ascending: true, length);
 			actual = PrivateGenerateArrays(mode, expected, length);
 		}
 
 		protected static void GenerateSpansAscending<T>(GenerationMode mode, int length, out Span<T> expected, out Span<T> actual)
 			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
-			T[] expectedArray = Enumerable.Range(1, length).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray();
+			T[] expectedArray = PrivateGenerateArrays<T>(mode, ascending: true, length);
 
 			expected = expectedArray.AsSpan();
 			actual = PrivateGenerateArrays(mode, expectedArray, length);
@@ -25,14 +26,14 @@
 		protected static void GenerateArraysDescending<T>(GenerationMode mode, int length, out T[] expected, out T[] actual)
 			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
-			expected = Enumerable.Range(1, length).Reverse().Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray();
+			expected = PrivateGenerateArrays<T>(mode, ascending: false, length);
 			actual = PrivateGenerateArrays(mode, expected, length);
 		}
 
 		protected static void GenerateSpansDescending<T>(GenerationMode mode, int length, out Span<T> expected, out Span<T> actual)
 			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
-			T[] expectedArray = Enumerable.Range(1, length).Reverse().Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray();
+			T[] expectedArray = PrivateGenerateArrays<T>(mode, ascending: false, length);
 
 			expected = expectedArray.AsSpan();
 			actual = PrivateGenerateArrays(mode, expectedArray, length);
@@ -65,7 +66,7 @@
 			=> a.CompareTo(b);
 
 		private static T[] PrivateGenerateArrays<T>(GenerationMode mode, T[] expected, int length)
-			where T : unmanaged
+			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
 		{
 			T[] actual = mode switch
 			{
@@ -109,6 +110,8 @@
 					}).Reverse().ToArray(),
 				GenerationMode.Random
 					=> expected.OrderBy(x => ThreadSafeRandom.Next()).ToArray(),
+				GenerationMode.SpecialValues
+					=> expected.ToArray(),
 				_
 					=> throw new Exception($"Generation mode `{mode}` is not supported in this context."),
 			};
@@ -118,6 +121,60 @@
 			//Debug.Assert(expected.Length == actual.Distinct().Count());
 
 			return actual;
+		}
+
+		private static T[] PrivateGenerateArrays<T>(GenerationMode mode, bool ascending, int length)
+			where T : unmanaged, IComparable, IComparable<T>, IConvertible, IEquatable<T>, IFormattable
+		{
+			IEnumerable<T> result;
+
+			if (mode == GenerationMode.SpecialValues)
+			{
+				result = Enumerable
+					.Range(1, length)
+					.Select(x => Helper<T>.Values[ThreadSafeRandom.Next(0, Helper<T>.Values.Length)])
+					.OrderBy(x => x)
+					.Select(x => (T)Convert.ChangeType(x, typeof(T)));
+			}
+			else
+			{
+				result = Enumerable
+					.Range(1, length)
+					.Select(x => (T)Convert.ChangeType(x, typeof(T)));
+			}
+
+			if (!ascending)
+			{
+				result = result.Reverse();
+			}
+
+			return result.ToArray();
+		}
+
+		private static class Helper<T>
+			where T : unmanaged
+		{
+			public readonly static T[] Values;
+
+			static Helper()
+			{
+				Values = typeof(T) switch
+				{
+					Type type when type == typeof(byte)
+						=> (new byte[] { byte.MinValue, byte.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+					Type type when type == typeof(sbyte)
+						=> (new sbyte[] { sbyte.MinValue, sbyte.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+					Type type when type == typeof(ushort)
+						=> (new ushort[] { ushort.MinValue, ushort.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+					Type type when type == typeof(short)
+						=> (new short[] { short.MinValue, short.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+					Type type when type == typeof(uint)
+						=> (new uint[] { uint.MinValue, uint.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+					Type type when type == typeof(int)
+						=> (new int[] { int.MinValue, int.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+					_ => throw new NotImplementedException(),
+				};
+			}
 		}
 	}
 }

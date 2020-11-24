@@ -9,6 +9,7 @@
 	{
 		public static IEnumerable<object[]> GetModeAndIterations()
 		{
+			yield return new object[] { GenerationMode.SpecialValues, 1 };
 			yield return new object[] { GenerationMode.Sorted, 1 };
 			yield return new object[] { GenerationMode.Reverse, 1 };
 			yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };

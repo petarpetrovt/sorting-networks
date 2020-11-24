@@ -124,12 +124,40 @@
 		/// <exclude/>
 		[EXCLUDE_FROM_CODE_COVERAGE]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		protected internal static void SwapBranchlessLessThan(ref uint left, ref uint right)
+		{
+			long diff = (long)left - right;
+			long dsgn = diff >> 63;
+			uint max = (uint)(left - (diff & dsgn));
+			uint min = (uint)(right + (diff & dsgn));
+
+			right = min;
+			left = max;
+		}
+
+		/// <exclude/>
+		[EXCLUDE_FROM_CODE_COVERAGE]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		protected internal static void SwapBranchlessGreaterThan(ref uint left, ref uint right)
+		{
+			long diff = (long)left - right;
+			long dsgn = diff >> 63;
+			uint max = (uint)(left - (diff & dsgn));
+			uint min = (uint)(right + (diff & dsgn));
+
+			right = max;
+			left = min;
+		}
+
+		/// <exclude/>
+		[EXCLUDE_FROM_CODE_COVERAGE]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessLessThan(ref int left, ref int right)
 		{
-			int diff = left - right;
-			int dsgn = diff >> 31;
-			int max = left - (diff & dsgn);
-			int min = right + (diff & dsgn);
+			long diff = (long)left - right;
+			long dsgn = diff >> 63;
+			int max = (int)(left - (diff & dsgn));
+			int min = (int)(right + (diff & dsgn));
 
 			right = min;
 			left = max;
@@ -140,10 +168,10 @@
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessGreaterThan(ref int left, ref int right)
 		{
-			int diff = left - right;
-			int dsgn = diff >> 31;
-			int max = left - (diff & dsgn);
-			int min = right + (diff & dsgn);
+			long diff = (long)left - right;
+			long dsgn = diff >> 63;
+			int max = (int)(left - (diff & dsgn));
+			int min = (int)(right + (diff & dsgn));
 
 			right = max;
 			left = min;

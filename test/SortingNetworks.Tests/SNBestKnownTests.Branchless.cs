@@ -142,6 +142,40 @@
 
 		[TestMethod]
 		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		public void Ascending_Branchless_UInt32(GenerationMode mode, int iterations)
+		{
+			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			{
+				for (int i = 0; i < iterations; i++)
+				{
+					GenerateArraysAscending(mode, length, out uint[] expected, out uint[] actual);
+
+					SNBestKnown.SortAscendingBranchless(ref actual[0], length);
+
+					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+				}
+			}
+		}
+
+		[TestMethod]
+		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		public void Descending_Branchless_UInt32(GenerationMode mode, int iterations)
+		{
+			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			{
+				for (int i = 0; i < iterations; i++)
+				{
+					GenerateArraysDescending(mode, length, out uint[] expected, out uint[] actual);
+
+					SNBestKnown.SortDescendingBranchless(ref actual[0], length);
+
+					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+				}
+			}
+		}
+
+		[TestMethod]
+		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
 		public void Ascending_Branchless_Int32(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
