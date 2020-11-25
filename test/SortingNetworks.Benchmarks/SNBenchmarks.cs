@@ -7,6 +7,9 @@
 	{
 		[Params(2)]
 		public override int Length { get; set; }
+		
+		[Params(110000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -51,6 +54,9 @@
 	{
 		[Params(3)]
 		public override int Length { get; set; }
+		
+		[Params(110000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -95,6 +101,9 @@
 	{
 		[Params(4)]
 		public override int Length { get; set; }
+		
+		[Params(110000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -139,6 +148,9 @@
 	{
 		[Params(5)]
 		public override int Length { get; set; }
+		
+		[Params(90000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -183,6 +195,9 @@
 	{
 		[Params(6)]
 		public override int Length { get; set; }
+		
+		[Params(85000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -227,6 +242,9 @@
 	{
 		[Params(7)]
 		public override int Length { get; set; }
+		
+		[Params(85000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -271,6 +289,9 @@
 	{
 		[Params(8)]
 		public override int Length { get; set; }
+		
+		[Params(55000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -315,6 +336,9 @@
 	{
 		[Params(9)]
 		public override int Length { get; set; }
+		
+		[Params(50000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -383,6 +407,9 @@
 	{
 		[Params(10)]
 		public override int Length { get; set; }
+		
+		[Params(45000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -451,6 +478,9 @@
 	{
 		[Params(11)]
 		public override int Length { get; set; }
+		
+		[Params(43000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -519,6 +549,9 @@
 	{
 		[Params(12)]
 		public override int Length { get; set; }
+		
+		[Params(36000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -587,6 +620,9 @@
 	{
 		[Params(13)]
 		public override int Length { get; set; }
+		
+		[Params(35000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -655,6 +691,9 @@
 	{
 		[Params(14)]
 		public override int Length { get; set; }
+		
+		[Params(22000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -723,6 +762,9 @@
 	{
 		[Params(15)]
 		public override int Length { get; set; }
+		
+		[Params(21000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -791,6 +833,9 @@
 	{
 		[Params(16)]
 		public override int Length { get; set; }
+		
+		[Params(21000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -859,6 +904,9 @@
 	{
 		[Params(17)]
 		public override int Length { get; set; }
+		
+		[Params(13000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -903,6 +951,9 @@
 	{
 		[Params(18)]
 		public override int Length { get; set; }
+		
+		[Params(12000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -947,6 +998,9 @@
 	{
 		[Params(19)]
 		public override int Length { get; set; }
+		
+		[Params(12000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -991,6 +1045,9 @@
 	{
 		[Params(20)]
 		public override int Length { get; set; }
+		
+		[Params(11000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1035,6 +1092,9 @@
 	{
 		[Params(21)]
 		public override int Length { get; set; }
+		
+		[Params(11000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1079,6 +1139,9 @@
 	{
 		[Params(22)]
 		public override int Length { get; set; }
+		
+		[Params(10000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1123,6 +1186,9 @@
 	{
 		[Params(23)]
 		public override int Length { get; set; }
+		
+		[Params(10000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1167,6 +1233,9 @@
 	{
 		[Params(24)]
 		public override int Length { get; set; }
+		
+		[Params(10000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1211,6 +1280,9 @@
 	{
 		[Params(25)]
 		public override int Length { get; set; }
+		
+		[Params(10000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1255,6 +1327,9 @@
 	{
 		[Params(26)]
 		public override int Length { get; set; }
+		
+		[Params(9000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1299,6 +1374,9 @@
 	{
 		[Params(27)]
 		public override int Length { get; set; }
+		
+		[Params(9000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1343,6 +1421,9 @@
 	{
 		[Params(28)]
 		public override int Length { get; set; }
+		
+		[Params(9000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1387,6 +1468,9 @@
 	{
 		[Params(29)]
 		public override int Length { get; set; }
+		
+		[Params(9000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1431,6 +1515,9 @@
 	{
 		[Params(30)]
 		public override int Length { get; set; }
+		
+		[Params(9000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1475,6 +1562,9 @@
 	{
 		[Params(31)]
 		public override int Length { get; set; }
+		
+		[Params(9000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
@@ -1519,6 +1609,9 @@
 	{
 		[Params(32)]
 		public override int Length { get; set; }
+		
+		[Params(9000000)]
+		public override int Count { get; set; }
 
 		[Benchmark]
 		public void BoseNelson_Comparable()
