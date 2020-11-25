@@ -1,7 +1,6 @@
 ﻿namespace SortingNetworks.Benchmarks
 {
 	using System;
-	using System.Buffers;
 	using System.Runtime.CompilerServices;
 	using BenchmarkDotNet.Attributes;
 	using BenchmarkDotNet.Jobs;
@@ -24,7 +23,7 @@
 			}
 		}
 
-		protected int[] _iterationItems;
+		protected readonly int[] IterationItems = new int[110_000_000];
 
 		public abstract int Length { get; set; }
 
@@ -73,17 +72,7 @@
 
 		[IterationSetup]
 		public void IterationSetup()
-		{
-			_iterationItems = ArrayPool<int>.Shared.Rent(Count);
-			_globalItems.AsSpan(0, Count).CopyTo(_iterationItems);
-		}
-
-		[IterationCleanup]
-		public void IterationCleanup()
-		{
-			ArrayPool<int>.Shared.Return(_iterationItems);
-			_iterationItems = null;
-		}
+			=> _globalItems.AsSpan(0, Count).CopyTo(IterationItems);
 
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		protected static void PrivateInsertionSortAscending<T>(Span<T> span)

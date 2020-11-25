@@ -22,7 +22,7 @@ namespace SortingNetworks.Benchmarks
 
 			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBoseNelson.Sort<#= i #>Ascending(ref _iterationItems[i]);
+				SNBoseNelson.Sort<#= i #>Ascending(ref IterationItems[i]);
 			}
 		}
 
@@ -34,7 +34,7 @@ namespace SortingNetworks.Benchmarks
 
 			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBoseNelson.Sort<#= i #>AscendingBranchless(ref _iterationItems[i]);
+				SNBoseNelson.Sort<#= i #>AscendingBranchless(ref IterationItems[i]);
 			}
 		}
 
@@ -47,7 +47,7 @@ namespace SortingNetworks.Benchmarks
 
 			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.Sort<#= i #>Ascending(ref _iterationItems[i]);
+				SNBestKnown.Sort<#= i #>Ascending(ref IterationItems[i]);
 			}
 		}
 
@@ -59,7 +59,7 @@ namespace SortingNetworks.Benchmarks
 
 			for (int i = 0; i < maximumLength; i += length)
 			{
-				SNBestKnown.Sort<#= i #>AscendingBranchless(ref _iterationItems[i]);
+				SNBestKnown.Sort<#= i #>AscendingBranchless(ref IterationItems[i]);
 			}
 		}
 
@@ -72,7 +72,7 @@ namespace SortingNetworks.Benchmarks
 
 			for (int i = 0; i < maximumLength; i += length)
 			{
-				Span<int> slice = _iterationItems.AsSpan(i, length);
+				Span<int> slice = IterationItems.AsSpan(i, length);
 
 				PrivateInsertionSortAscending(slice);
 			}
