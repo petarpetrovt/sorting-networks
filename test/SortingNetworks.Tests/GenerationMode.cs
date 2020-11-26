@@ -29,5 +29,10 @@
 		/// Even bigger than odd
 		/// </summary>
 		EvenBiggerThanOdd,
+
+		/// <summary>
+		/// Special values (NaN, Min, Max, etc)
+		/// </summary>
+		SpecialValues,
 	}
 }

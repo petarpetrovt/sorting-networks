@@ -5,10 +5,11 @@
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	[TestClass]
-	public class SNBestKnownTests : SNTestsBase
+	public partial class SNBestKnownTests : SNTestsBase
 	{
 		public static IEnumerable<object[]> GetModeAndIterations()
 		{
+			yield return new object[] { GenerationMode.SpecialValues, 1 };
 			yield return new object[] { GenerationMode.Sorted, 1 };
 			yield return new object[] { GenerationMode.Reverse, 1 };
 			yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };

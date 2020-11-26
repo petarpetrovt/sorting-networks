@@ -1,7 +1,6 @@
 ﻿namespace SortingNetworks.Benchmarks
 {
 	using System;
-	using System.Buffers;
 	using System.Runtime.CompilerServices;
 	using BenchmarkDotNet.Attributes;
 	using BenchmarkDotNet.Jobs;
@@ -15,29 +14,30 @@
 	{
 		private int[] _globalItems;
 
-		protected int[] _iterationItems;
+		protected int[] IterationItems;
 
+		/// <summary>
+		/// Gets or sets the length of the sorting network.
+		/// </summary>
 		public abstract int Length { get; set; }
 
-		public int Count
-			=> Length switch
-			{
-				int length when length <= 02 => 40_000_000,
-				int length when length <= 06 => 35_000_000,
-				int length when length <= 11 => 22_000_000,
-				int length when length <= 15 => 15_000_000,
-				int length when length <= 20 => 13_000_000,
-				int length when length <= 26 => 11_000_000,
-				int length when length <= 32 => 09_000_000,
-				_ => -1,
-			};
+		/// <summary>
+		/// Gets the count of the iteration items depending on the length of the sorting network.
+		/// </summary>
+		/// <remarks>
+		/// The values are adjusted in `TemplateUtilities.ttinclude -> GetOptimalBenchmarkCount` so that
+		/// the lowest benchmark of N length will run at least 100 ms per iteration.
+		/// </remarks>
+		public abstract int Count { get; set; }
 
 		[GlobalSetup]
 		public void GlobalSetup()
 		{
-			_globalItems = new int[Count];
+			_globalItems = new int[110_000_000];
+			IterationItems = new int[110_000_000];
 
 			var random = new Random(new Random().Next());
+
 			for (int i = 0; i < _globalItems.Length; i++)
 			{
 				_globalItems[i] = random.Next(int.MinValue, int.MaxValue);
@@ -48,22 +48,14 @@
 		public void GlobalCleanup()
 		{
 			_globalItems = null;
-			GC.Collect();
+			IterationItems = null;
 		}
 
 		[IterationSetup]
 		public void IterationSetup()
-		{
-			_iterationItems = ArrayPool<int>.Shared.Rent(Count);
-			_globalItems.AsSpan().CopyTo(_iterationItems);
-		}
-
-		[IterationCleanup]
-		public void IterationCleanup()
-		{
-			ArrayPool<int>.Shared.Return(_iterationItems);
-			_iterationItems = null;
-		}
+			=> _globalItems
+				.AsSpan(0, Count)
+				.CopyTo(IterationItems);
 
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		protected static void PrivateInsertionSortAscending<T>(Span<T> span)

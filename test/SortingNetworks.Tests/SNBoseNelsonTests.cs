@@ -5,10 +5,11 @@
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	[TestClass]
-	public class SNBoseNelsonTests : SNTestsBase
+	public partial class SNBoseNelsonTests : SNTestsBase
 	{
 		public static IEnumerable<object[]> GetModeAndIterations()
 		{
+			yield return new object[] { GenerationMode.SpecialValues, 1 };
 			yield return new object[] { GenerationMode.Sorted, 1 };
 			yield return new object[] { GenerationMode.Reverse, 1 };
 			yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };
@@ -90,11 +91,14 @@
 		{
 			for (int length = SNBoseNelson.MinLength; length <= SNBoseNelson.MaxLength; length++)
 			{
-				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
+				for (int i = 0; i < iterations; i++)
+				{
+					GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
-				SNBoseNelson.SortAscending(ref actual[0], length, &InternalComparison);
+					SNBoseNelson.SortAscending(ref actual[0], length, &InternalComparison);
 
-				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
+				}
 			}
 		}
 

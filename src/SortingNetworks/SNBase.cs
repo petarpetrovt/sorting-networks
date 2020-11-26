@@ -2,6 +2,11 @@
 {
 	using System;
 	using System.Runtime.CompilerServices;
+#if NETSTANDARD1_3
+	using EXCLUDE_FROM_CODE_COVERAGE = System.Diagnostics.DebuggerNonUserCodeAttribute;
+#else
+	using EXCLUDE_FROM_CODE_COVERAGE = System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute;
+#endif
 
 	/// <summary>
 	/// Represents a base for different sorting network implementations.
@@ -9,17 +14,13 @@
 #if NET5_0
 	[SkipLocalsInit]
 #endif
-	public abstract class SNBase
+	public abstract partial class SNBase
 	{
 		/// <summary>
 		/// Disable inheritance outside of the assembly.
 		/// </summary>
 		/// <exclude/>
-#if NETSTANDARD1_3
-		[System.Diagnostics.DebuggerNonUserCode]
-#else
-		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-#endif
+		[EXCLUDE_FROM_CODE_COVERAGE]
 		internal SNBase() { }
 
 		// Copied from https://github.com/dotnet/runtime/blob/6072e4d3a7a2a1493f514cdf4be75a3d56580e84/src/libraries/System.Private.CoreLib/src/System/Collections/Generic/ArraySortHelper.cs
@@ -32,23 +33,9 @@
 		// - The `? true : false` is to work-around poor codegen: https://github.com/dotnet/runtime/issues/37904#issuecomment-644180265.
 		// - These are duplicated here rather than being on a helper type due to current limitations around generic inlining.
 #pragma warning disable IDE0075 // Simplify conditional expression
-		/// <summary>
-		/// Gets a flag indicating whether <paramref name="left"/> is less than <paramref name="right"/>.
-		/// </summary>
-		/// <remarks>
-		/// Compiles to a single comparison or method call.
-		/// </remarks>
-		/// <typeparam name="T">the parameter type</typeparam>
-		/// <param name="left">the left parameter</param>
-		/// <param name="right">the right parameter</param>
-		/// <returns>true if <paramref name="left"/> is less than <paramref name="right"/>; otherwise false</returns>
 		/// <exclude/>
+		[EXCLUDE_FROM_CODE_COVERAGE]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-#if NETSTANDARD1_3
-		[System.Diagnostics.DebuggerNonUserCode]
-#else
-		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-#endif
 		protected internal static bool LessThan<T>(ref T left, ref T right)
 			where T : IComparable<T>
 		{
@@ -71,23 +58,9 @@
 			return left.CompareTo(right) < 0 ? true : false;
 		}
 
-		/// <summary>
-		/// Gets a flag indicating whether <paramref name="left"/> is greater than <paramref name="right"/>.
-		/// </summary>
-		/// <remarks>
-		/// Compiles to a single comparison or method call.
-		/// </remarks>
-		/// <typeparam name="T">the parameter type</typeparam>
-		/// <param name="left">the left parameter</param>
-		/// <param name="right">the right parameter</param>
-		/// <returns>true if <paramref name="left"/> is greater than <paramref name="right"/>; otherwise false</returns>
 		/// <exclude/>
+		[EXCLUDE_FROM_CODE_COVERAGE]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-#if NETSTANDARD1_3
-		[System.Diagnostics.DebuggerNonUserCode]
-#else
-		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-#endif
 		protected internal static bool GreaterThan<T>(ref T left, ref T right)
 			where T : IComparable<T>
 		{

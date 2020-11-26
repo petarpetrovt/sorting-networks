@@ -1,6 +1,15 @@
 ﻿<#+
-	int minLength = 2;
-	int maxLength = 32;
+	public static int GetMinLength()
+		=> 2;
+
+	public static int GetMaxLength()
+		=> 32;
+
+	public static string GetSwapIfGreaterBranchless(string a, string b, string temp = "temp")
+		=> $"SwapBranchlessGreaterThan(ref {a}, ref {b});";
+
+	public static string GetSwapIfLesserBranchless(string a, string b, string temp = "temp")
+		=> $"SwapBranchlessLessThan(ref {a}, ref {b});";
 
 	public static string GetSwapIfGreaterComparable(string a, string b, string temp = "temp")
 		=> $"if (GreaterThan(ref {a}, ref {b})) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
@@ -25,6 +34,71 @@
 
 	public static string GetSwapIfLesserComparisonPointer(string a, string b, string comparisonPointer = "comparisonPointer", string temp = "temp")
 		=> $"if ({comparisonPointer}({a}, {b}) < 0) {{ {temp} = {a}; {a} = {b}; {b} = {temp}; }}";
+
+	public static IEnumerable<string> GetBranchlessTypeNames()
+	{
+		yield return "byte";
+		yield return "sbyte";
+		yield return "ushort";
+		yield return "short";
+		yield return "uint";
+		yield return "int";
+	}
+
+	public static string GetTypeDisplayName(string value)
+	{
+		switch (value)
+		{
+			case "byte": return "Byte";
+			case "sbyte": return "SByte";
+			case "ushort": return "UInt16";
+			case "short": return "Int16";
+			case "uint": return "UInt32";
+			case "int": return "Int32";
+			case "ulong": return "UInt64";
+			case "long": return "Int64";
+			default: return "";
+		}
+	}
+
+	public static int GetOptimalBenchmarkCount(int length)
+	{
+		return length switch
+		{
+			02 => 110_000_000,
+			03 => 110_000_000,
+			04 => 110_000_000,
+			05 => 90_000_000,
+			06 => 85_000_000,
+			07 => 85_000_000,
+			08 => 55_000_000,
+			09 => 50_000_000,
+			10 => 45_000_000,
+			11 => 43_000_000,
+			12 => 36_000_000,
+			13 => 35_000_000,
+			14 => 22_000_000,
+			15 => 21_000_000,
+			16 => 21_000_000,
+			17 => 13_000_000,
+			18 => 12_000_000,
+			19 => 12_000_000,
+			20 => 11_000_000,
+			21 => 11_000_000,
+			22 => 10_000_000,
+			23 => 10_000_000,
+			24 => 10_000_000,
+			25 => 10_000_000,
+			26 => 09_000_000,
+			27 => 09_000_000,
+			28 => 09_000_000,
+			29 => 09_000_000,
+			30 => 09_000_000,
+			31 => 09_000_000,
+			32 => 09_000_000,
+			_ => -1,
+		};
+	}
 
 	private static IEnumerable<(int, int)> PStarBracket(int i, int x, int j, int y)
 	{

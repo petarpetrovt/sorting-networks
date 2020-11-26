@@ -45,4 +45,22 @@
 		</T4ParameterValues>
 	</ItemGroup>
 
+	<Choose>
+		<When Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
+			<PropertyGroup>
+				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
+			</PropertyGroup>
+		</When>
+		<When Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+			<PropertyGroup>
+				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
+			</PropertyGroup>
+		</When>
+		<When Condition="'$(TargetFramework)' == 'net5.0'">
+			<PropertyGroup>
+				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
+			</PropertyGroup>
+		</When>
+	</Choose>
+
 </Project>

@@ -24,26 +24,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="SNBNBenchmarks.tt">
-			<LastGenOutput>SNBNBenchmarks.cs</LastGenOutput>
+		<None Update="SNBenchmarks.tt">
+			<LastGenOutput>SNBenchmarks.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
-		</None>
-		<None Update="SNKNBenchmarks.tt">
-			<Generator>TextTemplatingFileGenerator</Generator>
-			<LastGenOutput>SNKNBenchmarks.cs</LastGenOutput>
 		</None>
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="SNBNBenchmarks.cs">
+		<Compile Update="SNBenchmarks.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
-			<DependentUpon>SNBNBenchmarks.tt</DependentUpon>
-		</Compile>
-		<Compile Update="SNKNBenchmarks.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>SNKNBenchmarks.tt</DependentUpon>
+			<DependentUpon>SNBenchmarks.tt</DependentUpon>
 		</Compile>
 	</ItemGroup>
 
