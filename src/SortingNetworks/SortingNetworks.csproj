@@ -15,7 +15,6 @@
 		<Description>A collection of sorting network algorithms implemented in C#.</Description>
 		<PackageLicenseFile></PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
-		<NoWarn>$(NoWarn);CA1812</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -40,10 +39,6 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.1">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
 	</ItemGroup>
 
 	<!-- DefaultDocumentation -->
@@ -51,7 +46,7 @@
 		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(BuildingInsideVisualStudio)' == 'true' AND '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
-		<PackageReference Include="DefaultDocumentation" Version="0.0.0-ci20201118183225">
+		<PackageReference Include="DefaultDocumentation" Version="0.6.13">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
