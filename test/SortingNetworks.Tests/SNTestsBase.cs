@@ -95,7 +95,7 @@
 				GenerationMode.EvenBiggerThanOdd
 					=> expected.Select(x =>
 					{
-						long value = Convert.ToInt64(x);
+						long value = Convert.ToInt64(x, CultureInfo.InvariantCulture);
 						if (value % 2 == 0)
 						{
 							return (T)Convert.ChangeType(value - 1, typeof(T), CultureInfo.InvariantCulture);
@@ -173,7 +173,8 @@
 						=> (new uint[] { uint.MinValue, uint.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
 					Type type when type == typeof(int)
 						=> (new int[] { int.MinValue, int.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
-					_ => throw new NotImplementedException(),
+					_
+						=> Array.Empty<T>(),
 				};
 			}
 		}

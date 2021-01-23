@@ -7,18 +7,21 @@
 	[TestClass]
 	public partial class SNBestKnownTests : SNTestsBase
 	{
-		public static IEnumerable<object[]> GetModeAndIterations()
+		public static IEnumerable<object[]> ModeAndIterations
 		{
-			yield return new object[] { GenerationMode.SpecialValues, 1 };
-			yield return new object[] { GenerationMode.Sorted, 1 };
-			yield return new object[] { GenerationMode.Reverse, 1 };
-			yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };
-			yield return new object[] { GenerationMode.OddBiggerThanEven, 1 };
-			yield return new object[] { GenerationMode.Random, 10 };
+			get
+			{
+				yield return new object[] { GenerationMode.SpecialValues, 1 };
+				yield return new object[] { GenerationMode.Sorted, 1 };
+				yield return new object[] { GenerationMode.Reverse, 1 };
+				yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };
+				yield return new object[] { GenerationMode.OddBiggerThanEven, 1 };
+				yield return new object[] { GenerationMode.Random, 10 };
+			}
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
 		public void Ascending_Comparable(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -35,7 +38,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
 		public void Descending_Comparable(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -52,7 +55,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
 		public void Ascending_Comparison(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -69,7 +72,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
 		public void Descending_Comparison(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -86,7 +89,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
 		public unsafe void Ascending_ComparisonPointer(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -103,7 +106,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
 		public unsafe void Descending_ComparisonPointer(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
