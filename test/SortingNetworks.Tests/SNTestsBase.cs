@@ -2,6 +2,7 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using System.Globalization;
 	using System.Linq;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -77,14 +78,14 @@
 				GenerationMode.OddBiggerThanEven
 					=> expected.Select(x =>
 					{
-						long value = Convert.ToInt64(x);
+						long value = Convert.ToInt64(x, CultureInfo.InvariantCulture);
 						if (value % 2 == 0)
 						{
-							return (T)Convert.ChangeType(value - 1, typeof(T));
+							return (T)Convert.ChangeType(value - 1, typeof(T), CultureInfo.InvariantCulture);
 						}
 						else if (value + 1 < length || length % 2 == 0)
 						{
-							return (T)Convert.ChangeType(value + 1, typeof(T));
+							return (T)Convert.ChangeType(value + 1, typeof(T), CultureInfo.InvariantCulture);
 						}
 						else
 						{
@@ -94,14 +95,14 @@
 				GenerationMode.EvenBiggerThanOdd
 					=> expected.Select(x =>
 					{
-						long value = Convert.ToInt64(x);
+						long value = Convert.ToInt64(x, CultureInfo.InvariantCulture);
 						if (value % 2 == 0)
 						{
-							return (T)Convert.ChangeType(value - 1, typeof(T));
+							return (T)Convert.ChangeType(value - 1, typeof(T), CultureInfo.InvariantCulture);
 						}
 						else if (value + 1 < length || length % 2 == 0)
 						{
-							return (T)Convert.ChangeType(value + 1, typeof(T));
+							return (T)Convert.ChangeType(value + 1, typeof(T), CultureInfo.InvariantCulture);
 						}
 						else
 						{
@@ -134,13 +135,13 @@
 					.Range(1, length)
 					.Select(x => Helper<T>.Values[ThreadSafeRandom.Next(0, Helper<T>.Values.Length)])
 					.OrderBy(x => x)
-					.Select(x => (T)Convert.ChangeType(x, typeof(T)));
+					.Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture));
 			}
 			else
 			{
 				result = Enumerable
 					.Range(1, length)
-					.Select(x => (T)Convert.ChangeType(x, typeof(T)));
+					.Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture));
 			}
 
 			if (!ascending)
@@ -160,19 +161,22 @@
 			{
 				Values = typeof(T) switch
 				{
+#pragma warning disable CA1508 // Avoid dead conditional code
 					Type type when type == typeof(byte)
-						=> (new byte[] { byte.MinValue, byte.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+						=> (new byte[] { byte.MinValue, byte.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
 					Type type when type == typeof(sbyte)
-						=> (new sbyte[] { sbyte.MinValue, sbyte.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+						=> (new sbyte[] { sbyte.MinValue, sbyte.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
 					Type type when type == typeof(ushort)
-						=> (new ushort[] { ushort.MinValue, ushort.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+						=> (new ushort[] { ushort.MinValue, ushort.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
 					Type type when type == typeof(short)
-						=> (new short[] { short.MinValue, short.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+						=> (new short[] { short.MinValue, short.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
 					Type type when type == typeof(uint)
-						=> (new uint[] { uint.MinValue, uint.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
+						=> (new uint[] { uint.MinValue, uint.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
 					Type type when type == typeof(int)
-						=> (new int[] { int.MinValue, int.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T))).ToArray(),
-					_ => throw new NotImplementedException(),
+						=> (new int[] { int.MinValue, int.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
+#pragma warning restore CA1508 // Avoid dead conditional code
+					_
+						=> Array.Empty<T>(),
 				};
 			}
 		}

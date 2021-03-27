@@ -5,7 +5,7 @@
 	partial class SNBestKnownTests
 	{
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Ascending_Branchless_Byte(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -22,7 +22,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_Byte(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -39,7 +39,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Ascending_Branchless_SByte(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -56,7 +56,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_SByte(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -73,7 +73,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Ascending_Branchless_UInt16(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -90,7 +90,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_UInt16(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -107,7 +107,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Ascending_Branchless_Int16(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -124,7 +124,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_Int16(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -141,7 +141,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Ascending_Branchless_UInt32(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -158,7 +158,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_UInt32(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -175,7 +175,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Ascending_Branchless_Int32(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -192,7 +192,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_Int32(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)

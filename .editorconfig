@@ -86,3 +86,9 @@ dotnet_naming_style.prefix_underscore.required_prefix              = _
 # CA1062: Validate arguments of public methods
 # TODO: remove when `DoesNotReturn` attribute gets fixed - https://github.com/dotnet/roslyn-analyzers/issues/2877
 dotnet_diagnostic.CA1062.severity                                  = none
+
+# CA1051: Do not declare visible instance fields
+dotnet_diagnostic.CA1051.severity = none
+
+# CA1810: Initialize reference type static fields inline
+dotnet_diagnostic.CA1810.severity = none

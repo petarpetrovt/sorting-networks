@@ -4,7 +4,7 @@
 
 	internal static class ThreadSafeRandom
 	{
-		private readonly static Random _global = new Random();
+		private readonly static Random _global = new();
 
 		[ThreadStatic]
 		private static Random _local;
