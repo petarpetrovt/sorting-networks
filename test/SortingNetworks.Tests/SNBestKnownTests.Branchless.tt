@@ -29,7 +29,7 @@ namespace SortingNetworks.Tests
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(GetModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_<#= GetTypeDisplayName(typeName) #>(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)

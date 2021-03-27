@@ -161,6 +161,7 @@
 			{
 				Values = typeof(T) switch
 				{
+#pragma warning disable CA1508 // Avoid dead conditional code
 					Type type when type == typeof(byte)
 						=> (new byte[] { byte.MinValue, byte.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
 					Type type when type == typeof(sbyte)
@@ -173,6 +174,7 @@
 						=> (new uint[] { uint.MinValue, uint.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
 					Type type when type == typeof(int)
 						=> (new int[] { int.MinValue, int.MaxValue }).Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToArray(),
+#pragma warning restore CA1508 // Avoid dead conditional code
 					_
 						=> Array.Empty<T>(),
 				};

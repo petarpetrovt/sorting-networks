@@ -22,7 +22,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_Byte(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -56,7 +56,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_SByte(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -90,7 +90,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_UInt16(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -124,7 +124,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_Int16(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -158,7 +158,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_UInt32(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -192,7 +192,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Branchless_Int32(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)

@@ -21,7 +21,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Ascending_Comparable(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -38,7 +38,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Comparable(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -55,7 +55,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Ascending_Comparison(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -72,7 +72,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public void Descending_Comparison(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -89,7 +89,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public unsafe void Ascending_ComparisonPointer(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
@@ -106,7 +106,7 @@
 		}
 
 		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
 		public unsafe void Descending_ComparisonPointer(GenerationMode mode, int iterations)
 		{
 			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
