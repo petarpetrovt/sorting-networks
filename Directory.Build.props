@@ -64,6 +64,11 @@
 				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
 			</PropertyGroup>
 		</When>
+		<When Condition="'$(TargetFramework)' == 'net6.0'">
+			<PropertyGroup>
+				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
+			</PropertyGroup>
+		</When>
 	</Choose>
 
 </Project>
