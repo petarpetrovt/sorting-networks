@@ -10,6 +10,12 @@
 			netcoreapp3.1;
 			net48
 		</TargetFrameworks>
+
+		<!--
+		Avoid spawning any-long living compiler processes to avoid BenchmarkDotNet issues with "file in use",
+		and automation failing to clean up the folders once the runs are over
+		-->
+		<UseSharedCompilation>false</UseSharedCompilation>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -17,7 +23,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
+		<PackageReference Include="BenchmarkDotNet" Version="0.12.1.1521" />
+		<PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.12.1.1521" />
 	</ItemGroup>
 
 	<ItemGroup>
