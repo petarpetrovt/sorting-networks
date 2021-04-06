@@ -36,7 +36,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DefaultDocumentation" Version="0.6.15">
+		<PackageReference Include="DefaultDocumentation" Version="1.0.0-test" Condition="'$(TargetFramework)' == 'net6.0'">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
