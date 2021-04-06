@@ -51,7 +51,7 @@ jobs:
           # netcoreapp3.1
           - os: windows-latest
             tf: netcoreapp3.1
-            rv: '6.0.100-preview.2.21155.3'
+            rv: '3.1.404'
             codecov: false
     steps:
      - name: Checkout
