@@ -29,39 +29,49 @@ jobs:
           - os: windows-latest
             tf: net48
             rv: '6.0.100-preview.2.21155.3'
+            tv: '6.0.100-preview.2.21155.3'
             codecov: false
           # ne6.0
           - os: ubuntu-latest
             tf: net6.0
             rv: '6.0.100-preview.2.21155.3'
+            tv: '6.0.100-preview.2.21155.3'
             codecov: true
           - os: windows-latest
             tf: net6.0
             rv: '6.0.100-preview.2.21155.3'
+            tv: '6.0.100-preview.2.21155.3'
             codecov: false
           - os: macos-latest
             tf: net6.0
             rv: '6.0.100-preview.2.21155.3'
+            tv: '6.0.100-preview.2.21155.3'
             codecov: false
           # net5.0
           - os: windows-latest
             tf: net5.0
             rv: '6.0.100-preview.2.21155.3'
+            tv: '5.0.100'
             codecov: false
           # netcoreapp3.1
-          # TODO: for some reason publishing tests requires .NET Core SDK 3.1 to be installed but global.json requires 6.0...
-          #- os: windows-latest
-          #  tf: netcoreapp3.1
-          #  rv: '3.1.404'
-          #  codecov: false
+          - os: windows-latest
+            tf: netcoreapp3.1
+            rv: '6.0.100-preview.2.21155.3'
+            tv: '3.1.404'
+            codecov: false
     steps:
      - name: Checkout
        uses: actions/checkout@v2.3.4
 
-     - name: Setup dotnet
+     - name: Setup dotnet SDK required for build (TODO it from global.json)
        uses: actions/setup-dotnet@v1.7.2
        with:
          dotnet-version: ${{ matrix.options.rv }}
+
+     - name: Setup dotnet SDK required for tests
+       uses: actions/setup-dotnet@v1.7.2
+       with:
+         dotnet-version: ${{ matrix.options.tv }}
 
      - name: Publish tests
        run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Release" -f "${{ matrix.options.tf }}"
