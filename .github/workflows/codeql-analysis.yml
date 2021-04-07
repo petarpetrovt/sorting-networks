@@ -39,7 +39,7 @@ jobs:
         languages: 'csharp'
 
     - name: Build
-      run: dotnet build "src/SortingNetworks/SortingNetworks.csproj" -c "Release" -f "net6.0"
+      run: dotnet build "src/SortingNetworks/SortingNetworks.csproj" -c "Release" -f "net6.0" /p:DisableDefaultDocumentation=true
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
