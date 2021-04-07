@@ -68,24 +68,24 @@ jobs:
        with:
          dotnet-version: ${{ matrix.options.rv }}
 
-     - name: Setup dotnet SDK required for tests
-       uses: actions/setup-dotnet@v1.7.2
-       with:
-         dotnet-version: ${{ matrix.options.tv }}
+     #- name: Setup dotnet SDK required for tests
+     #  uses: actions/setup-dotnet@v1.7.2
+     #  with:
+     #    dotnet-version: ${{ matrix.options.tv }}
 
      - name: Publish tests
        run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Release" -f "${{ matrix.options.tf }}" /p:DefaultDocumentationFolderBase=".deploy/SortingNetworks.Tests"
 
-     - name: Run tests with code coverage
-       if: ${{ matrix.options.codecov }}
-       run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --collect:"XPlat code coverage" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
+     #- name: Run tests with code coverage
+     #  if: ${{ matrix.options.codecov }}
+     #  run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --collect:"XPlat code coverage" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
 
-     - name: Run tests without code coverage
-       if: ${{ !matrix.options.codecov }}
-       run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
+     #- name: Run tests without code coverage
+     #  if: ${{ !matrix.options.codecov }}
+     #  run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
 
-     - name: Update codecov
-       if: ${{ matrix.options.codecov }}
-       uses: codecov/codecov-action@v1
-       with:
-         token: ${{ secrets.CODECOV_TOKEN }}
+     #- name: Update codecov
+     #  if: ${{ matrix.options.codecov }}
+     #  uses: codecov/codecov-action@v1
+     #  with:
+     #    token: ${{ secrets.CODECOV_TOKEN }}
