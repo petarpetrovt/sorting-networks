@@ -43,10 +43,10 @@
 	</ItemGroup>
 
 	<!-- DefaultDocumentation -->
-	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
+	<PropertyGroup>
 		<DefaultDocumentationFolder>$(SolutionDir)\docs\api\$(TargetFramework)</DefaultDocumentationFolder>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+	<ItemGroup>
 		<PackageReference Include="DefaultDocumentation" Version="1.0.0-test">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
