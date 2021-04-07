@@ -36,10 +36,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DefaultDocumentation" Version="1.0.0-test" Condition="'$(TargetFramework)' == 'net6.0'">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
 		<PackageReference Include="Nullable" Version="1.3.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -47,10 +43,10 @@
 	</ItemGroup>
 
 	<!-- DefaultDocumentation -->
-	<PropertyGroup Condition="'$(BuildingInsideVisualStudio)' == 'true' AND '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net6.0'">
-		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<DefaultDocumentationFolder>$(SolutionDir)\docs\api\$(TargetFramework)</DefaultDocumentationFolder>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(BuildingInsideVisualStudio)' == 'true' AND '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net6.0'">
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
 		<PackageReference Include="DefaultDocumentation" Version="1.0.0-test">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
