@@ -1,4 +1,4 @@
-<h1>
+﻿<h1>
 <img src="/icon.png" alt="sorting-networks" width="64"/>
 sorting-networks
 </h1>
@@ -30,7 +30,7 @@ A collection of sorting network algorithms implemented in C#.
 
 ## API
 
-* [documentation](docs/api/SortingNetworks.md)
+* [documentation](docs/api/index.md)
 * [benchmarks](docs/benchmarks/README.md)
 
 >  **WARNING**: Check benchmarks before use.

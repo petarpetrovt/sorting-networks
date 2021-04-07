@@ -47,6 +47,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{71B10C63-F4CD-440F-8BD8-D4E83126160A}"
+	ProjectSection(SolutionItems) = preProject
+		docs\api\index.md = docs\api\index.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
