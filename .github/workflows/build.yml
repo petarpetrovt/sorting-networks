@@ -25,67 +25,63 @@ jobs:
     strategy:
       matrix:
         options:
-          # net48
-          - os: windows-latest
-            tf: net48
-            rv: '6.0.100-preview.2.21155.3'
-            tv: '6.0.100-preview.2.21155.3'
-            codecov: false
           # ne6.0
           - os: ubuntu-latest
             tf: net6.0
-            rv: '6.0.100-preview.2.21155.3'
-            tv: '6.0.100-preview.2.21155.3'
             codecov: true
           - os: windows-latest
             tf: net6.0
-            rv: '6.0.100-preview.2.21155.3'
-            tv: '6.0.100-preview.2.21155.3'
             codecov: false
           - os: macos-latest
             tf: net6.0
-            rv: '6.0.100-preview.2.21155.3'
-            tv: '6.0.100-preview.2.21155.3'
             codecov: false
           # net5.0
           - os: windows-latest
             tf: net5.0
-            rv: '6.0.100-preview.2.21155.3'
-            tv: '5.0.100'
+            rv: '5.0.202'
             codecov: false
           # netcoreapp3.1
-          - os: windows-latest
+          - os: ubuntu-latest
             tf: netcoreapp3.1
-            rv: '6.0.100-preview.2.21155.3'
-            tv: '3.1.404'
+            rv: '3.1.404'
+            codecov: false
+          # netcoreapp2.1
+          - os: ubuntu-latest
+            tf: netcoreapp2.1
+            rv: '2.1.814'
+            codecov: false
+          # net48
+          - os: windows-latest
+            tf: net48
             codecov: false
     steps:
      - name: Checkout
        uses: actions/checkout@v2.3.4
 
-     - name: Setup dotnet SDK required for build (TODO it from global.json)
+     - name: Setup dotnet SDK required for build (TODO get it from global.json)
+       uses: actions/setup-dotnet@v1.7.2
+       with:
+         dotnet-version: '6.0.100-preview.2.21155.3'
+
+     - name: Setup dotnet runtime required for tests
+       if: ${{ matrix.options.rv != null }}
        uses: actions/setup-dotnet@v1.7.2
        with:
          dotnet-version: ${{ matrix.options.rv }}
 
-     #- name: Setup dotnet SDK required for tests
-     #  uses: actions/setup-dotnet@v1.7.2
-     #  with:
-     #    dotnet-version: ${{ matrix.options.tv }}
-
      - name: Publish tests
-       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Release" -f "${{ matrix.options.tf }}" /p:DisableDefaultDocumentation=true
+       run: dotnet publish "test/SortingNetworks.Tests/SortingNetworks.Tests.csproj" -o ".deploy/SortingNetworks.Tests" -c "Release" -f "${{ matrix.options.tf }}" /p:DefaultDocumentationFolderBase=".deploy/SortingNetworks.Tests"
 
-     #- name: Run tests with code coverage
-     #  if: ${{ matrix.options.codecov }}
-     #  run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --collect:"XPlat code coverage" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
+     - name: Run tests with code coverage
+       if: ${{ matrix.options.codecov }}
+       run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --collect:"XPlat code coverage" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
 
-     #- name: Run tests without code coverage
-     #  if: ${{ !matrix.options.codecov }}
-     #  run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
+     - name: Run tests without code coverage
+       if: ${{ !matrix.options.codecov }}
+       run: dotnet vstest ".deploy/SortingNetworks.Tests/SortingNetworks.Tests.dll" --settings:".runsettings" --ResultsDirectory:".deploy/SortingNetworks.Tests/TestResults"
 
-     #- name: Update codecov
-     #  if: ${{ matrix.options.codecov }}
-     #  uses: codecov/codecov-action@v1
-     #  with:
-     #    token: ${{ secrets.CODECOV_TOKEN }}
+     - name: Update codecov
+       if: ${{ matrix.options.codecov }}
+       uses: codecov/codecov-action@v1
+       with:
+         token: ${{ secrets.CODECOV_TOKEN }}
