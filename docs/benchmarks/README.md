@@ -1,11 +1,49 @@
 ﻿# benchmarks
 
-### latest - 26.11.2020
+### 03.04.2021
+
+> Add .NET 6.0 target framework
+
+| Length | Result                                                                        |
+| ------ | ----------------------------------------------------------------------------- |
+| 02     | [click](03.04.2021/SortingNetworks.Benchmarks.SN02Benchmark-report-github.md) |
+| 03     | [click](03.04.2021/SortingNetworks.Benchmarks.SN03Benchmark-report-github.md) |
+| 04     | [click](03.04.2021/SortingNetworks.Benchmarks.SN04Benchmark-report-github.md) |
+| 05     | [click](03.04.2021/SortingNetworks.Benchmarks.SN05Benchmark-report-github.md) |
+| 06     | [click](03.04.2021/SortingNetworks.Benchmarks.SN06Benchmark-report-github.md) |
+| 07     | [click](03.04.2021/SortingNetworks.Benchmarks.SN07Benchmark-report-github.md) |
+| 08     | [click](03.04.2021/SortingNetworks.Benchmarks.SN08Benchmark-report-github.md) |
+| 09     | [click](03.04.2021/SortingNetworks.Benchmarks.SN09Benchmark-report-github.md) |
+| 10     | [click](03.04.2021/SortingNetworks.Benchmarks.SN10Benchmark-report-github.md) |
+| 11     | [click](03.04.2021/SortingNetworks.Benchmarks.SN11Benchmark-report-github.md) |
+| 12     | [click](03.04.2021/SortingNetworks.Benchmarks.SN12Benchmark-report-github.md) |
+| 13     | [click](03.04.2021/SortingNetworks.Benchmarks.SN13Benchmark-report-github.md) |
+| 14     | [click](03.04.2021/SortingNetworks.Benchmarks.SN14Benchmark-report-github.md) |
+| 15     | [click](03.04.2021/SortingNetworks.Benchmarks.SN15Benchmark-report-github.md) |
+| 16     | [click](03.04.2021/SortingNetworks.Benchmarks.SN16Benchmark-report-github.md) |
+| 17     | [click](03.04.2021/SortingNetworks.Benchmarks.SN17Benchmark-report-github.md) |
+| 18     | [click](03.04.2021/SortingNetworks.Benchmarks.SN18Benchmark-report-github.md) |
+| 19     | [click](03.04.2021/SortingNetworks.Benchmarks.SN19Benchmark-report-github.md) |
+| 20     | [click](03.04.2021/SortingNetworks.Benchmarks.SN20Benchmark-report-github.md) |
+| 21     | [click](03.04.2021/SortingNetworks.Benchmarks.SN21Benchmark-report-github.md) |
+| 22     | [click](03.04.2021/SortingNetworks.Benchmarks.SN22Benchmark-report-github.md) |
+| 23     | [click](03.04.2021/SortingNetworks.Benchmarks.SN23Benchmark-report-github.md) |
+| 24     | [click](03.04.2021/SortingNetworks.Benchmarks.SN24Benchmark-report-github.md) |
+| 25     | [click](03.04.2021/SortingNetworks.Benchmarks.SN25Benchmark-report-github.md) |
+| 26     | [click](03.04.2021/SortingNetworks.Benchmarks.SN26Benchmark-report-github.md) |
+| 27     | [click](03.04.2021/SortingNetworks.Benchmarks.SN27Benchmark-report-github.md) |
+| 28     | [click](03.04.2021/SortingNetworks.Benchmarks.SN28Benchmark-report-github.md) |
+| 29     | [click](03.04.2021/SortingNetworks.Benchmarks.SN29Benchmark-report-github.md) |
+| 30     | [click](03.04.2021/SortingNetworks.Benchmarks.SN30Benchmark-report-github.md) |
+| 31     | [click](03.04.2021/SortingNetworks.Benchmarks.SN31Benchmark-report-github.md) |
+| 32     | [click](03.04.2021/SortingNetworks.Benchmarks.SN32Benchmark-report-github.md) |
+
+### 26.11.2020
 
 > Add branchless overloads.
 
-| Length | Result |
-| ------ | --------------------------------------------------------------------------------------------- |
+| Length | Result                                                                        |
+| ------ | ----------------------------------------------------------------------------- |
 | 02     | [click](26.11.2020/SortingNetworks.Benchmarks.SN02Benchmark-report-github.md) |
 | 03     | [click](26.11.2020/SortingNetworks.Benchmarks.SN03Benchmark-report-github.md) |
 | 04     | [click](26.11.2020/SortingNetworks.Benchmarks.SN04Benchmark-report-github.md) |

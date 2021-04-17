@@ -2,6 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>
+			net6.0;
 			net5.0;
 			netcoreapp3.1;
 			netstandard2.1;
@@ -42,11 +43,12 @@
 	</ItemGroup>
 
 	<!-- DefaultDocumentation -->
-	<PropertyGroup Condition="'$(BuildingInsideVisualStudio)' == 'true' AND '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
-		<DefaultDocumentationFolder>$(SolutionDir)\docs\api</DefaultDocumentationFolder>
+	<PropertyGroup>
+		<DefaultDocumentationFolderBase>$(SolutionDir)\docs\api</DefaultDocumentationFolderBase>
+		<DefaultDocumentationFolder>$(DefaultDocumentationFolderBase)\$(TargetFramework)</DefaultDocumentationFolder>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(BuildingInsideVisualStudio)' == 'true' AND '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'net5.0'">
-		<PackageReference Include="DefaultDocumentation" Version="0.6.13">
+	<ItemGroup>
+		<PackageReference Include="DefaultDocumentation" Version="0.7.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>

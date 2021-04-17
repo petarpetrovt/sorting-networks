@@ -34,7 +34,7 @@
 				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
-#if NET5_0
+#if NET5_0_OR_GREATER
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
 			ref T p0 = ref ArrayHelper.GetReference(array);
@@ -97,7 +97,7 @@
 				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
-#if NET5_0
+#if NET5_0_OR_GREATER
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
 			ref T p0 = ref ArrayHelper.GetReference(array);
@@ -271,7 +271,7 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-#if NET5_0
+#if NET5_0_OR_GREATER
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
 			ref T p0 = ref ArrayHelper.GetReference(array);
@@ -339,7 +339,7 @@
 				ThrowHelper.ArgumentNull(nameof(comparison));
 			}
 
-#if NET5_0
+#if NET5_0_OR_GREATER
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
 			ref T p0 = ref ArrayHelper.GetReference(array);
@@ -517,7 +517,7 @@
 				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
-#if NET5_0
+#if NET5_0_OR_GREATER
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
 			ref T p0 = ref ArrayHelper.GetReference(array);
@@ -579,7 +579,7 @@
 				ThrowHelper.ArgumentNull(nameof(array));
 			}
 
-#if NET5_0
+#if NET5_0_OR_GREATER
 			ref T p0 = ref MemoryMarshal.GetArrayDataReference(array);
 #else
 			ref T p0 = ref ArrayHelper.GetReference(array);
