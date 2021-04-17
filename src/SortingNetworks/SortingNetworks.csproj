@@ -44,12 +44,11 @@
 
 	<!-- DefaultDocumentation -->
 	<PropertyGroup>
-		<!--<DefaultDocumentationFallbackToolTargetFramework>net6.0</DefaultDocumentationFallbackToolTargetFramework>-->
 		<DefaultDocumentationFolderBase>$(SolutionDir)\docs\api</DefaultDocumentationFolderBase>
 		<DefaultDocumentationFolder>$(DefaultDocumentationFolderBase)\$(TargetFramework)</DefaultDocumentationFolder>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="DefaultDocumentation" Version="1.0.0-test">
+		<PackageReference Include="DefaultDocumentation" Version="0.7.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>

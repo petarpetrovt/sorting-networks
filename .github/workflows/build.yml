@@ -25,7 +25,7 @@ jobs:
     strategy:
       matrix:
         options:
-          # ne6.0
+          # net6.0
           - os: ubuntu-latest
             tf: net6.0
             codecov: true
