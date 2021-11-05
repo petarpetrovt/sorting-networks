@@ -38,7 +38,7 @@ A collection of sorting network algorithms implemented in C#.
 | API | MinLength | MaxLength | Safe |
 | --- | ----------| --------- | ------ |
 | [SN](docs/api/net6.0/SortingNetworks_SN.md) | `2` | `32` | `+` |
-| [SNBoseNelson](docs/api/net6.0/SortingNetworks_-SNBoseNelson.md) | `2` | `32` | `-` |
+| [SNBoseNelson](docs/api/net6.0/SortingNetworks_SNBoseNelson.md) | `2` | `32` | `-` |
 | [SNBestKnown](docs/api/net6.0/SortingNetworks_SNBestKnown.md) | `9` | `16` | `-` |
 
 ## License
