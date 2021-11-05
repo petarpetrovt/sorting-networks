@@ -37,9 +37,9 @@ A collection of sorting network algorithms implemented in C#.
 
 | API | MinLength | MaxLength | Safe |
 | --- | ----------| --------- | ------ |
-| [SN](docs/api/SortingNetworks-SN.md#Methods) | `2` | `32` | `+` |
-| [SNBoseNelson](docs/api/SortingNetworks-SNBoseNelson.md#Methods) | `2` | `32` | `-` |
-| [SNBestKnown](docs/api/SortingNetworks-SNBestKnown.md#Methods) | `9` | `16` | `-` |
+| [SN](docs/api/net6.0/SortingNetworks-SN.md#Methods) | `2` | `32` | `+` |
+| [SNBoseNelson](docs/api/net6.0/SortingNetworks-SNBoseNelson.md#Methods) | `2` | `32` | `-` |
+| [SNBestKnown](docs/api/net6.0/SortingNetworks-SNBestKnown.md#Methods) | `9` | `16` | `-` |
 
 ## License
 <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fpetarpetrovt%2Fsorting-networks?ref=badge_large">
