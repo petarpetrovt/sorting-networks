@@ -4,13 +4,14 @@
 		<OutputType>Exe</OutputType>
 		<AssemblyName>SortingNetworks.Benchmarks</AssemblyName>
 		<RootNamespace>SortingNetworks.Benchmarks</RootNamespace>
-		<TargetFrameworks>net6.0;net5.0;</TargetFrameworks>
+		<TargetFrameworks>net6.0;net5.0</TargetFrameworks>
 
 		<!--
 		Avoid spawning any-long living compiler processes to avoid BenchmarkDotNet issues with "file in use",
 		and automation failing to clean up the folders once the runs are over
 		-->
 		<UseSharedCompilation>false</UseSharedCompilation>
+		<StartupObject>SortingNetworks.Benchmarks.Program</StartupObject>
 	</PropertyGroup>
 
 	<ItemGroup>
