@@ -15,7 +15,7 @@ public class SN<#= $"{i}".PadLeft(2, '0') #>Benchmark : SNBenchmarkBase
 {
 	[Params(<#= i #>)]
 	public override int Length { get; set; }
-	
+
 	[Params(<#= GetOptimalBenchmarkCount(i) #>)]
 	public override int Count { get; set; }
 
