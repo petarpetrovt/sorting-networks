@@ -24,7 +24,7 @@ partial class SNBestKnown
 		ref <#= typeName #> p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-		<#= string.Join("\r\n			", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfGreaterBranchless($"p{x.Item1}", $"p{x.Item2}"))) #>
+		<#= string.Join("\r\n		", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfGreaterBranchless($"p{x.Item1}", $"p{x.Item2}"))) #>
 	}
 
 <#}#>

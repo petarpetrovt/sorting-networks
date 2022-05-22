@@ -22,7 +22,7 @@ partial class SNBoseNelson
 		ref <#= typeName #> p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-		<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfGreaterBranchless($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
+		<#= string.Join("\r\n		", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfGreaterBranchless($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 	}
 
 <#}#>

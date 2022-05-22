@@ -29,7 +29,7 @@ partial class SNBoseNelson
 <#}#>
 
 		T temp;
-		<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfGreaterComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
+		<#= string.Join("\r\n		", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfGreaterComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
 	}
 
 <#}#>

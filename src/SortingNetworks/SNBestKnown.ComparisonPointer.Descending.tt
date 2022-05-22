@@ -26,7 +26,7 @@ partial class SNBestKnown
 <#}#>
 
 		T temp;
-		<#= string.Join("\r\n			", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserComparisonPointer($"p{x.Item1}", $"p{x.Item2}"))) #>
+		<#= string.Join("\r\n		", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserComparisonPointer($"p{x.Item1}", $"p{x.Item2}"))) #>
 	}
 
 <#}#>
