@@ -4,11 +4,7 @@
 		<OutputType>Exe</OutputType>
 		<AssemblyName>SortingNetworks.Benchmarks</AssemblyName>
 		<RootNamespace>SortingNetworks.Benchmarks</RootNamespace>
-		<TargetFrameworks>
-			net6.0;
-			net5.0;
-			netcoreapp3.1;
-		</TargetFrameworks>
+		<TargetFrameworks>net6.0;net5.0;</TargetFrameworks>
 
 		<!--
 		Avoid spawning any-long living compiler processes to avoid BenchmarkDotNet issues with "file in use",

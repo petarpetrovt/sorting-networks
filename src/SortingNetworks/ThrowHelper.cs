@@ -1,36 +1,32 @@
-﻿namespace SortingNetworks
+﻿namespace SortingNetworks;
+
+using System.Diagnostics;
+
+[ExcludeFromCodeCoverage]
+[DebuggerStepThrough]
+internal static class ThrowHelper
 {
-	using System;
-	using System.Diagnostics;
-	using System.Diagnostics.CodeAnalysis;
-	using System.Runtime.CompilerServices;
-
-	[ExcludeFromCodeCoverage]
-	[DebuggerStepThrough]
-	internal static class ThrowHelper
+	[DoesNotReturn]
+	[MethodImpl(MethodImplOptions.NoInlining)]
+	public static void ArgumentNull(string argumentName)
 	{
-		[DoesNotReturn]
-		[MethodImpl(MethodImplOptions.NoInlining)]
-		public static void ArgumentNull(string argumentName)
+		if (argumentName is null)
 		{
-			if (argumentName is null)
-			{
-				throw new ArgumentNullException(nameof(argumentName));
-			}
-
-			throw new ArgumentNullException(argumentName);
+			throw new ArgumentNullException(nameof(argumentName));
 		}
 
-		[DoesNotReturn]
-		[MethodImpl(MethodImplOptions.NoInlining)]
-		public static void ArrayArgumentOutOfRange(string paramName, int length, int minLength, int maxLenggth)
-		{
-			if (paramName is null)
-			{
-				throw new ArgumentNullException(nameof(paramName));
-			}
+		throw new ArgumentNullException(argumentName);
+	}
 
-			throw new ArgumentOutOfRangeException(paramName, $"Array length `{length}` must be between `{minLength}` and `{maxLenggth}`.");
+	[DoesNotReturn]
+	[MethodImpl(MethodImplOptions.NoInlining)]
+	public static void ArrayArgumentOutOfRange(string paramName, int length, int minLength, int maxLenggth)
+	{
+		if (paramName is null)
+		{
+			throw new ArgumentNullException(nameof(paramName));
 		}
+
+		throw new ArgumentOutOfRangeException(paramName, $"Array length `{length}` must be between `{minLength}` and `{maxLenggth}`.");
 	}
 }

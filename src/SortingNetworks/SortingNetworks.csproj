@@ -1,11 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>
-			net6.0;
-			net5.0;
-			netcoreapp3.1;
-		</TargetFrameworks>
+		<TargetFrameworks>net6.0;net5.0;</TargetFrameworks>
 		<AssemblyName>SortingNetworks</AssemblyName>
 		<RootNamespace>SortingNetworks</RootNamespace>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -25,6 +21,7 @@
 	<PropertyGroup>
 		<DefaultDocumentationFolderBase>$(SolutionDir)\docs\api</DefaultDocumentationFolderBase>
 		<DefaultDocumentationFolder>$(DefaultDocumentationFolderBase)\$(TargetFramework)</DefaultDocumentationFolder>
+		<DisableDefaultDocumentation>true</DisableDefaultDocumentation>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="DefaultDocumentation" Version="0.8.1">

@@ -6,84 +6,82 @@
 <#@ import namespace="System.Collections.Generic" #>
 <# int minLength = GetMinLength(); #>
 <# int maxLength = GetMaxLength(); #>
-namespace SortingNetworks.Benchmarks
-{
-	using System;
-	using BenchmarkDotNet.Attributes;
+namespace SortingNetworks.Benchmarks;
+
+using BenchmarkDotNet.Attributes;
 
 <#for (int i = minLength; i <= maxLength; i++) {#>
-	public class SN<#= $"{i}".PadLeft(2, '0') #>Benchmark : SNBenchmarkBase
+public class SN<#= $"{i}".PadLeft(2, '0') #>Benchmark : SNBenchmarkBase
+{
+	[Params(<#= i #>)]
+	public override int Length { get; set; }
+	
+	[Params(<#= GetOptimalBenchmarkCount(i) #>)]
+	public override int Count { get; set; }
+
+	[Benchmark]
+	public void BoseNelson_Comparable()
 	{
-		[Params(<#= i #>)]
-		public override int Length { get; set; }
-		
-		[Params(<#= GetOptimalBenchmarkCount(i) #>)]
-		public override int Count { get; set; }
+		int length = Length;
+		int maximumLength = Count - length;
 
-		[Benchmark]
-		public void BoseNelson_Comparable()
+		for (int i = 0; i < maximumLength; i += length)
 		{
-			int length = Length;
-			int maximumLength = Count - length;
-
-			for (int i = 0; i < maximumLength; i += length)
-			{
-				SNBoseNelson.Sort<#= i #>Ascending(ref IterationItems[i]);
-			}
+			SNBoseNelson.Sort<#= i #>Ascending(ref IterationItems[i]);
 		}
+	}
 
-		[Benchmark]
-		public void BoseNelson_Branchless()
+	[Benchmark]
+	public void BoseNelson_Branchless()
+	{
+		int length = Length;
+		int maximumLength = Count - length;
+
+		for (int i = 0; i < maximumLength; i += length)
 		{
-			int length = Length;
-			int maximumLength = Count - length;
-
-			for (int i = 0; i < maximumLength; i += length)
-			{
-				SNBoseNelson.Sort<#= i #>AscendingBranchless(ref IterationItems[i]);
-			}
+			SNBoseNelson.Sort<#= i #>AscendingBranchless(ref IterationItems[i]);
 		}
+	}
 
 <#if (i >= 9 && i <= 16) { #>
-		[Benchmark]
-		public void BestKnown_Comparable()
-		{
-			int length = Length;
-			int maximumLength = Count - length;
+	[Benchmark]
+	public void BestKnown_Comparable()
+	{
+		int length = Length;
+		int maximumLength = Count - length;
 
-			for (int i = 0; i < maximumLength; i += length)
-			{
-				SNBestKnown.Sort<#= i #>Ascending(ref IterationItems[i]);
-			}
+		for (int i = 0; i < maximumLength; i += length)
+		{
+			SNBestKnown.Sort<#= i #>Ascending(ref IterationItems[i]);
 		}
+	}
 
-		[Benchmark]
-		public void BestKnown_Branchless()
+	[Benchmark]
+	public void BestKnown_Branchless()
+	{
+		int length = Length;
+		int maximumLength = Count - length;
+
+		for (int i = 0; i < maximumLength; i += length)
 		{
-			int length = Length;
-			int maximumLength = Count - length;
-
-			for (int i = 0; i < maximumLength; i += length)
-			{
-				SNBestKnown.Sort<#= i #>AscendingBranchless(ref IterationItems[i]);
-			}
-		}
-
-<#}#>
-		[Benchmark]
-		public void Insertion_Comparable()
-		{
-			int length = Length;
-			int maximumLength = Count - length;
-
-			for (int i = 0; i < maximumLength; i += length)
-			{
-				Span<int> slice = IterationItems.AsSpan(i, length);
-
-				PrivateInsertionSortAscending(slice);
-			}
+			SNBestKnown.Sort<#= i #>AscendingBranchless(ref IterationItems[i]);
 		}
 	}
 
 <#}#>
+	[Benchmark]
+	public void Insertion_Comparable()
+	{
+		int length = Length;
+		int maximumLength = Count - length;
+
+		for (int i = 0; i < maximumLength; i += length)
+		{
+			Span<int> slice = IterationItems.AsSpan(i, length);
+
+			PrivateInsertionSortAscending(slice);
+		}
+	}
 }
+
+<#}#>

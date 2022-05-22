@@ -1,38 +1,35 @@
-﻿namespace SortingNetworks.Tests
+﻿namespace SortingNetworks.Tests;
+
+internal static class ThreadSafeRandom
 {
-	using System;
+	private readonly static Random _global = new();
 
-	internal static class ThreadSafeRandom
+	[ThreadStatic]
+	private static Random _local;
+
+	public static int Next()
 	{
-		private readonly static Random _global = new();
-
-		[ThreadStatic]
-		private static Random _local;
-
-		public static int Next()
+		lock (_global)
 		{
-			lock (_global)
+			if (_local is null)
 			{
-				if (_local is null)
-				{
-					_local = new Random(_global.Next());
-				}
+				_local = new Random(_global.Next());
 			}
-
-			return _local.Next();
 		}
 
-		public static int Next(int minValue, int maxValue)
-		{
-			lock (_global)
-			{
-				if (_local is null)
-				{
-					_local = new Random(_global.Next());
-				}
-			}
+		return _local.Next();
+	}
 
-			return _local.Next(minValue, maxValue);
+	public static int Next(int minValue, int maxValue)
+	{
+		lock (_global)
+		{
+			if (_local is null)
+			{
+				_local = new Random(_global.Next());
+			}
 		}
+
+		return _local.Next(minValue, maxValue);
 	}
 }

@@ -6,63 +6,59 @@
 <#@ import namespace="System.Collections.Generic" #>
 <# int minLength = GetMinLength(); #>
 <# int maxLength = GetMaxLength(); #>
-namespace SortingNetworks
+namespace SortingNetworks;
+
+partial class SNBoseNelson
 {
-	using System;
-	using System.Runtime.CompilerServices;
-
-	partial class SNBoseNelson
-	{
 <#for (int i = minLength; i <= maxLength; i++) {#>
-		/// <summary>
-		/// Sorts a collection of <#= i #> elements in descending order using the specified <see cref="Comparison{T}"/>.
-		/// </summary>
-		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
-		/// <param name="p0">the reference to the first element of the collection</param>
-		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static void Sort<#= i #>Descending<T>(ref T p0, Comparison<T> comparison)
+	/// <summary>
+	/// Sorts a collection of <#= i #> elements in descending order using the specified <see cref="Comparison{T}"/>.
+	/// </summary>
+	/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+	/// <param name="p0">the reference to the first element of the collection</param>
+	/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+	public static void Sort<#= i #>Descending<T>(ref T p0, Comparison<T> comparison)
+	{
+		if (comparison is null)
 		{
-			if (comparison is null)
-			{
-				ThrowHelper.ArgumentNull(nameof(comparison));
-			}
-
-<#for (int y = 1; y < i; y++) {#>
-			ref T p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
-<#}#>
-
-			T temp;
-			<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfLesserComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
+			ThrowHelper.ArgumentNull(nameof(comparison));
 		}
 
+<#for (int y = 1; y < i; y++) {#>
+		ref T p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
-		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using the specified <see cref="Comparison{T}"/>.
-		/// </summary>
-		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
-		/// <param name="p0">the reference to the first element of the collection</param>
-		/// <param name="length">the length of the collection</param>
-		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static void SortDescending<T>(ref T p0, in int length, Comparison<T> comparison)
-			where T : IComparable<T>
-		{
-			if (comparison is null)
-			{
-				ThrowHelper.ArgumentNull(nameof(comparison));
-			}
 
-			switch (length)
-			{
-<#for (int i = minLength; i <= maxLength; i++) {#>
-				case <#= i #>: Sort<#= i #>Descending(ref p0, comparison); break;
+		T temp;
+		<#= string.Join("\r\n			", GetBoseNelsonSwapMacros(i).Select(x=> GetSwapIfLesserComparison($"p{x.Item1 - 1}", $"p{x.Item2 - 1}"))) #>
+	}
+
 <#}#>
-				default:
-					{
-						ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
-						break;
-					}
-			}
+	/// <summary>
+	/// Sorts a collection of specified number of elements in descending order using the specified <see cref="Comparison{T}"/>.
+	/// </summary>
+	/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+	/// <param name="p0">the reference to the first element of the collection</param>
+	/// <param name="length">the length of the collection</param>
+	/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+	/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
+	public static void SortDescending<T>(ref T p0, in int length, Comparison<T> comparison)
+		where T : IComparable<T>
+	{
+		if (comparison is null)
+		{
+			ThrowHelper.ArgumentNull(nameof(comparison));
+		}
+
+		switch (length)
+		{
+<#for (int i = minLength; i <= maxLength; i++) {#>
+			case <#= i #>: Sort<#= i #>Descending(ref p0, comparison); break;
+<#}#>
+			default:
+				{
+					ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
+					break;
+				}
 		}
 	}
 }
