@@ -1,16 +1,12 @@
 ﻿namespace SortingNetworks
 {
+	using System.Diagnostics.CodeAnalysis;
 	using System.Runtime.CompilerServices;
-#if NETSTANDARD1_3
-	using EXCLUDE_FROM_CODE_COVERAGE = System.Diagnostics.DebuggerNonUserCodeAttribute;
-#else
-	using EXCLUDE_FROM_CODE_COVERAGE = System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute;
-#endif
 
 	partial class SNBase
 	{
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessLessThan(ref byte left, ref byte right)
 		{
@@ -24,7 +20,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessGreaterThan(ref byte left, ref byte right)
 		{
@@ -38,7 +34,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessLessThan(ref sbyte left, ref sbyte right)
 		{
@@ -52,7 +48,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessGreaterThan(ref sbyte left, ref sbyte right)
 		{
@@ -66,7 +62,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessLessThan(ref ushort left, ref ushort right)
 		{
@@ -80,7 +76,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessGreaterThan(ref ushort left, ref ushort right)
 		{
@@ -94,7 +90,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessLessThan(ref short left, ref short right)
 		{
@@ -108,7 +104,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessGreaterThan(ref short left, ref short right)
 		{
@@ -122,7 +118,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessLessThan(ref uint left, ref uint right)
 		{
@@ -136,7 +132,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessGreaterThan(ref uint left, ref uint right)
 		{
@@ -150,7 +146,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessLessThan(ref int left, ref int right)
 		{
@@ -164,7 +160,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static void SwapBranchlessGreaterThan(ref int left, ref int right)
 		{

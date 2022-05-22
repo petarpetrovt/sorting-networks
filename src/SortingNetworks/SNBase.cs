@@ -1,12 +1,8 @@
 ﻿namespace SortingNetworks
 {
 	using System;
+	using System.Diagnostics.CodeAnalysis;
 	using System.Runtime.CompilerServices;
-#if NETSTANDARD1_3
-	using EXCLUDE_FROM_CODE_COVERAGE = System.Diagnostics.DebuggerNonUserCodeAttribute;
-#else
-	using EXCLUDE_FROM_CODE_COVERAGE = System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute;
-#endif
 
 	/// <summary>
 	/// Represents a base for different sorting network implementations.
@@ -20,7 +16,7 @@
 		/// Disable inheritance outside of the assembly.
 		/// </summary>
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		internal SNBase() { }
 
 		// Copied from https://github.com/dotnet/runtime/blob/6072e4d3a7a2a1493f514cdf4be75a3d56580e84/src/libraries/System.Private.CoreLib/src/System/Collections/Generic/ArraySortHelper.cs
@@ -34,7 +30,7 @@
 		// - These are duplicated here rather than being on a helper type due to current limitations around generic inlining.
 #pragma warning disable IDE0075 // Simplify conditional expression
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static bool LessThan<T>(ref T left, ref T right)
 			where T : IComparable<T>
@@ -59,7 +55,7 @@
 		}
 
 		/// <exclude/>
-		[EXCLUDE_FROM_CODE_COVERAGE]
+		[ExcludeFromCodeCoverage]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		protected internal static bool GreaterThan<T>(ref T left, ref T right)
 			where T : IComparable<T>

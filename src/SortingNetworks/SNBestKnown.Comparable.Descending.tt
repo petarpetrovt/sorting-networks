@@ -30,11 +30,7 @@ namespace SortingNetworks
 <#}#>
 
 			T temp;
-#if NETSTANDARD1_3
-			<#= string.Join("\r\n			", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserComparableLegacy($"p{x.Item1}", $"p{x.Item2}"))) #>
-#else
 			<#= string.Join("\r\n			", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserComparable($"p{x.Item1}", $"p{x.Item2}"))) #>
-#endif
 		}
 
 <#}#>

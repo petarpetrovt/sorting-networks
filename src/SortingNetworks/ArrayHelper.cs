@@ -2,14 +2,11 @@
 namespace SortingNetworks
 {
 	using System;
+	using System.Diagnostics.CodeAnalysis;
 	using System.Runtime.CompilerServices;
 	using System.Runtime.InteropServices;
 
-#if NETSTANDARD1_3
-	[System.Diagnostics.DebuggerNonUserCode]
-#else
-	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-#endif
+	[ExcludeFromCodeCoverage]
 	internal static class ArrayHelper
 	{
 		/// <summary>

@@ -24,33 +24,6 @@
 			ref T p8 = ref Unsafe.Add(ref p0, 8);
 
 			T temp;
-#if NETSTANDARD1_3
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p1.CompareTo(p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
-			if (p4.CompareTo(p5) > 0) { temp = p4; p4 = p5; p5 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p2.CompareTo(p5) > 0) { temp = p2; p2 = p5; p5 = temp; }
-			if (p0.CompareTo(p3) > 0) { temp = p0; p0 = p3; p3 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p5.CompareTo(p8) > 0) { temp = p5; p5 = p8; p8 = temp; }
-			if (p3.CompareTo(p6) > 0) { temp = p3; p3 = p6; p6 = temp; }
-			if (p4.CompareTo(p7) > 0) { temp = p4; p4 = p7; p7 = temp; }
-			if (p2.CompareTo(p5) > 0) { temp = p2; p2 = p5; p5 = temp; }
-			if (p0.CompareTo(p3) > 0) { temp = p0; p0 = p3; p3 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p5.CompareTo(p7) > 0) { temp = p5; p5 = p7; p7 = temp; }
-			if (p2.CompareTo(p6) > 0) { temp = p2; p2 = p6; p6 = temp; }
-			if (p1.CompareTo(p3) > 0) { temp = p1; p1 = p3; p3 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p2.CompareTo(p4) > 0) { temp = p2; p2 = p4; p4 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-#else
 			if (GreaterThan(ref p0, ref p1)) { temp = p0; p0 = p1; p1 = temp; }
 			if (GreaterThan(ref p3, ref p4)) { temp = p3; p3 = p4; p4 = temp; }
 			if (GreaterThan(ref p6, ref p7)) { temp = p6; p6 = p7; p7 = temp; }
@@ -76,7 +49,6 @@
 			if (GreaterThan(ref p2, ref p4)) { temp = p2; p2 = p4; p4 = temp; }
 			if (GreaterThan(ref p5, ref p6)) { temp = p5; p5 = p6; p6 = temp; }
 			if (GreaterThan(ref p2, ref p3)) { temp = p2; p2 = p3; p3 = temp; }
-#endif
 		}
 
 		/// <summary>
@@ -99,37 +71,6 @@
 			ref T p9 = ref Unsafe.Add(ref p0, 9);
 
 			T temp;
-#if NETSTANDARD1_3
-			if (p4.CompareTo(p9) > 0) { temp = p4; p4 = p9; p9 = temp; }
-			if (p3.CompareTo(p8) > 0) { temp = p3; p3 = p8; p8 = temp; }
-			if (p2.CompareTo(p7) > 0) { temp = p2; p2 = p7; p7 = temp; }
-			if (p1.CompareTo(p6) > 0) { temp = p1; p1 = p6; p6 = temp; }
-			if (p0.CompareTo(p5) > 0) { temp = p0; p0 = p5; p5 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p6.CompareTo(p9) > 0) { temp = p6; p6 = p9; p9 = temp; }
-			if (p0.CompareTo(p3) > 0) { temp = p0; p0 = p3; p3 = temp; }
-			if (p5.CompareTo(p8) > 0) { temp = p5; p5 = p8; p8 = temp; }
-			if (p0.CompareTo(p2) > 0) { temp = p0; p0 = p2; p2 = temp; }
-			if (p3.CompareTo(p6) > 0) { temp = p3; p3 = p6; p6 = temp; }
-			if (p7.CompareTo(p9) > 0) { temp = p7; p7 = p9; p9 = temp; }
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p2.CompareTo(p4) > 0) { temp = p2; p2 = p4; p4 = temp; }
-			if (p5.CompareTo(p7) > 0) { temp = p5; p5 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p1.CompareTo(p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-			if (p3.CompareTo(p5) > 0) { temp = p3; p3 = p5; p5 = temp; }
-			if (p2.CompareTo(p5) > 0) { temp = p2; p2 = p5; p5 = temp; }
-			if (p6.CompareTo(p8) > 0) { temp = p6; p6 = p8; p8 = temp; }
-			if (p1.CompareTo(p3) > 0) { temp = p1; p1 = p3; p3 = temp; }
-			if (p4.CompareTo(p7) > 0) { temp = p4; p4 = p7; p7 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p4.CompareTo(p5) > 0) { temp = p4; p4 = p5; p5 = temp; }
-#else
 			if (GreaterThan(ref p4, ref p9)) { temp = p4; p4 = p9; p9 = temp; }
 			if (GreaterThan(ref p3, ref p8)) { temp = p3; p3 = p8; p8 = temp; }
 			if (GreaterThan(ref p2, ref p7)) { temp = p2; p2 = p7; p7 = temp; }
@@ -159,7 +100,6 @@
 			if (GreaterThan(ref p3, ref p4)) { temp = p3; p3 = p4; p4 = temp; }
 			if (GreaterThan(ref p5, ref p6)) { temp = p5; p5 = p6; p6 = temp; }
 			if (GreaterThan(ref p4, ref p5)) { temp = p4; p4 = p5; p5 = temp; }
-#endif
 		}
 
 		/// <summary>
@@ -183,43 +123,6 @@
 			ref T p10 = ref Unsafe.Add(ref p0, 10);
 
 			T temp;
-#if NETSTANDARD1_3
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p4.CompareTo(p5) > 0) { temp = p4; p4 = p5; p5 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p1.CompareTo(p3) > 0) { temp = p1; p1 = p3; p3 = temp; }
-			if (p5.CompareTo(p7) > 0) { temp = p5; p5 = p7; p7 = temp; }
-			if (p0.CompareTo(p2) > 0) { temp = p0; p0 = p2; p2 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p8.CompareTo(p10) > 0) { temp = p8; p8 = p10; p10 = temp; }
-			if (p1.CompareTo(p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p0.CompareTo(p4) > 0) { temp = p0; p0 = p4; p4 = temp; }
-			if (p3.CompareTo(p7) > 0) { temp = p3; p3 = p7; p7 = temp; }
-			if (p1.CompareTo(p5) > 0) { temp = p1; p1 = p5; p5 = temp; }
-			if (p6.CompareTo(p10) > 0) { temp = p6; p6 = p10; p10 = temp; }
-			if (p4.CompareTo(p8) > 0) { temp = p4; p4 = p8; p8 = temp; }
-			if (p5.CompareTo(p9) > 0) { temp = p5; p5 = p9; p9 = temp; }
-			if (p2.CompareTo(p6) > 0) { temp = p2; p2 = p6; p6 = temp; }
-			if (p0.CompareTo(p4) > 0) { temp = p0; p0 = p4; p4 = temp; }
-			if (p3.CompareTo(p8) > 0) { temp = p3; p3 = p8; p8 = temp; }
-			if (p1.CompareTo(p5) > 0) { temp = p1; p1 = p5; p5 = temp; }
-			if (p6.CompareTo(p10) > 0) { temp = p6; p6 = p10; p10 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p7.CompareTo(p10) > 0) { temp = p7; p7 = p10; p10 = temp; }
-			if (p3.CompareTo(p5) > 0) { temp = p3; p3 = p5; p5 = temp; }
-			if (p6.CompareTo(p8) > 0) { temp = p6; p6 = p8; p8 = temp; }
-			if (p2.CompareTo(p4) > 0) { temp = p2; p2 = p4; p4 = temp; }
-			if (p7.CompareTo(p9) > 0) { temp = p7; p7 = p9; p9 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-#else
 			if (GreaterThan(ref p0, ref p1)) { temp = p0; p0 = p1; p1 = temp; }
 			if (GreaterThan(ref p2, ref p3)) { temp = p2; p2 = p3; p3 = temp; }
 			if (GreaterThan(ref p4, ref p5)) { temp = p4; p4 = p5; p5 = temp; }
@@ -255,7 +158,6 @@
 			if (GreaterThan(ref p5, ref p6)) { temp = p5; p5 = p6; p6 = temp; }
 			if (GreaterThan(ref p3, ref p4)) { temp = p3; p3 = p4; p4 = temp; }
 			if (GreaterThan(ref p7, ref p8)) { temp = p7; p7 = p8; p8 = temp; }
-#endif
 		}
 
 		/// <summary>
@@ -280,47 +182,6 @@
 			ref T p11 = ref Unsafe.Add(ref p0, 11);
 
 			T temp;
-#if NETSTANDARD1_3
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p4.CompareTo(p5) > 0) { temp = p4; p4 = p5; p5 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p10.CompareTo(p11) > 0) { temp = p10; p10 = p11; p11 = temp; }
-			if (p1.CompareTo(p3) > 0) { temp = p1; p1 = p3; p3 = temp; }
-			if (p5.CompareTo(p7) > 0) { temp = p5; p5 = p7; p7 = temp; }
-			if (p9.CompareTo(p11) > 0) { temp = p9; p9 = p11; p11 = temp; }
-			if (p0.CompareTo(p2) > 0) { temp = p0; p0 = p2; p2 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p8.CompareTo(p10) > 0) { temp = p8; p8 = p10; p10 = temp; }
-			if (p1.CompareTo(p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p0.CompareTo(p4) > 0) { temp = p0; p0 = p4; p4 = temp; }
-			if (p7.CompareTo(p11) > 0) { temp = p7; p7 = p11; p11 = temp; }
-			if (p1.CompareTo(p5) > 0) { temp = p1; p1 = p5; p5 = temp; }
-			if (p6.CompareTo(p10) > 0) { temp = p6; p6 = p10; p10 = temp; }
-			if (p3.CompareTo(p7) > 0) { temp = p3; p3 = p7; p7 = temp; }
-			if (p4.CompareTo(p8) > 0) { temp = p4; p4 = p8; p8 = temp; }
-			if (p5.CompareTo(p9) > 0) { temp = p5; p5 = p9; p9 = temp; }
-			if (p2.CompareTo(p6) > 0) { temp = p2; p2 = p6; p6 = temp; }
-			if (p0.CompareTo(p4) > 0) { temp = p0; p0 = p4; p4 = temp; }
-			if (p7.CompareTo(p11) > 0) { temp = p7; p7 = p11; p11 = temp; }
-			if (p3.CompareTo(p8) > 0) { temp = p3; p3 = p8; p8 = temp; }
-			if (p1.CompareTo(p5) > 0) { temp = p1; p1 = p5; p5 = temp; }
-			if (p6.CompareTo(p10) > 0) { temp = p6; p6 = p10; p10 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p7.CompareTo(p10) > 0) { temp = p7; p7 = p10; p10 = temp; }
-			if (p3.CompareTo(p5) > 0) { temp = p3; p3 = p5; p5 = temp; }
-			if (p6.CompareTo(p8) > 0) { temp = p6; p6 = p8; p8 = temp; }
-			if (p2.CompareTo(p4) > 0) { temp = p2; p2 = p4; p4 = temp; }
-			if (p7.CompareTo(p9) > 0) { temp = p7; p7 = p9; p9 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-#else
 			if (GreaterThan(ref p0, ref p1)) { temp = p0; p0 = p1; p1 = temp; }
 			if (GreaterThan(ref p2, ref p3)) { temp = p2; p2 = p3; p3 = temp; }
 			if (GreaterThan(ref p4, ref p5)) { temp = p4; p4 = p5; p5 = temp; }
@@ -360,7 +221,6 @@
 			if (GreaterThan(ref p5, ref p6)) { temp = p5; p5 = p6; p6 = temp; }
 			if (GreaterThan(ref p3, ref p4)) { temp = p3; p3 = p4; p4 = temp; }
 			if (GreaterThan(ref p7, ref p8)) { temp = p7; p7 = p8; p8 = temp; }
-#endif
 		}
 
 		/// <summary>
@@ -386,53 +246,6 @@
 			ref T p12 = ref Unsafe.Add(ref p0, 12);
 
 			T temp;
-#if NETSTANDARD1_3
-			if (p1.CompareTo(p7) > 0) { temp = p1; p1 = p7; p7 = temp; }
-			if (p9.CompareTo(p11) > 0) { temp = p9; p9 = p11; p11 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p5.CompareTo(p8) > 0) { temp = p5; p5 = p8; p8 = temp; }
-			if (p0.CompareTo(p12) > 0) { temp = p0; p0 = p12; p12 = temp; }
-			if (p2.CompareTo(p6) > 0) { temp = p2; p2 = p6; p6 = temp; }
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p8.CompareTo(p11) > 0) { temp = p8; p8 = p11; p11 = temp; }
-			if (p7.CompareTo(p12) > 0) { temp = p7; p7 = p12; p12 = temp; }
-			if (p5.CompareTo(p9) > 0) { temp = p5; p5 = p9; p9 = temp; }
-			if (p0.CompareTo(p2) > 0) { temp = p0; p0 = p2; p2 = temp; }
-			if (p3.CompareTo(p7) > 0) { temp = p3; p3 = p7; p7 = temp; }
-			if (p10.CompareTo(p11) > 0) { temp = p10; p10 = p11; p11 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p6.CompareTo(p12) > 0) { temp = p6; p6 = p12; p12 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-			if (p11.CompareTo(p12) > 0) { temp = p11; p11 = p12; p12 = temp; }
-			if (p4.CompareTo(p9) > 0) { temp = p4; p4 = p9; p9 = temp; }
-			if (p6.CompareTo(p10) > 0) { temp = p6; p6 = p10; p10 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p10.CompareTo(p11) > 0) { temp = p10; p10 = p11; p11 = temp; }
-			if (p1.CompareTo(p7) > 0) { temp = p1; p1 = p7; p7 = temp; }
-			if (p2.CompareTo(p6) > 0) { temp = p2; p2 = p6; p6 = temp; }
-			if (p9.CompareTo(p11) > 0) { temp = p9; p9 = p11; p11 = temp; }
-			if (p1.CompareTo(p3) > 0) { temp = p1; p1 = p3; p3 = temp; }
-			if (p4.CompareTo(p7) > 0) { temp = p4; p4 = p7; p7 = temp; }
-			if (p8.CompareTo(p10) > 0) { temp = p8; p8 = p10; p10 = temp; }
-			if (p0.CompareTo(p5) > 0) { temp = p0; p0 = p5; p5 = temp; }
-			if (p2.CompareTo(p5) > 0) { temp = p2; p2 = p5; p5 = temp; }
-			if (p6.CompareTo(p8) > 0) { temp = p6; p6 = p8; p8 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p1.CompareTo(p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
-			if (p3.CompareTo(p5) > 0) { temp = p3; p3 = p5; p5 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p4.CompareTo(p5) > 0) { temp = p4; p4 = p5; p5 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-#else
 			if (GreaterThan(ref p1, ref p7)) { temp = p1; p1 = p7; p7 = temp; }
 			if (GreaterThan(ref p9, ref p11)) { temp = p9; p9 = p11; p11 = temp; }
 			if (GreaterThan(ref p3, ref p4)) { temp = p3; p3 = p4; p4 = temp; }
@@ -478,7 +291,6 @@
 			if (GreaterThan(ref p8, ref p9)) { temp = p8; p8 = p9; p9 = temp; }
 			if (GreaterThan(ref p3, ref p4)) { temp = p3; p3 = p4; p4 = temp; }
 			if (GreaterThan(ref p5, ref p6)) { temp = p5; p5 = p6; p6 = temp; }
-#endif
 		}
 
 		/// <summary>
@@ -505,59 +317,6 @@
 			ref T p13 = ref Unsafe.Add(ref p0, 13);
 
 			T temp;
-#if NETSTANDARD1_3
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p4.CompareTo(p5) > 0) { temp = p4; p4 = p5; p5 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p10.CompareTo(p11) > 0) { temp = p10; p10 = p11; p11 = temp; }
-			if (p12.CompareTo(p13) > 0) { temp = p12; p12 = p13; p13 = temp; }
-			if (p0.CompareTo(p2) > 0) { temp = p0; p0 = p2; p2 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p8.CompareTo(p10) > 0) { temp = p8; p8 = p10; p10 = temp; }
-			if (p1.CompareTo(p3) > 0) { temp = p1; p1 = p3; p3 = temp; }
-			if (p5.CompareTo(p7) > 0) { temp = p5; p5 = p7; p7 = temp; }
-			if (p9.CompareTo(p11) > 0) { temp = p9; p9 = p11; p11 = temp; }
-			if (p0.CompareTo(p4) > 0) { temp = p0; p0 = p4; p4 = temp; }
-			if (p8.CompareTo(p12) > 0) { temp = p8; p8 = p12; p12 = temp; }
-			if (p1.CompareTo(p5) > 0) { temp = p1; p1 = p5; p5 = temp; }
-			if (p9.CompareTo(p13) > 0) { temp = p9; p9 = p13; p13 = temp; }
-			if (p2.CompareTo(p6) > 0) { temp = p2; p2 = p6; p6 = temp; }
-			if (p3.CompareTo(p7) > 0) { temp = p3; p3 = p7; p7 = temp; }
-			if (p0.CompareTo(p8) > 0) { temp = p0; p0 = p8; p8 = temp; }
-			if (p1.CompareTo(p9) > 0) { temp = p1; p1 = p9; p9 = temp; }
-			if (p2.CompareTo(p10) > 0) { temp = p2; p2 = p10; p10 = temp; }
-			if (p3.CompareTo(p11) > 0) { temp = p3; p3 = p11; p11 = temp; }
-			if (p4.CompareTo(p12) > 0) { temp = p4; p4 = p12; p12 = temp; }
-			if (p5.CompareTo(p13) > 0) { temp = p5; p5 = p13; p13 = temp; }
-			if (p5.CompareTo(p10) > 0) { temp = p5; p5 = p10; p10 = temp; }
-			if (p6.CompareTo(p9) > 0) { temp = p6; p6 = p9; p9 = temp; }
-			if (p3.CompareTo(p12) > 0) { temp = p3; p3 = p12; p12 = temp; }
-			if (p7.CompareTo(p11) > 0) { temp = p7; p7 = p11; p11 = temp; }
-			if (p1.CompareTo(p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
-			if (p4.CompareTo(p8) > 0) { temp = p4; p4 = p8; p8 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p7.CompareTo(p13) > 0) { temp = p7; p7 = p13; p13 = temp; }
-			if (p2.CompareTo(p8) > 0) { temp = p2; p2 = p8; p8 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p2.CompareTo(p4) > 0) { temp = p2; p2 = p4; p4 = temp; }
-			if (p11.CompareTo(p13) > 0) { temp = p11; p11 = p13; p13 = temp; }
-			if (p3.CompareTo(p8) > 0) { temp = p3; p3 = p8; p8 = temp; }
-			if (p7.CompareTo(p12) > 0) { temp = p7; p7 = p12; p12 = temp; }
-			if (p6.CompareTo(p8) > 0) { temp = p6; p6 = p8; p8 = temp; }
-			if (p10.CompareTo(p12) > 0) { temp = p10; p10 = p12; p12 = temp; }
-			if (p3.CompareTo(p5) > 0) { temp = p3; p3 = p5; p5 = temp; }
-			if (p7.CompareTo(p9) > 0) { temp = p7; p7 = p9; p9 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p11.CompareTo(p12) > 0) { temp = p11; p11 = p12; p12 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-#else
 			if (GreaterThan(ref p0, ref p1)) { temp = p0; p0 = p1; p1 = temp; }
 			if (GreaterThan(ref p2, ref p3)) { temp = p2; p2 = p3; p3 = temp; }
 			if (GreaterThan(ref p4, ref p5)) { temp = p4; p4 = p5; p5 = temp; }
@@ -609,7 +368,6 @@
 			if (GreaterThan(ref p11, ref p12)) { temp = p11; p11 = p12; p12 = temp; }
 			if (GreaterThan(ref p6, ref p7)) { temp = p6; p6 = p7; p7 = temp; }
 			if (GreaterThan(ref p8, ref p9)) { temp = p8; p8 = p9; p9 = temp; }
-#endif
 		}
 
 		/// <summary>
@@ -637,64 +395,6 @@
 			ref T p14 = ref Unsafe.Add(ref p0, 14);
 
 			T temp;
-#if NETSTANDARD1_3
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p4.CompareTo(p5) > 0) { temp = p4; p4 = p5; p5 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p10.CompareTo(p11) > 0) { temp = p10; p10 = p11; p11 = temp; }
-			if (p12.CompareTo(p13) > 0) { temp = p12; p12 = p13; p13 = temp; }
-			if (p0.CompareTo(p2) > 0) { temp = p0; p0 = p2; p2 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p8.CompareTo(p10) > 0) { temp = p8; p8 = p10; p10 = temp; }
-			if (p12.CompareTo(p14) > 0) { temp = p12; p12 = p14; p14 = temp; }
-			if (p1.CompareTo(p3) > 0) { temp = p1; p1 = p3; p3 = temp; }
-			if (p5.CompareTo(p7) > 0) { temp = p5; p5 = p7; p7 = temp; }
-			if (p9.CompareTo(p11) > 0) { temp = p9; p9 = p11; p11 = temp; }
-			if (p0.CompareTo(p4) > 0) { temp = p0; p0 = p4; p4 = temp; }
-			if (p8.CompareTo(p12) > 0) { temp = p8; p8 = p12; p12 = temp; }
-			if (p1.CompareTo(p5) > 0) { temp = p1; p1 = p5; p5 = temp; }
-			if (p9.CompareTo(p13) > 0) { temp = p9; p9 = p13; p13 = temp; }
-			if (p2.CompareTo(p6) > 0) { temp = p2; p2 = p6; p6 = temp; }
-			if (p10.CompareTo(p14) > 0) { temp = p10; p10 = p14; p14 = temp; }
-			if (p3.CompareTo(p7) > 0) { temp = p3; p3 = p7; p7 = temp; }
-			if (p0.CompareTo(p8) > 0) { temp = p0; p0 = p8; p8 = temp; }
-			if (p1.CompareTo(p9) > 0) { temp = p1; p1 = p9; p9 = temp; }
-			if (p2.CompareTo(p10) > 0) { temp = p2; p2 = p10; p10 = temp; }
-			if (p3.CompareTo(p11) > 0) { temp = p3; p3 = p11; p11 = temp; }
-			if (p4.CompareTo(p12) > 0) { temp = p4; p4 = p12; p12 = temp; }
-			if (p5.CompareTo(p13) > 0) { temp = p5; p5 = p13; p13 = temp; }
-			if (p6.CompareTo(p14) > 0) { temp = p6; p6 = p14; p14 = temp; }
-			if (p5.CompareTo(p10) > 0) { temp = p5; p5 = p10; p10 = temp; }
-			if (p6.CompareTo(p9) > 0) { temp = p6; p6 = p9; p9 = temp; }
-			if (p3.CompareTo(p12) > 0) { temp = p3; p3 = p12; p12 = temp; }
-			if (p13.CompareTo(p14) > 0) { temp = p13; p13 = p14; p14 = temp; }
-			if (p7.CompareTo(p11) > 0) { temp = p7; p7 = p11; p11 = temp; }
-			if (p1.CompareTo(p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
-			if (p4.CompareTo(p8) > 0) { temp = p4; p4 = p8; p8 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p7.CompareTo(p13) > 0) { temp = p7; p7 = p13; p13 = temp; }
-			if (p2.CompareTo(p8) > 0) { temp = p2; p2 = p8; p8 = temp; }
-			if (p11.CompareTo(p14) > 0) { temp = p11; p11 = p14; p14 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p2.CompareTo(p4) > 0) { temp = p2; p2 = p4; p4 = temp; }
-			if (p11.CompareTo(p13) > 0) { temp = p11; p11 = p13; p13 = temp; }
-			if (p3.CompareTo(p8) > 0) { temp = p3; p3 = p8; p8 = temp; }
-			if (p7.CompareTo(p12) > 0) { temp = p7; p7 = p12; p12 = temp; }
-			if (p6.CompareTo(p8) > 0) { temp = p6; p6 = p8; p8 = temp; }
-			if (p10.CompareTo(p12) > 0) { temp = p10; p10 = p12; p12 = temp; }
-			if (p3.CompareTo(p5) > 0) { temp = p3; p3 = p5; p5 = temp; }
-			if (p7.CompareTo(p9) > 0) { temp = p7; p7 = p9; p9 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p11.CompareTo(p12) > 0) { temp = p11; p11 = p12; p12 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-#else
 			if (GreaterThan(ref p0, ref p1)) { temp = p0; p0 = p1; p1 = temp; }
 			if (GreaterThan(ref p2, ref p3)) { temp = p2; p2 = p3; p3 = temp; }
 			if (GreaterThan(ref p4, ref p5)) { temp = p4; p4 = p5; p5 = temp; }
@@ -751,7 +451,6 @@
 			if (GreaterThan(ref p11, ref p12)) { temp = p11; p11 = p12; p12 = temp; }
 			if (GreaterThan(ref p6, ref p7)) { temp = p6; p6 = p7; p7 = temp; }
 			if (GreaterThan(ref p8, ref p9)) { temp = p8; p8 = p9; p9 = temp; }
-#endif
 		}
 
 		/// <summary>
@@ -780,68 +479,6 @@
 			ref T p15 = ref Unsafe.Add(ref p0, 15);
 
 			T temp;
-#if NETSTANDARD1_3
-			if (p0.CompareTo(p1) > 0) { temp = p0; p0 = p1; p1 = temp; }
-			if (p2.CompareTo(p3) > 0) { temp = p2; p2 = p3; p3 = temp; }
-			if (p4.CompareTo(p5) > 0) { temp = p4; p4 = p5; p5 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-			if (p10.CompareTo(p11) > 0) { temp = p10; p10 = p11; p11 = temp; }
-			if (p12.CompareTo(p13) > 0) { temp = p12; p12 = p13; p13 = temp; }
-			if (p14.CompareTo(p15) > 0) { temp = p14; p14 = p15; p15 = temp; }
-			if (p0.CompareTo(p2) > 0) { temp = p0; p0 = p2; p2 = temp; }
-			if (p4.CompareTo(p6) > 0) { temp = p4; p4 = p6; p6 = temp; }
-			if (p8.CompareTo(p10) > 0) { temp = p8; p8 = p10; p10 = temp; }
-			if (p12.CompareTo(p14) > 0) { temp = p12; p12 = p14; p14 = temp; }
-			if (p1.CompareTo(p3) > 0) { temp = p1; p1 = p3; p3 = temp; }
-			if (p5.CompareTo(p7) > 0) { temp = p5; p5 = p7; p7 = temp; }
-			if (p9.CompareTo(p11) > 0) { temp = p9; p9 = p11; p11 = temp; }
-			if (p13.CompareTo(p15) > 0) { temp = p13; p13 = p15; p15 = temp; }
-			if (p0.CompareTo(p4) > 0) { temp = p0; p0 = p4; p4 = temp; }
-			if (p8.CompareTo(p12) > 0) { temp = p8; p8 = p12; p12 = temp; }
-			if (p1.CompareTo(p5) > 0) { temp = p1; p1 = p5; p5 = temp; }
-			if (p9.CompareTo(p13) > 0) { temp = p9; p9 = p13; p13 = temp; }
-			if (p2.CompareTo(p6) > 0) { temp = p2; p2 = p6; p6 = temp; }
-			if (p10.CompareTo(p14) > 0) { temp = p10; p10 = p14; p14 = temp; }
-			if (p3.CompareTo(p7) > 0) { temp = p3; p3 = p7; p7 = temp; }
-			if (p11.CompareTo(p15) > 0) { temp = p11; p11 = p15; p15 = temp; }
-			if (p0.CompareTo(p8) > 0) { temp = p0; p0 = p8; p8 = temp; }
-			if (p1.CompareTo(p9) > 0) { temp = p1; p1 = p9; p9 = temp; }
-			if (p2.CompareTo(p10) > 0) { temp = p2; p2 = p10; p10 = temp; }
-			if (p3.CompareTo(p11) > 0) { temp = p3; p3 = p11; p11 = temp; }
-			if (p4.CompareTo(p12) > 0) { temp = p4; p4 = p12; p12 = temp; }
-			if (p5.CompareTo(p13) > 0) { temp = p5; p5 = p13; p13 = temp; }
-			if (p6.CompareTo(p14) > 0) { temp = p6; p6 = p14; p14 = temp; }
-			if (p7.CompareTo(p15) > 0) { temp = p7; p7 = p15; p15 = temp; }
-			if (p5.CompareTo(p10) > 0) { temp = p5; p5 = p10; p10 = temp; }
-			if (p6.CompareTo(p9) > 0) { temp = p6; p6 = p9; p9 = temp; }
-			if (p3.CompareTo(p12) > 0) { temp = p3; p3 = p12; p12 = temp; }
-			if (p13.CompareTo(p14) > 0) { temp = p13; p13 = p14; p14 = temp; }
-			if (p7.CompareTo(p11) > 0) { temp = p7; p7 = p11; p11 = temp; }
-			if (p1.CompareTo(p2) > 0) { temp = p1; p1 = p2; p2 = temp; }
-			if (p4.CompareTo(p8) > 0) { temp = p4; p4 = p8; p8 = temp; }
-			if (p1.CompareTo(p4) > 0) { temp = p1; p1 = p4; p4 = temp; }
-			if (p7.CompareTo(p13) > 0) { temp = p7; p7 = p13; p13 = temp; }
-			if (p2.CompareTo(p8) > 0) { temp = p2; p2 = p8; p8 = temp; }
-			if (p11.CompareTo(p14) > 0) { temp = p11; p11 = p14; p14 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p2.CompareTo(p4) > 0) { temp = p2; p2 = p4; p4 = temp; }
-			if (p11.CompareTo(p13) > 0) { temp = p11; p11 = p13; p13 = temp; }
-			if (p3.CompareTo(p8) > 0) { temp = p3; p3 = p8; p8 = temp; }
-			if (p7.CompareTo(p12) > 0) { temp = p7; p7 = p12; p12 = temp; }
-			if (p6.CompareTo(p8) > 0) { temp = p6; p6 = p8; p8 = temp; }
-			if (p10.CompareTo(p12) > 0) { temp = p10; p10 = p12; p12 = temp; }
-			if (p3.CompareTo(p5) > 0) { temp = p3; p3 = p5; p5 = temp; }
-			if (p7.CompareTo(p9) > 0) { temp = p7; p7 = p9; p9 = temp; }
-			if (p3.CompareTo(p4) > 0) { temp = p3; p3 = p4; p4 = temp; }
-			if (p5.CompareTo(p6) > 0) { temp = p5; p5 = p6; p6 = temp; }
-			if (p7.CompareTo(p8) > 0) { temp = p7; p7 = p8; p8 = temp; }
-			if (p9.CompareTo(p10) > 0) { temp = p9; p9 = p10; p10 = temp; }
-			if (p11.CompareTo(p12) > 0) { temp = p11; p11 = p12; p12 = temp; }
-			if (p6.CompareTo(p7) > 0) { temp = p6; p6 = p7; p7 = temp; }
-			if (p8.CompareTo(p9) > 0) { temp = p8; p8 = p9; p9 = temp; }
-#else
 			if (GreaterThan(ref p0, ref p1)) { temp = p0; p0 = p1; p1 = temp; }
 			if (GreaterThan(ref p2, ref p3)) { temp = p2; p2 = p3; p3 = temp; }
 			if (GreaterThan(ref p4, ref p5)) { temp = p4; p4 = p5; p5 = temp; }
@@ -902,7 +539,6 @@
 			if (GreaterThan(ref p11, ref p12)) { temp = p11; p11 = p12; p12 = temp; }
 			if (GreaterThan(ref p6, ref p7)) { temp = p6; p6 = p7; p7 = temp; }
 			if (GreaterThan(ref p8, ref p9)) { temp = p8; p8 = p9; p9 = temp; }
-#endif
 		}
 
 		/// <summary>

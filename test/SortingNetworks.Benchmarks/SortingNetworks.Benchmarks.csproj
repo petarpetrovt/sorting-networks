@@ -8,7 +8,6 @@
 			net6.0;
 			net5.0;
 			netcoreapp3.1;
-			net48
 		</TargetFrameworks>
 
 		<!--
@@ -23,8 +22,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="BenchmarkDotNet" Version="0.12.1.1521" />
-		<PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.12.1.1521" />
+		<PackageReference Include="BenchmarkDotNet" Version="0.13.1.1786" />
+		<PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.13.1.1786" />
 	</ItemGroup>
 
 	<ItemGroup>
