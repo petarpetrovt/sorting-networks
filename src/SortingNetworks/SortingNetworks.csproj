@@ -1,13 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>
-			net6.0;
-			net5.0;
-			netcoreapp3.1;
-			netstandard2.1;
-			netstandard1.3
-		</TargetFrameworks>
+		<TargetFrameworks>net6.0;net5.0;</TargetFrameworks>
 		<AssemblyName>SortingNetworks</AssemblyName>
 		<RootNamespace>SortingNetworks</RootNamespace>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -16,30 +10,11 @@
 		<Description>A collection of sorting network algorithms implemented in C#.</Description>
 		<PackageLicenseFile></PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="$(SolutionDir)icon.png" Pack="true" PackagePath="" />
-	</ItemGroup>
-
-	<PropertyGroup Condition="'$(TargetFramework)' != 'netstandard1.3'">
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
-		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
-		<PackageReference Include="System.Memory" Version="4.5.4" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
-		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Nullable" Version="1.3.0">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
 	</ItemGroup>
 
 	<!-- DefaultDocumentation -->
@@ -48,7 +23,7 @@
 		<DefaultDocumentationFolder>$(DefaultDocumentationFolderBase)\$(TargetFramework)</DefaultDocumentationFolder>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="DefaultDocumentation" Version="0.7.2">
+		<PackageReference Include="DefaultDocumentation" Version="0.8.1">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -122,14 +97,6 @@
 		<None Update="SNBoseNelson.Comparable.Descending.tt">
 			<LastGenOutput>SNBoseNelson.Comparable.Descending.cs</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
-		</None>
-		<None Update="SNBoseNelson.Comparable.Ascending.NETSTANDARD1_3.tt">
-			<Generator>TextTemplatingFileGenerator</Generator>
-			<LastGenOutput>SNBoseNelson.Comparable.Ascending.NETSTANDARD1_3.cs</LastGenOutput>
-		</None>
-		<None Update="SNBoseNelson.Comparable.Descending.NETSTANDARD1_3.tt">
-			<Generator>TextTemplatingFileGenerator</Generator>
-			<LastGenOutput>SNBoseNelson.Comparable.Descending.NETSTANDARD1_3.cs</LastGenOutput>
 		</None>
 	</ItemGroup>
 
@@ -211,16 +178,6 @@
 		</Compile>
 		<Compile Update="SNBoseNelson.Comparable.Descending.cs">
 			<DependentUpon>SNBoseNelson.Comparable.Descending.tt</DependentUpon>
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-		</Compile>
-		<Compile Update="SNBoseNelson.Comparable.Ascending.NETSTANDARD1_3.cs">
-			<DependentUpon>SNBoseNelson.Comparable.Ascending.NETSTANDARD1_3.tt</DependentUpon>
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-		</Compile>
-		<Compile Update="SNBoseNelson.Comparable.Descending.NETSTANDARD1_3.cs">
-			<DependentUpon>SNBoseNelson.Comparable.Descending.NETSTANDARD1_3.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</Compile>

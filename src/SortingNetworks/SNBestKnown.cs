@@ -1,33 +1,28 @@
-﻿namespace SortingNetworks
+﻿namespace SortingNetworks;
+
+/// <summary>
+/// Sorting networks implementation using the best known arrangement of comparators.
+/// </summary>
+/// <remarks>
+/// Custom arrangement or comparators are used only for length between [9, 16] otherwise Bose-Nelson algorithm is used.
+/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
+/// </remarks>
+public abstract partial class SNBestKnown : SNBoseNelson
 {
 	/// <summary>
-	/// Sorting networks implementation using the best known arrangement of comparators.
+	/// The minimum supported length for sorting.
 	/// </summary>
-	/// <remarks>
-	/// Custom arrangement or comparators are used only for length between [9, 16] otherwise Bose-Nelson algorithm is used.
-	/// SWAP macros generated from: https://pages.ripco.net/~jgamble/nw.html
-	/// </remarks>
-	public abstract partial class SNBestKnown : SNBoseNelson
-	{
-		/// <summary>
-		/// The minimum supported length for sorting.
-		/// </summary>
-		public new const int MinLength = 2;
+	public new const int MinLength = 2;
 
-		/// <summary>
-		/// The maximum supported length for sorting.
-		/// </summary>
-		public new const int MaxLength = 32;
+	/// <summary>
+	/// The maximum supported length for sorting.
+	/// </summary>
+	public new const int MaxLength = 32;
 
-		/// <summary>
-		/// Disable inheritance outside of the assembly.
-		/// </summary>
-		/// <exclude/>
-#if NETSTANDARD1_3
-		[System.Diagnostics.DebuggerNonUserCode]
-#else
-		[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-#endif
-		internal SNBestKnown() { }
-	}
+	/// <summary>
+	/// Disable inheritance outside of the assembly.
+	/// </summary>
+	/// <exclude/>
+	[ExcludeFromCodeCoverage]
+	internal SNBestKnown() { }
 }

@@ -21,10 +21,19 @@
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
 		<AnalysisLevel>latest</AnalysisLevel>
-		<LangVersion>9.0</LangVersion>
+		<LangVersion>preview</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<NoWarn>$(NoWarn);CA1812;CA2201;CA1014;CA1707;CA5394;</NoWarn>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<Using Include="System" />
+		<Using Include="System.Diagnostics.CodeAnalysis" />
+		<Using Include="System.Runtime.CompilerServices" />
+		<Using Include="System.Runtime.InteropServices" />
+	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
@@ -47,28 +56,5 @@
 			<Value>$(T4IncludeDir)</Value>
 		</T4ParameterValues>
 	</ItemGroup>
-
-	<Choose>
-		<When Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
-			<PropertyGroup>
-				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
-			</PropertyGroup>
-		</When>
-		<When Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
-			<PropertyGroup>
-				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
-			</PropertyGroup>
-		</When>
-		<When Condition="'$(TargetFramework)' == 'net5.0'">
-			<PropertyGroup>
-				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
-			</PropertyGroup>
-		</When>
-		<When Condition="'$(TargetFramework)' == 'net6.0'">
-			<PropertyGroup>
-				<DefineConstants>$(DefineConstants);SIMD_SUPPORT</DefineConstants>
-			</PropertyGroup>
-		</When>
-	</Choose>
 
 </Project>

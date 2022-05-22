@@ -1,213 +1,211 @@
-﻿namespace SortingNetworks.Tests
+﻿namespace SortingNetworks.Tests;
+
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+[TestClass]
+public partial class SNBestKnownTests : SNTestsBase
 {
-	using System;
-	using System.Collections.Generic;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-	[TestClass]
-	public partial class SNBestKnownTests : SNTestsBase
+	public static IEnumerable<object[]> ModeAndIterations
 	{
-		public static IEnumerable<object[]> ModeAndIterations
+		get
 		{
-			get
+			yield return new object[] { GenerationMode.SpecialValues, 1 };
+			yield return new object[] { GenerationMode.Sorted, 1 };
+			yield return new object[] { GenerationMode.Reverse, 1 };
+			yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };
+			yield return new object[] { GenerationMode.OddBiggerThanEven, 1 };
+			yield return new object[] { GenerationMode.Random, 10 };
+		}
+	}
+
+	[TestMethod]
+	[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
+	public void Ascending_Comparable(GenerationMode mode, int iterations)
+	{
+		for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+		{
+			for (int i = 0; i < iterations; i++)
 			{
-				yield return new object[] { GenerationMode.SpecialValues, 1 };
-				yield return new object[] { GenerationMode.Sorted, 1 };
-				yield return new object[] { GenerationMode.Reverse, 1 };
-				yield return new object[] { GenerationMode.EvenBiggerThanOdd, 1 };
-				yield return new object[] { GenerationMode.OddBiggerThanEven, 1 };
-				yield return new object[] { GenerationMode.Random, 10 };
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
+
+				SNBestKnown.SortAscending(ref actual[0], length);
+
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
 		}
+	}
 
-		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
-		public void Ascending_Comparable(GenerationMode mode, int iterations)
+	[TestMethod]
+	[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
+	public void Descending_Comparable(GenerationMode mode, int iterations)
+	{
+		for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			for (int i = 0; i < iterations; i++)
 			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
-					SNBestKnown.SortAscending(ref actual[0], length);
+				SNBestKnown.SortDescending(ref actual[0], length);
 
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
 		}
+	}
 
-		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
-		public void Descending_Comparable(GenerationMode mode, int iterations)
+	[TestMethod]
+	[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
+	public void Ascending_Comparison(GenerationMode mode, int iterations)
+	{
+		for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			for (int i = 0; i < iterations; i++)
 			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
-					SNBestKnown.SortDescending(ref actual[0], length);
+				SNBestKnown.SortAscending(ref actual[0], length, InternalComparison);
 
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
 		}
+	}
 
-		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
-		public void Ascending_Comparison(GenerationMode mode, int iterations)
+	[TestMethod]
+	[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
+	public void Descending_Comparison(GenerationMode mode, int iterations)
+	{
+		for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			for (int i = 0; i < iterations; i++)
 			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
-					SNBestKnown.SortAscending(ref actual[0], length, InternalComparison);
+				SNBestKnown.SortDescending(ref actual[0], length, InternalComparison);
 
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
 		}
+	}
 
-		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
-		public void Descending_Comparison(GenerationMode mode, int iterations)
+	[TestMethod]
+	[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
+	public unsafe void Ascending_ComparisonPointer(GenerationMode mode, int iterations)
+	{
+		for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			for (int i = 0; i < iterations; i++)
 			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
+				GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
 
-					SNBestKnown.SortDescending(ref actual[0], length, InternalComparison);
+				SNBestKnown.SortAscending(ref actual[0], length, &InternalComparison);
 
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
 		}
+	}
 
-		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
-		public unsafe void Ascending_ComparisonPointer(GenerationMode mode, int iterations)
+	[TestMethod]
+	[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
+	public unsafe void Descending_ComparisonPointer(GenerationMode mode, int iterations)
+	{
+		for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
 		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
+			for (int i = 0; i < iterations; i++)
 			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysAscending(mode, length, out int[] expected, out int[] actual);
+				GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
 
-					SNBestKnown.SortAscending(ref actual[0], length, &InternalComparison);
+				SNBestKnown.SortDescending(ref actual[0], length, &InternalComparison);
 
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
+				CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
 			}
 		}
+	}
 
-		[TestMethod]
-		[DynamicData(nameof(ModeAndIterations), DynamicDataSourceType.Property)]
-		public unsafe void Descending_ComparisonPointer(GenerationMode mode, int iterations)
+	[TestMethod]
+	public void Ascending_Comparable_OutOfRange()
+	{
+		Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 		{
-			for (int length = SNBestKnown.MinLength; length <= SNBestKnown.MaxLength; length++)
-			{
-				for (int i = 0; i < iterations; i++)
-				{
-					GenerateArraysDescending(mode, length, out int[] expected, out int[] actual);
+			GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
-					SNBestKnown.SortDescending(ref actual[0], length, &InternalComparison);
+			SNBestKnown.SortAscending(ref actual[0], actual.Length);
+		});
+	}
 
-					CollectionAssert.AreEqual(expected, actual, $"Collections differs for length `{length}`.");
-				}
-			}
-		}
-
-		[TestMethod]
-		public void Ascending_Comparable_OutOfRange()
+	[TestMethod]
+	public void Descending_Comparable_OutOfRange()
+	{
+		Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 		{
-			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
-			{
-				GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+			GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortAscending(ref actual[0], actual.Length);
-			});
-		}
+			SNBestKnown.SortDescending(ref actual[0], actual.Length);
+		});
+	}
 
-		[TestMethod]
-		public void Descending_Comparable_OutOfRange()
+	[TestMethod]
+	public void Ascending_Comparison_OutOfRange()
+	{
+		Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 		{
-			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
-			{
-				GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+			GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortDescending(ref actual[0], actual.Length);
-			});
-		}
+			SNBestKnown.SortAscending(ref actual[0], actual.Length, InternalComparison);
+		});
+	}
 
-		[TestMethod]
-		public void Ascending_Comparison_OutOfRange()
+	[TestMethod]
+	public void Descending_Comparison_OutOfRange()
+	{
+		Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 		{
-			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
-			{
-				GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+			GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortAscending(ref actual[0], actual.Length, InternalComparison);
-			});
-		}
+			SNBestKnown.SortDescending(ref actual[0], actual.Length, InternalComparison);
+		});
+	}
 
-		[TestMethod]
-		public void Descending_Comparison_OutOfRange()
+	[TestMethod]
+	public unsafe void Ascending_ComparisonPointer_OutOfRange()
+	{
+		Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 		{
-			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
-			{
-				GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+			GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortDescending(ref actual[0], actual.Length, InternalComparison);
-			});
-		}
+			SNBestKnown.SortAscending(ref actual[0], actual.Length, &InternalComparison);
+		});
+	}
 
-		[TestMethod]
-		public unsafe void Ascending_ComparisonPointer_OutOfRange()
+	[TestMethod]
+	public unsafe void Descending_ComparisonPointer_OutOfRange()
+	{
+		Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
 		{
-			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
-			{
-				GenerateArraysAscending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+			GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
 
-				SNBestKnown.SortAscending(ref actual[0], actual.Length, &InternalComparison);
-			});
-		}
+			SNBestKnown.SortDescending(ref actual[0], actual.Length, &InternalComparison);
+		});
+	}
 
-		[TestMethod]
-		public unsafe void Descending_ComparisonPointer_OutOfRange()
+	[TestMethod]
+	public void Ascending_Comparison_Null()
+	{
+		Assert.ThrowsException<ArgumentNullException>(() =>
 		{
-			Assert.ThrowsException<ArgumentOutOfRangeException>(() =>
-			{
-				GenerateArraysDescending(default, SNBestKnown.MinLength - 1, out int[] expected, out int[] actual);
+			Span<int> actual = stackalloc int[1];
 
-				SNBestKnown.SortDescending(ref actual[0], actual.Length, &InternalComparison);
-			});
-		}
+			SNBestKnown.SortAscending(ref actual[0], actual.Length, comparison: null);
+		});
+	}
 
-		[TestMethod]
-		public void Ascending_Comparison_Null()
+	[TestMethod]
+	public void Descending_Comparison_Null()
+	{
+		Assert.ThrowsException<ArgumentNullException>(() =>
 		{
-			Assert.ThrowsException<ArgumentNullException>(() =>
-			{
-				Span<int> actual = stackalloc int[1];
+			Span<int> actual = stackalloc int[1];
 
-				SNBestKnown.SortAscending(ref actual[0], actual.Length, comparison: null);
-			});
-		}
-
-		[TestMethod]
-		public void Descending_Comparison_Null()
-		{
-			Assert.ThrowsException<ArgumentNullException>(() =>
-			{
-				Span<int> actual = stackalloc int[1];
-
-				SNBestKnown.SortDescending(ref actual[0], actual.Length, comparison: null);
-			});
-		}
+			SNBestKnown.SortDescending(ref actual[0], actual.Length, comparison: null);
+		});
 	}
 }

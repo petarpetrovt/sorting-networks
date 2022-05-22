@@ -40,20 +40,6 @@ jobs:
             tf: net5.0
             rv: '5.0.202'
             codecov: false
-          # netcoreapp3.1
-          - os: ubuntu-latest
-            tf: netcoreapp3.1
-            rv: '3.1.404'
-            codecov: false
-          # netcoreapp2.1
-          - os: ubuntu-latest
-            tf: netcoreapp2.1
-            rv: '2.1.814'
-            codecov: false
-          # net48
-          - os: windows-latest
-            tf: net48
-            codecov: false
     steps:
      - name: Checkout
        uses: actions/checkout@v2.3.4

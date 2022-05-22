@@ -8,58 +8,50 @@
 <# int maxLength = GetMaxLength(); #>
 <# int minLengthOverwrite = 9; #>
 <# int maxLengthOverwrite = 16; #>
-namespace SortingNetworks
+namespace SortingNetworks;
+
+partial class SNBestKnown
 {
-	using System;
-	using System.Runtime.CompilerServices;
-
-	partial class SNBestKnown
-	{
 <#for (int i = minLengthOverwrite; i <= maxLengthOverwrite; i++) {#>
-		/// <summary>
-		/// Sorts a collection of <#= i #> elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
-		/// </summary>
-		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
-		/// <param name="p0">the reference to the first element of the collection</param>
-		public static new void Sort<#= i #>Descending<T>(ref T p0)
-			where T : IComparable<T>
-		{
+	/// <summary>
+	/// Sorts a collection of <#= i #> elements in descending order using the <see cref="IComparable{T}"/> generic
+	/// interface implementation of each element.
+	/// </summary>
+	/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+	/// <param name="p0">the reference to the first element of the collection</param>
+	public static new void Sort<#= i #>Descending<T>(ref T p0)
+		where T : IComparable<T>
+	{
 <#for (int y = 1; y < i; y++) {#>
-			ref T p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
+		ref T p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-			T temp;
-#if NETSTANDARD1_3
-			<#= string.Join("\r\n			", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserComparableLegacy($"p{x.Item1}", $"p{x.Item2}"))) #>
-#else
-			<#= string.Join("\r\n			", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserComparable($"p{x.Item1}", $"p{x.Item2}"))) #>
-#endif
-		}
+		T temp;
+		<#= string.Join("\r\n		", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserComparable($"p{x.Item1}", $"p{x.Item2}"))) #>
+	}
 
 <#}#>
-		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
-		/// interface implementation of each element.
-		/// </summary>
-		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
-		/// <param name="p0">the reference to the first element of the collection</param>
-		/// <param name="length">the length of the collection</param>
-		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static new void SortDescending<T>(ref T p0, in int length)
-			where T : IComparable<T>
+	/// <summary>
+	/// Sorts a collection of specified number of elements in descending order using the <see cref="IComparable{T}"/> generic
+	/// interface implementation of each element.
+	/// </summary>
+	/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+	/// <param name="p0">the reference to the first element of the collection</param>
+	/// <param name="length">the length of the collection</param>
+	/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
+	public static new void SortDescending<T>(ref T p0, in int length)
+		where T : IComparable<T>
+	{
+		switch (length)
 		{
-			switch (length)
-			{
 <#for (int i = minLength; i <= maxLength; i++) {#>
-				case <#= i #>: Sort<#= i #>Descending(ref p0); break;
+			case <#= i #>: Sort<#= i #>Descending(ref p0); break;
 <#}#>
-				default:
-					{
-						ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
-						break;
-					}
-			}
+			default:
+				{
+					ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
+					break;
+				}
 		}
 	}
 }

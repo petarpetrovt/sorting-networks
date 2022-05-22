@@ -1,103 +1,98 @@
-﻿namespace SortingNetworks.Benchmarks
+﻿namespace SortingNetworks.Benchmarks;
+
+using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
+
+[SimpleJob(RuntimeMoniker.Net50, baseline: true)]
+[SimpleJob(RuntimeMoniker.Net60)]
+[SimpleJob(RuntimeMoniker.CoreRt60)]
+[MemoryDiagnoser]
+public abstract class SNBenchmarkBase
 {
-	using System;
-	using System.Runtime.CompilerServices;
-	using BenchmarkDotNet.Attributes;
-	using BenchmarkDotNet.Jobs;
+	private int[] _globalItems;
 
-	[SimpleJob(RuntimeMoniker.Net48)]
-	[SimpleJob(RuntimeMoniker.NetCoreApp31)]
-	[SimpleJob(RuntimeMoniker.Net50)]
-	[SimpleJob(RuntimeMoniker.Net60)]
-	[SimpleJob(RuntimeMoniker.CoreRt60)]
-	[MemoryDiagnoser]
-	public abstract class SNBenchmarkBase
+	protected int[] IterationItems;
+
+	/// <summary>
+	/// Gets or sets the length of the sorting network.
+	/// </summary>
+	public abstract int Length { get; set; }
+
+	/// <summary>
+	/// Gets the count of the iteration items depending on the length of the sorting network.
+	/// </summary>
+	/// <remarks>
+	/// The values are adjusted in `TemplateUtilities.ttinclude -> GetOptimalBenchmarkCount` so that
+	/// the lowest benchmark of N length will run at least 100 ms per iteration.
+	/// </remarks>
+	public abstract int Count { get; set; }
+
+	[GlobalSetup]
+	public void GlobalSetup()
 	{
-		private int[] _globalItems;
+		_globalItems = new int[110_000_000];
+		IterationItems = new int[110_000_000];
 
-		protected int[] IterationItems;
+		var random = new Random(new Random().Next());
 
-		/// <summary>
-		/// Gets or sets the length of the sorting network.
-		/// </summary>
-		public abstract int Length { get; set; }
-
-		/// <summary>
-		/// Gets the count of the iteration items depending on the length of the sorting network.
-		/// </summary>
-		/// <remarks>
-		/// The values are adjusted in `TemplateUtilities.ttinclude -> GetOptimalBenchmarkCount` so that
-		/// the lowest benchmark of N length will run at least 100 ms per iteration.
-		/// </remarks>
-		public abstract int Count { get; set; }
-
-		[GlobalSetup]
-		public void GlobalSetup()
+		for (int i = 0; i < _globalItems.Length; i++)
 		{
-			_globalItems = new int[110_000_000];
-			IterationItems = new int[110_000_000];
-
-			var random = new Random(new Random().Next());
-
-			for (int i = 0; i < _globalItems.Length; i++)
-			{
-				_globalItems[i] = random.Next(int.MinValue, int.MaxValue);
-			}
+			_globalItems[i] = random.Next(int.MinValue, int.MaxValue);
 		}
+	}
 
-		[GlobalCleanup]
-		public void GlobalCleanup()
+	[GlobalCleanup]
+	public void GlobalCleanup()
+	{
+		_globalItems = null;
+		IterationItems = null;
+	}
+
+	[IterationSetup]
+	public void IterationSetup()
+		=> _globalItems
+			.AsSpan(0, Count)
+			.CopyTo(IterationItems);
+
+	[MethodImpl(MethodImplOptions.NoInlining)]
+	protected static void PrivateInsertionSortAscending<T>(Span<T> span)
+		where T : IComparable<T>
+	{
+		int length = span.Length;
+
+		for (int i = 1; i < length; ++i)
 		{
-			_globalItems = null;
-			IterationItems = null;
-		}
+			T key = span[i];
+			int j = i - 1;
 
-		[IterationSetup]
-		public void IterationSetup()
-			=> _globalItems
-				.AsSpan(0, Count)
-				.CopyTo(IterationItems);
-
-		[MethodImpl(MethodImplOptions.NoInlining)]
-		protected static void PrivateInsertionSortAscending<T>(Span<T> span)
-			where T : IComparable<T>
-		{
-			int length = span.Length;
-
-			for (int i = 1; i < length; ++i)
+			while (j >= 0 && span[j].CompareTo(key) > 0)
 			{
-				T key = span[i];
-				int j = i - 1;
-
-				while (j >= 0 && span[j].CompareTo(key) > 0)
-				{
-					span[j + 1] = span[j];
-					j -= 1;
-				}
-
-				span[j + 1] = key;
+				span[j + 1] = span[j];
+				j -= 1;
 			}
+
+			span[j + 1] = key;
 		}
+	}
 
-		[MethodImpl(MethodImplOptions.NoInlining)]
-		protected static void PrivateInsertionSortDescending<T>(Span<T> span)
-			where T : IComparable<T>
+	[MethodImpl(MethodImplOptions.NoInlining)]
+	protected static void PrivateInsertionSortDescending<T>(Span<T> span)
+		where T : IComparable<T>
+	{
+		int length = span.Length;
+
+		for (int i = 1; i < length; ++i)
 		{
-			int length = span.Length;
+			T key = span[i];
+			int j = i - 1;
 
-			for (int i = 1; i < length; ++i)
+			while (j >= 0 && span[j].CompareTo(key) < 0)
 			{
-				T key = span[i];
-				int j = i - 1;
-
-				while (j >= 0 && span[j].CompareTo(key) < 0)
-				{
-					span[j + 1] = span[j];
-					j -= 1;
-				}
-
-				span[j + 1] = key;
+				span[j + 1] = span[j];
+				j -= 1;
 			}
+
+			span[j + 1] = key;
 		}
 	}
 }

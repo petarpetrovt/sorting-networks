@@ -8,52 +8,48 @@
 <# int maxLength = GetMaxLength(); #>
 <# int minLengthOverwrite = 9; #>
 <# int maxLengthOverwrite = 16; #>
-namespace SortingNetworks
-{
-	using System;
-	using System.Runtime.CompilerServices;
+namespace SortingNetworks;
 
-	partial class SNBestKnown
-	{
+partial class SNBestKnown
+{
 <#foreach (string typeName in GetBranchlessTypeNames()) {#>
 <#for (int i = minLengthOverwrite; i <= maxLengthOverwrite; i++) {#>
-		/// <summary>
-		/// Sorts a collection of <#= i #> elements in descending order using branchless min/max swap.
-		/// </summary>
-		/// <param name="p0">the reference to the first element of the collection</param>
-		public static new void Sort<#= i #>DescendingBranchless(ref <#= typeName #> p0)
-		{
+	/// <summary>
+	/// Sorts a collection of <#= i #> elements in descending order using branchless min/max swap.
+	/// </summary>
+	/// <param name="p0">the reference to the first element of the collection</param>
+	public static new void Sort<#= i #>DescendingBranchless(ref <#= typeName #> p0)
+	{
 <#for (int y = 1; y < i; y++) {#>
-			ref <#= typeName #> p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
+		ref <#= typeName #> p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-			<#= string.Join("\r\n			", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserBranchless($"p{x.Item1}", $"p{x.Item2}"))) #>
-		}
+		<#= string.Join("\r\n		", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfLesserBranchless($"p{x.Item1}", $"p{x.Item2}"))) #>
+	}
 
 <#}#>
 <#}#>
 <#foreach (string typeName in GetBranchlessTypeNames()) {#>
-		/// <summary>
-		/// Sorts a collection of specified number of elements in descending order using branchless min/max swap.
-		/// </summary>
-		/// <param name="p0">the reference to the first element of the collection</param>
-		/// <param name="length">the length of the collection</param>
-		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static new void SortDescendingBranchless(ref <#= typeName #> p0, in int length)
+	/// <summary>
+	/// Sorts a collection of specified number of elements in descending order using branchless min/max swap.
+	/// </summary>
+	/// <param name="p0">the reference to the first element of the collection</param>
+	/// <param name="length">the length of the collection</param>
+	/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
+	public static new void SortDescendingBranchless(ref <#= typeName #> p0, in int length)
+	{
+		switch (length)
 		{
-			switch (length)
-			{
 <#for (int i = minLength; i <= maxLength; i++) {#>
-				case <#= i #>: Sort<#= i #>DescendingBranchless(ref p0); break;
+			case <#= i #>: Sort<#= i #>DescendingBranchless(ref p0); break;
 <#}#>
-				default:
-					{
-						ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
-						break;
-					}
-			}
+			default:
+				{
+					ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
+					break;
+				}
 		}
+	}
 
 <#}#>
-	}
 }

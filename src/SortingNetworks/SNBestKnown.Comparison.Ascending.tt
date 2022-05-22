@@ -8,64 +8,60 @@
 <# int maxLength = GetMaxLength(); #>
 <# int minLengthOverwrite = 9; #>
 <# int maxLengthOverwrite = 16; #>
-namespace SortingNetworks
+namespace SortingNetworks;
+
+partial class SNBestKnown
 {
-	using System;
-	using System.Runtime.CompilerServices;
-
-	partial class SNBestKnown
-	{
 <#for (int i = minLengthOverwrite; i <= maxLengthOverwrite; i++) {#>
-		/// <summary>
-		/// Sorts a collection of <#= i #> elements in ascending order using the specified <see cref="Comparison{T}"/>.
-		/// </summary>
-		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
-		/// <param name="p0">the reference to the first element of the collection</param>
-		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		public static new void Sort<#= i #>Ascending<T>(ref T p0, Comparison<T> comparison)
+	/// <summary>
+	/// Sorts a collection of <#= i #> elements in ascending order using the specified <see cref="Comparison{T}"/>.
+	/// </summary>
+	/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+	/// <param name="p0">the reference to the first element of the collection</param>
+	/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+	public static new void Sort<#= i #>Ascending<T>(ref T p0, Comparison<T> comparison)
+	{
+		if (comparison is null)
 		{
-			if (comparison is null)
-			{
-				ThrowHelper.ArgumentNull(nameof(comparison));
-			}
-
-<#for (int y = 1; y < i; y++) {#>
-			ref T p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
-<#}#>
-
-			T temp;
-			<#= string.Join("\r\n			", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfGreaterComparison($"p{x.Item1}", $"p{x.Item2}"))) #>
+			ThrowHelper.ArgumentNull(nameof(comparison));
 		}
 
+<#for (int y = 1; y < i; y++) {#>
+		ref T p<#= y #> = ref Unsafe.Add(ref p0, <#= y #>);
 <#}#>
 
-		/// <summary>
-		/// Sorts a collection of specified number of elements in ascending order using the specified <see cref="Comparison{T}"/>.
-		/// </summary>
-		/// <typeparam name="T">The type of the elements of the collection.</typeparam>
-		/// <param name="p0">the reference to the first element of the collection</param>
-		/// <param name="length">the length of the collection</param>
-		/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
-		/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
-		public static new void SortAscending<T>(ref T p0, in int length, Comparison<T> comparison)
-			where T : IComparable<T>
+		T temp;
+		<#= string.Join("\r\n		", GetBestKnownSwapMacros(i).Select(x=> GetSwapIfGreaterComparison($"p{x.Item1}", $"p{x.Item2}"))) #>
+	}
+
+<#}#>
+
+	/// <summary>
+	/// Sorts a collection of specified number of elements in ascending order using the specified <see cref="Comparison{T}"/>.
+	/// </summary>
+	/// <typeparam name="T">The type of the elements of the collection.</typeparam>
+	/// <param name="p0">the reference to the first element of the collection</param>
+	/// <param name="length">the length of the collection</param>
+	/// <param name="comparison">The <see cref="Comparison{T}"/> to use when comparing elements.</param>
+	/// <exception cref="ArgumentOutOfRangeException">collection length is not between <see cref="MinLength"/> and <see cref="MaxLength"/></exception>
+	public static new void SortAscending<T>(ref T p0, in int length, Comparison<T> comparison)
+		where T : IComparable<T>
+	{
+		if (comparison is null)
 		{
-			if (comparison is null)
-			{
-				ThrowHelper.ArgumentNull(nameof(comparison));
-			}
+			ThrowHelper.ArgumentNull(nameof(comparison));
+		}
 
-			switch (length)
-			{
+		switch (length)
+		{
 <#for (int i = minLength; i <= maxLength; i++) {#>
-				case <#= i #>: Sort<#= i #>Ascending(ref p0, comparison); break;
+			case <#= i #>: Sort<#= i #>Ascending(ref p0, comparison); break;
 <#}#>
-				default:
-					{
-						ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
-						break;
-					}
-			}
+			default:
+				{
+					ThrowHelper.ArrayArgumentOutOfRange(nameof(length), length, MinLength, MaxLength);
+					break;
+				}
 		}
 	}
 }
