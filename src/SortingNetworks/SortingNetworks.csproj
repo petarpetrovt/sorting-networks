@@ -21,7 +21,6 @@
 	<PropertyGroup>
 		<DefaultDocumentationFolderBase>$(SolutionDir)\docs\api</DefaultDocumentationFolderBase>
 		<DefaultDocumentationFolder>$(DefaultDocumentationFolderBase)\$(TargetFramework)</DefaultDocumentationFolder>
-		<DisableDefaultDocumentation>true</DisableDefaultDocumentation>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="DefaultDocumentation" Version="0.8.1">
