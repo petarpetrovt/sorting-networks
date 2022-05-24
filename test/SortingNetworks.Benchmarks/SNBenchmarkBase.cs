@@ -1,10 +1,11 @@
 ﻿namespace SortingNetworks.Benchmarks;
 
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Engines;
 using BenchmarkDotNet.Jobs;
 
-[SimpleJob(RuntimeMoniker.Net50)]
-[SimpleJob(RuntimeMoniker.Net60)]
+[SimpleJob(RunStrategy.Throughput, RuntimeMoniker.Net50)]
+[SimpleJob(RunStrategy.Throughput, RuntimeMoniker.Net60)]
 public abstract class SNBenchmarkBase
 {
 	private const int Seed = 260830948;
