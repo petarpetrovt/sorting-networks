@@ -42,14 +42,14 @@ jobs:
             codecov: false
     steps:
      - name: Checkout
-       uses: actions/checkout@v2.3.4
+       uses: actions/checkout@v3
 
      - name: Setup dotnet SDK required for build (global.json)
-       uses: actions/setup-dotnet@v1.7.2
+       uses: actions/setup-dotnet@v2
 
      - name: Setup dotnet runtime required for tests (${{ matrix.options.rv }})
        if: ${{ matrix.options.rv != null }}
-       uses: actions/setup-dotnet@v1.7.2
+       uses: actions/setup-dotnet@v2
        with:
          dotnet-version: ${{ matrix.options.rv }}
 
