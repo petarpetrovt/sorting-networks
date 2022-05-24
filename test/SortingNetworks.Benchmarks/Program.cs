@@ -6,5 +6,7 @@ using BenchmarkDotNet.Running;
 public static class Program
 {
 	public static void Main(string[] args)
-		=> BenchmarkRunner.Run(Assembly.GetExecutingAssembly(), args: args);
+		=> BenchmarkSwitcher
+			.FromAssembly(Assembly.GetExecutingAssembly())
+			.Run(args);
 }
