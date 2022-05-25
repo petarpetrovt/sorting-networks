@@ -42,9 +42,7 @@ public class SN02Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -89,9 +87,7 @@ public class SN03Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -136,9 +132,7 @@ public class SN04Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -183,9 +177,7 @@ public class SN05Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -230,9 +222,7 @@ public class SN06Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -277,9 +267,7 @@ public class SN07Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -324,9 +312,7 @@ public class SN08Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -395,9 +381,7 @@ public class SN09Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -466,9 +450,7 @@ public class SN10Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -537,9 +519,7 @@ public class SN11Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -608,9 +588,7 @@ public class SN12Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -679,9 +657,7 @@ public class SN13Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -750,9 +726,7 @@ public class SN14Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -821,9 +795,7 @@ public class SN15Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -892,9 +864,7 @@ public class SN16Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -939,9 +909,7 @@ public class SN17Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -986,9 +954,7 @@ public class SN18Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1033,9 +999,7 @@ public class SN19Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1080,9 +1044,7 @@ public class SN20Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1127,9 +1089,7 @@ public class SN21Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1174,9 +1134,7 @@ public class SN22Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1221,9 +1179,7 @@ public class SN23Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1268,9 +1224,7 @@ public class SN24Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1315,9 +1269,7 @@ public class SN25Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1362,9 +1314,7 @@ public class SN26Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1409,9 +1359,7 @@ public class SN27Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1456,9 +1404,7 @@ public class SN28Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1503,9 +1449,7 @@ public class SN29Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1550,9 +1494,7 @@ public class SN30Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1597,9 +1539,7 @@ public class SN31Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }
@@ -1644,9 +1584,7 @@ public class SN32Benchmark : SNBenchmarkBase
 
 		for (int i = 0; i < maximumLength; i += length)
 		{
-			Span<int> slice = IterationItems.AsSpan(i, length);
-
-			PrivateInsertionSortAscending(slice);
+			PrivateInsertionSortAscending(IterationItems.AsSpan(i, length));
 		}
 	}
 }

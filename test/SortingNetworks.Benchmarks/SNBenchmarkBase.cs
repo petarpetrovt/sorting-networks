@@ -1,14 +1,12 @@
 ﻿namespace SortingNetworks.Benchmarks;
 
 using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Jobs;
 
-[SimpleJob(RuntimeMoniker.Net50, baseline: true)]
-[SimpleJob(RuntimeMoniker.Net60)]
-[SimpleJob(RuntimeMoniker.CoreRt60)]
-[MemoryDiagnoser]
+[ShortRunJob]
 public abstract class SNBenchmarkBase
 {
+	private const int Seed = 260830948;
+
 	private int[] _globalItems;
 
 	protected int[] IterationItems;
@@ -33,7 +31,7 @@ public abstract class SNBenchmarkBase
 		_globalItems = new int[110_000_000];
 		IterationItems = new int[110_000_000];
 
-		var random = new Random(new Random().Next());
+		var random = new Random(Seed);
 
 		for (int i = 0; i < _globalItems.Length; i++)
 		{
