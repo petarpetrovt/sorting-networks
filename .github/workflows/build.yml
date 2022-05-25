@@ -25,7 +25,6 @@ jobs:
     strategy:
       matrix:
         options:
-          # net6.0
           - os: ubuntu-latest
             tf: net6.0
             codecov: true
@@ -35,7 +34,6 @@ jobs:
           - os: macos-latest
             tf: net6.0
             codecov: false
-          # net5.0
           - os: windows-latest
             tf: net5.0
             rv: '5.0.202'

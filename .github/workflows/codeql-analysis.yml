@@ -32,7 +32,7 @@ jobs:
       uses: actions/setup-dotnet@v2
 
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
+      uses: github/codeql-action/init@v2
       with:
         languages: 'csharp'
 
@@ -40,4 +40,4 @@ jobs:
       run: dotnet build "src/SortingNetworks/SortingNetworks.csproj" -c "Release" -f "net6.0" /p:DisableDefaultDocumentation=true
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
+      uses: github/codeql-action/analyze@v2
