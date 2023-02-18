@@ -11,6 +11,10 @@
 		<PackageLicenseFile></PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
 		<Nullable>enable</Nullable>
+
+		<!-- Strong name -->
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>$(SolutionDir)$(SolutionName).snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
 
 	<ItemGroup>
