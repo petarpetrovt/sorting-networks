@@ -11,6 +11,10 @@
 		<NeutralLanguage>en</NeutralLanguage>
 		<Icon>icon.png</Icon>
 		<Copyright>2020 Petar Petrov</Copyright>
+
+		<!--Ensure `SolutionName|SolutionDir` in Github actions-->
+		<SolutionName Condition="$(SolutionName) == '' Or $(SolutionName) == '*Undefined*'">SortingNetworks</SolutionName>
+		<SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildThisFileDirectory)</SolutionDir>
 	</PropertyGroup>
 
 	<PropertyGroup>

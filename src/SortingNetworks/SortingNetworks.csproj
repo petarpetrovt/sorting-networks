@@ -14,7 +14,7 @@
 
 		<!-- Strong name -->
 		<SignAssembly>True</SignAssembly>
-		<AssemblyOriginatorKeyFile>SortingNetworks.snk</AssemblyOriginatorKeyFile>
+		<AssemblyOriginatorKeyFile>$(SolutionDir)$(SolutionName).snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
 
 	<ItemGroup>
