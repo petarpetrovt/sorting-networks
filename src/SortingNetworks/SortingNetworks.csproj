@@ -11,6 +11,7 @@
 		<PackageLicenseFile></PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
 		<Nullable>enable</Nullable>
+		<IsTrimmable>true</IsTrimmable>
 
 		<!-- Strong name -->
 		<SignAssembly>True</SignAssembly>
