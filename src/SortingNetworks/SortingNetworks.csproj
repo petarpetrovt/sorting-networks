@@ -8,7 +8,7 @@
 		<IsPackable>true</IsPackable>
 		<PackageTags>sort;sorting;network;array;span;algorithms</PackageTags>
 		<Description>A collection of sorting network algorithms implemented in C#.</Description>
-		<PackageLicenseFile></PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>icon.png</PackageIcon>
 		<Nullable>enable</Nullable>
 		<IsTrimmable>true</IsTrimmable>
@@ -19,6 +19,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="$(SolutionDir)README.md" Pack="true" PackagePath="\"/>
 		<None Include="$(SolutionDir)icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
