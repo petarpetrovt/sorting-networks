@@ -109,7 +109,7 @@ public abstract class SNTestsBase
 					}
 				}).Reverse().ToArray(),
 			GenerationMode.Random
-				=> expected.OrderBy(x => ThreadSafeRandom.Next()).ToArray(),
+				=> expected.OrderBy(x => Random.Shared.Next()).ToArray(),
 			GenerationMode.SpecialValues
 				=> expected.ToArray(),
 			_
@@ -132,7 +132,7 @@ public abstract class SNTestsBase
 		{
 			result = Enumerable
 				.Range(1, length)
-				.Select(x => Helper<T>.Values[ThreadSafeRandom.Next(0, Helper<T>.Values.Length)])
+				.Select(x => Helper<T>.Values[Random.Shared.Next(0, Helper<T>.Values.Length)])
 				.OrderBy(x => x)
 				.Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture));
 		}
